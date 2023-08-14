@@ -1,0 +1,9 @@
+C:\DEVELOPMENT PROJECTS\ProductsDataMQS\ProductsDataMQS\bin\Debug\ProductsDataMQS.exe.config
+C:\DEVELOPMENT PROJECTS\ProductsDataMQS\ProductsDataMQS\bin\Debug\ProductsDataMQS.exe
+C:\DEVELOPMENT PROJECTS\ProductsDataMQS\ProductsDataMQS\bin\Debug\ProductsDataMQS.pdb
+C:\DEVELOPMENT PROJECTS\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQS.FormMain.resources
+C:\DEVELOPMENT PROJECTS\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQS.Properties.Resources.resources
+C:\DEVELOPMENT PROJECTS\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQS.csproj.GenerateResource.cache
+C:\DEVELOPMENT PROJECTS\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQS.csproj.CoreCompileInputs.cache
+C:\DEVELOPMENT PROJECTS\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQS.exe
+C:\DEVELOPMENT PROJECTS\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQS.pdb
