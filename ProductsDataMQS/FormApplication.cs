@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace ProductsDataMQS
@@ -45,9 +46,20 @@ namespace ProductsDataMQS
                 MessageBox.Show(errorDBMessage + ex);
             }
         }
+        private void yieldEvaluateLogic(string station)
+        {
+            if ((station == "IFLASH" || station == "CFC") && Convert.ToDouble(textBoxPYield.Text) < 98 && Convert.ToDouble(textBoxPYield.Text) >= 96)
+                textBoxPYield.BackColor = Color.Yellow;
+            else if ((station == "IFLASH" || station == "CFC") && Convert.ToDouble(textBoxPYield.Text) > 98)
+                textBoxPYield.BackColor = Color.Green;
+            else if ((station == "IFLASH" || station == "CFC") && Convert.ToDouble(textBoxPYield.Text) < 96)
+                textBoxPYield.BackColor = Color.Red;
+
+        }
         private void fillAllInofs()
         {
-            textBoxAllInfos.Text = "PRODUCT: " + textBoxFamily.Text + " PROCESS: " + textBoxProcess.Text + " PYIELD: " + textBoxPYield.Text + " TT:" + textBoxTTime.Text + " s";
+            yieldEvaluateLogic(textBoxProcess.Text);
+            textBoxAllInfos.Text = "PRODUCT: " + textBoxFamily.Text + " | PROCESS: " + textBoxProcess.Text + " | PYIELD: " + textBoxPYield.Text + " | TestTime:" + textBoxTTime.Text + " s";
         }
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
