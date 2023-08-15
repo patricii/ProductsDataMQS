@@ -93,7 +93,7 @@ namespace ProductsDataMQS
         }
         private void calMchTime()
         {
-            if (textBoxTTime.Text != null)
+            if (textBoxTTime.Text != "")
             {
                 if (Convert.ToDouble(textBoxTTime.Text) != 0)
                     textBoxMchTime.Text = (Convert.ToDouble(textBoxTTime.Text) * 0.97).ToString();
