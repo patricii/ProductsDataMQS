@@ -36,7 +36,6 @@ namespace ProductsDataMQS
         }
         private void buttonPrev_Click(object sender, EventArgs e)
         {
-
             fillAllInofs();
             try
             {
@@ -80,6 +79,11 @@ namespace ProductsDataMQS
         private void textBoxFamily_TextChanged(object sender, EventArgs e)
         {
             textBoxFamily.BackColor = Color.LightBlue;
+        }
+
+        private void textBoxProcess_TextChanged(object sender, EventArgs e)
+        {
+            textBoxProcess.BackColor = Color.LightBlue;
         }
     }
 }

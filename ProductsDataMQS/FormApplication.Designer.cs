@@ -197,6 +197,7 @@
             this.textBoxProcess.Name = "textBoxProcess";
             this.textBoxProcess.Size = new System.Drawing.Size(178, 21);
             this.textBoxProcess.TabIndex = 5;
+            this.textBoxProcess.TextChanged += new System.EventHandler(this.textBoxProcess_TextChanged);
             // 
             // labelProcess
             // 
