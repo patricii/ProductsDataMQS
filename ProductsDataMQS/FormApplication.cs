@@ -7,6 +7,7 @@ namespace ProductsDataMQS
     public partial class FormMain : Form
     {
         public static string errorDBMessage = "Não foi possivel conectar com o Banco de Dados! : ";
+        public static string successDBMessage = "Data saved successfully!!";
         ConvertCsvToDt cCTD = new ConvertCsvToDt();
         public FormMain()
         {
@@ -130,7 +131,7 @@ namespace ProductsDataMQS
             {
                 bOTDataBindingSource.EndEdit();
                 bOTDataTableAdapter.Update(botDataDataSet);
-                MessageBox.Show("Data saved successfully!!");
+                MessageBox.Show(successDBMessage);
             }
             catch (Exception ex)
             {
