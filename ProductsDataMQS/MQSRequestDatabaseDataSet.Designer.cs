@@ -1383,7 +1383,7 @@ namespace ProductsDataMQS.MQSRequestDatabaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::ProductsDataMQS.Properties.Settings.Default.MQSRequestDatabaseConnectionString2;
+            this._connection.ConnectionString = global::ProductsDataMQS.Properties.Settings.Default.MQSRequestDatabaseConnectionString3;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

@@ -16,7 +16,6 @@ namespace ProductsDataMQS
         }
         private void FormMain_Load(object sender, EventArgs e)
         {
-            bOTDataTableAdapter.Fill(botDataDataSet.BOTData);
             dailyMQSDataTableAdapter.Fill(mQSRequestDatabaseDataSet.DailyMQSData);
             fillAllInofs();
         }
@@ -88,54 +87,17 @@ namespace ProductsDataMQS
             textBoxProcess.BackColor = Color.LightBlue;
         }
 
-        private void buttonMoveBBOT_Click(object sender, EventArgs e)
+        private void textBoxTTime_TextChanged(object sender, EventArgs e)
         {
-            try
-            {
-                bOTDataBindingSource.MovePrevious();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(errorDBMessage + ex);
-            }
+            calMchTime();
         }
-
-        private void buttonMoveFBOT_Click(object sender, EventArgs e)
+        private void calMchTime()
         {
-            try
+            if (textBoxTTime.Text != null)
             {
-                bOTDataBindingSource.MoveNext();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(errorDBMessage + ex);
-            }
-        }
+                if (Convert.ToDouble(textBoxTTime.Text) != 0)
+                    textBoxMchTime.Text = (Convert.ToDouble(textBoxTTime.Text) * 0.97).ToString();
 
-        private void buttonAdd_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                bOTDataBindingSource.AddNew();
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(errorDBMessage + ex);
-            }
-        }
-
-        private void buttonSave_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                bOTDataBindingSource.EndEdit();
-                bOTDataTableAdapter.Update(botDataDataSet);
-                MessageBox.Show(successDBMessage);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(errorDBMessage + ex);
             }
         }
     }
