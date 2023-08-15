@@ -77,10 +77,39 @@
             this.totFailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totHandleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBoxAllInfos = new System.Windows.Forms.TextBox();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBoxBOT = new System.Windows.Forms.GroupBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.labelProductBOT = new System.Windows.Forms.Label();
+            this.textBoxProductBOT = new System.Windows.Forms.TextBox();
+            this.textBoxStationBOT = new System.Windows.Forms.TextBox();
+            this.labelTestStationBot = new System.Windows.Forms.Label();
+            this.textBoxTTBOT = new System.Windows.Forms.TextBox();
+            this.labelTestTimeBot = new System.Windows.Forms.Label();
+            this.buttonMoveFBOT = new System.Windows.Forms.Button();
+            this.buttonMoveBBOT = new System.Windows.Forms.Button();
+            this.buttonSave = new System.Windows.Forms.Button();
+            this.buttonAdd = new System.Windows.Forms.Button();
+            this.botDataDataSet = new ProductsDataMQS.BotDataDataSet();
+            this.bOTDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bOTDataTableAdapter = new ProductsDataMQS.BotDataDataSetTableAdapters.BOTDataTableAdapter();
+            this.iDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.testStationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.testTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMQS)).BeginInit();
             this.groupBoxProductData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mQSRequestDatabaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dailyMQSDataBindingSource)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.groupBoxBOT.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.botDataDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bOTDataBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewMQS
@@ -103,9 +132,9 @@
             this.totFailDataGridViewTextBoxColumn,
             this.totHandleDataGridViewTextBoxColumn});
             this.dataGridViewMQS.DataSource = this.dailyMQSDataBindingSource;
-            this.dataGridViewMQS.Location = new System.Drawing.Point(12, 199);
+            this.dataGridViewMQS.Location = new System.Drawing.Point(8, 164);
             this.dataGridViewMQS.Name = "dataGridViewMQS";
-            this.dataGridViewMQS.Size = new System.Drawing.Size(1341, 474);
+            this.dataGridViewMQS.Size = new System.Drawing.Size(1338, 474);
             this.dataGridViewMQS.TabIndex = 0;
             // 
             // groupBoxProductData
@@ -137,9 +166,9 @@
             this.groupBoxProductData.Controls.Add(this.textBoxProductName);
             this.groupBoxProductData.Controls.Add(this.labelProductName);
             this.groupBoxProductData.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxProductData.Location = new System.Drawing.Point(12, 13);
+            this.groupBoxProductData.Location = new System.Drawing.Point(6, 6);
             this.groupBoxProductData.Name = "groupBoxProductData";
-            this.groupBoxProductData.Size = new System.Drawing.Size(1341, 157);
+            this.groupBoxProductData.Size = new System.Drawing.Size(1340, 157);
             this.groupBoxProductData.TabIndex = 1;
             this.groupBoxProductData.TabStop = false;
             this.groupBoxProductData.Text = "Product Infos";
@@ -362,18 +391,19 @@
             // 
             // buttonUpdate
             // 
+            this.buttonUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.buttonUpdate.Location = new System.Drawing.Point(1256, 60);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(69, 49);
             this.buttonUpdate.TabIndex = 22;
             this.buttonUpdate.Text = "Update Table";
-            this.buttonUpdate.UseVisualStyleBackColor = true;
+            this.buttonUpdate.UseVisualStyleBackColor = false;
             this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
             // labelCsvFile
             // 
             this.labelCsvFile.AutoSize = true;
-            this.labelCsvFile.Location = new System.Drawing.Point(960, 70);
+            this.labelCsvFile.Location = new System.Drawing.Point(960, 113);
             this.labelCsvFile.Name = "labelCsvFile";
             this.labelCsvFile.Size = new System.Drawing.Size(90, 15);
             this.labelCsvFile.TabIndex = 23;
@@ -381,7 +411,7 @@
             // 
             // textBoxCsvFolder
             // 
-            this.textBoxCsvFolder.Location = new System.Drawing.Point(963, 87);
+            this.textBoxCsvFolder.Location = new System.Drawing.Point(963, 131);
             this.textBoxCsvFolder.Name = "textBoxCsvFolder";
             this.textBoxCsvFolder.Size = new System.Drawing.Size(276, 21);
             this.textBoxCsvFolder.TabIndex = 24;
@@ -493,15 +523,216 @@
             this.textBoxAllInfos.Size = new System.Drawing.Size(710, 21);
             this.textBoxAllInfos.TabIndex = 25;
             // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(0, 3);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1362, 670);
+            this.tabControl1.TabIndex = 4;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.dataGridViewMQS);
+            this.tabPage1.Controls.Add(this.groupBoxProductData);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1354, 644);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "MQS Product Infos";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.groupBoxBOT);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1354, 644);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "BOT Infos";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // groupBoxBOT
+            // 
+            this.groupBoxBOT.Controls.Add(this.buttonAdd);
+            this.groupBoxBOT.Controls.Add(this.buttonSave);
+            this.groupBoxBOT.Controls.Add(this.buttonMoveBBOT);
+            this.groupBoxBOT.Controls.Add(this.buttonMoveFBOT);
+            this.groupBoxBOT.Controls.Add(this.textBoxTTBOT);
+            this.groupBoxBOT.Controls.Add(this.labelTestTimeBot);
+            this.groupBoxBOT.Controls.Add(this.textBoxStationBOT);
+            this.groupBoxBOT.Controls.Add(this.labelTestStationBot);
+            this.groupBoxBOT.Controls.Add(this.textBoxProductBOT);
+            this.groupBoxBOT.Controls.Add(this.labelProductBOT);
+            this.groupBoxBOT.Controls.Add(this.dataGridView1);
+            this.groupBoxBOT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxBOT.Location = new System.Drawing.Point(9, 7);
+            this.groupBoxBOT.Name = "groupBoxBOT";
+            this.groupBoxBOT.Size = new System.Drawing.Size(1342, 634);
+            this.groupBoxBOT.TabIndex = 0;
+            this.groupBoxBOT.TabStop = false;
+            this.groupBoxBOT.Text = "BOT Infos";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDDataGridViewTextBoxColumn1,
+            this.productNameDataGridViewTextBoxColumn,
+            this.testStationDataGridViewTextBoxColumn,
+            this.testTimeDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.bOTDataBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 20);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(443, 608);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // labelProductBOT
+            // 
+            this.labelProductBOT.AutoSize = true;
+            this.labelProductBOT.Location = new System.Drawing.Point(468, 54);
+            this.labelProductBOT.Name = "labelProductBOT";
+            this.labelProductBOT.Size = new System.Drawing.Size(89, 15);
+            this.labelProductBOT.TabIndex = 1;
+            this.labelProductBOT.Text = "Product Name:";
+            // 
+            // textBoxProductBOT
+            // 
+            this.textBoxProductBOT.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bOTDataBindingSource, "ProductName", true));
+            this.textBoxProductBOT.Location = new System.Drawing.Point(471, 71);
+            this.textBoxProductBOT.Name = "textBoxProductBOT";
+            this.textBoxProductBOT.Size = new System.Drawing.Size(203, 21);
+            this.textBoxProductBOT.TabIndex = 2;
+            // 
+            // textBoxStationBOT
+            // 
+            this.textBoxStationBOT.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bOTDataBindingSource, "TestStation", true));
+            this.textBoxStationBOT.Location = new System.Drawing.Point(471, 125);
+            this.textBoxStationBOT.Name = "textBoxStationBOT";
+            this.textBoxStationBOT.Size = new System.Drawing.Size(203, 21);
+            this.textBoxStationBOT.TabIndex = 4;
+            // 
+            // labelTestStationBot
+            // 
+            this.labelTestStationBot.AutoSize = true;
+            this.labelTestStationBot.Location = new System.Drawing.Point(468, 108);
+            this.labelTestStationBot.Name = "labelTestStationBot";
+            this.labelTestStationBot.Size = new System.Drawing.Size(74, 15);
+            this.labelTestStationBot.TabIndex = 3;
+            this.labelTestStationBot.Text = "Test Station:";
+            // 
+            // textBoxTTBOT
+            // 
+            this.textBoxTTBOT.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bOTDataBindingSource, "TestTime", true));
+            this.textBoxTTBOT.Location = new System.Drawing.Point(471, 179);
+            this.textBoxTTBOT.Name = "textBoxTTBOT";
+            this.textBoxTTBOT.Size = new System.Drawing.Size(98, 21);
+            this.textBoxTTBOT.TabIndex = 6;
+            // 
+            // labelTestTimeBot
+            // 
+            this.labelTestTimeBot.AutoSize = true;
+            this.labelTestTimeBot.Location = new System.Drawing.Point(468, 162);
+            this.labelTestTimeBot.Name = "labelTestTimeBot";
+            this.labelTestTimeBot.Size = new System.Drawing.Size(64, 15);
+            this.labelTestTimeBot.TabIndex = 5;
+            this.labelTestTimeBot.Text = "Test Time:";
+            // 
+            // buttonMoveFBOT
+            // 
+            this.buttonMoveFBOT.Location = new System.Drawing.Point(599, 19);
+            this.buttonMoveFBOT.Name = "buttonMoveFBOT";
+            this.buttonMoveFBOT.Size = new System.Drawing.Size(75, 23);
+            this.buttonMoveFBOT.TabIndex = 7;
+            this.buttonMoveFBOT.Text = ">>";
+            this.buttonMoveFBOT.UseVisualStyleBackColor = true;
+            this.buttonMoveFBOT.Click += new System.EventHandler(this.buttonMoveFBOT_Click);
+            // 
+            // buttonMoveBBOT
+            // 
+            this.buttonMoveBBOT.Location = new System.Drawing.Point(471, 19);
+            this.buttonMoveBBOT.Name = "buttonMoveBBOT";
+            this.buttonMoveBBOT.Size = new System.Drawing.Size(75, 23);
+            this.buttonMoveBBOT.TabIndex = 8;
+            this.buttonMoveBBOT.Text = "<<";
+            this.buttonMoveBBOT.UseVisualStyleBackColor = true;
+            this.buttonMoveBBOT.Click += new System.EventHandler(this.buttonMoveBBOT_Click);
+            // 
+            // buttonSave
+            // 
+            this.buttonSave.Location = new System.Drawing.Point(565, 220);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(75, 23);
+            this.buttonSave.TabIndex = 9;
+            this.buttonSave.Text = "Save";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            // 
+            // buttonAdd
+            // 
+            this.buttonAdd.Location = new System.Drawing.Point(472, 220);
+            this.buttonAdd.Name = "buttonAdd";
+            this.buttonAdd.Size = new System.Drawing.Size(75, 23);
+            this.buttonAdd.TabIndex = 10;
+            this.buttonAdd.Text = "Add New";
+            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
+            // 
+            // botDataDataSet
+            // 
+            this.botDataDataSet.DataSetName = "BotDataDataSet";
+            this.botDataDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bOTDataBindingSource
+            // 
+            this.bOTDataBindingSource.DataMember = "BOTData";
+            this.bOTDataBindingSource.DataSource = this.botDataDataSet;
+            // 
+            // bOTDataTableAdapter
+            // 
+            this.bOTDataTableAdapter.ClearBeforeFill = true;
+            // 
+            // iDDataGridViewTextBoxColumn1
+            // 
+            this.iDDataGridViewTextBoxColumn1.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn1.Name = "iDDataGridViewTextBoxColumn1";
+            this.iDDataGridViewTextBoxColumn1.Visible = false;
+            this.iDDataGridViewTextBoxColumn1.Width = 5;
+            // 
+            // productNameDataGridViewTextBoxColumn
+            // 
+            this.productNameDataGridViewTextBoxColumn.DataPropertyName = "ProductName";
+            this.productNameDataGridViewTextBoxColumn.HeaderText = "ProductName";
+            this.productNameDataGridViewTextBoxColumn.Name = "productNameDataGridViewTextBoxColumn";
+            this.productNameDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // testStationDataGridViewTextBoxColumn
+            // 
+            this.testStationDataGridViewTextBoxColumn.DataPropertyName = "TestStation";
+            this.testStationDataGridViewTextBoxColumn.HeaderText = "TestStation";
+            this.testStationDataGridViewTextBoxColumn.Name = "testStationDataGridViewTextBoxColumn";
+            this.testStationDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // testTimeDataGridViewTextBoxColumn
+            // 
+            this.testTimeDataGridViewTextBoxColumn.DataPropertyName = "TestTime";
+            this.testTimeDataGridViewTextBoxColumn.HeaderText = "TestTime";
+            this.testTimeDataGridViewTextBoxColumn.Name = "testTimeDataGridViewTextBoxColumn";
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1362, 703);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.labelDev);
-            this.Controls.Add(this.groupBoxProductData);
-            this.Controls.Add(this.dataGridViewMQS);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -512,6 +743,14 @@
             this.groupBoxProductData.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mQSRequestDatabaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dailyMQSDataBindingSource)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.groupBoxBOT.ResumeLayout(false);
+            this.groupBoxBOT.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.botDataDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bOTDataBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -566,6 +805,28 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn totFailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn totHandleDataGridViewTextBoxColumn;
         private System.Windows.Forms.TextBox textBoxAllInfos;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.GroupBox groupBoxBOT;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button buttonMoveBBOT;
+        private System.Windows.Forms.Button buttonMoveFBOT;
+        private System.Windows.Forms.TextBox textBoxTTBOT;
+        private System.Windows.Forms.Label labelTestTimeBot;
+        private System.Windows.Forms.TextBox textBoxStationBOT;
+        private System.Windows.Forms.Label labelTestStationBot;
+        private System.Windows.Forms.TextBox textBoxProductBOT;
+        private System.Windows.Forms.Label labelProductBOT;
+        private System.Windows.Forms.Button buttonAdd;
+        private System.Windows.Forms.Button buttonSave;
+        private BotDataDataSet botDataDataSet;
+        private System.Windows.Forms.BindingSource bOTDataBindingSource;
+        private BotDataDataSetTableAdapters.BOTDataTableAdapter bOTDataTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn testStationDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn testTimeDataGridViewTextBoxColumn;
     }
 }
 

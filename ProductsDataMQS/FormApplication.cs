@@ -15,6 +15,10 @@ namespace ProductsDataMQS
         }
         private void FormMain_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'botDataDataSet.BOTData' table. You can move, or remove it, as needed.
+            this.bOTDataTableAdapter.Fill(this.botDataDataSet.BOTData);
+            // TODO: This line of code loads data into the 'botDataDataSet.BOTData' table. You can move, or remove it, as needed.
+            this.bOTDataTableAdapter.Fill(this.botDataDataSet.BOTData);
             dailyMQSDataTableAdapter.Fill(mQSRequestDatabaseDataSet.DailyMQSData);
             fillAllInofs();
         }
@@ -84,6 +88,57 @@ namespace ProductsDataMQS
         private void textBoxProcess_TextChanged(object sender, EventArgs e)
         {
             textBoxProcess.BackColor = Color.LightBlue;
+        }
+
+        private void buttonMoveBBOT_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                bOTDataBindingSource.MovePrevious();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(errorDBMessage + ex);
+            }
+        }
+
+        private void buttonMoveFBOT_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                bOTDataBindingSource.MoveNext();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(errorDBMessage + ex);
+            }
+        }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                bOTDataBindingSource.AddNew();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(errorDBMessage + ex);
+            }
+        }
+
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                bOTDataBindingSource.EndEdit();
+                bOTDataTableAdapter.Update(botDataDataSet);
+                MessageBox.Show("Data saved successfully!!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(errorDBMessage + ex);
+            }
         }
     }
 }
