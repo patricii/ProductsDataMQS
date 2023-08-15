@@ -82,6 +82,8 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dailyMQSDataTableAdapter = new ProductsDataMQS.MQSRequestDatabaseDataSetTableAdapters.DailyMQSDataTableAdapter();
+            this.labelNPI = new System.Windows.Forms.Label();
+            this.textBoxNPI = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMQS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dailyMQSDataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mQSRequestDatabaseDataSet)).BeginInit();
@@ -212,6 +214,8 @@
             // 
             // groupBoxProductData
             // 
+            this.groupBoxProductData.Controls.Add(this.textBoxNPI);
+            this.groupBoxProductData.Controls.Add(this.labelNPI);
             this.groupBoxProductData.Controls.Add(this.textBoxMchTime);
             this.groupBoxProductData.Controls.Add(this.labelMchTime);
             this.groupBoxProductData.Controls.Add(this.textBoxAllInfos);
@@ -551,6 +555,22 @@
             // 
             this.dailyMQSDataTableAdapter.ClearBeforeFill = true;
             // 
+            // labelNPI
+            // 
+            this.labelNPI.AutoSize = true;
+            this.labelNPI.Location = new System.Drawing.Point(960, 90);
+            this.labelNPI.Name = "labelNPI";
+            this.labelNPI.Size = new System.Drawing.Size(61, 15);
+            this.labelNPI.TabIndex = 28;
+            this.labelNPI.Text = "NPI Time:";
+            // 
+            // textBoxNPI
+            // 
+            this.textBoxNPI.Location = new System.Drawing.Point(1034, 87);
+            this.textBoxNPI.Name = "textBoxNPI";
+            this.textBoxNPI.Size = new System.Drawing.Size(72, 21);
+            this.textBoxNPI.TabIndex = 29;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -630,6 +650,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn totHandleDataGridViewTextBoxColumn;
         private System.Windows.Forms.TextBox textBoxMchTime;
         private System.Windows.Forms.Label labelMchTime;
+        private System.Windows.Forms.TextBox textBoxNPI;
+        private System.Windows.Forms.Label labelNPI;
     }
 }
 

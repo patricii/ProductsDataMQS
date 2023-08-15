@@ -96,7 +96,10 @@ namespace ProductsDataMQS
             if (textBoxTTime.Text != "")
             {
                 if (Convert.ToDouble(textBoxTTime.Text) != 0)
-                    textBoxMchTime.Text = (Convert.ToDouble(textBoxTTime.Text) * 0.97).ToString();
+                {
+                    textBoxMchTime.Text = (Convert.ToDouble(textBoxTTime.Text) + 12).ToString();
+                    textBoxNPI.Text = (Convert.ToDouble(textBoxTTime.Text) + 12).ToString();
+                }
 
             }
         }
