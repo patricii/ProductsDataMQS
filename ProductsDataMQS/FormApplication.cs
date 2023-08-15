@@ -15,10 +15,7 @@ namespace ProductsDataMQS
         }
         private void FormMain_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'botDataDataSet.BOTData' table. You can move, or remove it, as needed.
-            this.bOTDataTableAdapter.Fill(this.botDataDataSet.BOTData);
-            // TODO: This line of code loads data into the 'botDataDataSet.BOTData' table. You can move, or remove it, as needed.
-            this.bOTDataTableAdapter.Fill(this.botDataDataSet.BOTData);
+            bOTDataTableAdapter.Fill(botDataDataSet.BOTData);
             dailyMQSDataTableAdapter.Fill(mQSRequestDatabaseDataSet.DailyMQSData);
             fillAllInofs();
         }
