@@ -48,6 +48,8 @@
             this.dailyMQSDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mQSRequestDatabaseDataSet = new ProductsDataMQS.MQSRequestDatabaseDataSet();
             this.groupBoxProductData = new System.Windows.Forms.GroupBox();
+            this.textBoxNPI = new System.Windows.Forms.TextBox();
+            this.labelNPI = new System.Windows.Forms.Label();
             this.textBoxMchTime = new System.Windows.Forms.TextBox();
             this.labelMchTime = new System.Windows.Forms.Label();
             this.textBoxAllInfos = new System.Windows.Forms.TextBox();
@@ -82,8 +84,6 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dailyMQSDataTableAdapter = new ProductsDataMQS.MQSRequestDatabaseDataSetTableAdapters.DailyMQSDataTableAdapter();
-            this.labelNPI = new System.Windows.Forms.Label();
-            this.textBoxNPI = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMQS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dailyMQSDataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mQSRequestDatabaseDataSet)).BeginInit();
@@ -251,6 +251,22 @@
             this.groupBoxProductData.TabIndex = 1;
             this.groupBoxProductData.TabStop = false;
             this.groupBoxProductData.Text = "Product Infos";
+            // 
+            // textBoxNPI
+            // 
+            this.textBoxNPI.Location = new System.Drawing.Point(1034, 87);
+            this.textBoxNPI.Name = "textBoxNPI";
+            this.textBoxNPI.Size = new System.Drawing.Size(72, 21);
+            this.textBoxNPI.TabIndex = 29;
+            // 
+            // labelNPI
+            // 
+            this.labelNPI.AutoSize = true;
+            this.labelNPI.Location = new System.Drawing.Point(960, 90);
+            this.labelNPI.Name = "labelNPI";
+            this.labelNPI.Size = new System.Drawing.Size(61, 15);
+            this.labelNPI.TabIndex = 28;
+            this.labelNPI.Text = "NPI Time:";
             // 
             // textBoxMchTime
             // 
@@ -555,22 +571,6 @@
             // 
             this.dailyMQSDataTableAdapter.ClearBeforeFill = true;
             // 
-            // labelNPI
-            // 
-            this.labelNPI.AutoSize = true;
-            this.labelNPI.Location = new System.Drawing.Point(960, 90);
-            this.labelNPI.Name = "labelNPI";
-            this.labelNPI.Size = new System.Drawing.Size(61, 15);
-            this.labelNPI.TabIndex = 28;
-            this.labelNPI.Text = "NPI Time:";
-            // 
-            // textBoxNPI
-            // 
-            this.textBoxNPI.Location = new System.Drawing.Point(1034, 87);
-            this.textBoxNPI.Name = "textBoxNPI";
-            this.textBoxNPI.Size = new System.Drawing.Size(72, 21);
-            this.textBoxNPI.TabIndex = 29;
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -582,7 +582,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Products Data MQS";
+            this.Text = "Products Data MQS v1.0";
             this.Load += new System.EventHandler(this.FormMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMQS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dailyMQSDataBindingSource)).EndInit();
