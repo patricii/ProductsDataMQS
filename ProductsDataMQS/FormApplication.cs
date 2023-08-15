@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -63,6 +64,8 @@ namespace ProductsDataMQS
         }
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
+            callMQSRequestData();
+
             try
             {
                 dailyMQSDataBindingSource.DataSource = cCTD.ConvertCSVtoDataTable(textBoxCsvFolder.Text);
@@ -86,19 +89,27 @@ namespace ProductsDataMQS
         {
             textBoxProcess.BackColor = Color.LightBlue;
         }
-
+        private void callMQSRequestData()
+        {
+            labelUpdate.Text = "Updating....";
+            Application.DoEvents();
+            var process = Process.Start(@"C:\ProductDataMQS\MQSRequestData\MQSRequestData.exe");
+            process.WaitForExit();
+            labelUpdate.Text = "Updated!!!";
+            Application.DoEvents();
+        }
         private void textBoxTTime_TextChanged(object sender, EventArgs e)
         {
             calMchTime();
         }
-        private void calMchTime()
+        private void calMchTime() //to do!!!
         {
             if (textBoxTTime.Text != "")
             {
                 if (Convert.ToDouble(textBoxTTime.Text) != 0)
                 {
                     textBoxMchTime.Text = (Convert.ToDouble(textBoxTTime.Text) + 12).ToString();
-                    textBoxNPI.Text = (Convert.ToDouble(textBoxTTime.Text) + 12).ToString();
+                    textBoxNPI.Text = (Convert.ToDouble(textBoxTTime.Text) + 15).ToString();
                 }
 
             }

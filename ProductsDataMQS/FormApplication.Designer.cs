@@ -84,6 +84,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dailyMQSDataTableAdapter = new ProductsDataMQS.MQSRequestDatabaseDataSetTableAdapters.DailyMQSDataTableAdapter();
+            this.labelUpdate = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMQS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dailyMQSDataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mQSRequestDatabaseDataSet)).BeginInit();
@@ -214,6 +215,7 @@
             // 
             // groupBoxProductData
             // 
+            this.groupBoxProductData.Controls.Add(this.labelUpdate);
             this.groupBoxProductData.Controls.Add(this.textBoxNPI);
             this.groupBoxProductData.Controls.Add(this.labelNPI);
             this.groupBoxProductData.Controls.Add(this.textBoxMchTime);
@@ -311,9 +313,9 @@
             // buttonUpdate
             // 
             this.buttonUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.buttonUpdate.Location = new System.Drawing.Point(1256, 60);
+            this.buttonUpdate.Location = new System.Drawing.Point(1198, 25);
             this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(69, 49);
+            this.buttonUpdate.Size = new System.Drawing.Size(129, 49);
             this.buttonUpdate.TabIndex = 22;
             this.buttonUpdate.Text = "Update Table";
             this.buttonUpdate.UseVisualStyleBackColor = false;
@@ -571,6 +573,16 @@
             // 
             this.dailyMQSDataTableAdapter.ClearBeforeFill = true;
             // 
+            // labelUpdate
+            // 
+            this.labelUpdate.AutoSize = true;
+            this.labelUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUpdate.ForeColor = System.Drawing.Color.Teal;
+            this.labelUpdate.Location = new System.Drawing.Point(1195, 78);
+            this.labelUpdate.Name = "labelUpdate";
+            this.labelUpdate.Size = new System.Drawing.Size(0, 24);
+            this.labelUpdate.TabIndex = 30;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -652,6 +664,7 @@
         private System.Windows.Forms.Label labelMchTime;
         private System.Windows.Forms.TextBox textBoxNPI;
         private System.Windows.Forms.Label labelNPI;
+        private System.Windows.Forms.Label labelUpdate;
     }
 }
 
