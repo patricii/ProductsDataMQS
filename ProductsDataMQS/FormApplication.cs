@@ -15,7 +15,7 @@ namespace ProductsDataMQS
         }
         private void FormMain_Load(object sender, EventArgs e)
         {
-            this.dailyMQSDataTableAdapter.Fill(this.mQSRequestDatabaseDataSet.DailyMQSData);
+            dailyMQSDataTableAdapter.Fill(mQSRequestDatabaseDataSet.DailyMQSData);
             fillAllInofs();
         }
         private void buttonExit_Click(object sender, EventArgs e)
@@ -36,6 +36,7 @@ namespace ProductsDataMQS
         }
         private void buttonPrev_Click(object sender, EventArgs e)
         {
+
             fillAllInofs();
             try
             {
@@ -46,24 +47,22 @@ namespace ProductsDataMQS
                 MessageBox.Show(errorDBMessage + ex);
             }
         }
-        private void yieldEvaluateLogic(string station)
+        private void yieldEvaluateLogic()
         {
-            if ((station == "IFLASH" || station == "CFC") && Convert.ToDouble(textBoxPYield.Text) < 98 && Convert.ToDouble(textBoxPYield.Text) >= 96)
-                textBoxPYield.BackColor = Color.Yellow;
-            else if ((station == "IFLASH" || station == "CFC") && Convert.ToDouble(textBoxPYield.Text) > 98)
-                textBoxPYield.BackColor = Color.Green;
-            else if ((station == "IFLASH" || station == "CFC") && Convert.ToDouble(textBoxPYield.Text) < 96)
+            if (Convert.ToDouble(textBoxPYield.Text) < 96.0)
                 textBoxPYield.BackColor = Color.Red;
-
+            else if (Convert.ToDouble(textBoxPYield.Text) >= 96.0 && Convert.ToDouble(textBoxPYield.Text) <= 98.5)
+                textBoxPYield.BackColor = Color.Yellow;
+            else if (Convert.ToDouble(textBoxPYield.Text) > 98.5)
+                textBoxPYield.BackColor = Color.LightGreen;
+            Application.DoEvents();
         }
         private void fillAllInofs()
         {
-            yieldEvaluateLogic(textBoxProcess.Text);
-            textBoxAllInfos.Text = "PRODUCT: " + textBoxFamily.Text + " | PROCESS: " + textBoxProcess.Text + " | PYIELD: " + textBoxPYield.Text + " | TestTime:" + textBoxTTime.Text + " s";
+            textBoxAllInfos.Text = "[PRODUCT: " + textBoxFamily.Text + "] [PROCESS: " + textBoxProcess.Text + "] [PYIELD: " + textBoxPYield.Text + "] [TestTime:" + textBoxTTime.Text + " s]";
         }
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
-
             try
             {
                 dailyMQSDataBindingSource.DataSource = cCTD.ConvertCSVtoDataTable(textBoxCsvFolder.Text);
@@ -73,7 +72,14 @@ namespace ProductsDataMQS
             {
                 MessageBox.Show(errorDBMessage + ex);
             }
-
+        }
+        private void textBoxPYield_TextChanged(object sender, EventArgs e)
+        {
+            yieldEvaluateLogic();
+        }
+        private void textBoxFamily_TextChanged(object sender, EventArgs e)
+        {
+            textBoxFamily.BackColor = Color.LightBlue;
         }
     }
 }

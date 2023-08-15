@@ -179,6 +179,7 @@
             this.textBoxFamily.Name = "textBoxFamily";
             this.textBoxFamily.Size = new System.Drawing.Size(178, 21);
             this.textBoxFamily.TabIndex = 3;
+            this.textBoxFamily.TextChanged += new System.EventHandler(this.textBoxFamily_TextChanged);
             // 
             // labelFamily
             // 
@@ -257,6 +258,7 @@
             this.textBoxPYield.Name = "textBoxPYield";
             this.textBoxPYield.Size = new System.Drawing.Size(178, 21);
             this.textBoxPYield.TabIndex = 11;
+            this.textBoxPYield.TextChanged += new System.EventHandler(this.textBoxPYield_TextChanged);
             // 
             // labelPYield
             // 
