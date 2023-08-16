@@ -33,7 +33,7 @@ namespace ProductsDataMQS
             }
             catch (Exception ex)
             {
-                MessageBox.Show(errorDBMessage + ex);
+                MessageBox.Show(errorDBMessage + ex.Message);
             }
         }
         private void buttonPrev_Click(object sender, EventArgs e)
@@ -45,7 +45,7 @@ namespace ProductsDataMQS
             }
             catch (Exception ex)
             {
-                MessageBox.Show(errorDBMessage + ex);
+                MessageBox.Show(errorDBMessage + ex.Message);
             }
         }
         private void yieldEvaluateLogic()
@@ -73,7 +73,7 @@ namespace ProductsDataMQS
             }
             catch (Exception ex)
             {
-                MessageBox.Show(errorDBMessage + ex);
+                MessageBox.Show(errorDBMessage + ex.Message);
             }
         }
         private void textBoxPYield_TextChanged(object sender, EventArgs e)
@@ -104,6 +104,9 @@ namespace ProductsDataMQS
         }
         private void calMchTime() //to do!!!
         {
+            textBoxTTime.BackColor = Color.LightSkyBlue;
+            textBoxMchTime.BackColor = Color.LightYellow;
+            textBoxNPI.BackColor = Color.Orange;
             if (textBoxTTime.Text != "")
             {
                 if (Convert.ToDouble(textBoxTTime.Text) != 0)
