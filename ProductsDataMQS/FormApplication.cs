@@ -17,8 +17,7 @@ namespace ProductsDataMQS
         }
         private void FormMain_Load(object sender, EventArgs e)
         {
-            dailyMQSDataTableAdapter.Fill(mQSRequestDatabaseDataSet.DailyMQSData);
-            fillAllInofs();
+            dailyMQSDataTableAdapter.Fill(mQSRequestDatabaseDataSet.DailyMQSData);           
         }
         private void buttonExit_Click(object sender, EventArgs e)
         {
@@ -26,7 +25,6 @@ namespace ProductsDataMQS
         }
         private void buttonNext_Click(object sender, EventArgs e)
         {
-            fillAllInofs();
             try
             {
                 dailyMQSDataBindingSource.MoveNext();
@@ -38,7 +36,6 @@ namespace ProductsDataMQS
         }
         private void buttonPrev_Click(object sender, EventArgs e)
         {
-            fillAllInofs();
             try
             {
                 dailyMQSDataBindingSource.MovePrevious();
@@ -79,6 +76,7 @@ namespace ProductsDataMQS
         private void textBoxPYield_TextChanged(object sender, EventArgs e)
         {
             yieldEvaluateLogic();
+            fillAllInofs();
         }
         private void textBoxFamily_TextChanged(object sender, EventArgs e)
         {

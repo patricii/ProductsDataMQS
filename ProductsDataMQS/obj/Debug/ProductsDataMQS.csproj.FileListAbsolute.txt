@@ -10,4 +10,3 @@ C:\DEVELOPMENT PROJECTS\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQ
 C:\ProductDataMQS\ProductsDataMQS.exe.config
 C:\ProductDataMQS\ProductsDataMQS.exe
 C:\ProductDataMQS\ProductsDataMQS.pdb
-C:\DEVELOPMENT PROJECTS\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQS.csprojAssemblyReference.cache
