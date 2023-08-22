@@ -8,6 +8,7 @@ namespace ProductsDataMQS
     class SQLProcedure
     {
         string dbConnection = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\ProductDataMQS\db\MQSRequestDatabase.mdb";
+        string dbTableName = "DailyMQSData";
         public void dataTableToMdb(DataTable dataTable)
         {
             deleteTableProcedure();
@@ -15,8 +16,7 @@ namespace ProductsDataMQS
             myConn.Open();
             try
             {
-                string name = "DailyMQSData";
-                string strCom = string.Format("SELECT * FROM {0}", name);
+                string strCom = string.Format("SELECT * FROM {0}", dbTableName);
                 OleDbDataAdapter da = new OleDbDataAdapter(strCom, myConn);
                 OleDbCommandBuilder cb = new OleDbCommandBuilder(da)
                 {
@@ -24,14 +24,14 @@ namespace ProductsDataMQS
                     QuoteSuffix = "]"
                 };
                 DataSet midData = new DataSet();
-                da.Fill(midData, name);
+                da.Fill(midData, dbTableName);
                 foreach (DataRow dR in dataTable.Rows)
                 {
-                    DataRow dr = midData.Tables[name].NewRow();
+                    DataRow dr = midData.Tables[dbTableName].NewRow();
                     dr.ItemArray = dR.ItemArray;
-                    midData.Tables[name].Rows.Add(dr);
+                    midData.Tables[dbTableName].Rows.Add(dr);
                 }
-                da.Update(midData, name);
+                da.Update(midData, dbTableName);
                 myConn.Close();
             }
             catch (Exception ex)
@@ -49,7 +49,7 @@ namespace ProductsDataMQS
             try
             {
                 myConn.Open();
-                string cmdText = @"DELETE FROM DailyMQSData";
+                string cmdText = string.Format(@"DELETE FROM {0}", dbTableName);
                 OleDbCommand cmd = new OleDbCommand(cmdText, myConn);
                 cmd.Prepare();
                 cmd.ExecuteNonQuery();
