@@ -86,8 +86,8 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.buttonCompareAvg = new System.Windows.Forms.Button();
             this.textBoxCompare = new System.Windows.Forms.TextBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dailyMQSDataTableAdapter = new ProductsDataMQS.MQSRequestDatabaseDataSetTableAdapters.DailyMQSDataTableAdapter();
+            this.labelStatusCompare = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMQS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dailyMQSDataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mQSRequestDatabaseDataSet)).BeginInit();
@@ -566,7 +566,6 @@
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Location = new System.Drawing.Point(0, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -575,6 +574,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.labelStatusCompare);
             this.tabPage1.Controls.Add(this.buttonCompareAvg);
             this.tabPage1.Controls.Add(this.textBoxCompare);
             this.tabPage1.Controls.Add(this.dataGridViewMQS);
@@ -607,18 +607,17 @@
             this.textBoxCompare.Size = new System.Drawing.Size(514, 445);
             this.textBoxCompare.TabIndex = 2;
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1354, 644);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
             // dailyMQSDataTableAdapter
             // 
             this.dailyMQSDataTableAdapter.ClearBeforeFill = true;
+            // 
+            // labelStatusCompare
+            // 
+            this.labelStatusCompare.AutoSize = true;
+            this.labelStatusCompare.Location = new System.Drawing.Point(972, 170);
+            this.labelStatusCompare.Name = "labelStatusCompare";
+            this.labelStatusCompare.Size = new System.Drawing.Size(0, 13);
+            this.labelStatusCompare.TabIndex = 33;
             // 
             // FormMain
             // 
@@ -680,7 +679,6 @@
         private System.Windows.Forms.TextBox textBoxAllInfos;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
         private MQSRequestDatabaseDataSet mQSRequestDatabaseDataSet;
         private System.Windows.Forms.BindingSource dailyMQSDataBindingSource;
         private MQSRequestDatabaseDataSetTableAdapters.DailyMQSDataTableAdapter dailyMQSDataTableAdapter;
@@ -706,6 +704,7 @@
         private System.Windows.Forms.Button buttonInsertDB;
         private System.Windows.Forms.Button buttonCompareAvg;
         public System.Windows.Forms.TextBox textBoxCompare;
+        private System.Windows.Forms.Label labelStatusCompare;
     }
 }
 
