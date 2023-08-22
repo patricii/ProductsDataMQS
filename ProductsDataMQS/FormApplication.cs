@@ -13,6 +13,9 @@ namespace ProductsDataMQS
         public static string successDBMessage = "Data saved successfully!!";
         ConvertCsvToDt cCTD = new ConvertCsvToDt();
         SQLProcedure sqlProcedure = new SQLProcedure();
+        string dbTableName = "DailyMQSData";
+        string dbTableNameTemp = "DailyMQSDataTemp";
+
         public FormMain()
         {
             InitializeComponent();
@@ -20,7 +23,7 @@ namespace ProductsDataMQS
         }
         private void FormMain_Load(object sender, EventArgs e)
         {
-            dailyMQSDataTableAdapter.Fill(mQSRequestDatabaseDataSet.DailyMQSData);           
+            dailyMQSDataTableAdapter.Fill(mQSRequestDatabaseDataSet.DailyMQSData);
         }
         private void buttonExit_Click(object sender, EventArgs e)
         {
@@ -128,7 +131,6 @@ namespace ProductsDataMQS
             DialogResult dialogResult = MessageBox.Show("Deseja realmente carregar o arquivo .csv? o DataBase será atualizado.", "!!!Atenção!!!", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                bool result = sqlProcedure.compareAvgTestTime();
 
                 DataTable dt = new DataTable();
                 try
@@ -156,7 +158,8 @@ namespace ProductsDataMQS
             try
             {
                 DataTable dt = GetDataTableFromDGV(dataGridViewMQS);
-                sqlProcedure.dataTableToMdb(dt);
+                sqlProcedure.dataTableToMdb(dt, dbTableName);
+               // sqlProcedure.dataTableToMdb(dt, dbTableNameTemp);
             }
             catch (Exception ex)
             {
@@ -182,6 +185,14 @@ namespace ProductsDataMQS
             }
 
             return dt;
+        }
+
+        private void buttonCompareAvg_Click(object sender, EventArgs e)
+        {
+            bool result = sqlProcedure.compareAvgTestTime();
+            if (!result)
+                MessageBox.Show("Valores de AVG diferentes dos anteriores!");
+
         }
     }
 }

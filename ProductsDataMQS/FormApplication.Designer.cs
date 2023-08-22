@@ -86,6 +86,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dailyMQSDataTableAdapter = new ProductsDataMQS.MQSRequestDatabaseDataSetTableAdapters.DailyMQSDataTableAdapter();
             this.buttonInsertDB = new System.Windows.Forms.Button();
+            this.buttonCompareAvg = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMQS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dailyMQSDataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mQSRequestDatabaseDataSet)).BeginInit();
@@ -216,6 +217,7 @@
             // 
             // groupBoxProductData
             // 
+            this.groupBoxProductData.Controls.Add(this.buttonCompareAvg);
             this.groupBoxProductData.Controls.Add(this.buttonInsertDB);
             this.groupBoxProductData.Controls.Add(this.labelUpdate);
             this.groupBoxProductData.Controls.Add(this.textBoxNPI);
@@ -596,6 +598,16 @@
             this.buttonInsertDB.UseVisualStyleBackColor = false;
             this.buttonInsertDB.Click += new System.EventHandler(this.buttonInsertDB_Click);
             // 
+            // buttonCompareAvg
+            // 
+            this.buttonCompareAvg.Location = new System.Drawing.Point(6, 123);
+            this.buttonCompareAvg.Name = "buttonCompareAvg";
+            this.buttonCompareAvg.Size = new System.Drawing.Size(133, 23);
+            this.buttonCompareAvg.TabIndex = 32;
+            this.buttonCompareAvg.Text = "Compare Test Time";
+            this.buttonCompareAvg.UseVisualStyleBackColor = true;
+            this.buttonCompareAvg.Click += new System.EventHandler(this.buttonCompareAvg_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -679,6 +691,7 @@
         private System.Windows.Forms.Label labelNPI;
         private System.Windows.Forms.Label labelUpdate;
         private System.Windows.Forms.Button buttonInsertDB;
+        private System.Windows.Forms.Button buttonCompareAvg;
     }
 }
 
