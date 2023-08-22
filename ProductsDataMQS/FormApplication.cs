@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace ProductsDataMQS
@@ -10,6 +12,7 @@ namespace ProductsDataMQS
         public static string errorDBMessage = "Não foi possivel conectar com o Banco de Dados! : ";
         public static string successDBMessage = "Data saved successfully!!";
         ConvertCsvToDt cCTD = new ConvertCsvToDt();
+        SQLProcedure sqlProcedure = new SQLProcedure();
         public FormMain()
         {
             InitializeComponent();
@@ -114,6 +117,69 @@ namespace ProductsDataMQS
                 }
 
             }
+        }
+
+        private void buttonInsertDB_Click(object sender, EventArgs e)
+        {
+            updateDB();
+        }
+        private void updateDB()
+        {
+            DialogResult dialogResult = MessageBox.Show("Deseja realmente carregar o arquivo .csv? o DataBase será atualizado.", "!!!Atenção!!!", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                DataTable dt = new DataTable();
+                try
+                {
+                    foreach (string file_name in Directory.GetFiles(@"C:\ProductDataMQS\rawdata\", "*.csv*", SearchOption.AllDirectories))
+                    {
+                        dt = cCTD.ConvertCSVtoDataTable(file_name);
+                        dailyMQSDataBindingSource.DataSource = dt;
+                        dataGridViewToDt();
+                    }
+                    MessageBox.Show("Banco de dados atualizado com sucesso!!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(errorDBMessage + ex.Message);
+                }
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do nothing
+            }
+        }
+        private void dataGridViewToDt()
+        {
+            try
+            {
+                DataTable dt = GetDataTableFromDGV(dataGridViewMQS);
+                sqlProcedure.dataTableToMdb(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message);
+            }
+        }
+        private DataTable GetDataTableFromDGV(DataGridView dgv)
+        {
+            var dt = new DataTable();
+            foreach (DataGridViewColumn column in dgv.Columns)
+            {
+                dt.Columns.Add();
+            }
+
+            object[] cellValues = new object[dgv.Columns.Count];
+            foreach (DataGridViewRow row in dgv.Rows)
+            {
+                for (int i = 0; i < row.Cells.Count; i++)
+                {
+                    cellValues[i] = row.Cells[i].Value;
+                }
+                dt.Rows.Add(cellValues);
+            }
+
+            return dt;
         }
     }
 }

@@ -1,30 +1,46 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 using System.IO;
+using System.Windows.Forms;
 
 namespace ProductsDataMQS
 {
     class ConvertCsvToDt
     {
+
         public DataTable ConvertCSVtoDataTable(string strFilePath)
         {
             DataTable dt = new DataTable();
-            using (StreamReader sr = new StreamReader(strFilePath))
+            try
             {
-                string[] headers = sr.ReadLine().Split(',');
-                foreach (string header in headers)
+                using (StreamReader sr = new StreamReader(strFilePath))
                 {
-                    dt.Columns.Add(header);
-                }
-                while (!sr.EndOfStream)
-                {
-                    string[] rows = sr.ReadLine().Split(',');
-                    DataRow dr = dt.NewRow();
-                    for (int i = 0; i < headers.Length; i++)
+                    string[] headers = sr.ReadLine().Split(',');
+                    foreach (string header in headers)
                     {
-                        dr[i] = rows[i];
+                        dt.Columns.Add(header);
                     }
-                    dt.Rows.Add(dr);
+                    while (!sr.EndOfStream)
+                    {
+                        string[] rows = sr.ReadLine().Split(',');
+                        DataRow dr = dt.NewRow();
+                        for (int i = 0; i < headers.Length; i++)
+                        {
+                            if (rows.Length == 13) {
+                                if (rows[i] == "")
+                                    rows[i] = "0";
+
+                                dr[i] = rows[i];
+                            }
+                        }
+                        dt.Rows.Add(dr);
+                    }
                 }
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message);
             }
             return dt;
         }

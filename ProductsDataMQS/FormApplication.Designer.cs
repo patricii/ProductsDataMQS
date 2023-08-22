@@ -48,6 +48,7 @@
             this.dailyMQSDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mQSRequestDatabaseDataSet = new ProductsDataMQS.MQSRequestDatabaseDataSet();
             this.groupBoxProductData = new System.Windows.Forms.GroupBox();
+            this.labelUpdate = new System.Windows.Forms.Label();
             this.textBoxNPI = new System.Windows.Forms.TextBox();
             this.labelNPI = new System.Windows.Forms.Label();
             this.textBoxMchTime = new System.Windows.Forms.TextBox();
@@ -84,7 +85,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dailyMQSDataTableAdapter = new ProductsDataMQS.MQSRequestDatabaseDataSetTableAdapters.DailyMQSDataTableAdapter();
-            this.labelUpdate = new System.Windows.Forms.Label();
+            this.buttonInsertDB = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMQS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dailyMQSDataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mQSRequestDatabaseDataSet)).BeginInit();
@@ -215,6 +216,7 @@
             // 
             // groupBoxProductData
             // 
+            this.groupBoxProductData.Controls.Add(this.buttonInsertDB);
             this.groupBoxProductData.Controls.Add(this.labelUpdate);
             this.groupBoxProductData.Controls.Add(this.textBoxNPI);
             this.groupBoxProductData.Controls.Add(this.labelNPI);
@@ -253,6 +255,16 @@
             this.groupBoxProductData.TabIndex = 1;
             this.groupBoxProductData.TabStop = false;
             this.groupBoxProductData.Text = "Product Infos";
+            // 
+            // labelUpdate
+            // 
+            this.labelUpdate.AutoSize = true;
+            this.labelUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUpdate.ForeColor = System.Drawing.Color.Teal;
+            this.labelUpdate.Location = new System.Drawing.Point(1195, 78);
+            this.labelUpdate.Name = "labelUpdate";
+            this.labelUpdate.Size = new System.Drawing.Size(0, 24);
+            this.labelUpdate.TabIndex = 30;
             // 
             // textBoxNPI
             // 
@@ -297,7 +309,7 @@
             // 
             this.textBoxCsvFolder.Location = new System.Drawing.Point(963, 131);
             this.textBoxCsvFolder.Name = "textBoxCsvFolder";
-            this.textBoxCsvFolder.Size = new System.Drawing.Size(308, 21);
+            this.textBoxCsvFolder.Size = new System.Drawing.Size(273, 21);
             this.textBoxCsvFolder.TabIndex = 24;
             this.textBoxCsvFolder.Text = "C:\\ProductDataMQS\\rawdata\\DailyMQSData.csv";
             // 
@@ -317,7 +329,7 @@
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(129, 49);
             this.buttonUpdate.TabIndex = 22;
-            this.buttonUpdate.Text = "Update Table";
+            this.buttonUpdate.Text = "MQS Update";
             this.buttonUpdate.UseVisualStyleBackColor = false;
             this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
@@ -573,15 +585,16 @@
             // 
             this.dailyMQSDataTableAdapter.ClearBeforeFill = true;
             // 
-            // labelUpdate
+            // buttonInsertDB
             // 
-            this.labelUpdate.AutoSize = true;
-            this.labelUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUpdate.ForeColor = System.Drawing.Color.Teal;
-            this.labelUpdate.Location = new System.Drawing.Point(1195, 78);
-            this.labelUpdate.Name = "labelUpdate";
-            this.labelUpdate.Size = new System.Drawing.Size(0, 24);
-            this.labelUpdate.TabIndex = 30;
+            this.buttonInsertDB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.buttonInsertDB.Location = new System.Drawing.Point(1245, 117);
+            this.buttonInsertDB.Name = "buttonInsertDB";
+            this.buttonInsertDB.Size = new System.Drawing.Size(89, 35);
+            this.buttonInsertDB.TabIndex = 31;
+            this.buttonInsertDB.Text = "Insert To db";
+            this.buttonInsertDB.UseVisualStyleBackColor = false;
+            this.buttonInsertDB.Click += new System.EventHandler(this.buttonInsertDB_Click);
             // 
             // FormMain
             // 
@@ -665,6 +678,7 @@
         private System.Windows.Forms.TextBox textBoxNPI;
         private System.Windows.Forms.Label labelNPI;
         private System.Windows.Forms.Label labelUpdate;
+        private System.Windows.Forms.Button buttonInsertDB;
     }
 }
 
