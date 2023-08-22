@@ -128,6 +128,8 @@ namespace ProductsDataMQS
             DialogResult dialogResult = MessageBox.Show("Deseja realmente carregar o arquivo .csv? o DataBase será atualizado.", "!!!Atenção!!!", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
+                bool result = sqlProcedure.compareAvgTestTime();
+
                 DataTable dt = new DataTable();
                 try
                 {

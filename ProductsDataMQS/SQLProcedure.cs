@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.OleDb;
 using System.Windows.Forms;
@@ -62,6 +63,43 @@ namespace ProductsDataMQS
             {
                 myConn.Close();
             }
+        }
+        public bool compareAvgTestTime()
+        {
+            string query1 = "SELECT Family, Process, AvgPASSTime FROM DailyMQSData ORDER BY Family, Process;";
+            string query2 = "SELECT Family, Process, AvgPASSTime FROM DailyMQSDataTemp ORDER BY Family, Process;";
+
+            using (var installedDBAdapter = new OleDbDataAdapter(query1, dbConnection))
+            using (var baselineDBAdapter = new OleDbDataAdapter(query2, dbConnection))
+            using (var installedTable = new DataTable())
+            using (var baselineTable = new DataTable())
+            {
+                installedDBAdapter.Fill(installedTable);
+                baselineDBAdapter.Fill(baselineTable);
+
+                int[] columnsToCompare = new int[] { 0, 1 , 2 };
+
+                return CompareTables(installedTable, baselineTable, columnsToCompare);
+            }
+        }
+
+        bool CompareTables(DataTable table1, DataTable table2, IEnumerable<int> columnsToCompare)
+        {
+            if (table1.Rows.Count != table2.Rows.Count)
+                return false;
+
+            for (int rowIndex = 0; rowIndex < table1.Rows.Count; rowIndex++)
+            {
+                foreach (int colIndex in columnsToCompare)
+                {
+                    if (!table1.Rows[rowIndex][colIndex].Equals(table2.Rows[rowIndex][colIndex]))
+                    {
+                        return false;
+                    }
+                }
+            }
+
+            return true;
         }
     }
 }
