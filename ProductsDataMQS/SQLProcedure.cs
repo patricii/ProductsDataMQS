@@ -85,21 +85,25 @@ namespace ProductsDataMQS
         private void CompareTables(DataTable table1, DataTable table2, IEnumerable<int> columnsToCompare)
         {
             FormMain frm = FormMain.getInstance();
-            for (int rowIndex = 0; rowIndex < table1.Rows.Count; rowIndex++)
+            for (int i_rowIndex = 0; i_rowIndex < table1.Rows.Count; i_rowIndex++)
             {
-                foreach (int colIndex in columnsToCompare)
+                for (int j_rowIndex = 0; j_rowIndex < table2.Rows.Count; j_rowIndex++)
                 {
-                    try
+                    foreach (int colIndex in columnsToCompare)
                     {
-                        if (table1.Rows[rowIndex][colIndex - 2].Equals(table2.Rows[rowIndex][colIndex - 2]) && table1.Rows[rowIndex][colIndex - 1].Equals(table2.Rows[rowIndex][colIndex - 1]))
+                        try
                         {
-                            if (!table1.Rows[rowIndex][colIndex].Equals(table2.Rows[rowIndex][colIndex]))
+                            if (table1.Rows[i_rowIndex][colIndex - 2].Equals(table2.Rows[j_rowIndex][colIndex - 2]) && table1.Rows[i_rowIndex][colIndex - 1].Equals(table2.Rows[j_rowIndex][colIndex - 1]))
                             {
-                                frm.textBoxCompare.Text += "[Product: " + table1.Rows[rowIndex][colIndex - 2].ToString() + " - Process: " + table1.Rows[rowIndex][colIndex - 1].ToString() + " - Old AvgTestTime: " + table1.Rows[rowIndex][colIndex].ToString() + "s ]" + Environment.NewLine + "[Product: " + table2.Rows[rowIndex][colIndex - 2].ToString() + " - Process: " + table2.Rows[rowIndex][colIndex - 1].ToString() + " - New AvgTestTime: " + table2.Rows[rowIndex][colIndex].ToString() + "s ]" + Environment.NewLine + Environment.NewLine;
+                                if (!table1.Rows[i_rowIndex][colIndex].Equals(table2.Rows[j_rowIndex][colIndex]))
+                                {
+                                    frm.textBoxCompare.Text += "[Product: " + table1.Rows[i_rowIndex][colIndex - 2].ToString() + " - Process: " + table1.Rows[i_rowIndex][colIndex - 1].ToString() + " - Old AvgTestTime: " + table1.Rows[j_rowIndex][colIndex].ToString() + "s ]" + Environment.NewLine + "[Product: " + table2.Rows[j_rowIndex][colIndex - 2].ToString() + " - Process: " + table2.Rows[j_rowIndex][colIndex - 1].ToString() + " - New AvgTestTime: " + table2.Rows[j_rowIndex][colIndex].ToString() + "s ]" + Environment.NewLine + Environment.NewLine;
+                                    Application.DoEvents();
+                                }
                             }
                         }
+                        catch { }
                     }
-                    catch { }
                 }
             }
         }
