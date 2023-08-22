@@ -91,15 +91,15 @@ namespace ProductsDataMQS
                 {
                     try
                     {
-                        if (!table1.Rows[rowIndex][colIndex].Equals(table2.Rows[rowIndex][colIndex]))
+                        if (table1.Rows[rowIndex][colIndex - 2].Equals(table2.Rows[rowIndex][colIndex - 2]) && table1.Rows[rowIndex][colIndex - 1].Equals(table2.Rows[rowIndex][colIndex - 1]))
                         {
-                            frm.textBoxCompare.Text += "Product: " + table1.Rows[rowIndex][colIndex - 2].ToString() + " - Process" + table1.Rows[rowIndex][colIndex - 1].ToString() + " - New AvgTestTime: " + table1.Rows[rowIndex][colIndex].ToString() + "s" + Environment.NewLine + "Product: " + table2.Rows[rowIndex][colIndex - 2].ToString() + " - Process" + table2.Rows[rowIndex][colIndex - 1].ToString() + " - Old AvgTestTime: " + table2.Rows[rowIndex][colIndex].ToString() + "s" + Environment.NewLine;
+                            if (!table1.Rows[rowIndex][colIndex].Equals(table2.Rows[rowIndex][colIndex]))
+                            {
+                                frm.textBoxCompare.Text += "[Product: " + table1.Rows[rowIndex][colIndex - 2].ToString() + " - Process" + table1.Rows[rowIndex][colIndex - 1].ToString() + " - New AvgTestTime: " + table1.Rows[rowIndex][colIndex].ToString() + "s ]" + Environment.NewLine + "[Product: " + table2.Rows[rowIndex][colIndex - 2].ToString() + " - Process" + table2.Rows[rowIndex][colIndex - 1].ToString() + " - Old AvgTestTime: " + table2.Rows[rowIndex][colIndex].ToString() + "s ]" + Environment.NewLine + Environment.NewLine;
+                            }
                         }
                     }
-                    catch
-                    {
-                        frm.textBoxCompare.Text += "Sem dados atuais no MQS!" + Environment.NewLine;
-                    }
+                    catch { }
                 }
             }
         }

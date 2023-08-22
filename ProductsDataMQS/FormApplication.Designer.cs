@@ -48,6 +48,7 @@
             this.dailyMQSDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mQSRequestDatabaseDataSet = new ProductsDataMQS.MQSRequestDatabaseDataSet();
             this.groupBoxProductData = new System.Windows.Forms.GroupBox();
+            this.buttonInsertDB = new System.Windows.Forms.Button();
             this.labelUpdate = new System.Windows.Forms.Label();
             this.textBoxNPI = new System.Windows.Forms.TextBox();
             this.labelNPI = new System.Windows.Forms.Label();
@@ -83,11 +84,10 @@
             this.buttonExit = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dailyMQSDataTableAdapter = new ProductsDataMQS.MQSRequestDatabaseDataSetTableAdapters.DailyMQSDataTableAdapter();
-            this.buttonInsertDB = new System.Windows.Forms.Button();
             this.buttonCompareAvg = new System.Windows.Forms.Button();
             this.textBoxCompare = new System.Windows.Forms.TextBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dailyMQSDataTableAdapter = new ProductsDataMQS.MQSRequestDatabaseDataSetTableAdapters.DailyMQSDataTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMQS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dailyMQSDataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mQSRequestDatabaseDataSet)).BeginInit();
@@ -118,7 +118,7 @@
             this.dataGridViewMQS.DataSource = this.dailyMQSDataBindingSource;
             this.dataGridViewMQS.Location = new System.Drawing.Point(8, 164);
             this.dataGridViewMQS.Name = "dataGridViewMQS";
-            this.dataGridViewMQS.Size = new System.Drawing.Size(681, 474);
+            this.dataGridViewMQS.Size = new System.Drawing.Size(818, 474);
             this.dataGridViewMQS.TabIndex = 0;
             // 
             // iDDataGridViewTextBoxColumn
@@ -257,6 +257,17 @@
             this.groupBoxProductData.TabIndex = 1;
             this.groupBoxProductData.TabStop = false;
             this.groupBoxProductData.Text = "Product Infos";
+            // 
+            // buttonInsertDB
+            // 
+            this.buttonInsertDB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.buttonInsertDB.Location = new System.Drawing.Point(1245, 117);
+            this.buttonInsertDB.Name = "buttonInsertDB";
+            this.buttonInsertDB.Size = new System.Drawing.Size(89, 35);
+            this.buttonInsertDB.TabIndex = 31;
+            this.buttonInsertDB.Text = "Insert To db";
+            this.buttonInsertDB.UseVisualStyleBackColor = false;
+            this.buttonInsertDB.Click += new System.EventHandler(this.buttonInsertDB_Click);
             // 
             // labelUpdate
             // 
@@ -576,6 +587,26 @@
             this.tabPage1.Text = "MQS Product Infos";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // buttonCompareAvg
+            // 
+            this.buttonCompareAvg.Location = new System.Drawing.Point(832, 164);
+            this.buttonCompareAvg.Name = "buttonCompareAvg";
+            this.buttonCompareAvg.Size = new System.Drawing.Size(133, 23);
+            this.buttonCompareAvg.TabIndex = 32;
+            this.buttonCompareAvg.Text = "Compare Test Time";
+            this.buttonCompareAvg.UseVisualStyleBackColor = true;
+            this.buttonCompareAvg.Click += new System.EventHandler(this.buttonCompareAvg_Click);
+            // 
+            // textBoxCompare
+            // 
+            this.textBoxCompare.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCompare.Location = new System.Drawing.Point(832, 193);
+            this.textBoxCompare.Multiline = true;
+            this.textBoxCompare.Name = "textBoxCompare";
+            this.textBoxCompare.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxCompare.Size = new System.Drawing.Size(514, 445);
+            this.textBoxCompare.TabIndex = 2;
+            // 
             // tabPage2
             // 
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
@@ -588,37 +619,6 @@
             // dailyMQSDataTableAdapter
             // 
             this.dailyMQSDataTableAdapter.ClearBeforeFill = true;
-            // 
-            // buttonInsertDB
-            // 
-            this.buttonInsertDB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.buttonInsertDB.Location = new System.Drawing.Point(1245, 117);
-            this.buttonInsertDB.Name = "buttonInsertDB";
-            this.buttonInsertDB.Size = new System.Drawing.Size(89, 35);
-            this.buttonInsertDB.TabIndex = 31;
-            this.buttonInsertDB.Text = "Insert To db";
-            this.buttonInsertDB.UseVisualStyleBackColor = false;
-            this.buttonInsertDB.Click += new System.EventHandler(this.buttonInsertDB_Click);
-            // 
-            // buttonCompareAvg
-            // 
-            this.buttonCompareAvg.Location = new System.Drawing.Point(695, 164);
-            this.buttonCompareAvg.Name = "buttonCompareAvg";
-            this.buttonCompareAvg.Size = new System.Drawing.Size(133, 23);
-            this.buttonCompareAvg.TabIndex = 32;
-            this.buttonCompareAvg.Text = "Compare Test Time";
-            this.buttonCompareAvg.UseVisualStyleBackColor = true;
-            this.buttonCompareAvg.Click += new System.EventHandler(this.buttonCompareAvg_Click);
-            // 
-            // textBoxCompare
-            // 
-            this.textBoxCompare.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCompare.Location = new System.Drawing.Point(695, 193);
-            this.textBoxCompare.Multiline = true;
-            this.textBoxCompare.Name = "textBoxCompare";
-            this.textBoxCompare.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxCompare.Size = new System.Drawing.Size(651, 445);
-            this.textBoxCompare.TabIndex = 2;
             // 
             // FormMain
             // 
