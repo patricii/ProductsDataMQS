@@ -200,7 +200,7 @@ namespace ProductsDataMQS
 
         private void buttonCompareAvg_Click(object sender, EventArgs e)
         {
-            labelStatusCompare.Text = "Searching....";
+            labelStatusCompare.Text = "Searching...this may take a several seconds";
             textBoxCompare.Text = "";
             Application.DoEvents();
             sqlProcedure.compareAvgTestTime();
