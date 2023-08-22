@@ -63,7 +63,7 @@ namespace ProductsDataMQS
                 myConn.Close();
             }
         }
-        public bool compareAvgTestTime()
+        public void compareAvgTestTime()
         {
             string query1 = "SELECT Family, Process, AvgPASSTime FROM DailyMQSData ORDER BY Family, Process;";
             string query2 = "SELECT Family, Process, AvgPASSTime FROM DailyMQSDataTemp ORDER BY Family, Process;";
@@ -76,29 +76,32 @@ namespace ProductsDataMQS
                 installedDBAdapter.Fill(installedTable);
                 baselineDBAdapter.Fill(baselineTable);
 
-                int[] columnsToCompare = new int[] { 0, 1 , 2 };
+                int[] columnsToCompare = new int[] { 0, 1, 2 };
 
-                return CompareTables(installedTable, baselineTable, columnsToCompare);
+                CompareTables(installedTable, baselineTable, columnsToCompare);
             }
         }
 
-        bool CompareTables(DataTable table1, DataTable table2, IEnumerable<int> columnsToCompare)
+        private void CompareTables(DataTable table1, DataTable table2, IEnumerable<int> columnsToCompare)
         {
-            if (table1.Rows.Count != table2.Rows.Count)
-                return false;
-
+            FormMain frm = FormMain.getInstance();
             for (int rowIndex = 0; rowIndex < table1.Rows.Count; rowIndex++)
             {
                 foreach (int colIndex in columnsToCompare)
                 {
-                    if (!table1.Rows[rowIndex][colIndex].Equals(table2.Rows[rowIndex][colIndex]))
+                    try
                     {
-                        return false;
+                        if (!table1.Rows[rowIndex][colIndex].Equals(table2.Rows[rowIndex][colIndex]))
+                        {
+                            frm.textBoxCompare.Text += "Product: " + table1.Rows[rowIndex][colIndex - 2].ToString() + " - Process" + table1.Rows[rowIndex][colIndex - 1].ToString() + " - New AvgTestTime: " + table1.Rows[rowIndex][colIndex].ToString() + "s" + Environment.NewLine + "Product: " + table2.Rows[rowIndex][colIndex - 2].ToString() + " - Process" + table2.Rows[rowIndex][colIndex - 1].ToString() + " - Old AvgTestTime: " + table2.Rows[rowIndex][colIndex].ToString() + "s" + Environment.NewLine;
+                        }
+                    }
+                    catch
+                    {
+                        frm.textBoxCompare.Text += "Sem dados atuais no MQS!" + Environment.NewLine;
                     }
                 }
             }
-
-            return true;
         }
     }
 }

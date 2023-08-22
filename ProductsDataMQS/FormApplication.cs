@@ -15,11 +15,20 @@ namespace ProductsDataMQS
         SQLProcedure sqlProcedure = new SQLProcedure();
         string dbTableName = "DailyMQSData";
         string dbTableNameTemp = "DailyMQSDataTemp";
+        private static FormMain INSTANCE = null;
 
         public FormMain()
         {
             InitializeComponent();
+            INSTANCE = this;
 
+        }
+        public static FormMain getInstance()
+        {
+            if (INSTANCE == null)
+                INSTANCE = new FormMain();
+
+            return INSTANCE;
         }
         private void FormMain_Load(object sender, EventArgs e)
         {
@@ -72,7 +81,9 @@ namespace ProductsDataMQS
             try
             {
                 dailyMQSDataBindingSource.DataSource = cCTD.ConvertCSVtoDataTable(textBoxCsvFolder.Text);
-                MessageBox.Show("DataBase updated Successfully!!!");
+                DataTable dt = GetDataTableFromDGV(dataGridViewMQS);
+                sqlProcedure.dataTableToMdb(dt, dbTableNameTemp);
+                MessageBox.Show("DataBase *Temp* updated Successfully!!!");
             }
             catch (Exception ex)
             {
@@ -159,7 +170,7 @@ namespace ProductsDataMQS
             {
                 DataTable dt = GetDataTableFromDGV(dataGridViewMQS);
                 sqlProcedure.dataTableToMdb(dt, dbTableName);
-               // sqlProcedure.dataTableToMdb(dt, dbTableNameTemp);
+
             }
             catch (Exception ex)
             {
@@ -189,9 +200,8 @@ namespace ProductsDataMQS
 
         private void buttonCompareAvg_Click(object sender, EventArgs e)
         {
-            bool result = sqlProcedure.compareAvgTestTime();
-            if (!result)
-                MessageBox.Show("Valores de AVG diferentes dos anteriores!");
+            textBoxCompare.Text = "";
+            sqlProcedure.compareAvgTestTime();
 
         }
     }

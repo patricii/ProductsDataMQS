@@ -87,6 +87,7 @@
             this.dailyMQSDataTableAdapter = new ProductsDataMQS.MQSRequestDatabaseDataSetTableAdapters.DailyMQSDataTableAdapter();
             this.buttonInsertDB = new System.Windows.Forms.Button();
             this.buttonCompareAvg = new System.Windows.Forms.Button();
+            this.textBoxCompare = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMQS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dailyMQSDataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mQSRequestDatabaseDataSet)).BeginInit();
@@ -117,7 +118,7 @@
             this.dataGridViewMQS.DataSource = this.dailyMQSDataBindingSource;
             this.dataGridViewMQS.Location = new System.Drawing.Point(8, 164);
             this.dataGridViewMQS.Name = "dataGridViewMQS";
-            this.dataGridViewMQS.Size = new System.Drawing.Size(1338, 474);
+            this.dataGridViewMQS.Size = new System.Drawing.Size(681, 474);
             this.dataGridViewMQS.TabIndex = 0;
             // 
             // iDDataGridViewTextBoxColumn
@@ -217,7 +218,6 @@
             // 
             // groupBoxProductData
             // 
-            this.groupBoxProductData.Controls.Add(this.buttonCompareAvg);
             this.groupBoxProductData.Controls.Add(this.buttonInsertDB);
             this.groupBoxProductData.Controls.Add(this.labelUpdate);
             this.groupBoxProductData.Controls.Add(this.textBoxNPI);
@@ -564,6 +564,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.buttonCompareAvg);
+            this.tabPage1.Controls.Add(this.textBoxCompare);
             this.tabPage1.Controls.Add(this.dataGridViewMQS);
             this.tabPage1.Controls.Add(this.groupBoxProductData);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
@@ -600,13 +602,23 @@
             // 
             // buttonCompareAvg
             // 
-            this.buttonCompareAvg.Location = new System.Drawing.Point(6, 123);
+            this.buttonCompareAvg.Location = new System.Drawing.Point(695, 164);
             this.buttonCompareAvg.Name = "buttonCompareAvg";
             this.buttonCompareAvg.Size = new System.Drawing.Size(133, 23);
             this.buttonCompareAvg.TabIndex = 32;
             this.buttonCompareAvg.Text = "Compare Test Time";
             this.buttonCompareAvg.UseVisualStyleBackColor = true;
             this.buttonCompareAvg.Click += new System.EventHandler(this.buttonCompareAvg_Click);
+            // 
+            // textBoxCompare
+            // 
+            this.textBoxCompare.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCompare.Location = new System.Drawing.Point(695, 193);
+            this.textBoxCompare.Multiline = true;
+            this.textBoxCompare.Name = "textBoxCompare";
+            this.textBoxCompare.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxCompare.Size = new System.Drawing.Size(651, 445);
+            this.textBoxCompare.TabIndex = 2;
             // 
             // FormMain
             // 
@@ -628,6 +640,7 @@
             this.groupBoxProductData.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -692,6 +705,7 @@
         private System.Windows.Forms.Label labelUpdate;
         private System.Windows.Forms.Button buttonInsertDB;
         private System.Windows.Forms.Button buttonCompareAvg;
+        public System.Windows.Forms.TextBox textBoxCompare;
     }
 }
 
