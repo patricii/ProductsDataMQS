@@ -62,13 +62,17 @@ namespace ProductsDataMQS
         }
         private void yieldEvaluateLogic()
         {
-            if (Convert.ToDouble(textBoxPYield.Text) < 96.0)
-                textBoxPYield.BackColor = Color.OrangeRed;
-            else if (Convert.ToDouble(textBoxPYield.Text) >= 96.0 && Convert.ToDouble(textBoxPYield.Text) <= 98.5)
-                textBoxPYield.BackColor = Color.LightYellow;
-            else if (Convert.ToDouble(textBoxPYield.Text) > 98.5)
-                textBoxPYield.BackColor = Color.LightGreen;
-            Application.DoEvents();
+            try
+            {
+                if (Convert.ToDouble(textBoxPYield.Text) < 96.0)
+                    textBoxPYield.BackColor = Color.OrangeRed;
+                else if (Convert.ToDouble(textBoxPYield.Text) >= 96.0 && Convert.ToDouble(textBoxPYield.Text) <= 98.5)
+                    textBoxPYield.BackColor = Color.LightYellow;
+                else if (Convert.ToDouble(textBoxPYield.Text) > 98.5)
+                    textBoxPYield.BackColor = Color.LightGreen;
+                Application.DoEvents();
+            }
+            catch { }
         }
         private void fillAllInofs()
         {
