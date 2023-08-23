@@ -85,8 +85,15 @@ namespace ProductsDataMQS
 
         private void CompareTables(DataTable table1, DataTable table2, IEnumerable<int> columnsToCompare)
         {
-            int countCompare = 0;
             FormMain frm = FormMain.getInstance();
+
+            int countCompare = 0;
+            int countCompareOut = 0;
+            int avgTTOld = 0;
+            int avgTTNew = 0;
+            int result = 0;
+            int filterValue = Convert.ToInt32(frm.textBoxFilterValue.Text);
+
             for (int i_rowIndex = 0; i_rowIndex < table1.Rows.Count; i_rowIndex++)
             {
                 for (int j_rowIndex = 0; j_rowIndex < table2.Rows.Count; j_rowIndex++)
@@ -99,10 +106,26 @@ namespace ProductsDataMQS
                             {
                                 if (!table1.Rows[i_rowIndex][colIndex].Equals(table2.Rows[j_rowIndex][colIndex]))
                                 {
-                                    frm.textBoxCompare.Text += "[Product: " + table1.Rows[i_rowIndex][colIndex - 2].ToString() + " - Process: " + table1.Rows[i_rowIndex][colIndex - 1].ToString() + " - Old AvgTestTime: " + table1.Rows[i_rowIndex][colIndex].ToString() + "s ]" + Environment.NewLine + "[Product: " + table2.Rows[j_rowIndex][colIndex - 2].ToString() + " - Process: " + table2.Rows[j_rowIndex][colIndex - 1].ToString() + " - New AvgTestTime: " + table2.Rows[j_rowIndex][colIndex].ToString() + "s ]" + Environment.NewLine + Environment.NewLine;
+                                    avgTTOld = Convert.ToInt32(table1.Rows[i_rowIndex][colIndex]);
+                                    avgTTNew = Convert.ToInt32(table2.Rows[j_rowIndex][colIndex]);
+                                    result = avgTTOld - avgTTNew;
+                                    if (result < 0)
+                                        result = result * -1;
+                                    if (result > filterValue)
+                                    {
+                                        frm.textBoxCompare.Text += "***->[Product: " + table1.Rows[i_rowIndex][colIndex - 2].ToString() + " - Process: " + table1.Rows[i_rowIndex][colIndex - 1].ToString() + " - Old AvgTestTime: " + table1.Rows[i_rowIndex][colIndex].ToString() + "s ]" + Environment.NewLine + "***->[Product: " + table2.Rows[j_rowIndex][colIndex - 2].ToString() + " - Process: " + table2.Rows[j_rowIndex][colIndex - 1].ToString() + " - New AvgTestTime: " + table2.Rows[j_rowIndex][colIndex].ToString() + "s ]" + Environment.NewLine + Environment.NewLine;
+                                        countCompareOut++;
+                                        frm.textBoxFilterCount.Text = countCompareOut.ToString();
+                                        frm.textBoxFilterCount.BackColor = Color.OrangeRed;
+                                    }
+                                    else
+                                        frm.textBoxCompare.Text += "[Product: " + table1.Rows[i_rowIndex][colIndex - 2].ToString() + " - Process: " + table1.Rows[i_rowIndex][colIndex - 1].ToString() + " - Old AvgTestTime: " + table1.Rows[i_rowIndex][colIndex].ToString() + "s ]" + Environment.NewLine + "[Product: " + table2.Rows[j_rowIndex][colIndex - 2].ToString() + " - Process: " + table2.Rows[j_rowIndex][colIndex - 1].ToString() + " - New AvgTestTime: " + table2.Rows[j_rowIndex][colIndex].ToString() + "s ]" + Environment.NewLine + Environment.NewLine;
+
                                     countCompare++;
                                     frm.textBoxCompareCount.Text = countCompare.ToString();
                                     Application.DoEvents();
+
+                                    result = 0;
 
                                 }
                             }

@@ -90,6 +90,11 @@
             this.dailyMQSDataTableAdapter = new ProductsDataMQS.MQSRequestDatabaseDataSetTableAdapters.DailyMQSDataTableAdapter();
             this.textBoxCompareCount = new System.Windows.Forms.TextBox();
             this.labelLogo = new System.Windows.Forms.Label();
+            this.labelCriteria = new System.Windows.Forms.Label();
+            this.textBoxFilterValue = new System.Windows.Forms.TextBox();
+            this.textBoxFilterCount = new System.Windows.Forms.TextBox();
+            this.labelFilterCount = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMQS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dailyMQSDataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mQSRequestDatabaseDataSet)).BeginInit();
@@ -590,6 +595,11 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Controls.Add(this.textBoxFilterCount);
+            this.tabPage1.Controls.Add(this.labelFilterCount);
+            this.tabPage1.Controls.Add(this.textBoxFilterValue);
+            this.tabPage1.Controls.Add(this.labelCriteria);
             this.tabPage1.Controls.Add(this.textBoxCompareCount);
             this.tabPage1.Controls.Add(this.labelStatusCompare);
             this.tabPage1.Controls.Add(this.buttonCompareAvg);
@@ -627,11 +637,11 @@
             // textBoxCompare
             // 
             this.textBoxCompare.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCompare.Location = new System.Drawing.Point(832, 205);
+            this.textBoxCompare.Location = new System.Drawing.Point(832, 228);
             this.textBoxCompare.Multiline = true;
             this.textBoxCompare.Name = "textBoxCompare";
             this.textBoxCompare.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxCompare.Size = new System.Drawing.Size(514, 433);
+            this.textBoxCompare.Size = new System.Drawing.Size(514, 410);
             this.textBoxCompare.TabIndex = 2;
             // 
             // dailyMQSDataTableAdapter
@@ -640,7 +650,7 @@
             // 
             // textBoxCompareCount
             // 
-            this.textBoxCompareCount.Location = new System.Drawing.Point(1317, 179);
+            this.textBoxCompareCount.Location = new System.Drawing.Point(1317, 202);
             this.textBoxCompareCount.Name = "textBoxCompareCount";
             this.textBoxCompareCount.Size = new System.Drawing.Size(29, 20);
             this.textBoxCompareCount.TabIndex = 34;
@@ -656,6 +666,50 @@
             this.labelLogo.Size = new System.Drawing.Size(165, 24);
             this.labelLogo.TabIndex = 32;
             this.labelLogo.Text = "Product Data MQS";
+            // 
+            // labelCriteria
+            // 
+            this.labelCriteria.AutoSize = true;
+            this.labelCriteria.Location = new System.Drawing.Point(832, 209);
+            this.labelCriteria.Name = "labelCriteria";
+            this.labelCriteria.Size = new System.Drawing.Size(76, 13);
+            this.labelCriteria.TabIndex = 35;
+            this.labelCriteria.Text = "Filter Value (s):";
+            // 
+            // textBoxFilterValue
+            // 
+            this.textBoxFilterValue.Location = new System.Drawing.Point(910, 202);
+            this.textBoxFilterValue.Name = "textBoxFilterValue";
+            this.textBoxFilterValue.Size = new System.Drawing.Size(29, 20);
+            this.textBoxFilterValue.TabIndex = 36;
+            this.textBoxFilterValue.Text = "10";
+            this.textBoxFilterValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBoxFilterCount
+            // 
+            this.textBoxFilterCount.Location = new System.Drawing.Point(1207, 202);
+            this.textBoxFilterCount.Name = "textBoxFilterCount";
+            this.textBoxFilterCount.Size = new System.Drawing.Size(29, 20);
+            this.textBoxFilterCount.TabIndex = 38;
+            this.textBoxFilterCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // labelFilterCount
+            // 
+            this.labelFilterCount.AutoSize = true;
+            this.labelFilterCount.Location = new System.Drawing.Point(1139, 209);
+            this.labelFilterCount.Name = "labelFilterCount";
+            this.labelFilterCount.Size = new System.Drawing.Size(63, 13);
+            this.labelFilterCount.TabIndex = 37;
+            this.labelFilterCount.Text = "Filter Count:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(1248, 209);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 13);
+            this.label1.TabIndex = 39;
+            this.label1.Text = "Total Count:";
             // 
             // FormMain
             // 
@@ -745,6 +799,11 @@
         public System.Windows.Forms.TextBox textBoxCompareCount;
         private System.Windows.Forms.Label labelLogo;
         public System.Windows.Forms.Button buttonCompareAvg;
+        private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.TextBox textBoxFilterCount;
+        private System.Windows.Forms.Label labelFilterCount;
+        public System.Windows.Forms.TextBox textBoxFilterValue;
+        private System.Windows.Forms.Label labelCriteria;
     }
 }
 
