@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.OleDb;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace ProductsDataMQS
@@ -105,11 +106,19 @@ namespace ProductsDataMQS
 
                                 }
                             }
+                            else
+                                Application.DoEvents();
+
                         }
                         catch { }
                     }
                 }
             }
+            if (countCompare == 0)
+                frm.textBoxCompare.Text = "There's No AvgTestTime changes!!!";
+
+            frm.buttonCompareAvg.Enabled = true;
+            frm.buttonCompareAvg.BackColor = Color.Yellow;
         }
     }
 }

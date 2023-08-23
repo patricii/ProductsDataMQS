@@ -120,8 +120,8 @@ namespace ProductsDataMQS
         private void calMchTime() //to do!!!
         {
             textBoxTTime.BackColor = Color.LightSkyBlue;
-            textBoxMchTime.BackColor = Color.LightYellow;
-            textBoxNPI.BackColor = Color.Orange;
+            //textBoxMchTime.BackColor = Color.LightYellow;
+            //textBoxNPI.BackColor = Color.Orange;
             if (textBoxTTime.Text != "")
             {
                 if (Convert.ToDouble(textBoxTTime.Text) != 0)
@@ -200,6 +200,8 @@ namespace ProductsDataMQS
 
         private void buttonCompareAvg_Click(object sender, EventArgs e)
         {
+            buttonCompareAvg.BackColor = Color.LightGreen;
+            buttonCompareAvg.Enabled = false;
             labelStatusCompare.Text = "Searching...this may take a several seconds";
             textBoxCompare.Text = "";
             Application.DoEvents();

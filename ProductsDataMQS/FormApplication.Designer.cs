@@ -263,10 +263,10 @@
             // 
             // buttonInsertDB
             // 
-            this.buttonInsertDB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.buttonInsertDB.Location = new System.Drawing.Point(1245, 117);
+            this.buttonInsertDB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.buttonInsertDB.Location = new System.Drawing.Point(1245, 113);
             this.buttonInsertDB.Name = "buttonInsertDB";
-            this.buttonInsertDB.Size = new System.Drawing.Size(89, 35);
+            this.buttonInsertDB.Size = new System.Drawing.Size(89, 39);
             this.buttonInsertDB.TabIndex = 31;
             this.buttonInsertDB.Text = "Insert To db";
             this.buttonInsertDB.UseVisualStyleBackColor = false;
@@ -340,7 +340,8 @@
             // 
             // buttonUpdate
             // 
-            this.buttonUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.buttonUpdate.BackColor = System.Drawing.Color.Teal;
+            this.buttonUpdate.ForeColor = System.Drawing.Color.White;
             this.buttonUpdate.Location = new System.Drawing.Point(1198, 25);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(129, 49);
@@ -594,16 +595,18 @@
             // labelStatusCompare
             // 
             this.labelStatusCompare.AutoSize = true;
-            this.labelStatusCompare.Location = new System.Drawing.Point(972, 170);
+            this.labelStatusCompare.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStatusCompare.Location = new System.Drawing.Point(972, 180);
             this.labelStatusCompare.Name = "labelStatusCompare";
-            this.labelStatusCompare.Size = new System.Drawing.Size(0, 13);
+            this.labelStatusCompare.Size = new System.Drawing.Size(0, 15);
             this.labelStatusCompare.TabIndex = 33;
             // 
             // buttonCompareAvg
             // 
+            this.buttonCompareAvg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCompareAvg.Location = new System.Drawing.Point(832, 164);
             this.buttonCompareAvg.Name = "buttonCompareAvg";
-            this.buttonCompareAvg.Size = new System.Drawing.Size(133, 23);
+            this.buttonCompareAvg.Size = new System.Drawing.Size(133, 35);
             this.buttonCompareAvg.TabIndex = 32;
             this.buttonCompareAvg.Text = "Compare Test Time";
             this.buttonCompareAvg.UseVisualStyleBackColor = true;
@@ -612,11 +615,11 @@
             // textBoxCompare
             // 
             this.textBoxCompare.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCompare.Location = new System.Drawing.Point(832, 193);
+            this.textBoxCompare.Location = new System.Drawing.Point(832, 205);
             this.textBoxCompare.Multiline = true;
             this.textBoxCompare.Name = "textBoxCompare";
             this.textBoxCompare.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxCompare.Size = new System.Drawing.Size(514, 445);
+            this.textBoxCompare.Size = new System.Drawing.Size(514, 433);
             this.textBoxCompare.TabIndex = 2;
             // 
             // dailyMQSDataTableAdapter
@@ -625,7 +628,7 @@
             // 
             // textBoxCompareCount
             // 
-            this.textBoxCompareCount.Location = new System.Drawing.Point(1317, 167);
+            this.textBoxCompareCount.Location = new System.Drawing.Point(1317, 179);
             this.textBoxCompareCount.Name = "textBoxCompareCount";
             this.textBoxCompareCount.Size = new System.Drawing.Size(29, 20);
             this.textBoxCompareCount.TabIndex = 34;
@@ -725,11 +728,11 @@
         private System.Windows.Forms.Label labelNPI;
         private System.Windows.Forms.Label labelUpdate;
         private System.Windows.Forms.Button buttonInsertDB;
-        private System.Windows.Forms.Button buttonCompareAvg;
         public System.Windows.Forms.TextBox textBoxCompare;
         private System.Windows.Forms.Label labelStatusCompare;
         public System.Windows.Forms.TextBox textBoxCompareCount;
         private System.Windows.Forms.Label labelLogo;
+        public System.Windows.Forms.Button buttonCompareAvg;
     }
 }
 
