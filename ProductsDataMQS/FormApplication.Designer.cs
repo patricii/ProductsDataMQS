@@ -89,6 +89,7 @@
             this.textBoxCompare = new System.Windows.Forms.TextBox();
             this.dailyMQSDataTableAdapter = new ProductsDataMQS.MQSRequestDatabaseDataSetTableAdapters.DailyMQSDataTableAdapter();
             this.textBoxCompareCount = new System.Windows.Forms.TextBox();
+            this.labelLogo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMQS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dailyMQSDataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mQSRequestDatabaseDataSet)).BeginInit();
@@ -219,6 +220,7 @@
             // 
             // groupBoxProductData
             // 
+            this.groupBoxProductData.Controls.Add(this.labelLogo);
             this.groupBoxProductData.Controls.Add(this.buttonInsertDB);
             this.groupBoxProductData.Controls.Add(this.labelUpdate);
             this.groupBoxProductData.Controls.Add(this.textBoxNPI);
@@ -350,7 +352,7 @@
             // buttonPrev
             // 
             this.buttonPrev.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPrev.Location = new System.Drawing.Point(30, 61);
+            this.buttonPrev.Location = new System.Drawing.Point(30, 70);
             this.buttonPrev.Name = "buttonPrev";
             this.buttonPrev.Size = new System.Drawing.Size(54, 32);
             this.buttonPrev.TabIndex = 21;
@@ -361,7 +363,7 @@
             // buttonNext
             // 
             this.buttonNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonNext.Location = new System.Drawing.Point(100, 61);
+            this.buttonNext.Location = new System.Drawing.Point(100, 70);
             this.buttonNext.Name = "buttonNext";
             this.buttonNext.Size = new System.Drawing.Size(56, 32);
             this.buttonNext.TabIndex = 20;
@@ -623,11 +625,22 @@
             // 
             // textBoxCompareCount
             // 
-            this.textBoxCompareCount.Location = new System.Drawing.Point(1303, 170);
+            this.textBoxCompareCount.Location = new System.Drawing.Point(1317, 167);
             this.textBoxCompareCount.Name = "textBoxCompareCount";
-            this.textBoxCompareCount.Size = new System.Drawing.Size(43, 20);
+            this.textBoxCompareCount.Size = new System.Drawing.Size(29, 20);
             this.textBoxCompareCount.TabIndex = 34;
             this.textBoxCompareCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // labelLogo
+            // 
+            this.labelLogo.AutoSize = true;
+            this.labelLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLogo.ForeColor = System.Drawing.Color.Teal;
+            this.labelLogo.Location = new System.Drawing.Point(7, 25);
+            this.labelLogo.Name = "labelLogo";
+            this.labelLogo.Size = new System.Drawing.Size(165, 24);
+            this.labelLogo.TabIndex = 32;
+            this.labelLogo.Text = "Product Data MQS";
             // 
             // FormMain
             // 
@@ -716,6 +729,7 @@
         public System.Windows.Forms.TextBox textBoxCompare;
         private System.Windows.Forms.Label labelStatusCompare;
         public System.Windows.Forms.TextBox textBoxCompareCount;
+        private System.Windows.Forms.Label labelLogo;
     }
 }
 
