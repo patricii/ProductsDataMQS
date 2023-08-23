@@ -63,9 +63,9 @@ namespace ProductsDataMQS
         private void yieldEvaluateLogic()
         {
             if (Convert.ToDouble(textBoxPYield.Text) < 96.0)
-                textBoxPYield.BackColor = Color.Red;
+                textBoxPYield.BackColor = Color.OrangeRed;
             else if (Convert.ToDouble(textBoxPYield.Text) >= 96.0 && Convert.ToDouble(textBoxPYield.Text) <= 98.5)
-                textBoxPYield.BackColor = Color.Yellow;
+                textBoxPYield.BackColor = Color.LightYellow;
             else if (Convert.ToDouble(textBoxPYield.Text) > 98.5)
                 textBoxPYield.BackColor = Color.LightGreen;
             Application.DoEvents();
@@ -200,7 +200,7 @@ namespace ProductsDataMQS
 
         private void buttonCompareAvg_Click(object sender, EventArgs e)
         {
-            buttonCompareAvg.BackColor = Color.LightGreen;
+            buttonCompareAvg.BackColor = Color.LightSkyBlue;
             buttonCompareAvg.Enabled = false;
             labelStatusCompare.Text = "Searching...this may take a several seconds";
             textBoxCompare.Text = "";
