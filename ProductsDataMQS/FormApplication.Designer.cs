@@ -684,6 +684,7 @@
             this.textBoxFilterValue.TabIndex = 36;
             this.textBoxFilterValue.Text = "10";
             this.textBoxFilterValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxFilterValue.TextChanged += new System.EventHandler(this.textBoxFilterValue_TextChanged);
             // 
             // textBoxFilterCount
             // 

@@ -111,7 +111,7 @@ namespace ProductsDataMQS
                                     result = avgTTOld - avgTTNew;
                                     if (result < 0)
                                         result = result * -1;
-                                    if (result > filterValue)
+                                    if (result >= filterValue)
                                     {
                                         frm.textBoxCompare.Text += "***->[Product: " + table1.Rows[i_rowIndex][colIndex - 2].ToString() + " - Process: " + table1.Rows[i_rowIndex][colIndex - 1].ToString() + " - Old AvgTestTime: " + table1.Rows[i_rowIndex][colIndex].ToString() + "s ]" + Environment.NewLine + "***->[Product: " + table2.Rows[j_rowIndex][colIndex - 2].ToString() + " - Process: " + table2.Rows[j_rowIndex][colIndex - 1].ToString() + " - New AvgTestTime: " + table2.Rows[j_rowIndex][colIndex].ToString() + "s ]" + Environment.NewLine + Environment.NewLine;
                                         countCompareOut++;

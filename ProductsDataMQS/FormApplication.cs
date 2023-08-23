@@ -215,5 +215,11 @@ namespace ProductsDataMQS
             sqlProcedure.compareAvgTestTime();
             labelStatusCompare.Text = "Finished!";
         }
+
+        private void textBoxFilterValue_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxFilterValue.Text == "0" || textBoxFilterValue.Text == "")
+                textBoxFilterValue.Text = "10";
+        }
     }
 }
