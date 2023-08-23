@@ -84,6 +84,7 @@ namespace ProductsDataMQS
 
         private void CompareTables(DataTable table1, DataTable table2, IEnumerable<int> columnsToCompare)
         {
+            int countCompare = 0;
             FormMain frm = FormMain.getInstance();
             for (int i_rowIndex = 0; i_rowIndex < table1.Rows.Count; i_rowIndex++)
             {
@@ -97,8 +98,11 @@ namespace ProductsDataMQS
                             {
                                 if (!table1.Rows[i_rowIndex][colIndex].Equals(table2.Rows[j_rowIndex][colIndex]))
                                 {
-                                    frm.textBoxCompare.Text += "[Product: " + table1.Rows[i_rowIndex][colIndex - 2].ToString() + " - Process: " + table1.Rows[i_rowIndex][colIndex - 1].ToString() + " - Old AvgTestTime: " + table1.Rows[j_rowIndex][colIndex].ToString() + "s ]" + Environment.NewLine + "[Product: " + table2.Rows[j_rowIndex][colIndex - 2].ToString() + " - Process: " + table2.Rows[j_rowIndex][colIndex - 1].ToString() + " - New AvgTestTime: " + table2.Rows[j_rowIndex][colIndex].ToString() + "s ]" + Environment.NewLine + Environment.NewLine;
+                                    frm.textBoxCompare.Text += "[Product: " + table1.Rows[i_rowIndex][colIndex - 2].ToString() + " - Process: " + table1.Rows[i_rowIndex][colIndex - 1].ToString() + " - Old AvgTestTime: " + table1.Rows[i_rowIndex][colIndex].ToString() + "s ]" + Environment.NewLine + "[Product: " + table2.Rows[j_rowIndex][colIndex - 2].ToString() + " - Process: " + table2.Rows[j_rowIndex][colIndex - 1].ToString() + " - New AvgTestTime: " + table2.Rows[j_rowIndex][colIndex].ToString() + "s ]" + Environment.NewLine + Environment.NewLine;
+                                    countCompare++;
+                                    frm.textBoxCompareCount.Text = countCompare.ToString();
                                     Application.DoEvents();
+
                                 }
                             }
                         }

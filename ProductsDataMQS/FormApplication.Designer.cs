@@ -84,10 +84,11 @@
             this.buttonExit = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.labelStatusCompare = new System.Windows.Forms.Label();
             this.buttonCompareAvg = new System.Windows.Forms.Button();
             this.textBoxCompare = new System.Windows.Forms.TextBox();
             this.dailyMQSDataTableAdapter = new ProductsDataMQS.MQSRequestDatabaseDataSetTableAdapters.DailyMQSDataTableAdapter();
-            this.labelStatusCompare = new System.Windows.Forms.Label();
+            this.textBoxCompareCount = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMQS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dailyMQSDataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mQSRequestDatabaseDataSet)).BeginInit();
@@ -574,6 +575,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.textBoxCompareCount);
             this.tabPage1.Controls.Add(this.labelStatusCompare);
             this.tabPage1.Controls.Add(this.buttonCompareAvg);
             this.tabPage1.Controls.Add(this.textBoxCompare);
@@ -586,6 +588,14 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "MQS Product Infos";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // labelStatusCompare
+            // 
+            this.labelStatusCompare.AutoSize = true;
+            this.labelStatusCompare.Location = new System.Drawing.Point(972, 170);
+            this.labelStatusCompare.Name = "labelStatusCompare";
+            this.labelStatusCompare.Size = new System.Drawing.Size(0, 13);
+            this.labelStatusCompare.TabIndex = 33;
             // 
             // buttonCompareAvg
             // 
@@ -611,13 +621,13 @@
             // 
             this.dailyMQSDataTableAdapter.ClearBeforeFill = true;
             // 
-            // labelStatusCompare
+            // textBoxCompareCount
             // 
-            this.labelStatusCompare.AutoSize = true;
-            this.labelStatusCompare.Location = new System.Drawing.Point(972, 170);
-            this.labelStatusCompare.Name = "labelStatusCompare";
-            this.labelStatusCompare.Size = new System.Drawing.Size(0, 13);
-            this.labelStatusCompare.TabIndex = 33;
+            this.textBoxCompareCount.Location = new System.Drawing.Point(1303, 170);
+            this.textBoxCompareCount.Name = "textBoxCompareCount";
+            this.textBoxCompareCount.Size = new System.Drawing.Size(43, 20);
+            this.textBoxCompareCount.TabIndex = 34;
+            this.textBoxCompareCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // FormMain
             // 
@@ -705,6 +715,7 @@
         private System.Windows.Forms.Button buttonCompareAvg;
         public System.Windows.Forms.TextBox textBoxCompare;
         private System.Windows.Forms.Label labelStatusCompare;
+        public System.Windows.Forms.TextBox textBoxCompareCount;
     }
 }
 
