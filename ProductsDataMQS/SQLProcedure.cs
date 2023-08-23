@@ -139,9 +139,6 @@ namespace ProductsDataMQS
             }
             if (countCompare == 0)
                 frm.textBoxCompare.Text = "There's No AvgTestTime changes!!!";
-
-            frm.buttonCompareAvg.Enabled = true;
-            frm.buttonCompareAvg.BackColor = Color.LightYellow;
         }
     }
 }

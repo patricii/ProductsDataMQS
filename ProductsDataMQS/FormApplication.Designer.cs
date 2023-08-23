@@ -48,6 +48,7 @@
             this.dailyMQSDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mQSRequestDatabaseDataSet = new ProductsDataMQS.MQSRequestDatabaseDataSet();
             this.groupBoxProductData = new System.Windows.Forms.GroupBox();
+            this.labelLogo = new System.Windows.Forms.Label();
             this.buttonInsertDB = new System.Windows.Forms.Button();
             this.labelUpdate = new System.Windows.Forms.Label();
             this.textBoxNPI = new System.Windows.Forms.TextBox();
@@ -84,17 +85,16 @@
             this.buttonExit = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxFilterCount = new System.Windows.Forms.TextBox();
+            this.labelFilterCount = new System.Windows.Forms.Label();
+            this.textBoxFilterValue = new System.Windows.Forms.TextBox();
+            this.labelCriteria = new System.Windows.Forms.Label();
+            this.textBoxCompareCount = new System.Windows.Forms.TextBox();
             this.labelStatusCompare = new System.Windows.Forms.Label();
             this.buttonCompareAvg = new System.Windows.Forms.Button();
             this.textBoxCompare = new System.Windows.Forms.TextBox();
             this.dailyMQSDataTableAdapter = new ProductsDataMQS.MQSRequestDatabaseDataSetTableAdapters.DailyMQSDataTableAdapter();
-            this.textBoxCompareCount = new System.Windows.Forms.TextBox();
-            this.labelLogo = new System.Windows.Forms.Label();
-            this.labelCriteria = new System.Windows.Forms.Label();
-            this.textBoxFilterValue = new System.Windows.Forms.TextBox();
-            this.textBoxFilterCount = new System.Windows.Forms.TextBox();
-            this.labelFilterCount = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMQS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dailyMQSDataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mQSRequestDatabaseDataSet)).BeginInit();
@@ -266,6 +266,17 @@
             this.groupBoxProductData.TabStop = false;
             this.groupBoxProductData.Text = "Product Infos";
             // 
+            // labelLogo
+            // 
+            this.labelLogo.AutoSize = true;
+            this.labelLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLogo.ForeColor = System.Drawing.Color.Teal;
+            this.labelLogo.Location = new System.Drawing.Point(7, 25);
+            this.labelLogo.Name = "labelLogo";
+            this.labelLogo.Size = new System.Drawing.Size(165, 24);
+            this.labelLogo.TabIndex = 32;
+            this.labelLogo.Text = "Product Data MQS";
+            // 
             // buttonInsertDB
             // 
             this.buttonInsertDB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -330,6 +341,7 @@
             // 
             // textBoxCsvFolder
             // 
+            this.textBoxCsvFolder.Enabled = false;
             this.textBoxCsvFolder.Location = new System.Drawing.Point(963, 131);
             this.textBoxCsvFolder.Name = "textBoxCsvFolder";
             this.textBoxCsvFolder.Size = new System.Drawing.Size(273, 21);
@@ -614,13 +626,67 @@
             this.tabPage1.Text = "MQS Product Infos";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(1241, 209);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 13);
+            this.label1.TabIndex = 39;
+            this.label1.Text = "Total Count:";
+            // 
+            // textBoxFilterCount
+            // 
+            this.textBoxFilterCount.Location = new System.Drawing.Point(1200, 202);
+            this.textBoxFilterCount.Name = "textBoxFilterCount";
+            this.textBoxFilterCount.Size = new System.Drawing.Size(29, 20);
+            this.textBoxFilterCount.TabIndex = 38;
+            this.textBoxFilterCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // labelFilterCount
+            // 
+            this.labelFilterCount.AutoSize = true;
+            this.labelFilterCount.Location = new System.Drawing.Point(1132, 209);
+            this.labelFilterCount.Name = "labelFilterCount";
+            this.labelFilterCount.Size = new System.Drawing.Size(63, 13);
+            this.labelFilterCount.TabIndex = 37;
+            this.labelFilterCount.Text = "Filter Count:";
+            // 
+            // textBoxFilterValue
+            // 
+            this.textBoxFilterValue.Location = new System.Drawing.Point(910, 202);
+            this.textBoxFilterValue.Name = "textBoxFilterValue";
+            this.textBoxFilterValue.Size = new System.Drawing.Size(29, 20);
+            this.textBoxFilterValue.TabIndex = 36;
+            this.textBoxFilterValue.Text = "10";
+            this.textBoxFilterValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxFilterValue.TextChanged += new System.EventHandler(this.textBoxFilterValue_TextChanged);
+            // 
+            // labelCriteria
+            // 
+            this.labelCriteria.AutoSize = true;
+            this.labelCriteria.Location = new System.Drawing.Point(832, 209);
+            this.labelCriteria.Name = "labelCriteria";
+            this.labelCriteria.Size = new System.Drawing.Size(76, 13);
+            this.labelCriteria.TabIndex = 35;
+            this.labelCriteria.Text = "Filter Value (s):";
+            // 
+            // textBoxCompareCount
+            // 
+            this.textBoxCompareCount.Location = new System.Drawing.Point(1310, 202);
+            this.textBoxCompareCount.Name = "textBoxCompareCount";
+            this.textBoxCompareCount.Size = new System.Drawing.Size(29, 20);
+            this.textBoxCompareCount.TabIndex = 34;
+            this.textBoxCompareCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // labelStatusCompare
             // 
             this.labelStatusCompare.AutoSize = true;
-            this.labelStatusCompare.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStatusCompare.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStatusCompare.ForeColor = System.Drawing.Color.Teal;
             this.labelStatusCompare.Location = new System.Drawing.Point(972, 180);
             this.labelStatusCompare.Name = "labelStatusCompare";
-            this.labelStatusCompare.Size = new System.Drawing.Size(0, 15);
+            this.labelStatusCompare.Size = new System.Drawing.Size(0, 16);
             this.labelStatusCompare.TabIndex = 33;
             // 
             // buttonCompareAvg
@@ -647,70 +713,6 @@
             // dailyMQSDataTableAdapter
             // 
             this.dailyMQSDataTableAdapter.ClearBeforeFill = true;
-            // 
-            // textBoxCompareCount
-            // 
-            this.textBoxCompareCount.Location = new System.Drawing.Point(1317, 202);
-            this.textBoxCompareCount.Name = "textBoxCompareCount";
-            this.textBoxCompareCount.Size = new System.Drawing.Size(29, 20);
-            this.textBoxCompareCount.TabIndex = 34;
-            this.textBoxCompareCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // labelLogo
-            // 
-            this.labelLogo.AutoSize = true;
-            this.labelLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLogo.ForeColor = System.Drawing.Color.Teal;
-            this.labelLogo.Location = new System.Drawing.Point(7, 25);
-            this.labelLogo.Name = "labelLogo";
-            this.labelLogo.Size = new System.Drawing.Size(165, 24);
-            this.labelLogo.TabIndex = 32;
-            this.labelLogo.Text = "Product Data MQS";
-            // 
-            // labelCriteria
-            // 
-            this.labelCriteria.AutoSize = true;
-            this.labelCriteria.Location = new System.Drawing.Point(832, 209);
-            this.labelCriteria.Name = "labelCriteria";
-            this.labelCriteria.Size = new System.Drawing.Size(76, 13);
-            this.labelCriteria.TabIndex = 35;
-            this.labelCriteria.Text = "Filter Value (s):";
-            // 
-            // textBoxFilterValue
-            // 
-            this.textBoxFilterValue.Location = new System.Drawing.Point(910, 202);
-            this.textBoxFilterValue.Name = "textBoxFilterValue";
-            this.textBoxFilterValue.Size = new System.Drawing.Size(29, 20);
-            this.textBoxFilterValue.TabIndex = 36;
-            this.textBoxFilterValue.Text = "10";
-            this.textBoxFilterValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBoxFilterValue.TextChanged += new System.EventHandler(this.textBoxFilterValue_TextChanged);
-            // 
-            // textBoxFilterCount
-            // 
-            this.textBoxFilterCount.Location = new System.Drawing.Point(1207, 202);
-            this.textBoxFilterCount.Name = "textBoxFilterCount";
-            this.textBoxFilterCount.Size = new System.Drawing.Size(29, 20);
-            this.textBoxFilterCount.TabIndex = 38;
-            this.textBoxFilterCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // labelFilterCount
-            // 
-            this.labelFilterCount.AutoSize = true;
-            this.labelFilterCount.Location = new System.Drawing.Point(1139, 209);
-            this.labelFilterCount.Name = "labelFilterCount";
-            this.labelFilterCount.Size = new System.Drawing.Size(63, 13);
-            this.labelFilterCount.TabIndex = 37;
-            this.labelFilterCount.Text = "Filter Count:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1248, 209);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 13);
-            this.label1.TabIndex = 39;
-            this.label1.Text = "Total Count:";
             // 
             // FormMain
             // 
@@ -766,7 +768,6 @@
         private System.Windows.Forms.Label labelTotalPass;
         private System.Windows.Forms.Button buttonPrev;
         private System.Windows.Forms.Button buttonNext;
-        private System.Windows.Forms.Button buttonUpdate;
         private System.Windows.Forms.TextBox textBoxCsvFolder;
         private System.Windows.Forms.Label labelCsvFile;
         private System.Windows.Forms.TextBox textBoxAllInfos;
@@ -805,6 +806,7 @@
         private System.Windows.Forms.Label labelFilterCount;
         public System.Windows.Forms.TextBox textBoxFilterValue;
         private System.Windows.Forms.Label labelCriteria;
+        public System.Windows.Forms.Button buttonUpdate;
     }
 }
 

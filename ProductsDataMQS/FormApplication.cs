@@ -208,16 +208,23 @@ namespace ProductsDataMQS
         }
         private void initializeFields()
         {
-
+            buttonInsertDB.Enabled = false;
+            buttonCompareAvg.Enabled = false;
+            buttonUpdate.Enabled = false;
             textBoxCompareCount.Text = "";
             textBoxFilterCount.Text = "";
             buttonCompareAvg.BackColor = Color.LightBlue;
-            buttonCompareAvg.Enabled = false;
-            labelStatusCompare.Text = "Searching...this may take a several seconds";
+            labelStatusCompare.Text = "Searching...this may take a several seconds...";
             textBoxCompare.Text = "";
             Application.DoEvents();
+
             sqlProcedure.compareAvgTestTime();
+
             labelStatusCompare.Text = "Finished!";
+            buttonUpdate.Enabled = true;
+            buttonCompareAvg.Enabled = true;
+            buttonInsertDB.Enabled = true;
+            buttonCompareAvg.BackColor = Color.LightYellow;
         }
 
         private void textBoxFilterValue_TextChanged(object sender, EventArgs e)
