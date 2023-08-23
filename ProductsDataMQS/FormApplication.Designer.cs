@@ -95,12 +95,14 @@
             this.buttonCompareAvg = new System.Windows.Forms.Button();
             this.textBoxCompare = new System.Windows.Forms.TextBox();
             this.dailyMQSDataTableAdapter = new ProductsDataMQS.MQSRequestDatabaseDataSetTableAdapters.DailyMQSDataTableAdapter();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMQS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dailyMQSDataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mQSRequestDatabaseDataSet)).BeginInit();
             this.groupBoxProductData.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridViewMQS
@@ -226,8 +228,6 @@
             // groupBoxProductData
             // 
             this.groupBoxProductData.Controls.Add(this.labelLogo);
-            this.groupBoxProductData.Controls.Add(this.buttonInsertDB);
-            this.groupBoxProductData.Controls.Add(this.labelUpdate);
             this.groupBoxProductData.Controls.Add(this.textBoxNPI);
             this.groupBoxProductData.Controls.Add(this.labelNPI);
             this.groupBoxProductData.Controls.Add(this.textBoxMchTime);
@@ -235,7 +235,6 @@
             this.groupBoxProductData.Controls.Add(this.textBoxAllInfos);
             this.groupBoxProductData.Controls.Add(this.textBoxCsvFolder);
             this.groupBoxProductData.Controls.Add(this.labelCsvFile);
-            this.groupBoxProductData.Controls.Add(this.buttonUpdate);
             this.groupBoxProductData.Controls.Add(this.buttonPrev);
             this.groupBoxProductData.Controls.Add(this.buttonNext);
             this.groupBoxProductData.Controls.Add(this.textBoxTTime);
@@ -261,7 +260,7 @@
             this.groupBoxProductData.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxProductData.Location = new System.Drawing.Point(6, 6);
             this.groupBoxProductData.Name = "groupBoxProductData";
-            this.groupBoxProductData.Size = new System.Drawing.Size(1340, 157);
+            this.groupBoxProductData.Size = new System.Drawing.Size(997, 157);
             this.groupBoxProductData.TabIndex = 1;
             this.groupBoxProductData.TabStop = false;
             this.groupBoxProductData.Text = "Product Infos";
@@ -280,9 +279,10 @@
             // buttonInsertDB
             // 
             this.buttonInsertDB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.buttonInsertDB.Location = new System.Drawing.Point(1245, 106);
+            this.buttonInsertDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonInsertDB.Location = new System.Drawing.Point(220, 19);
             this.buttonInsertDB.Name = "buttonInsertDB";
-            this.buttonInsertDB.Size = new System.Drawing.Size(89, 46);
+            this.buttonInsertDB.Size = new System.Drawing.Size(94, 101);
             this.buttonInsertDB.TabIndex = 31;
             this.buttonInsertDB.Text = "Insert To db";
             this.buttonInsertDB.UseVisualStyleBackColor = false;
@@ -293,7 +293,7 @@
             this.labelUpdate.AutoSize = true;
             this.labelUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUpdate.ForeColor = System.Drawing.Color.Teal;
-            this.labelUpdate.Location = new System.Drawing.Point(1114, 76);
+            this.labelUpdate.Location = new System.Drawing.Point(78, 123);
             this.labelUpdate.Name = "labelUpdate";
             this.labelUpdate.Size = new System.Drawing.Size(0, 24);
             this.labelUpdate.TabIndex = 30;
@@ -302,7 +302,7 @@
             // 
             this.textBoxNPI.Location = new System.Drawing.Point(888, 87);
             this.textBoxNPI.Name = "textBoxNPI";
-            this.textBoxNPI.Size = new System.Drawing.Size(72, 21);
+            this.textBoxNPI.Size = new System.Drawing.Size(83, 21);
             this.textBoxNPI.TabIndex = 29;
             this.textBoxNPI.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -319,7 +319,7 @@
             // 
             this.textBoxMchTime.Location = new System.Drawing.Point(888, 62);
             this.textBoxMchTime.Name = "textBoxMchTime";
-            this.textBoxMchTime.Size = new System.Drawing.Size(72, 21);
+            this.textBoxMchTime.Size = new System.Drawing.Size(83, 21);
             this.textBoxMchTime.TabIndex = 27;
             this.textBoxMchTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -336,13 +336,13 @@
             // 
             this.textBoxAllInfos.Location = new System.Drawing.Point(239, 131);
             this.textBoxAllInfos.Name = "textBoxAllInfos";
-            this.textBoxAllInfos.Size = new System.Drawing.Size(710, 21);
+            this.textBoxAllInfos.Size = new System.Drawing.Size(453, 21);
             this.textBoxAllInfos.TabIndex = 25;
             // 
             // textBoxCsvFolder
             // 
             this.textBoxCsvFolder.Enabled = false;
-            this.textBoxCsvFolder.Location = new System.Drawing.Point(963, 131);
+            this.textBoxCsvFolder.Location = new System.Drawing.Point(698, 131);
             this.textBoxCsvFolder.Name = "textBoxCsvFolder";
             this.textBoxCsvFolder.Size = new System.Drawing.Size(273, 21);
             this.textBoxCsvFolder.TabIndex = 24;
@@ -351,7 +351,7 @@
             // labelCsvFile
             // 
             this.labelCsvFile.AutoSize = true;
-            this.labelCsvFile.Location = new System.Drawing.Point(960, 113);
+            this.labelCsvFile.Location = new System.Drawing.Point(695, 113);
             this.labelCsvFile.Name = "labelCsvFile";
             this.labelCsvFile.Size = new System.Drawing.Size(90, 15);
             this.labelCsvFile.TabIndex = 23;
@@ -360,10 +360,11 @@
             // buttonUpdate
             // 
             this.buttonUpdate.BackColor = System.Drawing.Color.Teal;
+            this.buttonUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonUpdate.ForeColor = System.Drawing.Color.White;
-            this.buttonUpdate.Location = new System.Drawing.Point(1027, 35);
+            this.buttonUpdate.Location = new System.Drawing.Point(21, 19);
             this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(265, 38);
+            this.buttonUpdate.Size = new System.Drawing.Size(193, 101);
             this.buttonUpdate.TabIndex = 22;
             this.buttonUpdate.Text = "MQS Update";
             this.buttonUpdate.UseVisualStyleBackColor = false;
@@ -396,7 +397,7 @@
             this.textBoxTTime.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dailyMQSDataBindingSource, "AvgPASSTime", true));
             this.textBoxTTime.Location = new System.Drawing.Point(888, 35);
             this.textBoxTTime.Name = "textBoxTTime";
-            this.textBoxTTime.Size = new System.Drawing.Size(72, 21);
+            this.textBoxTTime.Size = new System.Drawing.Size(83, 21);
             this.textBoxTTime.TabIndex = 19;
             this.textBoxTTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxTTime.TextChanged += new System.EventHandler(this.textBoxTTime_TextChanged);
@@ -607,6 +608,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.textBoxFilterCount);
             this.tabPage1.Controls.Add(this.labelFilterCount);
@@ -654,7 +656,7 @@
             // 
             // textBoxFilterValue
             // 
-            this.textBoxFilterValue.Location = new System.Drawing.Point(910, 202);
+            this.textBoxFilterValue.Location = new System.Drawing.Point(1090, 202);
             this.textBoxFilterValue.Name = "textBoxFilterValue";
             this.textBoxFilterValue.Size = new System.Drawing.Size(29, 20);
             this.textBoxFilterValue.TabIndex = 36;
@@ -665,7 +667,7 @@
             // labelCriteria
             // 
             this.labelCriteria.AutoSize = true;
-            this.labelCriteria.Location = new System.Drawing.Point(832, 209);
+            this.labelCriteria.Location = new System.Drawing.Point(1012, 209);
             this.labelCriteria.Name = "labelCriteria";
             this.labelCriteria.Size = new System.Drawing.Size(76, 13);
             this.labelCriteria.TabIndex = 35;
@@ -684,7 +686,7 @@
             this.labelStatusCompare.AutoSize = true;
             this.labelStatusCompare.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelStatusCompare.ForeColor = System.Drawing.Color.Teal;
-            this.labelStatusCompare.Location = new System.Drawing.Point(972, 180);
+            this.labelStatusCompare.Location = new System.Drawing.Point(1012, 180);
             this.labelStatusCompare.Name = "labelStatusCompare";
             this.labelStatusCompare.Size = new System.Drawing.Size(0, 16);
             this.labelStatusCompare.TabIndex = 33;
@@ -694,7 +696,7 @@
             this.buttonCompareAvg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCompareAvg.Location = new System.Drawing.Point(832, 164);
             this.buttonCompareAvg.Name = "buttonCompareAvg";
-            this.buttonCompareAvg.Size = new System.Drawing.Size(133, 35);
+            this.buttonCompareAvg.Size = new System.Drawing.Size(171, 58);
             this.buttonCompareAvg.TabIndex = 32;
             this.buttonCompareAvg.Text = "Compare Test Time";
             this.buttonCompareAvg.UseVisualStyleBackColor = true;
@@ -714,11 +716,23 @@
             // 
             this.dailyMQSDataTableAdapter.ClearBeforeFill = true;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.buttonUpdate);
+            this.groupBox1.Controls.Add(this.labelUpdate);
+            this.groupBox1.Controls.Add(this.buttonInsertDB);
+            this.groupBox1.Location = new System.Drawing.Point(1015, 6);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(324, 157);
+            this.groupBox1.TabIndex = 40;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Query";
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1362, 703);
+            this.ClientSize = new System.Drawing.Size(1363, 703);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.labelDev);
@@ -735,6 +749,8 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -807,6 +823,7 @@
         public System.Windows.Forms.TextBox textBoxFilterValue;
         private System.Windows.Forms.Label labelCriteria;
         public System.Windows.Forms.Button buttonUpdate;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 

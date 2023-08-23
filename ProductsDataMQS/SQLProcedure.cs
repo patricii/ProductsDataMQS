@@ -78,7 +78,6 @@ namespace ProductsDataMQS
                 baselineDBAdapter.Fill(baselineTable);
 
                 int[] columnsToCompare = new int[] { 0, 1, 2 };
-
                 CompareTables(installedTable, baselineTable, columnsToCompare);
             }
         }
