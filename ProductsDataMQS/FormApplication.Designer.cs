@@ -280,9 +280,9 @@
             // 
             this.buttonInsertDB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.buttonInsertDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonInsertDB.Location = new System.Drawing.Point(220, 19);
+            this.buttonInsertDB.Location = new System.Drawing.Point(220, 35);
             this.buttonInsertDB.Name = "buttonInsertDB";
-            this.buttonInsertDB.Size = new System.Drawing.Size(94, 101);
+            this.buttonInsertDB.Size = new System.Drawing.Size(94, 73);
             this.buttonInsertDB.TabIndex = 31;
             this.buttonInsertDB.Text = "Insert To db";
             this.buttonInsertDB.UseVisualStyleBackColor = false;
@@ -362,9 +362,9 @@
             this.buttonUpdate.BackColor = System.Drawing.Color.Teal;
             this.buttonUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonUpdate.ForeColor = System.Drawing.Color.White;
-            this.buttonUpdate.Location = new System.Drawing.Point(21, 19);
+            this.buttonUpdate.Location = new System.Drawing.Point(21, 35);
             this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(193, 101);
+            this.buttonUpdate.Size = new System.Drawing.Size(193, 75);
             this.buttonUpdate.TabIndex = 22;
             this.buttonUpdate.Text = "MQS Update";
             this.buttonUpdate.UseVisualStyleBackColor = false;
