@@ -200,6 +200,7 @@ namespace ProductsDataMQS
 
         private void buttonCompareAvg_Click(object sender, EventArgs e)
         {
+            textBoxCompareCount.Text = "";
             buttonCompareAvg.BackColor = Color.LightSkyBlue;
             buttonCompareAvg.Enabled = false;
             labelStatusCompare.Text = "Searching...this may take a several seconds";
