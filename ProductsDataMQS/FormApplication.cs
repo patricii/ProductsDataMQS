@@ -119,7 +119,7 @@ namespace ProductsDataMQS
         }
         private void calMchTime() //to do!!!
         {
-            textBoxTTime.BackColor = Color.LightSkyBlue;
+            textBoxTTime.BackColor = Color.LightBlue;
             //textBoxMchTime.BackColor = Color.LightYellow;
             //textBoxNPI.BackColor = Color.Orange;
             if (textBoxTTime.Text != "")
@@ -200,15 +200,19 @@ namespace ProductsDataMQS
 
         private void buttonCompareAvg_Click(object sender, EventArgs e)
         {
+            initializeFields();
+        }
+        private void initializeFields()
+        {
+
             textBoxCompareCount.Text = "";
-            buttonCompareAvg.BackColor = Color.LightSkyBlue;
+            buttonCompareAvg.BackColor = Color.LightBlue;
             buttonCompareAvg.Enabled = false;
             labelStatusCompare.Text = "Searching...this may take a several seconds";
             textBoxCompare.Text = "";
             Application.DoEvents();
             sqlProcedure.compareAvgTestTime();
             labelStatusCompare.Text = "Finished!";
-
         }
     }
 }

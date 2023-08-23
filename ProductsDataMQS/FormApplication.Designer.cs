@@ -264,9 +264,9 @@
             // buttonInsertDB
             // 
             this.buttonInsertDB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.buttonInsertDB.Location = new System.Drawing.Point(1245, 95);
+            this.buttonInsertDB.Location = new System.Drawing.Point(1245, 106);
             this.buttonInsertDB.Name = "buttonInsertDB";
-            this.buttonInsertDB.Size = new System.Drawing.Size(89, 57);
+            this.buttonInsertDB.Size = new System.Drawing.Size(89, 46);
             this.buttonInsertDB.TabIndex = 31;
             this.buttonInsertDB.Text = "Insert To db";
             this.buttonInsertDB.UseVisualStyleBackColor = false;
@@ -277,7 +277,7 @@
             this.labelUpdate.AutoSize = true;
             this.labelUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUpdate.ForeColor = System.Drawing.Color.Teal;
-            this.labelUpdate.Location = new System.Drawing.Point(1114, 71);
+            this.labelUpdate.Location = new System.Drawing.Point(1114, 76);
             this.labelUpdate.Name = "labelUpdate";
             this.labelUpdate.Size = new System.Drawing.Size(0, 24);
             this.labelUpdate.TabIndex = 30;
@@ -344,9 +344,9 @@
             // 
             this.buttonUpdate.BackColor = System.Drawing.Color.Teal;
             this.buttonUpdate.ForeColor = System.Drawing.Color.White;
-            this.buttonUpdate.Location = new System.Drawing.Point(1027, 20);
+            this.buttonUpdate.Location = new System.Drawing.Point(1027, 35);
             this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(265, 46);
+            this.buttonUpdate.Size = new System.Drawing.Size(265, 38);
             this.buttonUpdate.TabIndex = 22;
             this.buttonUpdate.Text = "MQS Update";
             this.buttonUpdate.UseVisualStyleBackColor = false;
