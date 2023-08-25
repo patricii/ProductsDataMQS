@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.OleDb;
 using System.Drawing;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace ProductsDataMQS
@@ -82,6 +83,16 @@ namespace ProductsDataMQS
             }
         }
 
+        private void ColourRrbText(RichTextBox rtb)
+        {
+            Regex regExp = new Regex("[*><]");
+
+            foreach (Match match in regExp.Matches(rtb.Text))
+            {
+                rtb.Select(match.Index, match.Length);
+                rtb.SelectionColor = Color.Red;
+            }
+        }
         private void CompareTables(DataTable table1, DataTable table2, IEnumerable<int> columnsToCompare)
         {
             FormMain frm = FormMain.getInstance();
@@ -112,13 +123,13 @@ namespace ProductsDataMQS
                                         result = result * -1;
                                     if (result >= filterValue)
                                     {
-                                        frm.textBoxCompare.Text += "***->[Product: " + table1.Rows[i_rowIndex][colIndex - 2].ToString() + " - Process: " + table1.Rows[i_rowIndex][colIndex - 1].ToString() + " - Old AvgTestTime: " + table1.Rows[i_rowIndex][colIndex].ToString() + "s ]" + Environment.NewLine + "***->[Product: " + table2.Rows[j_rowIndex][colIndex - 2].ToString() + " - Process: " + table2.Rows[j_rowIndex][colIndex - 1].ToString() + " - New AvgTestTime: " + table2.Rows[j_rowIndex][colIndex].ToString() + "s ]" + Environment.NewLine + Environment.NewLine;
+                                        frm.richTextBoxCompare.Text += "***>[PRODUCT: " + table1.Rows[i_rowIndex][colIndex - 2].ToString() + " - PROCESS: " + table1.Rows[i_rowIndex][colIndex - 1].ToString() + " - OLD AVGTESTTIME: " + table1.Rows[i_rowIndex][colIndex].ToString() + "s ]<***" + Environment.NewLine + "***>[PRODUCT: " + table2.Rows[j_rowIndex][colIndex - 2].ToString() + " - PROCESS: " + table2.Rows[j_rowIndex][colIndex - 1].ToString() + " - NEW AVGTESTTIME: " + table2.Rows[j_rowIndex][colIndex].ToString() + "s] <***" + Environment.NewLine + Environment.NewLine;
                                         countCompareOut++;
                                         frm.textBoxFilterCount.Text = countCompareOut.ToString();
                                         frm.textBoxFilterCount.BackColor = Color.OrangeRed;
                                     }
                                     else
-                                        frm.textBoxCompare.Text += "[Product: " + table1.Rows[i_rowIndex][colIndex - 2].ToString() + " - Process: " + table1.Rows[i_rowIndex][colIndex - 1].ToString() + " - Old AvgTestTime: " + table1.Rows[i_rowIndex][colIndex].ToString() + "s ]" + Environment.NewLine + "[Product: " + table2.Rows[j_rowIndex][colIndex - 2].ToString() + " - Process: " + table2.Rows[j_rowIndex][colIndex - 1].ToString() + " - New AvgTestTime: " + table2.Rows[j_rowIndex][colIndex].ToString() + "s ]" + Environment.NewLine + Environment.NewLine;
+                                        frm.richTextBoxCompare.Text += "[Product: " + table1.Rows[i_rowIndex][colIndex - 2].ToString() + " - Process: " + table1.Rows[i_rowIndex][colIndex - 1].ToString() + " - Old AvgTestTime: " + table1.Rows[i_rowIndex][colIndex].ToString() + "s ]" + Environment.NewLine + "[Product: " + table2.Rows[j_rowIndex][colIndex - 2].ToString() + " - Process: " + table2.Rows[j_rowIndex][colIndex - 1].ToString() + " - New AvgTestTime: " + table2.Rows[j_rowIndex][colIndex].ToString() + "s ]" + Environment.NewLine + Environment.NewLine;
 
                                     countCompare++;
                                     frm.textBoxCompareCount.Text = countCompare.ToString();
@@ -137,7 +148,9 @@ namespace ProductsDataMQS
                 }
             }
             if (countCompare == 0)
-                frm.textBoxCompare.Text = "There's No AvgTestTime changes!!!";
+                frm.richTextBoxCompare.Text = "There's No AvgTestTime changes!!!";
+
+            ColourRrbText(frm.richTextBoxCompare);
         }
     }
 }

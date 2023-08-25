@@ -215,7 +215,7 @@ namespace ProductsDataMQS
             textBoxFilterCount.Text = "";
             buttonCompareAvg.BackColor = Color.LightBlue;
             labelStatusCompare.Text = "Searching...this may take a several seconds...";
-            textBoxCompare.Text = "";
+            richTextBoxCompare.Text = "";
             Application.DoEvents();
 
             sqlProcedure.compareAvgTestTime();
