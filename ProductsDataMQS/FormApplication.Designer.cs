@@ -131,7 +131,7 @@
             this.dataGridViewMQS.DataSource = this.dailyMQSDataBindingSource;
             this.dataGridViewMQS.Location = new System.Drawing.Point(8, 164);
             this.dataGridViewMQS.Name = "dataGridViewMQS";
-            this.dataGridViewMQS.Size = new System.Drawing.Size(917, 508);
+            this.dataGridViewMQS.Size = new System.Drawing.Size(843, 508);
             this.dataGridViewMQS.TabIndex = 0;
             // 
             // iDDataGridViewTextBoxColumn
@@ -280,7 +280,7 @@
             this.labelLogo.AutoSize = true;
             this.labelLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLogo.ForeColor = System.Drawing.Color.Teal;
-            this.labelLogo.Location = new System.Drawing.Point(0, 20);
+            this.labelLogo.Location = new System.Drawing.Point(6, 17);
             this.labelLogo.Name = "labelLogo";
             this.labelLogo.Size = new System.Drawing.Size(165, 24);
             this.labelLogo.TabIndex = 32;
@@ -322,15 +322,16 @@
             // 
             // textBoxAllInfos
             // 
-            this.textBoxAllInfos.Location = new System.Drawing.Point(239, 131);
+            this.textBoxAllInfos.Location = new System.Drawing.Point(518, 130);
             this.textBoxAllInfos.Name = "textBoxAllInfos";
             this.textBoxAllInfos.Size = new System.Drawing.Size(453, 21);
             this.textBoxAllInfos.TabIndex = 25;
+            this.textBoxAllInfos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBoxCsvFolder
             // 
             this.textBoxCsvFolder.Enabled = false;
-            this.textBoxCsvFolder.Location = new System.Drawing.Point(698, 131);
+            this.textBoxCsvFolder.Location = new System.Drawing.Point(239, 130);
             this.textBoxCsvFolder.Name = "textBoxCsvFolder";
             this.textBoxCsvFolder.Size = new System.Drawing.Size(273, 21);
             this.textBoxCsvFolder.TabIndex = 24;
@@ -339,11 +340,11 @@
             // labelCsvFile
             // 
             this.labelCsvFile.AutoSize = true;
-            this.labelCsvFile.Location = new System.Drawing.Point(695, 113);
+            this.labelCsvFile.Location = new System.Drawing.Point(186, 136);
             this.labelCsvFile.Name = "labelCsvFile";
-            this.labelCsvFile.Size = new System.Drawing.Size(90, 15);
+            this.labelCsvFile.Size = new System.Drawing.Size(52, 15);
             this.labelCsvFile.TabIndex = 23;
-            this.labelCsvFile.Text = "Csv File Folder:";
+            this.labelCsvFile.Text = "Csv File:";
             // 
             // buttonPrev
             // 
@@ -555,9 +556,9 @@
             // 
             this.buttonInsertDB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.buttonInsertDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonInsertDB.Location = new System.Drawing.Point(6, 113);
+            this.buttonInsertDB.Location = new System.Drawing.Point(20, 113);
             this.buttonInsertDB.Name = "buttonInsertDB";
-            this.buttonInsertDB.Size = new System.Drawing.Size(140, 38);
+            this.buttonInsertDB.Size = new System.Drawing.Size(116, 38);
             this.buttonInsertDB.TabIndex = 31;
             this.buttonInsertDB.Text = "Insert To db";
             this.buttonInsertDB.UseVisualStyleBackColor = false;
@@ -568,7 +569,7 @@
             this.labelUpdate.AutoSize = true;
             this.labelUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUpdate.ForeColor = System.Drawing.Color.Teal;
-            this.labelUpdate.Location = new System.Drawing.Point(26, 80);
+            this.labelUpdate.Location = new System.Drawing.Point(26, 82);
             this.labelUpdate.Name = "labelUpdate";
             this.labelUpdate.Size = new System.Drawing.Size(0, 24);
             this.labelUpdate.TabIndex = 30;
@@ -650,7 +651,7 @@
             // 
             // textBoxFilterCount
             // 
-            this.textBoxFilterCount.Location = new System.Drawing.Point(1321, 202);
+            this.textBoxFilterCount.Location = new System.Drawing.Point(1297, 202);
             this.textBoxFilterCount.Name = "textBoxFilterCount";
             this.textBoxFilterCount.Size = new System.Drawing.Size(29, 20);
             this.textBoxFilterCount.TabIndex = 38;
@@ -659,7 +660,7 @@
             // labelFilterCount
             // 
             this.labelFilterCount.AutoSize = true;
-            this.labelFilterCount.Location = new System.Drawing.Point(1253, 209);
+            this.labelFilterCount.Location = new System.Drawing.Point(1229, 209);
             this.labelFilterCount.Name = "labelFilterCount";
             this.labelFilterCount.Size = new System.Drawing.Size(63, 13);
             this.labelFilterCount.TabIndex = 37;
@@ -667,7 +668,7 @@
             // 
             // textBoxFilterValue
             // 
-            this.textBoxFilterValue.Location = new System.Drawing.Point(1211, 202);
+            this.textBoxFilterValue.Location = new System.Drawing.Point(1179, 202);
             this.textBoxFilterValue.Name = "textBoxFilterValue";
             this.textBoxFilterValue.Size = new System.Drawing.Size(29, 20);
             this.textBoxFilterValue.TabIndex = 36;
@@ -678,18 +679,18 @@
             // labelCriteria
             // 
             this.labelCriteria.AutoSize = true;
-            this.labelCriteria.Location = new System.Drawing.Point(1108, 209);
+            this.labelCriteria.Location = new System.Drawing.Point(1053, 209);
             this.labelCriteria.Name = "labelCriteria";
-            this.labelCriteria.Size = new System.Drawing.Size(99, 13);
+            this.labelCriteria.Size = new System.Drawing.Size(123, 13);
             this.labelCriteria.TabIndex = 35;
-            this.labelCriteria.Text = "Min Delta Value (s):";
+            this.labelCriteria.Text = "Minimum Delta Value (s):";
             // 
             // labelStatusCompare
             // 
             this.labelStatusCompare.AutoSize = true;
             this.labelStatusCompare.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelStatusCompare.ForeColor = System.Drawing.Color.Teal;
-            this.labelStatusCompare.Location = new System.Drawing.Point(1108, 180);
+            this.labelStatusCompare.Location = new System.Drawing.Point(1040, 180);
             this.labelStatusCompare.Name = "labelStatusCompare";
             this.labelStatusCompare.Size = new System.Drawing.Size(0, 16);
             this.labelStatusCompare.TabIndex = 33;
@@ -697,7 +698,7 @@
             // buttonCompareAvg
             // 
             this.buttonCompareAvg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCompareAvg.Location = new System.Drawing.Point(931, 169);
+            this.buttonCompareAvg.Location = new System.Drawing.Point(857, 170);
             this.buttonCompareAvg.Name = "buttonCompareAvg";
             this.buttonCompareAvg.Size = new System.Drawing.Size(171, 53);
             this.buttonCompareAvg.TabIndex = 32;
@@ -711,15 +712,15 @@
             // 
             // richTextBoxCompare
             // 
-            this.richTextBoxCompare.Location = new System.Drawing.Point(931, 229);
+            this.richTextBoxCompare.Location = new System.Drawing.Point(857, 229);
             this.richTextBoxCompare.Name = "richTextBoxCompare";
-            this.richTextBoxCompare.Size = new System.Drawing.Size(450, 443);
+            this.richTextBoxCompare.Size = new System.Drawing.Size(524, 443);
             this.richTextBoxCompare.TabIndex = 41;
             this.richTextBoxCompare.Text = "";
             // 
             // buttonAddNew
             // 
-            this.buttonAddNew.Location = new System.Drawing.Point(6, 74);
+            this.buttonAddNew.Location = new System.Drawing.Point(6, 55);
             this.buttonAddNew.Name = "buttonAddNew";
             this.buttonAddNew.Size = new System.Drawing.Size(75, 34);
             this.buttonAddNew.TabIndex = 33;
@@ -730,7 +731,7 @@
             // buttonSave
             // 
             this.buttonSave.Enabled = false;
-            this.buttonSave.Location = new System.Drawing.Point(87, 74);
+            this.buttonSave.Location = new System.Drawing.Point(87, 55);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(75, 34);
             this.buttonSave.TabIndex = 34;

@@ -67,8 +67,8 @@ namespace ProductsDataMQS
         }
         public void compareAvgTestTime()
         {
-            string query1 = "SELECT Family, Process, AvgPASSTime FROM DailyMQSData ORDER BY Family, Process;";
-            string query2 = "SELECT Family, Process, AvgPASSTime FROM DailyMQSDataTemp ORDER BY Family, Process;";
+            string query1 = "SELECT Family, Process, AvgPASSTime, TotHandle FROM DailyMQSData ORDER BY Family, Process;";
+            string query2 = "SELECT Family, Process, AvgPASSTime, TotHandle FROM DailyMQSDataTemp ORDER BY Family, Process;";
 
             using (var installedDBAdapter = new OleDbDataAdapter(query1, dbConnection))
             using (var baselineDBAdapter = new OleDbDataAdapter(query2, dbConnection))
@@ -78,7 +78,7 @@ namespace ProductsDataMQS
                 installedDBAdapter.Fill(installedTable);
                 baselineDBAdapter.Fill(baselineTable);
 
-                int[] columnsToCompare = new int[] { 0, 1, 2 };
+                int[] columnsToCompare = new int[] { 0, 1, 2 , 3 };
                 CompareTables(installedTable, baselineTable, columnsToCompare);
             }
         }
@@ -123,7 +123,7 @@ namespace ProductsDataMQS
                                     {
                                         if (result >= filterValue)
                                         {
-                                            string temp = "Product: " + table1.Rows[i_rowIndex][colIndex - 2].ToString() + " - Process: " + table1.Rows[i_rowIndex][colIndex - 1].ToString() + " - OLD AvgTestTime: " + table1.Rows[i_rowIndex][colIndex].ToString() + "s" + Environment.NewLine + "Product: " + table2.Rows[j_rowIndex][colIndex - 2].ToString() + " - Process: " + table2.Rows[j_rowIndex][colIndex - 1].ToString() + " - NEW AvgTestTime: " + table2.Rows[j_rowIndex][colIndex].ToString() + "s" + Environment.NewLine + Environment.NewLine;
+                                            string temp = "*Product: " + table1.Rows[i_rowIndex][colIndex - 2].ToString() + " - Process: " + table1.Rows[i_rowIndex][colIndex - 1].ToString() + " - OLD AvgTestTime: " + table1.Rows[i_rowIndex][colIndex].ToString() + "s" + " - TotHandle:" +table1.Rows[i_rowIndex][colIndex + 1].ToString() + "*" + Environment.NewLine + "*Product: " + table2.Rows[j_rowIndex][colIndex - 2].ToString() + " - Process: " + table2.Rows[j_rowIndex][colIndex - 1].ToString() + " - NEW AvgTestTime: " + table2.Rows[j_rowIndex][colIndex].ToString() + "s" + " - TotHandle:" + table2.Rows[i_rowIndex][colIndex + 1].ToString() + "*" +Environment.NewLine + Environment.NewLine;
                                             frm.richTextBoxCompare.Text += temp;
                                             countCompareOut++;
                                             frm.textBoxFilterCount.Text = countCompareOut.ToString();

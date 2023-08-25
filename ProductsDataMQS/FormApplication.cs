@@ -124,8 +124,6 @@ namespace ProductsDataMQS
         private void calMchTime() //to do!!!
         {
             textBoxTTime.BackColor = Color.LightBlue;
-            //textBoxMchTime.BackColor = Color.LightYellow;
-            //textBoxNPI.BackColor = Color.Orange;
             if (textBoxTTime.Text != "")
             {
                 if (Convert.ToDouble(textBoxTTime.Text) != 0)
@@ -139,9 +137,10 @@ namespace ProductsDataMQS
 
         private void buttonInsertDB_Click(object sender, EventArgs e)
         {
-            updateDB();
+            FormLogin frmLogin = new FormLogin();
+            frmLogin.Show();          
         }
-        private void updateDB()
+        public void updateDB()
         {
             DialogResult dialogResult = MessageBox.Show("Deseja realmente carregar o arquivo .csv? o DataBase será atualizado.", "!!!Atenção!!!", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
