@@ -85,7 +85,7 @@ namespace ProductsDataMQS
 
         private void ColourRrbText(RichTextBox rtb)
         {
-            Regex regExp = new Regex("[*a-zA-Z0-9]");
+            Regex regExp = new Regex("[*a-zA-Z0-9_:-]");
 
             foreach (Match match in regExp.Matches(rtb.Text))
             {
