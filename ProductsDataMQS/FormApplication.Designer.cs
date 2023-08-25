@@ -94,6 +94,8 @@
             this.buttonCompareAvg = new System.Windows.Forms.Button();
             this.dailyMQSDataTableAdapter = new ProductsDataMQS.MQSRequestDatabaseDataSetTableAdapters.DailyMQSDataTableAdapter();
             this.richTextBoxCompare = new System.Windows.Forms.RichTextBox();
+            this.buttonAddNew = new System.Windows.Forms.Button();
+            this.buttonSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMQS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dailyMQSDataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mQSRequestDatabaseDataSet)).BeginInit();
@@ -225,6 +227,8 @@
             // 
             // groupBoxProductData
             // 
+            this.groupBoxProductData.Controls.Add(this.buttonSave);
+            this.groupBoxProductData.Controls.Add(this.buttonAddNew);
             this.groupBoxProductData.Controls.Add(this.labelLogo);
             this.groupBoxProductData.Controls.Add(this.textBoxNPI);
             this.groupBoxProductData.Controls.Add(this.labelNPI);
@@ -336,7 +340,7 @@
             // buttonPrev
             // 
             this.buttonPrev.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPrev.Location = new System.Drawing.Point(30, 70);
+            this.buttonPrev.Location = new System.Drawing.Point(2, 123);
             this.buttonPrev.Name = "buttonPrev";
             this.buttonPrev.Size = new System.Drawing.Size(54, 32);
             this.buttonPrev.TabIndex = 21;
@@ -347,7 +351,7 @@
             // buttonNext
             // 
             this.buttonNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonNext.Location = new System.Drawing.Point(100, 70);
+            this.buttonNext.Location = new System.Drawing.Point(72, 123);
             this.buttonNext.Name = "buttonNext";
             this.buttonNext.Size = new System.Drawing.Size(56, 32);
             this.buttonNext.TabIndex = 20;
@@ -638,7 +642,7 @@
             // 
             // textBoxFilterCount
             // 
-            this.textBoxFilterCount.Location = new System.Drawing.Point(1200, 202);
+            this.textBoxFilterCount.Location = new System.Drawing.Point(1225, 202);
             this.textBoxFilterCount.Name = "textBoxFilterCount";
             this.textBoxFilterCount.Size = new System.Drawing.Size(29, 20);
             this.textBoxFilterCount.TabIndex = 38;
@@ -647,7 +651,7 @@
             // labelFilterCount
             // 
             this.labelFilterCount.AutoSize = true;
-            this.labelFilterCount.Location = new System.Drawing.Point(1132, 209);
+            this.labelFilterCount.Location = new System.Drawing.Point(1157, 209);
             this.labelFilterCount.Name = "labelFilterCount";
             this.labelFilterCount.Size = new System.Drawing.Size(63, 13);
             this.labelFilterCount.TabIndex = 37;
@@ -655,7 +659,7 @@
             // 
             // textBoxFilterValue
             // 
-            this.textBoxFilterValue.Location = new System.Drawing.Point(1090, 202);
+            this.textBoxFilterValue.Location = new System.Drawing.Point(1115, 202);
             this.textBoxFilterValue.Name = "textBoxFilterValue";
             this.textBoxFilterValue.Size = new System.Drawing.Size(29, 20);
             this.textBoxFilterValue.TabIndex = 36;
@@ -668,9 +672,9 @@
             this.labelCriteria.AutoSize = true;
             this.labelCriteria.Location = new System.Drawing.Point(1012, 209);
             this.labelCriteria.Name = "labelCriteria";
-            this.labelCriteria.Size = new System.Drawing.Size(76, 13);
+            this.labelCriteria.Size = new System.Drawing.Size(99, 13);
             this.labelCriteria.TabIndex = 35;
-            this.labelCriteria.Text = "Filter Value (s):";
+            this.labelCriteria.Text = "Min Delta Value (s):";
             // 
             // labelStatusCompare
             // 
@@ -704,6 +708,27 @@
             this.richTextBoxCompare.Size = new System.Drawing.Size(504, 412);
             this.richTextBoxCompare.TabIndex = 41;
             this.richTextBoxCompare.Text = "";
+            // 
+            // buttonAddNew
+            // 
+            this.buttonAddNew.Location = new System.Drawing.Point(2, 54);
+            this.buttonAddNew.Name = "buttonAddNew";
+            this.buttonAddNew.Size = new System.Drawing.Size(75, 34);
+            this.buttonAddNew.TabIndex = 33;
+            this.buttonAddNew.Text = "Add New";
+            this.buttonAddNew.UseVisualStyleBackColor = true;
+            this.buttonAddNew.Click += new System.EventHandler(this.buttonAddNew_Click);
+            // 
+            // buttonSave
+            // 
+            this.buttonSave.Enabled = false;
+            this.buttonSave.Location = new System.Drawing.Point(84, 54);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(75, 34);
+            this.buttonSave.TabIndex = 34;
+            this.buttonSave.Text = "Save";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // FormMain
             // 
@@ -799,6 +824,8 @@
         public System.Windows.Forms.Button buttonUpdate;
         private System.Windows.Forms.GroupBox groupBox1;
         public System.Windows.Forms.RichTextBox richTextBoxCompare;
+        private System.Windows.Forms.Button buttonSave;
+        private System.Windows.Forms.Button buttonAddNew;
     }
 }
 

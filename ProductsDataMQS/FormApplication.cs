@@ -231,5 +231,49 @@ namespace ProductsDataMQS
             if (textBoxFilterValue.Text == "0" || textBoxFilterValue.Text == "")
                 textBoxFilterValue.Text = "10";
         }
+
+        private void buttonAddNew_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dailyMQSDataBindingSource.AddNew();
+                setField();
+                buttonSave.Enabled = true;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(errorDBMessage + ex);
+            }
+        }
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dailyMQSDataBindingSource.EndEdit();
+                dailyMQSDataTableAdapter.Update(mQSRequestDatabaseDataSet);
+                MessageBox.Show(successDBMessage);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(errorDBMessage + ex);
+            }
+            finally
+            {
+                buttonSave.Enabled = false;
+            }
+        }
+        private void setField()
+        {
+            textBoxMchTime.Text = "0";
+            textBoxNPI.Text = "0";
+            textBoxTTime.Text = "0";
+            textBoxPrimeFail.Text = "0";
+            textBoxPrimePass.Text = "0";
+            textBoxPYield.Text = "0";
+            textBoxTFail.Text = "0";
+            textBoxTPass.Text = "0";
+            textBoxTYield.Text = "0";
+        }
     }
 }
