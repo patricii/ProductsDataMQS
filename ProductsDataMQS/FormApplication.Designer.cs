@@ -86,12 +86,10 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.textBoxFilterCount = new System.Windows.Forms.TextBox();
             this.labelFilterCount = new System.Windows.Forms.Label();
             this.textBoxFilterValue = new System.Windows.Forms.TextBox();
             this.labelCriteria = new System.Windows.Forms.Label();
-            this.textBoxCompareCount = new System.Windows.Forms.TextBox();
             this.labelStatusCompare = new System.Windows.Forms.Label();
             this.buttonCompareAvg = new System.Windows.Forms.Button();
             this.dailyMQSDataTableAdapter = new ProductsDataMQS.MQSRequestDatabaseDataSetTableAdapters.DailyMQSDataTableAdapter();
@@ -127,7 +125,7 @@
             this.dataGridViewMQS.DataSource = this.dailyMQSDataBindingSource;
             this.dataGridViewMQS.Location = new System.Drawing.Point(8, 164);
             this.dataGridViewMQS.Name = "dataGridViewMQS";
-            this.dataGridViewMQS.Size = new System.Drawing.Size(818, 474);
+            this.dataGridViewMQS.Size = new System.Drawing.Size(793, 474);
             this.dataGridViewMQS.TabIndex = 0;
             // 
             // iDDataGridViewTextBoxColumn
@@ -610,12 +608,10 @@
             // 
             this.tabPage1.Controls.Add(this.richTextBoxCompare);
             this.tabPage1.Controls.Add(this.groupBox1);
-            this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.textBoxFilterCount);
             this.tabPage1.Controls.Add(this.labelFilterCount);
             this.tabPage1.Controls.Add(this.textBoxFilterValue);
             this.tabPage1.Controls.Add(this.labelCriteria);
-            this.tabPage1.Controls.Add(this.textBoxCompareCount);
             this.tabPage1.Controls.Add(this.labelStatusCompare);
             this.tabPage1.Controls.Add(this.buttonCompareAvg);
             this.tabPage1.Controls.Add(this.dataGridViewMQS);
@@ -639,15 +635,6 @@
             this.groupBox1.TabIndex = 40;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Query";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1241, 209);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 13);
-            this.label1.TabIndex = 39;
-            this.label1.Text = "Total Count:";
             // 
             // textBoxFilterCount
             // 
@@ -685,14 +672,6 @@
             this.labelCriteria.TabIndex = 35;
             this.labelCriteria.Text = "Filter Value (s):";
             // 
-            // textBoxCompareCount
-            // 
-            this.textBoxCompareCount.Location = new System.Drawing.Point(1310, 202);
-            this.textBoxCompareCount.Name = "textBoxCompareCount";
-            this.textBoxCompareCount.Size = new System.Drawing.Size(29, 20);
-            this.textBoxCompareCount.TabIndex = 34;
-            this.textBoxCompareCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // labelStatusCompare
             // 
             this.labelStatusCompare.AutoSize = true;
@@ -706,7 +685,7 @@
             // buttonCompareAvg
             // 
             this.buttonCompareAvg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCompareAvg.Location = new System.Drawing.Point(832, 164);
+            this.buttonCompareAvg.Location = new System.Drawing.Point(807, 164);
             this.buttonCompareAvg.Name = "buttonCompareAvg";
             this.buttonCompareAvg.Size = new System.Drawing.Size(171, 58);
             this.buttonCompareAvg.TabIndex = 32;
@@ -720,9 +699,9 @@
             // 
             // richTextBoxCompare
             // 
-            this.richTextBoxCompare.Location = new System.Drawing.Point(833, 229);
+            this.richTextBoxCompare.Location = new System.Drawing.Point(807, 229);
             this.richTextBoxCompare.Name = "richTextBoxCompare";
-            this.richTextBoxCompare.Size = new System.Drawing.Size(506, 412);
+            this.richTextBoxCompare.Size = new System.Drawing.Size(532, 412);
             this.richTextBoxCompare.TabIndex = 41;
             this.richTextBoxCompare.Text = "";
             // 
@@ -811,10 +790,8 @@
         private System.Windows.Forms.Label labelUpdate;
         private System.Windows.Forms.Button buttonInsertDB;
         private System.Windows.Forms.Label labelStatusCompare;
-        public System.Windows.Forms.TextBox textBoxCompareCount;
         private System.Windows.Forms.Label labelLogo;
         public System.Windows.Forms.Button buttonCompareAvg;
-        private System.Windows.Forms.Label label1;
         public System.Windows.Forms.TextBox textBoxFilterCount;
         private System.Windows.Forms.Label labelFilterCount;
         public System.Windows.Forms.TextBox textBoxFilterValue;

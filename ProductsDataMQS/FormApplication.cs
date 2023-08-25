@@ -211,7 +211,6 @@ namespace ProductsDataMQS
             buttonInsertDB.Enabled = false;
             buttonCompareAvg.Enabled = false;
             buttonUpdate.Enabled = false;
-            textBoxCompareCount.Text = "";
             textBoxFilterCount.Text = "";
             buttonCompareAvg.BackColor = Color.LightBlue;
             labelStatusCompare.Text = "Searching...this may take a several seconds...";

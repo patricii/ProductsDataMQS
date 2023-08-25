@@ -85,7 +85,7 @@ namespace ProductsDataMQS
 
         private void ColourRrbText(RichTextBox rtb)
         {
-            Regex regExp = new Regex("[*><]");
+            Regex regExp = new Regex("[*a-zA-Z0-9]");
 
             foreach (Match match in regExp.Matches(rtb.Text))
             {
@@ -96,8 +96,6 @@ namespace ProductsDataMQS
         private void CompareTables(DataTable table1, DataTable table2, IEnumerable<int> columnsToCompare)
         {
             FormMain frm = FormMain.getInstance();
-
-            int countCompare = 0;
             int countCompareOut = 0;
             int avgTTOld = 0;
             int avgTTNew = 0;
@@ -123,18 +121,13 @@ namespace ProductsDataMQS
                                         result = result * -1;
                                     if (result >= filterValue)
                                     {
-                                        frm.richTextBoxCompare.Text += "***>[PRODUCT: " + table1.Rows[i_rowIndex][colIndex - 2].ToString() + " - PROCESS: " + table1.Rows[i_rowIndex][colIndex - 1].ToString() + " - OLD AVGTESTTIME: " + table1.Rows[i_rowIndex][colIndex].ToString() + "s ]<***" + Environment.NewLine + "***>[PRODUCT: " + table2.Rows[j_rowIndex][colIndex - 2].ToString() + " - PROCESS: " + table2.Rows[j_rowIndex][colIndex - 1].ToString() + " - NEW AVGTESTTIME: " + table2.Rows[j_rowIndex][colIndex].ToString() + "s] <***" + Environment.NewLine + Environment.NewLine;
+                                        string temp = "*** Product: " + table1.Rows[i_rowIndex][colIndex - 2].ToString() + " - Process: " + table1.Rows[i_rowIndex][colIndex - 1].ToString() + " - OLD AvgTestTime: " + table1.Rows[i_rowIndex][colIndex].ToString() + "s ***" + Environment.NewLine + "*** Product: " + table2.Rows[j_rowIndex][colIndex - 2].ToString() + " - Process: " + table2.Rows[j_rowIndex][colIndex - 1].ToString() + " - NEW AvgTestTime: " + table2.Rows[j_rowIndex][colIndex].ToString() + "s ***" + Environment.NewLine + Environment.NewLine;
+                                        frm.richTextBoxCompare.Text += temp;
                                         countCompareOut++;
                                         frm.textBoxFilterCount.Text = countCompareOut.ToString();
                                         frm.textBoxFilterCount.BackColor = Color.OrangeRed;
                                     }
-                                    else
-                                        frm.richTextBoxCompare.Text += "[Product: " + table1.Rows[i_rowIndex][colIndex - 2].ToString() + " - Process: " + table1.Rows[i_rowIndex][colIndex - 1].ToString() + " - Old AvgTestTime: " + table1.Rows[i_rowIndex][colIndex].ToString() + "s ]" + Environment.NewLine + "[Product: " + table2.Rows[j_rowIndex][colIndex - 2].ToString() + " - Process: " + table2.Rows[j_rowIndex][colIndex - 1].ToString() + " - New AvgTestTime: " + table2.Rows[j_rowIndex][colIndex].ToString() + "s ]" + Environment.NewLine + Environment.NewLine;
-
-                                    countCompare++;
-                                    frm.textBoxCompareCount.Text = countCompare.ToString();
                                     Application.DoEvents();
-
                                     result = 0;
 
                                 }
@@ -147,7 +140,7 @@ namespace ProductsDataMQS
                     }
                 }
             }
-            if (countCompare == 0)
+            if (countCompareOut == 0)
                 frm.richTextBoxCompare.Text = "There's No AvgTestTime changes!!!";
 
             ColourRrbText(frm.richTextBoxCompare);
