@@ -27,10 +27,6 @@ diferença em segundos "s" dos dados anteriores (MQSDailyData) os novos dados
 - No campo "Filter Count" serão mostradas as quantidades de Testes com 
 diferença de AvgTestTime maiores do que o valor solicitado em "Filter Value"
 
-- No campo "Total Count" serão mostradas as quantidades totais de Testes
-com diferença entre os dados da Table "MQSDailyData" com a table 
-"MQSDailyDataTemp";
-
 ****************************************************************************
 ****************************************************************************
 **************************Developed by A. Patricio**************************

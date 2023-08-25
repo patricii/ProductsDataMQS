@@ -140,10 +140,11 @@ namespace ProductsDataMQS
                     }
                 }
             }
+            ColourRrbText(frm.richTextBoxCompare);
+
             if (countCompareOut == 0)
                 frm.richTextBoxCompare.Text = "There's No AvgTestTime changes!!!";
 
-            ColourRrbText(frm.richTextBoxCompare);
         }
     }
 }
