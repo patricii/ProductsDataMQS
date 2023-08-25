@@ -31,20 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.dataGridViewMQS = new System.Windows.Forms.DataGridView();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.locationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.familyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.processDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.technologyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pYieldDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.primePassDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.primeFailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.primeHandleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totYieldDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totPassDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.avgPASSTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totFailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totHandleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dailyMQSDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mQSRequestDatabaseDataSet = new ProductsDataMQS.MQSRequestDatabaseDataSet();
             this.groupBoxProductData = new System.Windows.Forms.GroupBox();
@@ -100,6 +86,22 @@
             this.labelTHandle = new System.Windows.Forms.Label();
             this.textBoxLocation = new System.Windows.Forms.TextBox();
             this.labelSite = new System.Windows.Forms.Label();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.locationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.familyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.processDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.technologyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pYieldDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.primePassDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.primeFailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.primeHandleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totYieldDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totPassDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.avgPASSTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totFailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totHandleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonEnableLogin = new System.Windows.Forms.Button();
+            this.buttonDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMQS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dailyMQSDataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mQSRequestDatabaseDataSet)).BeginInit();
@@ -129,95 +131,10 @@
             this.totFailDataGridViewTextBoxColumn,
             this.totHandleDataGridViewTextBoxColumn});
             this.dataGridViewMQS.DataSource = this.dailyMQSDataBindingSource;
-            this.dataGridViewMQS.Location = new System.Drawing.Point(8, 164);
+            this.dataGridViewMQS.Location = new System.Drawing.Point(8, 197);
             this.dataGridViewMQS.Name = "dataGridViewMQS";
-            this.dataGridViewMQS.Size = new System.Drawing.Size(843, 508);
+            this.dataGridViewMQS.Size = new System.Drawing.Size(843, 475);
             this.dataGridViewMQS.TabIndex = 0;
-            // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // locationDataGridViewTextBoxColumn
-            // 
-            this.locationDataGridViewTextBoxColumn.DataPropertyName = "Location";
-            this.locationDataGridViewTextBoxColumn.HeaderText = "Location";
-            this.locationDataGridViewTextBoxColumn.Name = "locationDataGridViewTextBoxColumn";
-            // 
-            // familyDataGridViewTextBoxColumn
-            // 
-            this.familyDataGridViewTextBoxColumn.DataPropertyName = "Family";
-            this.familyDataGridViewTextBoxColumn.HeaderText = "Family";
-            this.familyDataGridViewTextBoxColumn.Name = "familyDataGridViewTextBoxColumn";
-            // 
-            // processDataGridViewTextBoxColumn
-            // 
-            this.processDataGridViewTextBoxColumn.DataPropertyName = "Process";
-            this.processDataGridViewTextBoxColumn.HeaderText = "Process";
-            this.processDataGridViewTextBoxColumn.Name = "processDataGridViewTextBoxColumn";
-            // 
-            // technologyDataGridViewTextBoxColumn
-            // 
-            this.technologyDataGridViewTextBoxColumn.DataPropertyName = "Technology";
-            this.technologyDataGridViewTextBoxColumn.HeaderText = "Technology";
-            this.technologyDataGridViewTextBoxColumn.Name = "technologyDataGridViewTextBoxColumn";
-            // 
-            // pYieldDataGridViewTextBoxColumn
-            // 
-            this.pYieldDataGridViewTextBoxColumn.DataPropertyName = "PYield";
-            this.pYieldDataGridViewTextBoxColumn.HeaderText = "PYield";
-            this.pYieldDataGridViewTextBoxColumn.Name = "pYieldDataGridViewTextBoxColumn";
-            // 
-            // primePassDataGridViewTextBoxColumn
-            // 
-            this.primePassDataGridViewTextBoxColumn.DataPropertyName = "PrimePass";
-            this.primePassDataGridViewTextBoxColumn.HeaderText = "PrimePass";
-            this.primePassDataGridViewTextBoxColumn.Name = "primePassDataGridViewTextBoxColumn";
-            // 
-            // primeFailDataGridViewTextBoxColumn
-            // 
-            this.primeFailDataGridViewTextBoxColumn.DataPropertyName = "PrimeFail";
-            this.primeFailDataGridViewTextBoxColumn.HeaderText = "PrimeFail";
-            this.primeFailDataGridViewTextBoxColumn.Name = "primeFailDataGridViewTextBoxColumn";
-            // 
-            // primeHandleDataGridViewTextBoxColumn
-            // 
-            this.primeHandleDataGridViewTextBoxColumn.DataPropertyName = "PrimeHandle";
-            this.primeHandleDataGridViewTextBoxColumn.HeaderText = "PrimeHandle";
-            this.primeHandleDataGridViewTextBoxColumn.Name = "primeHandleDataGridViewTextBoxColumn";
-            // 
-            // totYieldDataGridViewTextBoxColumn
-            // 
-            this.totYieldDataGridViewTextBoxColumn.DataPropertyName = "TotYield";
-            this.totYieldDataGridViewTextBoxColumn.HeaderText = "TotYield";
-            this.totYieldDataGridViewTextBoxColumn.Name = "totYieldDataGridViewTextBoxColumn";
-            // 
-            // totPassDataGridViewTextBoxColumn
-            // 
-            this.totPassDataGridViewTextBoxColumn.DataPropertyName = "TotPass";
-            this.totPassDataGridViewTextBoxColumn.HeaderText = "TotPass";
-            this.totPassDataGridViewTextBoxColumn.Name = "totPassDataGridViewTextBoxColumn";
-            // 
-            // avgPASSTimeDataGridViewTextBoxColumn
-            // 
-            this.avgPASSTimeDataGridViewTextBoxColumn.DataPropertyName = "AvgPASSTime";
-            this.avgPASSTimeDataGridViewTextBoxColumn.HeaderText = "AvgPASSTime";
-            this.avgPASSTimeDataGridViewTextBoxColumn.Name = "avgPASSTimeDataGridViewTextBoxColumn";
-            // 
-            // totFailDataGridViewTextBoxColumn
-            // 
-            this.totFailDataGridViewTextBoxColumn.DataPropertyName = "TotFail";
-            this.totFailDataGridViewTextBoxColumn.HeaderText = "TotFail";
-            this.totFailDataGridViewTextBoxColumn.Name = "totFailDataGridViewTextBoxColumn";
-            // 
-            // totHandleDataGridViewTextBoxColumn
-            // 
-            this.totHandleDataGridViewTextBoxColumn.DataPropertyName = "TotHandle";
-            this.totHandleDataGridViewTextBoxColumn.HeaderText = "TotHandle";
-            this.totHandleDataGridViewTextBoxColumn.Name = "totHandleDataGridViewTextBoxColumn";
             // 
             // dailyMQSDataBindingSource
             // 
@@ -231,6 +148,8 @@
             // 
             // groupBoxProductData
             // 
+            this.groupBoxProductData.Controls.Add(this.buttonDelete);
+            this.groupBoxProductData.Controls.Add(this.buttonEnableLogin);
             this.groupBoxProductData.Controls.Add(this.textBoxThandle);
             this.groupBoxProductData.Controls.Add(this.labelTHandle);
             this.groupBoxProductData.Controls.Add(this.textBoxLocation);
@@ -245,8 +164,6 @@
             this.groupBoxProductData.Controls.Add(this.textBoxAllInfos);
             this.groupBoxProductData.Controls.Add(this.textBoxCsvFolder);
             this.groupBoxProductData.Controls.Add(this.labelCsvFile);
-            this.groupBoxProductData.Controls.Add(this.buttonPrev);
-            this.groupBoxProductData.Controls.Add(this.buttonNext);
             this.groupBoxProductData.Controls.Add(this.textBoxTTime);
             this.groupBoxProductData.Controls.Add(this.labelTestTime);
             this.groupBoxProductData.Controls.Add(this.textBoxTYield);
@@ -278,11 +195,11 @@
             // labelLogo
             // 
             this.labelLogo.AutoSize = true;
-            this.labelLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLogo.ForeColor = System.Drawing.Color.Teal;
-            this.labelLogo.Location = new System.Drawing.Point(6, 17);
+            this.labelLogo.Location = new System.Drawing.Point(613, 7);
             this.labelLogo.Name = "labelLogo";
-            this.labelLogo.Size = new System.Drawing.Size(165, 24);
+            this.labelLogo.Size = new System.Drawing.Size(143, 20);
             this.labelLogo.TabIndex = 32;
             this.labelLogo.Text = "Product Data MQS";
             // 
@@ -324,7 +241,7 @@
             // 
             this.textBoxAllInfos.Location = new System.Drawing.Point(518, 130);
             this.textBoxAllInfos.Name = "textBoxAllInfos";
-            this.textBoxAllInfos.Size = new System.Drawing.Size(453, 21);
+            this.textBoxAllInfos.Size = new System.Drawing.Size(683, 21);
             this.textBoxAllInfos.TabIndex = 25;
             this.textBoxAllInfos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -349,7 +266,7 @@
             // buttonPrev
             // 
             this.buttonPrev.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPrev.Location = new System.Drawing.Point(6, 131);
+            this.buttonPrev.Location = new System.Drawing.Point(12, 170);
             this.buttonPrev.Name = "buttonPrev";
             this.buttonPrev.Size = new System.Drawing.Size(70, 21);
             this.buttonPrev.TabIndex = 21;
@@ -360,7 +277,7 @@
             // buttonNext
             // 
             this.buttonNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonNext.Location = new System.Drawing.Point(92, 131);
+            this.buttonNext.Location = new System.Drawing.Point(88, 170);
             this.buttonNext.Name = "buttonNext";
             this.buttonNext.Size = new System.Drawing.Size(70, 21);
             this.buttonNext.TabIndex = 20;
@@ -555,6 +472,7 @@
             // buttonInsertDB
             // 
             this.buttonInsertDB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.buttonInsertDB.Enabled = false;
             this.buttonInsertDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonInsertDB.Location = new System.Drawing.Point(20, 113);
             this.buttonInsertDB.Name = "buttonInsertDB";
@@ -629,6 +547,8 @@
             this.tabPage1.Controls.Add(this.buttonCompareAvg);
             this.tabPage1.Controls.Add(this.dataGridViewMQS);
             this.tabPage1.Controls.Add(this.groupBoxProductData);
+            this.tabPage1.Controls.Add(this.buttonPrev);
+            this.tabPage1.Controls.Add(this.buttonNext);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -700,7 +620,7 @@
             this.buttonCompareAvg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCompareAvg.Location = new System.Drawing.Point(857, 170);
             this.buttonCompareAvg.Name = "buttonCompareAvg";
-            this.buttonCompareAvg.Size = new System.Drawing.Size(171, 53);
+            this.buttonCompareAvg.Size = new System.Drawing.Size(171, 52);
             this.buttonCompareAvg.TabIndex = 32;
             this.buttonCompareAvg.Text = "Compare Test Time";
             this.buttonCompareAvg.UseVisualStyleBackColor = true;
@@ -720,9 +640,10 @@
             // 
             // buttonAddNew
             // 
+            this.buttonAddNew.Enabled = false;
             this.buttonAddNew.Location = new System.Drawing.Point(6, 55);
             this.buttonAddNew.Name = "buttonAddNew";
-            this.buttonAddNew.Size = new System.Drawing.Size(75, 34);
+            this.buttonAddNew.Size = new System.Drawing.Size(156, 34);
             this.buttonAddNew.TabIndex = 33;
             this.buttonAddNew.Text = "Add New";
             this.buttonAddNew.UseVisualStyleBackColor = true;
@@ -731,7 +652,7 @@
             // buttonSave
             // 
             this.buttonSave.Enabled = false;
-            this.buttonSave.Location = new System.Drawing.Point(87, 55);
+            this.buttonSave.Location = new System.Drawing.Point(6, 92);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(75, 34);
             this.buttonSave.TabIndex = 34;
@@ -775,6 +696,116 @@
             this.labelSite.TabIndex = 35;
             this.labelSite.Text = "Location:";
             // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // locationDataGridViewTextBoxColumn
+            // 
+            this.locationDataGridViewTextBoxColumn.DataPropertyName = "Location";
+            this.locationDataGridViewTextBoxColumn.HeaderText = "Location";
+            this.locationDataGridViewTextBoxColumn.Name = "locationDataGridViewTextBoxColumn";
+            // 
+            // familyDataGridViewTextBoxColumn
+            // 
+            this.familyDataGridViewTextBoxColumn.DataPropertyName = "Family";
+            this.familyDataGridViewTextBoxColumn.HeaderText = "Family";
+            this.familyDataGridViewTextBoxColumn.Name = "familyDataGridViewTextBoxColumn";
+            // 
+            // processDataGridViewTextBoxColumn
+            // 
+            this.processDataGridViewTextBoxColumn.DataPropertyName = "Process";
+            this.processDataGridViewTextBoxColumn.HeaderText = "Process";
+            this.processDataGridViewTextBoxColumn.Name = "processDataGridViewTextBoxColumn";
+            // 
+            // technologyDataGridViewTextBoxColumn
+            // 
+            this.technologyDataGridViewTextBoxColumn.DataPropertyName = "Technology";
+            this.technologyDataGridViewTextBoxColumn.HeaderText = "Technology";
+            this.technologyDataGridViewTextBoxColumn.Name = "technologyDataGridViewTextBoxColumn";
+            // 
+            // pYieldDataGridViewTextBoxColumn
+            // 
+            this.pYieldDataGridViewTextBoxColumn.DataPropertyName = "PYield";
+            this.pYieldDataGridViewTextBoxColumn.HeaderText = "PYield";
+            this.pYieldDataGridViewTextBoxColumn.Name = "pYieldDataGridViewTextBoxColumn";
+            // 
+            // primePassDataGridViewTextBoxColumn
+            // 
+            this.primePassDataGridViewTextBoxColumn.DataPropertyName = "PrimePass";
+            this.primePassDataGridViewTextBoxColumn.HeaderText = "PrimePass";
+            this.primePassDataGridViewTextBoxColumn.Name = "primePassDataGridViewTextBoxColumn";
+            // 
+            // primeFailDataGridViewTextBoxColumn
+            // 
+            this.primeFailDataGridViewTextBoxColumn.DataPropertyName = "PrimeFail";
+            this.primeFailDataGridViewTextBoxColumn.HeaderText = "PrimeFail";
+            this.primeFailDataGridViewTextBoxColumn.Name = "primeFailDataGridViewTextBoxColumn";
+            // 
+            // primeHandleDataGridViewTextBoxColumn
+            // 
+            this.primeHandleDataGridViewTextBoxColumn.DataPropertyName = "PrimeHandle";
+            this.primeHandleDataGridViewTextBoxColumn.HeaderText = "PrimeHandle";
+            this.primeHandleDataGridViewTextBoxColumn.Name = "primeHandleDataGridViewTextBoxColumn";
+            this.primeHandleDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // totYieldDataGridViewTextBoxColumn
+            // 
+            this.totYieldDataGridViewTextBoxColumn.DataPropertyName = "TotYield";
+            this.totYieldDataGridViewTextBoxColumn.HeaderText = "TotYield";
+            this.totYieldDataGridViewTextBoxColumn.Name = "totYieldDataGridViewTextBoxColumn";
+            this.totYieldDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // totPassDataGridViewTextBoxColumn
+            // 
+            this.totPassDataGridViewTextBoxColumn.DataPropertyName = "TotPass";
+            this.totPassDataGridViewTextBoxColumn.HeaderText = "TotPass";
+            this.totPassDataGridViewTextBoxColumn.Name = "totPassDataGridViewTextBoxColumn";
+            this.totPassDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // avgPASSTimeDataGridViewTextBoxColumn
+            // 
+            this.avgPASSTimeDataGridViewTextBoxColumn.DataPropertyName = "AvgPASSTime";
+            this.avgPASSTimeDataGridViewTextBoxColumn.HeaderText = "AvgPASSTime";
+            this.avgPASSTimeDataGridViewTextBoxColumn.Name = "avgPASSTimeDataGridViewTextBoxColumn";
+            // 
+            // totFailDataGridViewTextBoxColumn
+            // 
+            this.totFailDataGridViewTextBoxColumn.DataPropertyName = "TotFail";
+            this.totFailDataGridViewTextBoxColumn.HeaderText = "TotFail";
+            this.totFailDataGridViewTextBoxColumn.Name = "totFailDataGridViewTextBoxColumn";
+            this.totFailDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // totHandleDataGridViewTextBoxColumn
+            // 
+            this.totHandleDataGridViewTextBoxColumn.DataPropertyName = "TotHandle";
+            this.totHandleDataGridViewTextBoxColumn.HeaderText = "TotHandle";
+            this.totHandleDataGridViewTextBoxColumn.Name = "totHandleDataGridViewTextBoxColumn";
+            // 
+            // buttonEnableLogin
+            // 
+            this.buttonEnableLogin.Location = new System.Drawing.Point(6, 20);
+            this.buttonEnableLogin.Name = "buttonEnableLogin";
+            this.buttonEnableLogin.Size = new System.Drawing.Size(58, 23);
+            this.buttonEnableLogin.TabIndex = 39;
+            this.buttonEnableLogin.Text = "Login";
+            this.buttonEnableLogin.UseVisualStyleBackColor = true;
+            this.buttonEnableLogin.Click += new System.EventHandler(this.buttonEnableLogin_Click);
+            // 
+            // buttonDelete
+            // 
+            this.buttonDelete.Enabled = false;
+            this.buttonDelete.Location = new System.Drawing.Point(87, 92);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(75, 34);
+            this.buttonDelete.TabIndex = 40;
+            this.buttonDelete.Text = "Delete";
+            this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -786,7 +817,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Products Data MQS v1.0";
+            this.Text = "Products Data MQS v1.1";
             this.Load += new System.EventHandler(this.FormMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMQS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dailyMQSDataBindingSource)).EndInit();
@@ -839,6 +870,25 @@
         private MQSRequestDatabaseDataSet mQSRequestDatabaseDataSet;
         private System.Windows.Forms.BindingSource dailyMQSDataBindingSource;
         private MQSRequestDatabaseDataSetTableAdapters.DailyMQSDataTableAdapter dailyMQSDataTableAdapter;
+        private System.Windows.Forms.TextBox textBoxMchTime;
+        private System.Windows.Forms.Label labelMchTime;
+        private System.Windows.Forms.TextBox textBoxNPI;
+        private System.Windows.Forms.Label labelNPI;
+        private System.Windows.Forms.Label labelUpdate;
+        private System.Windows.Forms.Label labelStatusCompare;
+        private System.Windows.Forms.Label labelLogo;
+        public System.Windows.Forms.Button buttonCompareAvg;
+        public System.Windows.Forms.TextBox textBoxFilterCount;
+        private System.Windows.Forms.Label labelFilterCount;
+        public System.Windows.Forms.TextBox textBoxFilterValue;
+        private System.Windows.Forms.Label labelCriteria;
+        public System.Windows.Forms.Button buttonUpdate;
+        private System.Windows.Forms.GroupBox groupBox1;
+        public System.Windows.Forms.RichTextBox richTextBoxCompare;
+        private System.Windows.Forms.TextBox textBoxThandle;
+        private System.Windows.Forms.Label labelTHandle;
+        private System.Windows.Forms.TextBox textBoxLocation;
+        private System.Windows.Forms.Label labelSite;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn locationDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn familyDataGridViewTextBoxColumn;
@@ -853,28 +903,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn avgPASSTimeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn totFailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn totHandleDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TextBox textBoxMchTime;
-        private System.Windows.Forms.Label labelMchTime;
-        private System.Windows.Forms.TextBox textBoxNPI;
-        private System.Windows.Forms.Label labelNPI;
-        private System.Windows.Forms.Label labelUpdate;
-        private System.Windows.Forms.Button buttonInsertDB;
-        private System.Windows.Forms.Label labelStatusCompare;
-        private System.Windows.Forms.Label labelLogo;
-        public System.Windows.Forms.Button buttonCompareAvg;
-        public System.Windows.Forms.TextBox textBoxFilterCount;
-        private System.Windows.Forms.Label labelFilterCount;
-        public System.Windows.Forms.TextBox textBoxFilterValue;
-        private System.Windows.Forms.Label labelCriteria;
-        public System.Windows.Forms.Button buttonUpdate;
-        private System.Windows.Forms.GroupBox groupBox1;
-        public System.Windows.Forms.RichTextBox richTextBoxCompare;
-        private System.Windows.Forms.Button buttonSave;
-        private System.Windows.Forms.Button buttonAddNew;
-        private System.Windows.Forms.TextBox textBoxThandle;
-        private System.Windows.Forms.Label labelTHandle;
-        private System.Windows.Forms.TextBox textBoxLocation;
-        private System.Windows.Forms.Label labelSite;
+        private System.Windows.Forms.Button buttonEnableLogin;
+        public System.Windows.Forms.Button buttonInsertDB;
+        public System.Windows.Forms.Button buttonSave;
+        public System.Windows.Forms.Button buttonAddNew;
+        public System.Windows.Forms.Button buttonDelete;
     }
 }
 

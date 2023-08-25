@@ -10,7 +10,7 @@ namespace ProductsDataMQS
     public partial class FormMain : Form
     {
         public static string errorDBMessage = "Não foi possivel conectar com o Banco de Dados! : ";
-        public static string successDBMessage = "Data saved successfully!!";
+        public static string successDBMessage = "Data updated successfully!!";
         ConvertCsvToDt cCTD = new ConvertCsvToDt();
         SQLProcedure sqlProcedure = new SQLProcedure();
         string dbTableName = "DailyMQSData";
@@ -137,10 +137,9 @@ namespace ProductsDataMQS
 
         private void buttonInsertDB_Click(object sender, EventArgs e)
         {
-            FormLogin frmLogin = new FormLogin();
-            frmLogin.Show();          
+            updateDB();
         }
-        public void updateDB()
+        private void updateDB()
         {
             DialogResult dialogResult = MessageBox.Show("Deseja realmente carregar o arquivo .csv? o DataBase será atualizado.", "!!!Atenção!!!", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
@@ -245,7 +244,7 @@ namespace ProductsDataMQS
                 MessageBox.Show(errorDBMessage + ex);
             }
         }
-        private void buttonSave_Click(object sender, EventArgs e)
+        private void saveChangesDB()
         {
             try
             {
@@ -257,10 +256,11 @@ namespace ProductsDataMQS
             {
                 MessageBox.Show(errorDBMessage + ex);
             }
-            finally
-            {
-                buttonSave.Enabled = false;
-            }
+        }
+
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            saveChangesDB();
         }
         private void setField()
         {
@@ -275,6 +275,33 @@ namespace ProductsDataMQS
             textBoxTYield.Text = "0";
             textBoxThandle.Text = "0";
             textBoxLocation.Text = "MDB_Jaguariuna";
+        }
+
+        private void buttonEnableLogin_Click(object sender, EventArgs e)
+        {
+            FormLogin frmLogin = new FormLogin();
+            frmLogin.Show();
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Deseja realmente deletar o registro? o DataBase será atualizado.", "!!!Atenção!!!", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                try
+                {
+                    dailyMQSDataBindingSource.RemoveCurrent();
+                    saveChangesDB();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(errorDBMessage + ex);
+                }
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do nothing
+            }
         }
     }
 }

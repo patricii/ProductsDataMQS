@@ -16,7 +16,11 @@ namespace ProductsDataMQS
             if (textBoxUser.Text == "test" && textBoxPassword.Text == "test123")
             {
                 Hide();
-                frm.updateDB();
+                frm.buttonSave.Enabled = true;
+                frm.buttonAddNew.Enabled = true;
+                frm.buttonInsertDB.Enabled = true;
+                frm.buttonDelete.Enabled = true;
+
             }
             else
             {
