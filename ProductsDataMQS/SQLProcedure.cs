@@ -119,13 +119,16 @@ namespace ProductsDataMQS
                                     result = avgTTOld - avgTTNew;
                                     if (result < 0)
                                         result = result * -1;
-                                    if (result >= filterValue)
+                                    if (!table1.Rows[i_rowIndex][colIndex - 1].ToString().Contains("CAL") && !table1.Rows[i_rowIndex][colIndex - 1].ToString().Contains("NORM") && !table1.Rows[i_rowIndex][colIndex - 1].ToString().Contains("BACKFLASH"))
                                     {
-                                        string temp = "*** Product: " + table1.Rows[i_rowIndex][colIndex - 2].ToString() + " - Process: " + table1.Rows[i_rowIndex][colIndex - 1].ToString() + " - OLD AvgTestTime: " + table1.Rows[i_rowIndex][colIndex].ToString() + "s ***" + Environment.NewLine + "*** Product: " + table2.Rows[j_rowIndex][colIndex - 2].ToString() + " - Process: " + table2.Rows[j_rowIndex][colIndex - 1].ToString() + " - NEW AvgTestTime: " + table2.Rows[j_rowIndex][colIndex].ToString() + "s ***" + Environment.NewLine + Environment.NewLine;
-                                        frm.richTextBoxCompare.Text += temp;
-                                        countCompareOut++;
-                                        frm.textBoxFilterCount.Text = countCompareOut.ToString();
-                                        frm.textBoxFilterCount.BackColor = Color.OrangeRed;
+                                        if (result >= filterValue)
+                                        {
+                                            string temp = "Product: " + table1.Rows[i_rowIndex][colIndex - 2].ToString() + " - Process: " + table1.Rows[i_rowIndex][colIndex - 1].ToString() + " - OLD AvgTestTime: " + table1.Rows[i_rowIndex][colIndex].ToString() + "s" + Environment.NewLine + "Product: " + table2.Rows[j_rowIndex][colIndex - 2].ToString() + " - Process: " + table2.Rows[j_rowIndex][colIndex - 1].ToString() + " - NEW AvgTestTime: " + table2.Rows[j_rowIndex][colIndex].ToString() + "s" + Environment.NewLine + Environment.NewLine;
+                                            frm.richTextBoxCompare.Text += temp;
+                                            countCompareOut++;
+                                            frm.textBoxFilterCount.Text = countCompareOut.ToString();
+                                            frm.textBoxFilterCount.BackColor = Color.OrangeRed;
+                                        }
                                     }
                                     Application.DoEvents();
                                     result = 0;

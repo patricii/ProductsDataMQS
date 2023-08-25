@@ -96,6 +96,10 @@
             this.richTextBoxCompare = new System.Windows.Forms.RichTextBox();
             this.buttonAddNew = new System.Windows.Forms.Button();
             this.buttonSave = new System.Windows.Forms.Button();
+            this.textBoxThandle = new System.Windows.Forms.TextBox();
+            this.labelTHandle = new System.Windows.Forms.Label();
+            this.textBoxLocation = new System.Windows.Forms.TextBox();
+            this.labelSite = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMQS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dailyMQSDataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mQSRequestDatabaseDataSet)).BeginInit();
@@ -127,7 +131,7 @@
             this.dataGridViewMQS.DataSource = this.dailyMQSDataBindingSource;
             this.dataGridViewMQS.Location = new System.Drawing.Point(8, 164);
             this.dataGridViewMQS.Name = "dataGridViewMQS";
-            this.dataGridViewMQS.Size = new System.Drawing.Size(821, 474);
+            this.dataGridViewMQS.Size = new System.Drawing.Size(917, 508);
             this.dataGridViewMQS.TabIndex = 0;
             // 
             // iDDataGridViewTextBoxColumn
@@ -227,6 +231,10 @@
             // 
             // groupBoxProductData
             // 
+            this.groupBoxProductData.Controls.Add(this.textBoxThandle);
+            this.groupBoxProductData.Controls.Add(this.labelTHandle);
+            this.groupBoxProductData.Controls.Add(this.textBoxLocation);
+            this.groupBoxProductData.Controls.Add(this.labelSite);
             this.groupBoxProductData.Controls.Add(this.buttonSave);
             this.groupBoxProductData.Controls.Add(this.buttonAddNew);
             this.groupBoxProductData.Controls.Add(this.labelLogo);
@@ -262,7 +270,7 @@
             this.groupBoxProductData.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxProductData.Location = new System.Drawing.Point(6, 6);
             this.groupBoxProductData.Name = "groupBoxProductData";
-            this.groupBoxProductData.Size = new System.Drawing.Size(997, 157);
+            this.groupBoxProductData.Size = new System.Drawing.Size(1213, 157);
             this.groupBoxProductData.TabIndex = 1;
             this.groupBoxProductData.TabStop = false;
             this.groupBoxProductData.Text = "Product Infos";
@@ -272,7 +280,7 @@
             this.labelLogo.AutoSize = true;
             this.labelLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLogo.ForeColor = System.Drawing.Color.Teal;
-            this.labelLogo.Location = new System.Drawing.Point(7, 25);
+            this.labelLogo.Location = new System.Drawing.Point(0, 20);
             this.labelLogo.Name = "labelLogo";
             this.labelLogo.Size = new System.Drawing.Size(165, 24);
             this.labelLogo.TabIndex = 32;
@@ -340,9 +348,9 @@
             // buttonPrev
             // 
             this.buttonPrev.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPrev.Location = new System.Drawing.Point(2, 123);
+            this.buttonPrev.Location = new System.Drawing.Point(6, 131);
             this.buttonPrev.Name = "buttonPrev";
-            this.buttonPrev.Size = new System.Drawing.Size(54, 32);
+            this.buttonPrev.Size = new System.Drawing.Size(70, 21);
             this.buttonPrev.TabIndex = 21;
             this.buttonPrev.Text = "<<";
             this.buttonPrev.UseVisualStyleBackColor = true;
@@ -351,9 +359,9 @@
             // buttonNext
             // 
             this.buttonNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonNext.Location = new System.Drawing.Point(72, 123);
+            this.buttonNext.Location = new System.Drawing.Point(92, 131);
             this.buttonNext.Name = "buttonNext";
-            this.buttonNext.Size = new System.Drawing.Size(56, 32);
+            this.buttonNext.Size = new System.Drawing.Size(70, 21);
             this.buttonNext.TabIndex = 20;
             this.buttonNext.Text = ">>";
             this.buttonNext.UseVisualStyleBackColor = true;
@@ -547,9 +555,9 @@
             // 
             this.buttonInsertDB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.buttonInsertDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonInsertDB.Location = new System.Drawing.Point(220, 35);
+            this.buttonInsertDB.Location = new System.Drawing.Point(6, 113);
             this.buttonInsertDB.Name = "buttonInsertDB";
-            this.buttonInsertDB.Size = new System.Drawing.Size(94, 73);
+            this.buttonInsertDB.Size = new System.Drawing.Size(140, 38);
             this.buttonInsertDB.TabIndex = 31;
             this.buttonInsertDB.Text = "Insert To db";
             this.buttonInsertDB.UseVisualStyleBackColor = false;
@@ -560,7 +568,7 @@
             this.labelUpdate.AutoSize = true;
             this.labelUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUpdate.ForeColor = System.Drawing.Color.Teal;
-            this.labelUpdate.Location = new System.Drawing.Point(78, 123);
+            this.labelUpdate.Location = new System.Drawing.Point(26, 80);
             this.labelUpdate.Name = "labelUpdate";
             this.labelUpdate.Size = new System.Drawing.Size(0, 24);
             this.labelUpdate.TabIndex = 30;
@@ -570,9 +578,9 @@
             this.buttonUpdate.BackColor = System.Drawing.Color.Teal;
             this.buttonUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonUpdate.ForeColor = System.Drawing.Color.White;
-            this.buttonUpdate.Location = new System.Drawing.Point(21, 35);
+            this.buttonUpdate.Location = new System.Drawing.Point(6, 20);
             this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(193, 75);
+            this.buttonUpdate.Size = new System.Drawing.Size(140, 57);
             this.buttonUpdate.TabIndex = 22;
             this.buttonUpdate.Text = "MQS Update";
             this.buttonUpdate.UseVisualStyleBackColor = false;
@@ -583,7 +591,7 @@
             this.labelDev.AutoSize = true;
             this.labelDev.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDev.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.labelDev.Location = new System.Drawing.Point(-2, 690);
+            this.labelDev.Location = new System.Drawing.Point(2, 727);
             this.labelDev.Name = "labelDev";
             this.labelDev.Size = new System.Drawing.Size(107, 12);
             this.labelDev.TabIndex = 2;
@@ -591,7 +599,7 @@
             // 
             // buttonExit
             // 
-            this.buttonExit.Location = new System.Drawing.Point(1268, 679);
+            this.buttonExit.Location = new System.Drawing.Point(1301, 713);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(94, 23);
             this.buttonExit.TabIndex = 3;
@@ -605,7 +613,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1362, 670);
+            this.tabControl1.Size = new System.Drawing.Size(1399, 704);
             this.tabControl1.TabIndex = 4;
             // 
             // tabPage1
@@ -623,7 +631,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1354, 644);
+            this.tabPage1.Size = new System.Drawing.Size(1391, 678);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "MQS Product Infos";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -633,16 +641,16 @@
             this.groupBox1.Controls.Add(this.buttonUpdate);
             this.groupBox1.Controls.Add(this.labelUpdate);
             this.groupBox1.Controls.Add(this.buttonInsertDB);
-            this.groupBox1.Location = new System.Drawing.Point(1015, 6);
+            this.groupBox1.Location = new System.Drawing.Point(1225, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(324, 157);
+            this.groupBox1.Size = new System.Drawing.Size(156, 157);
             this.groupBox1.TabIndex = 40;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Query";
             // 
             // textBoxFilterCount
             // 
-            this.textBoxFilterCount.Location = new System.Drawing.Point(1225, 202);
+            this.textBoxFilterCount.Location = new System.Drawing.Point(1321, 202);
             this.textBoxFilterCount.Name = "textBoxFilterCount";
             this.textBoxFilterCount.Size = new System.Drawing.Size(29, 20);
             this.textBoxFilterCount.TabIndex = 38;
@@ -651,7 +659,7 @@
             // labelFilterCount
             // 
             this.labelFilterCount.AutoSize = true;
-            this.labelFilterCount.Location = new System.Drawing.Point(1157, 209);
+            this.labelFilterCount.Location = new System.Drawing.Point(1253, 209);
             this.labelFilterCount.Name = "labelFilterCount";
             this.labelFilterCount.Size = new System.Drawing.Size(63, 13);
             this.labelFilterCount.TabIndex = 37;
@@ -659,7 +667,7 @@
             // 
             // textBoxFilterValue
             // 
-            this.textBoxFilterValue.Location = new System.Drawing.Point(1115, 202);
+            this.textBoxFilterValue.Location = new System.Drawing.Point(1211, 202);
             this.textBoxFilterValue.Name = "textBoxFilterValue";
             this.textBoxFilterValue.Size = new System.Drawing.Size(29, 20);
             this.textBoxFilterValue.TabIndex = 36;
@@ -670,7 +678,7 @@
             // labelCriteria
             // 
             this.labelCriteria.AutoSize = true;
-            this.labelCriteria.Location = new System.Drawing.Point(1012, 209);
+            this.labelCriteria.Location = new System.Drawing.Point(1108, 209);
             this.labelCriteria.Name = "labelCriteria";
             this.labelCriteria.Size = new System.Drawing.Size(99, 13);
             this.labelCriteria.TabIndex = 35;
@@ -681,7 +689,7 @@
             this.labelStatusCompare.AutoSize = true;
             this.labelStatusCompare.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelStatusCompare.ForeColor = System.Drawing.Color.Teal;
-            this.labelStatusCompare.Location = new System.Drawing.Point(1012, 180);
+            this.labelStatusCompare.Location = new System.Drawing.Point(1108, 180);
             this.labelStatusCompare.Name = "labelStatusCompare";
             this.labelStatusCompare.Size = new System.Drawing.Size(0, 16);
             this.labelStatusCompare.TabIndex = 33;
@@ -689,9 +697,9 @@
             // buttonCompareAvg
             // 
             this.buttonCompareAvg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCompareAvg.Location = new System.Drawing.Point(835, 164);
+            this.buttonCompareAvg.Location = new System.Drawing.Point(931, 169);
             this.buttonCompareAvg.Name = "buttonCompareAvg";
-            this.buttonCompareAvg.Size = new System.Drawing.Size(171, 58);
+            this.buttonCompareAvg.Size = new System.Drawing.Size(171, 53);
             this.buttonCompareAvg.TabIndex = 32;
             this.buttonCompareAvg.Text = "Compare Test Time";
             this.buttonCompareAvg.UseVisualStyleBackColor = true;
@@ -703,15 +711,15 @@
             // 
             // richTextBoxCompare
             // 
-            this.richTextBoxCompare.Location = new System.Drawing.Point(835, 229);
+            this.richTextBoxCompare.Location = new System.Drawing.Point(931, 229);
             this.richTextBoxCompare.Name = "richTextBoxCompare";
-            this.richTextBoxCompare.Size = new System.Drawing.Size(504, 412);
+            this.richTextBoxCompare.Size = new System.Drawing.Size(450, 443);
             this.richTextBoxCompare.TabIndex = 41;
             this.richTextBoxCompare.Text = "";
             // 
             // buttonAddNew
             // 
-            this.buttonAddNew.Location = new System.Drawing.Point(2, 54);
+            this.buttonAddNew.Location = new System.Drawing.Point(6, 74);
             this.buttonAddNew.Name = "buttonAddNew";
             this.buttonAddNew.Size = new System.Drawing.Size(75, 34);
             this.buttonAddNew.TabIndex = 33;
@@ -722,7 +730,7 @@
             // buttonSave
             // 
             this.buttonSave.Enabled = false;
-            this.buttonSave.Location = new System.Drawing.Point(84, 54);
+            this.buttonSave.Location = new System.Drawing.Point(87, 74);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(75, 34);
             this.buttonSave.TabIndex = 34;
@@ -730,11 +738,47 @@
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
+            // textBoxThandle
+            // 
+            this.textBoxThandle.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dailyMQSDataBindingSource, "TotHandle", true));
+            this.textBoxThandle.Location = new System.Drawing.Point(1062, 62);
+            this.textBoxThandle.Name = "textBoxThandle";
+            this.textBoxThandle.Size = new System.Drawing.Size(83, 21);
+            this.textBoxThandle.TabIndex = 38;
+            this.textBoxThandle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // labelTHandle
+            // 
+            this.labelTHandle.AutoSize = true;
+            this.labelTHandle.Location = new System.Drawing.Point(981, 67);
+            this.labelTHandle.Name = "labelTHandle";
+            this.labelTHandle.Size = new System.Drawing.Size(80, 15);
+            this.labelTHandle.TabIndex = 37;
+            this.labelTHandle.Text = "Total Handle:";
+            // 
+            // textBoxLocation
+            // 
+            this.textBoxLocation.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dailyMQSDataBindingSource, "Location", true));
+            this.textBoxLocation.Location = new System.Drawing.Point(1062, 35);
+            this.textBoxLocation.Name = "textBoxLocation";
+            this.textBoxLocation.Size = new System.Drawing.Size(139, 21);
+            this.textBoxLocation.TabIndex = 36;
+            this.textBoxLocation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // labelSite
+            // 
+            this.labelSite.AutoSize = true;
+            this.labelSite.Location = new System.Drawing.Point(981, 42);
+            this.labelSite.Name = "labelSite";
+            this.labelSite.Size = new System.Drawing.Size(57, 15);
+            this.labelSite.TabIndex = 35;
+            this.labelSite.Text = "Location:";
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1363, 703);
+            this.ClientSize = new System.Drawing.Size(1401, 741);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.labelDev);
@@ -826,6 +870,10 @@
         public System.Windows.Forms.RichTextBox richTextBoxCompare;
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Button buttonAddNew;
+        private System.Windows.Forms.TextBox textBoxThandle;
+        private System.Windows.Forms.Label labelTHandle;
+        private System.Windows.Forms.TextBox textBoxLocation;
+        private System.Windows.Forms.Label labelSite;
     }
 }
 

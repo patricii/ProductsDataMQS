@@ -274,6 +274,8 @@ namespace ProductsDataMQS
             textBoxTFail.Text = "0";
             textBoxTPass.Text = "0";
             textBoxTYield.Text = "0";
+            textBoxThandle.Text = "0";
+            textBoxLocation.Text = "MDB_Jaguariuna";
         }
     }
 }
