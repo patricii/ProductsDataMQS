@@ -133,7 +133,7 @@
             this.dataGridViewMQS.DataSource = this.dailyMQSDataBindingSource;
             this.dataGridViewMQS.Location = new System.Drawing.Point(8, 197);
             this.dataGridViewMQS.Name = "dataGridViewMQS";
-            this.dataGridViewMQS.Size = new System.Drawing.Size(843, 475);
+            this.dataGridViewMQS.Size = new System.Drawing.Size(804, 475);
             this.dataGridViewMQS.TabIndex = 0;
             // 
             // dailyMQSDataBindingSource
@@ -618,7 +618,7 @@
             // buttonCompareAvg
             // 
             this.buttonCompareAvg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCompareAvg.Location = new System.Drawing.Point(857, 170);
+            this.buttonCompareAvg.Location = new System.Drawing.Point(823, 171);
             this.buttonCompareAvg.Name = "buttonCompareAvg";
             this.buttonCompareAvg.Size = new System.Drawing.Size(171, 52);
             this.buttonCompareAvg.TabIndex = 32;
@@ -632,9 +632,9 @@
             // 
             // richTextBoxCompare
             // 
-            this.richTextBoxCompare.Location = new System.Drawing.Point(857, 229);
+            this.richTextBoxCompare.Location = new System.Drawing.Point(823, 229);
             this.richTextBoxCompare.Name = "richTextBoxCompare";
-            this.richTextBoxCompare.Size = new System.Drawing.Size(524, 443);
+            this.richTextBoxCompare.Size = new System.Drawing.Size(558, 443);
             this.richTextBoxCompare.TabIndex = 41;
             this.richTextBoxCompare.Text = "";
             // 
