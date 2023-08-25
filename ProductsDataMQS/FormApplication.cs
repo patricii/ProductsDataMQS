@@ -220,7 +220,6 @@ namespace ProductsDataMQS
             labelStatusCompare.Text = "Finished!";
             buttonUpdate.Enabled = true;
             buttonCompareAvg.Enabled = true;
-            buttonInsertDB.Enabled = true;
             buttonCompareAvg.BackColor = Color.LightYellow;
         }
 

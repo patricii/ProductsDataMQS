@@ -571,7 +571,7 @@
             // 
             // textBoxFilterCount
             // 
-            this.textBoxFilterCount.Location = new System.Drawing.Point(1297, 202);
+            this.textBoxFilterCount.Location = new System.Drawing.Point(1296, 187);
             this.textBoxFilterCount.Name = "textBoxFilterCount";
             this.textBoxFilterCount.Size = new System.Drawing.Size(29, 20);
             this.textBoxFilterCount.TabIndex = 38;
@@ -580,7 +580,7 @@
             // labelFilterCount
             // 
             this.labelFilterCount.AutoSize = true;
-            this.labelFilterCount.Location = new System.Drawing.Point(1229, 209);
+            this.labelFilterCount.Location = new System.Drawing.Point(1228, 194);
             this.labelFilterCount.Name = "labelFilterCount";
             this.labelFilterCount.Size = new System.Drawing.Size(63, 13);
             this.labelFilterCount.TabIndex = 37;
@@ -588,7 +588,7 @@
             // 
             // textBoxFilterValue
             // 
-            this.textBoxFilterValue.Location = new System.Drawing.Point(1179, 202);
+            this.textBoxFilterValue.Location = new System.Drawing.Point(1178, 187);
             this.textBoxFilterValue.Name = "textBoxFilterValue";
             this.textBoxFilterValue.Size = new System.Drawing.Size(29, 20);
             this.textBoxFilterValue.TabIndex = 36;
@@ -599,7 +599,7 @@
             // labelCriteria
             // 
             this.labelCriteria.AutoSize = true;
-            this.labelCriteria.Location = new System.Drawing.Point(1053, 209);
+            this.labelCriteria.Location = new System.Drawing.Point(1052, 194);
             this.labelCriteria.Name = "labelCriteria";
             this.labelCriteria.Size = new System.Drawing.Size(123, 13);
             this.labelCriteria.TabIndex = 35;
@@ -610,7 +610,7 @@
             this.labelStatusCompare.AutoSize = true;
             this.labelStatusCompare.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelStatusCompare.ForeColor = System.Drawing.Color.Teal;
-            this.labelStatusCompare.Location = new System.Drawing.Point(1040, 180);
+            this.labelStatusCompare.Location = new System.Drawing.Point(827, 210);
             this.labelStatusCompare.Name = "labelStatusCompare";
             this.labelStatusCompare.Size = new System.Drawing.Size(0, 16);
             this.labelStatusCompare.TabIndex = 33;
@@ -620,7 +620,7 @@
             this.buttonCompareAvg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCompareAvg.Location = new System.Drawing.Point(823, 171);
             this.buttonCompareAvg.Name = "buttonCompareAvg";
-            this.buttonCompareAvg.Size = new System.Drawing.Size(171, 52);
+            this.buttonCompareAvg.Size = new System.Drawing.Size(171, 36);
             this.buttonCompareAvg.TabIndex = 32;
             this.buttonCompareAvg.Text = "Compare Test Time";
             this.buttonCompareAvg.UseVisualStyleBackColor = true;
