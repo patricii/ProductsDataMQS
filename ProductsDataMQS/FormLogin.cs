@@ -27,6 +27,7 @@ namespace ProductsDataMQS
             {
                 setUserName(textBoxUser.Text);
                 FormMain frm = FormMain.getInstance();
+                frm.labelUserLogin.Text = "User: " + textBoxUser.Text;
                 Hide();
                 frm.buttonSave.Enabled = true;
                 frm.buttonAddNew.Enabled = true;

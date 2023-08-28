@@ -206,8 +206,7 @@ namespace ProductsDataMQS
             initializeFields();
         }
         private void initializeFields()
-        {
-            buttonInsertDB.Enabled = false;
+        {          
             buttonCompareAvg.Enabled = false;
             buttonUpdate.Enabled = false;
             textBoxFilterCount.Text = "";
