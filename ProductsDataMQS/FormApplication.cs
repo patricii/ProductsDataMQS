@@ -3,6 +3,7 @@ using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace ProductsDataMQS
@@ -137,9 +138,53 @@ namespace ProductsDataMQS
 
         private void buttonInsertDB_Click(object sender, EventArgs e)
         {
-            updateDB();
+
+            insertDB();
         }
+
         private void updateDB()
+        {
+            if (comboBoxListToADDdb.Text == "")
+                MessageBox.Show("Selecione o Novo AvgTestTime para adicionar!");
+            else
+            {
+                FormLogin fl = new FormLogin();
+                SQLProcedure sqlProc = new SQLProcedure();
+                DialogResult dialogResult = MessageBox.Show("Deseja realmente atualizar o AvgTestTime?", "!!!Atenção!!!", MessageBoxButtons.YesNo);
+
+                if (dialogResult == DialogResult.Yes)
+                {
+
+                    try
+                    {
+                        string[] vect = comboBoxListToADDdb.Text.Split('-');
+
+                        string product = vect[0];
+                        product = product.Replace(">>Product: ", "");
+
+                        string process = vect[1];
+                        process = process.Replace("Process: ", "");
+
+                        string avgTT = vect[2];
+                        avgTT = avgTT.Replace("[NEW AvgTestTime:", "");
+                        avgTT = avgTT.Replace("s]", "");
+
+                        sqlProc.updateAVGTestTimeToMdb(product, process, avgTT);
+
+                        MessageBox.Show("Banco de dados atualizado com sucesso pelo usuario: " + fl.getUserName());
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(errorDBMessage + ex.Message);
+                    }
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    //do nothing
+                }
+            }
+        }
+        private void insertDB()
         {
             FormLogin fl = new FormLogin();
             DialogResult dialogResult = MessageBox.Show("Deseja realmente carregar o arquivo .csv? o DataBase será atualizado.", "!!!Atenção!!!", MessageBoxButtons.YesNo);
@@ -204,9 +249,17 @@ namespace ProductsDataMQS
         private void buttonCompareAvg_Click(object sender, EventArgs e)
         {
             initializeFields();
+            readRichTextBoxAndFillComboBox();
+        }
+        public void readRichTextBoxAndFillComboBox()
+        {
+            richTextBoxCompare.Lines.ToList()
+         .GetRange(0, richTextBoxCompare.Lines.Count() - 1)
+         .Where(line => line.Contains("NEW")).ToList()
+         .ForEach(validLine => comboBoxListToADDdb.Items.Add(validLine));
         }
         private void initializeFields()
-        {          
+        {
             buttonCompareAvg.Enabled = false;
             buttonUpdate.Enabled = false;
             textBoxFilterCount.Text = "";
@@ -338,6 +391,11 @@ namespace ProductsDataMQS
             textBoxCreatePassword.Text = "";
             textBoxCreateUserName.Text = "";
             textBoxConfirmPassword.Text = "";
+        }
+
+        private void buttonUpdateToDb_Click(object sender, EventArgs e)
+        {
+            updateDB();
         }
     }
 }

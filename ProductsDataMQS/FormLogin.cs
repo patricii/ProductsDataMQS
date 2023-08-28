@@ -4,7 +4,7 @@ using System.Data.OleDb;
 using System.Windows.Forms;
 
 namespace ProductsDataMQS
-{ 
+{
     public partial class FormLogin : Form
     {
         public static string userName = string.Empty;
@@ -31,8 +31,11 @@ namespace ProductsDataMQS
                 Hide();
                 frm.buttonSave.Enabled = true;
                 frm.buttonAddNew.Enabled = true;
-                frm.buttonInsertDB.Enabled = true;
+                if (textBoxUser.Text == "admin")
+                    frm.buttonInsertDB.Enabled = true;
                 frm.buttonDelete.Enabled = true;
+                frm.comboBoxListToADDdb.Enabled = true;
+                frm.buttonUpdateToDb.Enabled = true;
 
             }
             else

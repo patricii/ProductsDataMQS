@@ -114,6 +114,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.labelLoginSetting = new System.Windows.Forms.Label();
             this.dailyMQSDataTableAdapter = new ProductsDataMQS.MQSRequestDatabaseDataSetTableAdapters.DailyMQSDataTableAdapter();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.comboBoxListToADDdb = new System.Windows.Forms.ComboBox();
+            this.buttonUpdateToDb = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMQS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dailyMQSDataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mQSRequestDatabaseDataSet)).BeginInit();
@@ -123,6 +126,7 @@
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridViewMQS
@@ -673,14 +677,14 @@
             // 
             // buttonInsertDB
             // 
-            this.buttonInsertDB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.buttonInsertDB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.buttonInsertDB.Enabled = false;
             this.buttonInsertDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonInsertDB.Location = new System.Drawing.Point(23, 113);
+            this.buttonInsertDB.Location = new System.Drawing.Point(20, 114);
             this.buttonInsertDB.Name = "buttonInsertDB";
-            this.buttonInsertDB.Size = new System.Drawing.Size(138, 38);
+            this.buttonInsertDB.Size = new System.Drawing.Size(138, 36);
             this.buttonInsertDB.TabIndex = 31;
-            this.buttonInsertDB.Text = "Insert To db";
+            this.buttonInsertDB.Text = "Create DataBase";
             this.buttonInsertDB.UseVisualStyleBackColor = false;
             this.buttonInsertDB.Click += new System.EventHandler(this.buttonInsertDB_Click);
             // 
@@ -689,7 +693,7 @@
             this.labelUpdate.AutoSize = true;
             this.labelUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUpdate.ForeColor = System.Drawing.Color.Teal;
-            this.labelUpdate.Location = new System.Drawing.Point(43, 82);
+            this.labelUpdate.Location = new System.Drawing.Point(50, 87);
             this.labelUpdate.Name = "labelUpdate";
             this.labelUpdate.Size = new System.Drawing.Size(0, 24);
             this.labelUpdate.TabIndex = 30;
@@ -701,7 +705,7 @@
             this.buttonUpdate.ForeColor = System.Drawing.Color.White;
             this.buttonUpdate.Location = new System.Drawing.Point(6, 20);
             this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(169, 57);
+            this.buttonUpdate.Size = new System.Drawing.Size(169, 63);
             this.buttonUpdate.TabIndex = 22;
             this.buttonUpdate.Text = "MQS Update";
             this.buttonUpdate.UseVisualStyleBackColor = false;
@@ -740,6 +744,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.groupBox3);
             this.tabPage1.Controls.Add(this.richTextBoxCompare);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Controls.Add(this.textBoxFilterCount);
@@ -762,17 +767,17 @@
             // 
             // richTextBoxCompare
             // 
-            this.richTextBoxCompare.Location = new System.Drawing.Point(771, 229);
+            this.richTextBoxCompare.Location = new System.Drawing.Point(771, 213);
             this.richTextBoxCompare.Name = "richTextBoxCompare";
-            this.richTextBoxCompare.Size = new System.Drawing.Size(587, 443);
+            this.richTextBoxCompare.Size = new System.Drawing.Size(587, 342);
             this.richTextBoxCompare.TabIndex = 41;
             this.richTextBoxCompare.Text = "";
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.buttonUpdate);
-            this.groupBox1.Controls.Add(this.labelUpdate);
             this.groupBox1.Controls.Add(this.buttonInsertDB);
+            this.groupBox1.Controls.Add(this.labelUpdate);
             this.groupBox1.Location = new System.Drawing.Point(1167, 6);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(181, 157);
@@ -821,7 +826,7 @@
             this.labelStatusCompare.AutoSize = true;
             this.labelStatusCompare.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelStatusCompare.ForeColor = System.Drawing.Color.Teal;
-            this.labelStatusCompare.Location = new System.Drawing.Point(780, 210);
+            this.labelStatusCompare.Location = new System.Drawing.Point(961, 167);
             this.labelStatusCompare.Name = "labelStatusCompare";
             this.labelStatusCompare.Size = new System.Drawing.Size(0, 16);
             this.labelStatusCompare.TabIndex = 33;
@@ -955,6 +960,39 @@
             // 
             this.dailyMQSDataTableAdapter.ClearBeforeFill = true;
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.buttonUpdateToDb);
+            this.groupBox3.Controls.Add(this.comboBoxListToADDdb);
+            this.groupBox3.Location = new System.Drawing.Point(771, 562);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(587, 100);
+            this.groupBox3.TabIndex = 42;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Insert To DB";
+            // 
+            // comboBoxListToADDdb
+            // 
+            this.comboBoxListToADDdb.Enabled = false;
+            this.comboBoxListToADDdb.FormattingEnabled = true;
+            this.comboBoxListToADDdb.Location = new System.Drawing.Point(15, 19);
+            this.comboBoxListToADDdb.Name = "comboBoxListToADDdb";
+            this.comboBoxListToADDdb.Size = new System.Drawing.Size(566, 21);
+            this.comboBoxListToADDdb.TabIndex = 32;
+            // 
+            // buttonUpdateToDb
+            // 
+            this.buttonUpdateToDb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.buttonUpdateToDb.Enabled = false;
+            this.buttonUpdateToDb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.buttonUpdateToDb.Location = new System.Drawing.Point(242, 58);
+            this.buttonUpdateToDb.Name = "buttonUpdateToDb";
+            this.buttonUpdateToDb.Size = new System.Drawing.Size(138, 36);
+            this.buttonUpdateToDb.TabIndex = 33;
+            this.buttonUpdateToDb.Text = "Update To DB";
+            this.buttonUpdateToDb.UseVisualStyleBackColor = false;
+            this.buttonUpdateToDb.Click += new System.EventHandler(this.buttonUpdateToDb_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -982,6 +1020,7 @@
             this.tabPage2.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1073,6 +1112,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn totHandleDataGridViewTextBoxColumn;
         private System.Windows.Forms.TextBox textBoxConfirmPassword;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        public System.Windows.Forms.ComboBox comboBoxListToADDdb;
+        public System.Windows.Forms.Button buttonUpdateToDb;
     }
 }
 
