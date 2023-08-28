@@ -31,9 +31,24 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.dataGridViewMQS = new System.Windows.Forms.DataGridView();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.locationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.familyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.processDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.technologyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pYieldDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.primePassDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.primeFailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.primeHandleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totYieldDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totPassDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.avgPASSTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totFailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totHandleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dailyMQSDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mQSRequestDatabaseDataSet = new ProductsDataMQS.MQSRequestDatabaseDataSet();
             this.groupBoxProductData = new System.Windows.Forms.GroupBox();
+            this.labelUserLogin = new System.Windows.Forms.Label();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonEnableLogin = new System.Windows.Forms.Button();
             this.textBoxThandle = new System.Windows.Forms.TextBox();
@@ -87,33 +102,18 @@
             this.labelCriteria = new System.Windows.Forms.Label();
             this.labelStatusCompare = new System.Windows.Forms.Label();
             this.buttonCompareAvg = new System.Windows.Forms.Button();
-            this.dailyMQSDataTableAdapter = new ProductsDataMQS.MQSRequestDatabaseDataSetTableAdapters.DailyMQSDataTableAdapter();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.labelLoginSetting = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBoxCreateUserName = new System.Windows.Forms.TextBox();
-            this.textBoxCreatePassword = new System.Windows.Forms.TextBox();
-            this.labelCreatePassword = new System.Windows.Forms.Label();
-            this.buttonNewUser = new System.Windows.Forms.Button();
-            this.buttonSaveNew = new System.Windows.Forms.Button();
-            this.labelUserLogin = new System.Windows.Forms.Label();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.locationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.familyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.processDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.technologyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pYieldDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.primePassDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.primeFailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.primeHandleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totYieldDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totPassDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.avgPASSTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totFailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totHandleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBoxConfirmPassword = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.buttonSaveNew = new System.Windows.Forms.Button();
+            this.buttonNewUser = new System.Windows.Forms.Button();
+            this.textBoxCreatePassword = new System.Windows.Forms.TextBox();
+            this.labelCreatePassword = new System.Windows.Forms.Label();
+            this.textBoxCreateUserName = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.labelLoginSetting = new System.Windows.Forms.Label();
+            this.dailyMQSDataTableAdapter = new ProductsDataMQS.MQSRequestDatabaseDataSetTableAdapters.DailyMQSDataTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMQS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dailyMQSDataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mQSRequestDatabaseDataSet)).BeginInit();
@@ -149,6 +149,106 @@
             this.dataGridViewMQS.Name = "dataGridViewMQS";
             this.dataGridViewMQS.Size = new System.Drawing.Size(757, 475);
             this.dataGridViewMQS.TabIndex = 0;
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // locationDataGridViewTextBoxColumn
+            // 
+            this.locationDataGridViewTextBoxColumn.DataPropertyName = "Location";
+            this.locationDataGridViewTextBoxColumn.HeaderText = "Location";
+            this.locationDataGridViewTextBoxColumn.Name = "locationDataGridViewTextBoxColumn";
+            this.locationDataGridViewTextBoxColumn.Width = 95;
+            // 
+            // familyDataGridViewTextBoxColumn
+            // 
+            this.familyDataGridViewTextBoxColumn.DataPropertyName = "Family";
+            this.familyDataGridViewTextBoxColumn.HeaderText = "Family";
+            this.familyDataGridViewTextBoxColumn.Name = "familyDataGridViewTextBoxColumn";
+            // 
+            // processDataGridViewTextBoxColumn
+            // 
+            this.processDataGridViewTextBoxColumn.DataPropertyName = "Process";
+            this.processDataGridViewTextBoxColumn.HeaderText = "Process";
+            this.processDataGridViewTextBoxColumn.Name = "processDataGridViewTextBoxColumn";
+            this.processDataGridViewTextBoxColumn.Width = 90;
+            // 
+            // technologyDataGridViewTextBoxColumn
+            // 
+            this.technologyDataGridViewTextBoxColumn.DataPropertyName = "Technology";
+            this.technologyDataGridViewTextBoxColumn.HeaderText = "Technology";
+            this.technologyDataGridViewTextBoxColumn.Name = "technologyDataGridViewTextBoxColumn";
+            // 
+            // pYieldDataGridViewTextBoxColumn
+            // 
+            this.pYieldDataGridViewTextBoxColumn.DataPropertyName = "PYield";
+            this.pYieldDataGridViewTextBoxColumn.HeaderText = "PYield";
+            this.pYieldDataGridViewTextBoxColumn.Name = "pYieldDataGridViewTextBoxColumn";
+            this.pYieldDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // primePassDataGridViewTextBoxColumn
+            // 
+            this.primePassDataGridViewTextBoxColumn.DataPropertyName = "PrimePass";
+            this.primePassDataGridViewTextBoxColumn.HeaderText = "PrimePass";
+            this.primePassDataGridViewTextBoxColumn.Name = "primePassDataGridViewTextBoxColumn";
+            this.primePassDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // primeFailDataGridViewTextBoxColumn
+            // 
+            this.primeFailDataGridViewTextBoxColumn.DataPropertyName = "PrimeFail";
+            this.primeFailDataGridViewTextBoxColumn.HeaderText = "PrimeFail";
+            this.primeFailDataGridViewTextBoxColumn.Name = "primeFailDataGridViewTextBoxColumn";
+            this.primeFailDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // primeHandleDataGridViewTextBoxColumn
+            // 
+            this.primeHandleDataGridViewTextBoxColumn.DataPropertyName = "PrimeHandle";
+            this.primeHandleDataGridViewTextBoxColumn.HeaderText = "PrimeHandle";
+            this.primeHandleDataGridViewTextBoxColumn.Name = "primeHandleDataGridViewTextBoxColumn";
+            this.primeHandleDataGridViewTextBoxColumn.Visible = false;
+            this.primeHandleDataGridViewTextBoxColumn.Width = 65;
+            // 
+            // totYieldDataGridViewTextBoxColumn
+            // 
+            this.totYieldDataGridViewTextBoxColumn.DataPropertyName = "TotYield";
+            this.totYieldDataGridViewTextBoxColumn.HeaderText = "TotYield";
+            this.totYieldDataGridViewTextBoxColumn.Name = "totYieldDataGridViewTextBoxColumn";
+            this.totYieldDataGridViewTextBoxColumn.Visible = false;
+            this.totYieldDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // totPassDataGridViewTextBoxColumn
+            // 
+            this.totPassDataGridViewTextBoxColumn.DataPropertyName = "TotPass";
+            this.totPassDataGridViewTextBoxColumn.HeaderText = "TotPass";
+            this.totPassDataGridViewTextBoxColumn.Name = "totPassDataGridViewTextBoxColumn";
+            this.totPassDataGridViewTextBoxColumn.Visible = false;
+            this.totPassDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // avgPASSTimeDataGridViewTextBoxColumn
+            // 
+            this.avgPASSTimeDataGridViewTextBoxColumn.DataPropertyName = "AvgPASSTime";
+            this.avgPASSTimeDataGridViewTextBoxColumn.HeaderText = "AvgPASSTime";
+            this.avgPASSTimeDataGridViewTextBoxColumn.Name = "avgPASSTimeDataGridViewTextBoxColumn";
+            this.avgPASSTimeDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // totFailDataGridViewTextBoxColumn
+            // 
+            this.totFailDataGridViewTextBoxColumn.DataPropertyName = "TotFail";
+            this.totFailDataGridViewTextBoxColumn.HeaderText = "TotFail";
+            this.totFailDataGridViewTextBoxColumn.Name = "totFailDataGridViewTextBoxColumn";
+            this.totFailDataGridViewTextBoxColumn.Visible = false;
+            this.totFailDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // totHandleDataGridViewTextBoxColumn
+            // 
+            this.totHandleDataGridViewTextBoxColumn.DataPropertyName = "TotHandle";
+            this.totHandleDataGridViewTextBoxColumn.HeaderText = "TotHandle";
+            this.totHandleDataGridViewTextBoxColumn.Name = "totHandleDataGridViewTextBoxColumn";
+            this.totHandleDataGridViewTextBoxColumn.Width = 60;
             // 
             // dailyMQSDataBindingSource
             // 
@@ -206,6 +306,14 @@
             this.groupBoxProductData.TabIndex = 1;
             this.groupBoxProductData.TabStop = false;
             this.groupBoxProductData.Text = "Product Infos";
+            // 
+            // labelUserLogin
+            // 
+            this.labelUserLogin.AutoSize = true;
+            this.labelUserLogin.Location = new System.Drawing.Point(70, 61);
+            this.labelUserLogin.Name = "labelUserLogin";
+            this.labelUserLogin.Size = new System.Drawing.Size(0, 15);
+            this.labelUserLogin.TabIndex = 41;
             // 
             // buttonDelete
             // 
@@ -729,10 +837,6 @@
             this.buttonCompareAvg.UseVisualStyleBackColor = true;
             this.buttonCompareAvg.Click += new System.EventHandler(this.buttonCompareAvg_Click);
             // 
-            // dailyMQSDataTableAdapter
-            // 
-            this.dailyMQSDataTableAdapter.ClearBeforeFill = true;
-            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.groupBox2);
@@ -744,17 +848,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Login Setting";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // labelLoginSetting
-            // 
-            this.labelLoginSetting.AutoSize = true;
-            this.labelLoginSetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLoginSetting.ForeColor = System.Drawing.Color.Teal;
-            this.labelLoginSetting.Location = new System.Drawing.Point(17, 7);
-            this.labelLoginSetting.Name = "labelLoginSetting";
-            this.labelLoginSetting.Size = new System.Drawing.Size(103, 20);
-            this.labelLoginSetting.TabIndex = 33;
-            this.labelLoginSetting.Text = "Login Setting";
             // 
             // groupBox2
             // 
@@ -773,22 +866,44 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Create User and Password";
             // 
-            // label1
+            // textBoxConfirmPassword
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 69);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "User Name:";
+            this.textBoxConfirmPassword.Enabled = false;
+            this.textBoxConfirmPassword.Location = new System.Drawing.Point(20, 191);
+            this.textBoxConfirmPassword.Name = "textBoxConfirmPassword";
+            this.textBoxConfirmPassword.Size = new System.Drawing.Size(185, 20);
+            this.textBoxConfirmPassword.TabIndex = 7;
+            this.textBoxConfirmPassword.UseSystemPasswordChar = true;
             // 
-            // textBoxCreateUserName
+            // label2
             // 
-            this.textBoxCreateUserName.Enabled = false;
-            this.textBoxCreateUserName.Location = new System.Drawing.Point(20, 86);
-            this.textBoxCreateUserName.Name = "textBoxCreateUserName";
-            this.textBoxCreateUserName.Size = new System.Drawing.Size(185, 20);
-            this.textBoxCreateUserName.TabIndex = 1;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(17, 174);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Confirm Password:";
+            // 
+            // buttonSaveNew
+            // 
+            this.buttonSaveNew.Enabled = false;
+            this.buttonSaveNew.Location = new System.Drawing.Point(141, 226);
+            this.buttonSaveNew.Name = "buttonSaveNew";
+            this.buttonSaveNew.Size = new System.Drawing.Size(64, 23);
+            this.buttonSaveNew.TabIndex = 5;
+            this.buttonSaveNew.Text = "Save";
+            this.buttonSaveNew.UseVisualStyleBackColor = true;
+            this.buttonSaveNew.Click += new System.EventHandler(this.buttonSaveNew_Click);
+            // 
+            // buttonNewUser
+            // 
+            this.buttonNewUser.Location = new System.Drawing.Point(20, 34);
+            this.buttonNewUser.Name = "buttonNewUser";
+            this.buttonNewUser.Size = new System.Drawing.Size(64, 23);
+            this.buttonNewUser.TabIndex = 4;
+            this.buttonNewUser.Text = "New";
+            this.buttonNewUser.UseVisualStyleBackColor = true;
+            this.buttonNewUser.Click += new System.EventHandler(this.buttonNewUser_Click);
             // 
             // textBoxCreatePassword
             // 
@@ -808,152 +923,37 @@
             this.labelCreatePassword.TabIndex = 2;
             this.labelCreatePassword.Text = "Password:";
             // 
-            // buttonNewUser
+            // textBoxCreateUserName
             // 
-            this.buttonNewUser.Location = new System.Drawing.Point(20, 34);
-            this.buttonNewUser.Name = "buttonNewUser";
-            this.buttonNewUser.Size = new System.Drawing.Size(64, 23);
-            this.buttonNewUser.TabIndex = 4;
-            this.buttonNewUser.Text = "New";
-            this.buttonNewUser.UseVisualStyleBackColor = true;
-            this.buttonNewUser.Click += new System.EventHandler(this.buttonNewUser_Click);
+            this.textBoxCreateUserName.Enabled = false;
+            this.textBoxCreateUserName.Location = new System.Drawing.Point(20, 86);
+            this.textBoxCreateUserName.Name = "textBoxCreateUserName";
+            this.textBoxCreateUserName.Size = new System.Drawing.Size(185, 20);
+            this.textBoxCreateUserName.TabIndex = 1;
             // 
-            // buttonSaveNew
+            // label1
             // 
-            this.buttonSaveNew.Enabled = false;
-            this.buttonSaveNew.Location = new System.Drawing.Point(141, 226);
-            this.buttonSaveNew.Name = "buttonSaveNew";
-            this.buttonSaveNew.Size = new System.Drawing.Size(64, 23);
-            this.buttonSaveNew.TabIndex = 5;
-            this.buttonSaveNew.Text = "Save";
-            this.buttonSaveNew.UseVisualStyleBackColor = true;
-            this.buttonSaveNew.Click += new System.EventHandler(this.buttonSaveNew_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(17, 69);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "User Name:";
             // 
-            // labelUserLogin
+            // labelLoginSetting
             // 
-            this.labelUserLogin.AutoSize = true;
-            this.labelUserLogin.Location = new System.Drawing.Point(70, 61);
-            this.labelUserLogin.Name = "labelUserLogin";
-            this.labelUserLogin.Size = new System.Drawing.Size(0, 15);
-            this.labelUserLogin.TabIndex = 41;
+            this.labelLoginSetting.AutoSize = true;
+            this.labelLoginSetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLoginSetting.ForeColor = System.Drawing.Color.Teal;
+            this.labelLoginSetting.Location = new System.Drawing.Point(17, 7);
+            this.labelLoginSetting.Name = "labelLoginSetting";
+            this.labelLoginSetting.Size = new System.Drawing.Size(103, 20);
+            this.labelLoginSetting.TabIndex = 33;
+            this.labelLoginSetting.Text = "Login Setting";
             // 
-            // iDDataGridViewTextBoxColumn
+            // dailyMQSDataTableAdapter
             // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // locationDataGridViewTextBoxColumn
-            // 
-            this.locationDataGridViewTextBoxColumn.DataPropertyName = "Location";
-            this.locationDataGridViewTextBoxColumn.HeaderText = "Location";
-            this.locationDataGridViewTextBoxColumn.Name = "locationDataGridViewTextBoxColumn";
-            this.locationDataGridViewTextBoxColumn.Width = 95;
-            // 
-            // familyDataGridViewTextBoxColumn
-            // 
-            this.familyDataGridViewTextBoxColumn.DataPropertyName = "Family";
-            this.familyDataGridViewTextBoxColumn.HeaderText = "Family";
-            this.familyDataGridViewTextBoxColumn.Name = "familyDataGridViewTextBoxColumn";
-            // 
-            // processDataGridViewTextBoxColumn
-            // 
-            this.processDataGridViewTextBoxColumn.DataPropertyName = "Process";
-            this.processDataGridViewTextBoxColumn.HeaderText = "Process";
-            this.processDataGridViewTextBoxColumn.Name = "processDataGridViewTextBoxColumn";
-            this.processDataGridViewTextBoxColumn.Width = 90;
-            // 
-            // technologyDataGridViewTextBoxColumn
-            // 
-            this.technologyDataGridViewTextBoxColumn.DataPropertyName = "Technology";
-            this.technologyDataGridViewTextBoxColumn.HeaderText = "Technology";
-            this.technologyDataGridViewTextBoxColumn.Name = "technologyDataGridViewTextBoxColumn";
-            // 
-            // pYieldDataGridViewTextBoxColumn
-            // 
-            this.pYieldDataGridViewTextBoxColumn.DataPropertyName = "PYield";
-            this.pYieldDataGridViewTextBoxColumn.HeaderText = "PYield";
-            this.pYieldDataGridViewTextBoxColumn.Name = "pYieldDataGridViewTextBoxColumn";
-            this.pYieldDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // primePassDataGridViewTextBoxColumn
-            // 
-            this.primePassDataGridViewTextBoxColumn.DataPropertyName = "PrimePass";
-            this.primePassDataGridViewTextBoxColumn.HeaderText = "PrimePass";
-            this.primePassDataGridViewTextBoxColumn.Name = "primePassDataGridViewTextBoxColumn";
-            this.primePassDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // primeFailDataGridViewTextBoxColumn
-            // 
-            this.primeFailDataGridViewTextBoxColumn.DataPropertyName = "PrimeFail";
-            this.primeFailDataGridViewTextBoxColumn.HeaderText = "PrimeFail";
-            this.primeFailDataGridViewTextBoxColumn.Name = "primeFailDataGridViewTextBoxColumn";
-            this.primeFailDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // primeHandleDataGridViewTextBoxColumn
-            // 
-            this.primeHandleDataGridViewTextBoxColumn.DataPropertyName = "PrimeHandle";
-            this.primeHandleDataGridViewTextBoxColumn.HeaderText = "PrimeHandle";
-            this.primeHandleDataGridViewTextBoxColumn.Name = "primeHandleDataGridViewTextBoxColumn";
-            this.primeHandleDataGridViewTextBoxColumn.Visible = false;
-            this.primeHandleDataGridViewTextBoxColumn.Width = 65;
-            // 
-            // totYieldDataGridViewTextBoxColumn
-            // 
-            this.totYieldDataGridViewTextBoxColumn.DataPropertyName = "TotYield";
-            this.totYieldDataGridViewTextBoxColumn.HeaderText = "TotYield";
-            this.totYieldDataGridViewTextBoxColumn.Name = "totYieldDataGridViewTextBoxColumn";
-            this.totYieldDataGridViewTextBoxColumn.Visible = false;
-            this.totYieldDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // totPassDataGridViewTextBoxColumn
-            // 
-            this.totPassDataGridViewTextBoxColumn.DataPropertyName = "TotPass";
-            this.totPassDataGridViewTextBoxColumn.HeaderText = "TotPass";
-            this.totPassDataGridViewTextBoxColumn.Name = "totPassDataGridViewTextBoxColumn";
-            this.totPassDataGridViewTextBoxColumn.Visible = false;
-            this.totPassDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // avgPASSTimeDataGridViewTextBoxColumn
-            // 
-            this.avgPASSTimeDataGridViewTextBoxColumn.DataPropertyName = "AvgPASSTime";
-            this.avgPASSTimeDataGridViewTextBoxColumn.HeaderText = "AvgPASSTime";
-            this.avgPASSTimeDataGridViewTextBoxColumn.Name = "avgPASSTimeDataGridViewTextBoxColumn";
-            this.avgPASSTimeDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // totFailDataGridViewTextBoxColumn
-            // 
-            this.totFailDataGridViewTextBoxColumn.DataPropertyName = "TotFail";
-            this.totFailDataGridViewTextBoxColumn.HeaderText = "TotFail";
-            this.totFailDataGridViewTextBoxColumn.Name = "totFailDataGridViewTextBoxColumn";
-            this.totFailDataGridViewTextBoxColumn.Visible = false;
-            this.totFailDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // totHandleDataGridViewTextBoxColumn
-            // 
-            this.totHandleDataGridViewTextBoxColumn.DataPropertyName = "TotHandle";
-            this.totHandleDataGridViewTextBoxColumn.HeaderText = "TotHandle";
-            this.totHandleDataGridViewTextBoxColumn.Name = "totHandleDataGridViewTextBoxColumn";
-            this.totHandleDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // textBoxConfirmPassword
-            // 
-            this.textBoxConfirmPassword.Enabled = false;
-            this.textBoxConfirmPassword.Location = new System.Drawing.Point(20, 191);
-            this.textBoxConfirmPassword.Name = "textBoxConfirmPassword";
-            this.textBoxConfirmPassword.Size = new System.Drawing.Size(185, 20);
-            this.textBoxConfirmPassword.TabIndex = 7;
-            this.textBoxConfirmPassword.UseSystemPasswordChar = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 174);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Confirm Password:";
+            this.dailyMQSDataTableAdapter.ClearBeforeFill = true;
             // 
             // FormMain
             // 

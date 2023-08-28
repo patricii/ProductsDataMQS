@@ -120,6 +120,31 @@ namespace ProductsDataMQS
             return result;
 
         }
+        public void updateAVGTestTimeToMdb(string product, string process, string newTT)
+        {
+            try
+            {
+                var con = new OleDbConnection(dbConnection);
+                var cmd = new OleDbCommand();
+                cmd.Connection = con;
+
+                cmd.Parameters.AddWithValue("@Family", product);
+                cmd.Parameters.AddWithValue("@Process", process);
+                cmd.Parameters.AddWithValue("@AvgPASSTime", newTT);
+
+                cmd.CommandText = "UPDATE DailyMQSData SET AvgPASSTime = " + newTT + " Where Family = '" + product + "' AND Process = '" + process + "'";
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+                Application.DoEvents();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:" + ex);
+            }
+
+        }
         private void CompareTables(DataTable table1, DataTable table2, IEnumerable<int> columnsToCompare)
         {
             FormMain frm = FormMain.getInstance();
