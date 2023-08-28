@@ -34,6 +34,14 @@
             this.dailyMQSDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mQSRequestDatabaseDataSet = new ProductsDataMQS.MQSRequestDatabaseDataSet();
             this.groupBoxProductData = new System.Windows.Forms.GroupBox();
+            this.buttonDelete = new System.Windows.Forms.Button();
+            this.buttonEnableLogin = new System.Windows.Forms.Button();
+            this.textBoxThandle = new System.Windows.Forms.TextBox();
+            this.labelTHandle = new System.Windows.Forms.Label();
+            this.textBoxLocation = new System.Windows.Forms.TextBox();
+            this.labelSite = new System.Windows.Forms.Label();
+            this.buttonSave = new System.Windows.Forms.Button();
+            this.buttonAddNew = new System.Windows.Forms.Button();
             this.labelLogo = new System.Windows.Forms.Label();
             this.textBoxNPI = new System.Windows.Forms.TextBox();
             this.labelNPI = new System.Windows.Forms.Label();
@@ -42,8 +50,6 @@
             this.textBoxAllInfos = new System.Windows.Forms.TextBox();
             this.textBoxCsvFolder = new System.Windows.Forms.TextBox();
             this.labelCsvFile = new System.Windows.Forms.Label();
-            this.buttonPrev = new System.Windows.Forms.Button();
-            this.buttonNext = new System.Windows.Forms.Button();
             this.textBoxTTime = new System.Windows.Forms.TextBox();
             this.labelTestTime = new System.Windows.Forms.Label();
             this.textBoxTYield = new System.Windows.Forms.TextBox();
@@ -64,6 +70,8 @@
             this.labelFamily = new System.Windows.Forms.Label();
             this.textBoxProductName = new System.Windows.Forms.TextBox();
             this.labelProductName = new System.Windows.Forms.Label();
+            this.buttonPrev = new System.Windows.Forms.Button();
+            this.buttonNext = new System.Windows.Forms.Button();
             this.buttonInsertDB = new System.Windows.Forms.Button();
             this.labelUpdate = new System.Windows.Forms.Label();
             this.buttonUpdate = new System.Windows.Forms.Button();
@@ -71,6 +79,7 @@
             this.buttonExit = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.richTextBoxCompare = new System.Windows.Forms.RichTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBoxFilterCount = new System.Windows.Forms.TextBox();
             this.labelFilterCount = new System.Windows.Forms.Label();
@@ -79,13 +88,15 @@
             this.labelStatusCompare = new System.Windows.Forms.Label();
             this.buttonCompareAvg = new System.Windows.Forms.Button();
             this.dailyMQSDataTableAdapter = new ProductsDataMQS.MQSRequestDatabaseDataSetTableAdapters.DailyMQSDataTableAdapter();
-            this.richTextBoxCompare = new System.Windows.Forms.RichTextBox();
-            this.buttonAddNew = new System.Windows.Forms.Button();
-            this.buttonSave = new System.Windows.Forms.Button();
-            this.textBoxThandle = new System.Windows.Forms.TextBox();
-            this.labelTHandle = new System.Windows.Forms.Label();
-            this.textBoxLocation = new System.Windows.Forms.TextBox();
-            this.labelSite = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.labelLoginSetting = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxCreateUserName = new System.Windows.Forms.TextBox();
+            this.textBoxCreatePassword = new System.Windows.Forms.TextBox();
+            this.labelCreatePassword = new System.Windows.Forms.Label();
+            this.buttonNewUser = new System.Windows.Forms.Button();
+            this.buttonSaveNew = new System.Windows.Forms.Button();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.locationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.familyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -100,8 +111,6 @@
             this.avgPASSTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totFailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totHandleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buttonEnableLogin = new System.Windows.Forms.Button();
-            this.buttonDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMQS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dailyMQSDataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mQSRequestDatabaseDataSet)).BeginInit();
@@ -109,6 +118,8 @@
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridViewMQS
@@ -192,6 +203,85 @@
             this.groupBoxProductData.TabStop = false;
             this.groupBoxProductData.Text = "Product Infos";
             // 
+            // buttonDelete
+            // 
+            this.buttonDelete.Enabled = false;
+            this.buttonDelete.Location = new System.Drawing.Point(87, 92);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(75, 34);
+            this.buttonDelete.TabIndex = 40;
+            this.buttonDelete.Text = "Delete";
+            this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
+            // 
+            // buttonEnableLogin
+            // 
+            this.buttonEnableLogin.Location = new System.Drawing.Point(6, 20);
+            this.buttonEnableLogin.Name = "buttonEnableLogin";
+            this.buttonEnableLogin.Size = new System.Drawing.Size(58, 23);
+            this.buttonEnableLogin.TabIndex = 39;
+            this.buttonEnableLogin.Text = "Login";
+            this.buttonEnableLogin.UseVisualStyleBackColor = true;
+            this.buttonEnableLogin.Click += new System.EventHandler(this.buttonEnableLogin_Click);
+            // 
+            // textBoxThandle
+            // 
+            this.textBoxThandle.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dailyMQSDataBindingSource, "TotHandle", true));
+            this.textBoxThandle.Location = new System.Drawing.Point(1062, 62);
+            this.textBoxThandle.Name = "textBoxThandle";
+            this.textBoxThandle.Size = new System.Drawing.Size(83, 21);
+            this.textBoxThandle.TabIndex = 38;
+            this.textBoxThandle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // labelTHandle
+            // 
+            this.labelTHandle.AutoSize = true;
+            this.labelTHandle.Location = new System.Drawing.Point(981, 67);
+            this.labelTHandle.Name = "labelTHandle";
+            this.labelTHandle.Size = new System.Drawing.Size(80, 15);
+            this.labelTHandle.TabIndex = 37;
+            this.labelTHandle.Text = "Total Handle:";
+            // 
+            // textBoxLocation
+            // 
+            this.textBoxLocation.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dailyMQSDataBindingSource, "Location", true));
+            this.textBoxLocation.Location = new System.Drawing.Point(1062, 35);
+            this.textBoxLocation.Name = "textBoxLocation";
+            this.textBoxLocation.Size = new System.Drawing.Size(139, 21);
+            this.textBoxLocation.TabIndex = 36;
+            this.textBoxLocation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // labelSite
+            // 
+            this.labelSite.AutoSize = true;
+            this.labelSite.Location = new System.Drawing.Point(981, 42);
+            this.labelSite.Name = "labelSite";
+            this.labelSite.Size = new System.Drawing.Size(57, 15);
+            this.labelSite.TabIndex = 35;
+            this.labelSite.Text = "Location:";
+            // 
+            // buttonSave
+            // 
+            this.buttonSave.Enabled = false;
+            this.buttonSave.Location = new System.Drawing.Point(6, 92);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(75, 34);
+            this.buttonSave.TabIndex = 34;
+            this.buttonSave.Text = "Save";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            // 
+            // buttonAddNew
+            // 
+            this.buttonAddNew.Enabled = false;
+            this.buttonAddNew.Location = new System.Drawing.Point(6, 55);
+            this.buttonAddNew.Name = "buttonAddNew";
+            this.buttonAddNew.Size = new System.Drawing.Size(156, 34);
+            this.buttonAddNew.TabIndex = 33;
+            this.buttonAddNew.Text = "Add New";
+            this.buttonAddNew.UseVisualStyleBackColor = true;
+            this.buttonAddNew.Click += new System.EventHandler(this.buttonAddNew_Click);
+            // 
             // labelLogo
             // 
             this.labelLogo.AutoSize = true;
@@ -262,28 +352,6 @@
             this.labelCsvFile.Size = new System.Drawing.Size(52, 15);
             this.labelCsvFile.TabIndex = 23;
             this.labelCsvFile.Text = "Csv File:";
-            // 
-            // buttonPrev
-            // 
-            this.buttonPrev.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPrev.Location = new System.Drawing.Point(12, 170);
-            this.buttonPrev.Name = "buttonPrev";
-            this.buttonPrev.Size = new System.Drawing.Size(70, 21);
-            this.buttonPrev.TabIndex = 21;
-            this.buttonPrev.Text = "<<";
-            this.buttonPrev.UseVisualStyleBackColor = true;
-            this.buttonPrev.Click += new System.EventHandler(this.buttonPrev_Click);
-            // 
-            // buttonNext
-            // 
-            this.buttonNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonNext.Location = new System.Drawing.Point(88, 170);
-            this.buttonNext.Name = "buttonNext";
-            this.buttonNext.Size = new System.Drawing.Size(70, 21);
-            this.buttonNext.TabIndex = 20;
-            this.buttonNext.Text = ">>";
-            this.buttonNext.UseVisualStyleBackColor = true;
-            this.buttonNext.Click += new System.EventHandler(this.buttonNext_Click);
             // 
             // textBoxTTime
             // 
@@ -469,6 +537,28 @@
             this.labelProductName.TabIndex = 0;
             this.labelProductName.Text = "Product:";
             // 
+            // buttonPrev
+            // 
+            this.buttonPrev.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPrev.Location = new System.Drawing.Point(12, 170);
+            this.buttonPrev.Name = "buttonPrev";
+            this.buttonPrev.Size = new System.Drawing.Size(70, 21);
+            this.buttonPrev.TabIndex = 21;
+            this.buttonPrev.Text = "<<";
+            this.buttonPrev.UseVisualStyleBackColor = true;
+            this.buttonPrev.Click += new System.EventHandler(this.buttonPrev_Click);
+            // 
+            // buttonNext
+            // 
+            this.buttonNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonNext.Location = new System.Drawing.Point(88, 170);
+            this.buttonNext.Name = "buttonNext";
+            this.buttonNext.Size = new System.Drawing.Size(70, 21);
+            this.buttonNext.TabIndex = 20;
+            this.buttonNext.Text = ">>";
+            this.buttonNext.UseVisualStyleBackColor = true;
+            this.buttonNext.Click += new System.EventHandler(this.buttonNext_Click);
+            // 
             // buttonInsertDB
             // 
             this.buttonInsertDB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -529,6 +619,7 @@
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Location = new System.Drawing.Point(0, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -556,6 +647,14 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "MQS Product Infos";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // richTextBoxCompare
+            // 
+            this.richTextBoxCompare.Location = new System.Drawing.Point(823, 229);
+            this.richTextBoxCompare.Name = "richTextBoxCompare";
+            this.richTextBoxCompare.Size = new System.Drawing.Size(558, 443);
+            this.richTextBoxCompare.TabIndex = 41;
+            this.richTextBoxCompare.Text = "";
             // 
             // groupBox1
             // 
@@ -630,71 +729,98 @@
             // 
             this.dailyMQSDataTableAdapter.ClearBeforeFill = true;
             // 
-            // richTextBoxCompare
+            // tabPage2
             // 
-            this.richTextBoxCompare.Location = new System.Drawing.Point(823, 229);
-            this.richTextBoxCompare.Name = "richTextBoxCompare";
-            this.richTextBoxCompare.Size = new System.Drawing.Size(558, 443);
-            this.richTextBoxCompare.TabIndex = 41;
-            this.richTextBoxCompare.Text = "";
+            this.tabPage2.Controls.Add(this.groupBox2);
+            this.tabPage2.Controls.Add(this.labelLoginSetting);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1391, 678);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Login Setting";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // buttonAddNew
+            // labelLoginSetting
             // 
-            this.buttonAddNew.Enabled = false;
-            this.buttonAddNew.Location = new System.Drawing.Point(6, 55);
-            this.buttonAddNew.Name = "buttonAddNew";
-            this.buttonAddNew.Size = new System.Drawing.Size(156, 34);
-            this.buttonAddNew.TabIndex = 33;
-            this.buttonAddNew.Text = "Add New";
-            this.buttonAddNew.UseVisualStyleBackColor = true;
-            this.buttonAddNew.Click += new System.EventHandler(this.buttonAddNew_Click);
+            this.labelLoginSetting.AutoSize = true;
+            this.labelLoginSetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLoginSetting.ForeColor = System.Drawing.Color.Teal;
+            this.labelLoginSetting.Location = new System.Drawing.Point(17, 7);
+            this.labelLoginSetting.Name = "labelLoginSetting";
+            this.labelLoginSetting.Size = new System.Drawing.Size(103, 20);
+            this.labelLoginSetting.TabIndex = 33;
+            this.labelLoginSetting.Text = "Login Setting";
             // 
-            // buttonSave
+            // groupBox2
             // 
-            this.buttonSave.Enabled = false;
-            this.buttonSave.Location = new System.Drawing.Point(6, 92);
-            this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(75, 34);
-            this.buttonSave.TabIndex = 34;
-            this.buttonSave.Text = "Save";
-            this.buttonSave.UseVisualStyleBackColor = true;
-            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            this.groupBox2.Controls.Add(this.buttonSaveNew);
+            this.groupBox2.Controls.Add(this.buttonNewUser);
+            this.groupBox2.Controls.Add(this.textBoxCreatePassword);
+            this.groupBox2.Controls.Add(this.labelCreatePassword);
+            this.groupBox2.Controls.Add(this.textBoxCreateUserName);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Location = new System.Drawing.Point(21, 47);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(240, 240);
+            this.groupBox2.TabIndex = 34;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Create User and Password";
             // 
-            // textBoxThandle
+            // label1
             // 
-            this.textBoxThandle.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dailyMQSDataBindingSource, "TotHandle", true));
-            this.textBoxThandle.Location = new System.Drawing.Point(1062, 62);
-            this.textBoxThandle.Name = "textBoxThandle";
-            this.textBoxThandle.Size = new System.Drawing.Size(83, 21);
-            this.textBoxThandle.TabIndex = 38;
-            this.textBoxThandle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(17, 69);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "User Name:";
             // 
-            // labelTHandle
+            // textBoxCreateUserName
             // 
-            this.labelTHandle.AutoSize = true;
-            this.labelTHandle.Location = new System.Drawing.Point(981, 67);
-            this.labelTHandle.Name = "labelTHandle";
-            this.labelTHandle.Size = new System.Drawing.Size(80, 15);
-            this.labelTHandle.TabIndex = 37;
-            this.labelTHandle.Text = "Total Handle:";
+            this.textBoxCreateUserName.Enabled = false;
+            this.textBoxCreateUserName.Location = new System.Drawing.Point(20, 86);
+            this.textBoxCreateUserName.Name = "textBoxCreateUserName";
+            this.textBoxCreateUserName.Size = new System.Drawing.Size(185, 20);
+            this.textBoxCreateUserName.TabIndex = 1;
             // 
-            // textBoxLocation
+            // textBoxCreatePassword
             // 
-            this.textBoxLocation.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dailyMQSDataBindingSource, "Location", true));
-            this.textBoxLocation.Location = new System.Drawing.Point(1062, 35);
-            this.textBoxLocation.Name = "textBoxLocation";
-            this.textBoxLocation.Size = new System.Drawing.Size(139, 21);
-            this.textBoxLocation.TabIndex = 36;
-            this.textBoxLocation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxCreatePassword.Enabled = false;
+            this.textBoxCreatePassword.Location = new System.Drawing.Point(20, 141);
+            this.textBoxCreatePassword.Name = "textBoxCreatePassword";
+            this.textBoxCreatePassword.Size = new System.Drawing.Size(185, 20);
+            this.textBoxCreatePassword.TabIndex = 3;
             // 
-            // labelSite
+            // labelCreatePassword
             // 
-            this.labelSite.AutoSize = true;
-            this.labelSite.Location = new System.Drawing.Point(981, 42);
-            this.labelSite.Name = "labelSite";
-            this.labelSite.Size = new System.Drawing.Size(57, 15);
-            this.labelSite.TabIndex = 35;
-            this.labelSite.Text = "Location:";
+            this.labelCreatePassword.AutoSize = true;
+            this.labelCreatePassword.Location = new System.Drawing.Point(17, 124);
+            this.labelCreatePassword.Name = "labelCreatePassword";
+            this.labelCreatePassword.Size = new System.Drawing.Size(56, 13);
+            this.labelCreatePassword.TabIndex = 2;
+            this.labelCreatePassword.Text = "Password:";
+            // 
+            // buttonNewUser
+            // 
+            this.buttonNewUser.Location = new System.Drawing.Point(20, 34);
+            this.buttonNewUser.Name = "buttonNewUser";
+            this.buttonNewUser.Size = new System.Drawing.Size(64, 23);
+            this.buttonNewUser.TabIndex = 4;
+            this.buttonNewUser.Text = "New";
+            this.buttonNewUser.UseVisualStyleBackColor = true;
+            this.buttonNewUser.Click += new System.EventHandler(this.buttonNewUser_Click);
+            // 
+            // buttonSaveNew
+            // 
+            this.buttonSaveNew.Enabled = false;
+            this.buttonSaveNew.Location = new System.Drawing.Point(141, 183);
+            this.buttonSaveNew.Name = "buttonSaveNew";
+            this.buttonSaveNew.Size = new System.Drawing.Size(64, 23);
+            this.buttonSaveNew.TabIndex = 5;
+            this.buttonSaveNew.Text = "Save";
+            this.buttonSaveNew.UseVisualStyleBackColor = true;
+            this.buttonSaveNew.Click += new System.EventHandler(this.buttonSaveNew_Click);
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -750,21 +876,18 @@
             this.primeHandleDataGridViewTextBoxColumn.DataPropertyName = "PrimeHandle";
             this.primeHandleDataGridViewTextBoxColumn.HeaderText = "PrimeHandle";
             this.primeHandleDataGridViewTextBoxColumn.Name = "primeHandleDataGridViewTextBoxColumn";
-            this.primeHandleDataGridViewTextBoxColumn.Visible = false;
             // 
             // totYieldDataGridViewTextBoxColumn
             // 
             this.totYieldDataGridViewTextBoxColumn.DataPropertyName = "TotYield";
             this.totYieldDataGridViewTextBoxColumn.HeaderText = "TotYield";
             this.totYieldDataGridViewTextBoxColumn.Name = "totYieldDataGridViewTextBoxColumn";
-            this.totYieldDataGridViewTextBoxColumn.Visible = false;
             // 
             // totPassDataGridViewTextBoxColumn
             // 
             this.totPassDataGridViewTextBoxColumn.DataPropertyName = "TotPass";
             this.totPassDataGridViewTextBoxColumn.HeaderText = "TotPass";
             this.totPassDataGridViewTextBoxColumn.Name = "totPassDataGridViewTextBoxColumn";
-            this.totPassDataGridViewTextBoxColumn.Visible = false;
             // 
             // avgPASSTimeDataGridViewTextBoxColumn
             // 
@@ -777,34 +900,12 @@
             this.totFailDataGridViewTextBoxColumn.DataPropertyName = "TotFail";
             this.totFailDataGridViewTextBoxColumn.HeaderText = "TotFail";
             this.totFailDataGridViewTextBoxColumn.Name = "totFailDataGridViewTextBoxColumn";
-            this.totFailDataGridViewTextBoxColumn.Visible = false;
             // 
             // totHandleDataGridViewTextBoxColumn
             // 
             this.totHandleDataGridViewTextBoxColumn.DataPropertyName = "TotHandle";
             this.totHandleDataGridViewTextBoxColumn.HeaderText = "TotHandle";
             this.totHandleDataGridViewTextBoxColumn.Name = "totHandleDataGridViewTextBoxColumn";
-            // 
-            // buttonEnableLogin
-            // 
-            this.buttonEnableLogin.Location = new System.Drawing.Point(6, 20);
-            this.buttonEnableLogin.Name = "buttonEnableLogin";
-            this.buttonEnableLogin.Size = new System.Drawing.Size(58, 23);
-            this.buttonEnableLogin.TabIndex = 39;
-            this.buttonEnableLogin.Text = "Login";
-            this.buttonEnableLogin.UseVisualStyleBackColor = true;
-            this.buttonEnableLogin.Click += new System.EventHandler(this.buttonEnableLogin_Click);
-            // 
-            // buttonDelete
-            // 
-            this.buttonDelete.Enabled = false;
-            this.buttonDelete.Location = new System.Drawing.Point(87, 92);
-            this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(75, 34);
-            this.buttonDelete.TabIndex = 40;
-            this.buttonDelete.Text = "Delete";
-            this.buttonDelete.UseVisualStyleBackColor = true;
-            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // FormMain
             // 
@@ -829,6 +930,10 @@
             this.tabPage1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -889,6 +994,20 @@
         private System.Windows.Forms.Label labelTHandle;
         private System.Windows.Forms.TextBox textBoxLocation;
         private System.Windows.Forms.Label labelSite;
+        private System.Windows.Forms.Button buttonEnableLogin;
+        public System.Windows.Forms.Button buttonInsertDB;
+        public System.Windows.Forms.Button buttonSave;
+        public System.Windows.Forms.Button buttonAddNew;
+        public System.Windows.Forms.Button buttonDelete;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button buttonSaveNew;
+        private System.Windows.Forms.Button buttonNewUser;
+        private System.Windows.Forms.TextBox textBoxCreatePassword;
+        private System.Windows.Forms.Label labelCreatePassword;
+        private System.Windows.Forms.TextBox textBoxCreateUserName;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelLoginSetting;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn locationDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn familyDataGridViewTextBoxColumn;
@@ -903,11 +1022,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn avgPASSTimeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn totFailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn totHandleDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button buttonEnableLogin;
-        public System.Windows.Forms.Button buttonInsertDB;
-        public System.Windows.Forms.Button buttonSave;
-        public System.Windows.Forms.Button buttonAddNew;
-        public System.Windows.Forms.Button buttonDelete;
     }
 }
 

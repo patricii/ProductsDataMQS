@@ -78,7 +78,7 @@ namespace ProductsDataMQS
                 installedDBAdapter.Fill(installedTable);
                 baselineDBAdapter.Fill(baselineTable);
 
-                int[] columnsToCompare = new int[] { 0, 1, 2 , 3 };
+                int[] columnsToCompare = new int[] { 0, 1, 2, 3 };
                 CompareTables(installedTable, baselineTable, columnsToCompare);
             }
         }
@@ -92,6 +92,33 @@ namespace ProductsDataMQS
                 rtb.Select(match.Index, match.Length);
                 rtb.SelectionColor = Color.Red;
             }
+        }
+        public bool InsertNewLoginUsertoDb(string userName, string passwordKey)
+        {
+            bool result = false;
+            try
+            {
+                var con = new OleDbConnection(dbConnection);
+                var cmd = new OleDbCommand();
+                cmd.Connection = con;
+
+                cmd.CommandText = "INSERT INTO [Login] ([user], [password]) VALUES ('" + userName + "', '" + passwordKey + "');";
+                cmd.Parameters.AddWithValue("@user", userName);
+                cmd.Parameters.AddWithValue("@password", passwordKey);
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+                Application.DoEvents();
+                result = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message);
+                result = false;
+            }
+            return result;
+
         }
         private void CompareTables(DataTable table1, DataTable table2, IEnumerable<int> columnsToCompare)
         {
@@ -123,7 +150,7 @@ namespace ProductsDataMQS
                                     {
                                         if (result >= filterValue)
                                         {
-                                            string temp = "**Product: " + table1.Rows[i_rowIndex][colIndex - 2].ToString() + " - Process: " + table1.Rows[i_rowIndex][colIndex - 1].ToString() + " - OLD AvgTestTime: " + table1.Rows[i_rowIndex][colIndex].ToString() + "s" + " - TotHandle:" +table1.Rows[i_rowIndex][colIndex + 1].ToString() + "**" + Environment.NewLine + "**Product: " + table2.Rows[j_rowIndex][colIndex - 2].ToString() + " - Process: " + table2.Rows[j_rowIndex][colIndex - 1].ToString() + " - NEW AvgTestTime: " + table2.Rows[j_rowIndex][colIndex].ToString() + "s" + " - TotHandle:" + table2.Rows[i_rowIndex][colIndex + 1].ToString() + "**" +Environment.NewLine + Environment.NewLine;
+                                            string temp = "**Product: " + table1.Rows[i_rowIndex][colIndex - 2].ToString() + " - Process: " + table1.Rows[i_rowIndex][colIndex - 1].ToString() + " - OLD AvgTestTime: " + table1.Rows[i_rowIndex][colIndex].ToString() + "s" + " - TotHandle:" + table1.Rows[i_rowIndex][colIndex + 1].ToString() + "**" + Environment.NewLine + "**Product: " + table2.Rows[j_rowIndex][colIndex - 2].ToString() + " - Process: " + table2.Rows[j_rowIndex][colIndex - 1].ToString() + " - NEW AvgTestTime: " + table2.Rows[j_rowIndex][colIndex].ToString() + "s" + " - TotHandle:" + table2.Rows[i_rowIndex][colIndex + 1].ToString() + "**" + Environment.NewLine + Environment.NewLine;
                                             frm.richTextBoxCompare.Text += temp;
                                             countCompareOut++;
                                             frm.textBoxFilterCount.Text = countCompareOut.ToString();

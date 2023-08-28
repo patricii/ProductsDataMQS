@@ -302,5 +302,26 @@ namespace ProductsDataMQS
                 //do nothing
             }
         }
+
+        private void buttonNewUser_Click(object sender, EventArgs e)
+        {
+            textBoxCreatePassword.Enabled = true;
+            textBoxCreateUserName.Enabled = true;
+            buttonSaveNew.Enabled = true;
+        }
+
+        private void buttonSaveNew_Click(object sender, EventArgs e)
+        {
+            SQLProcedure sqlProc = new SQLProcedure();
+            bool result = sqlProc.InsertNewLoginUsertoDb(textBoxCreateUserName.Text, textBoxCreateUserName.Text);
+            if (result)
+                MessageBox.Show("Novo usuario inserido com sucesso!!");
+            else
+                MessageBox.Show("Erro ao inserir novo usuario!!");
+
+
+            textBoxCreatePassword.Text = "";
+            textBoxCreateUserName.Text = "";
+        }
     }
 }
