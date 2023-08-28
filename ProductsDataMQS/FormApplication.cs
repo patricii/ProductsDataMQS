@@ -328,7 +328,7 @@ namespace ProductsDataMQS
             else
             {
                 SQLProcedure sqlProc = new SQLProcedure();
-                bool result = sqlProc.InsertNewLoginUsertoDb(textBoxCreateUserName.Text, textBoxCreateUserName.Text);
+                bool result = sqlProc.InsertNewLoginUsertoDb(textBoxCreateUserName.Text, textBoxCreatePassword.Text);
                 if (result)
                     MessageBox.Show("Novo usuario inserido com sucesso!!");
                 else

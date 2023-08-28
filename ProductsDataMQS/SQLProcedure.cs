@@ -85,7 +85,7 @@ namespace ProductsDataMQS
 
         private void ColourRrbText(RichTextBox rtb)
         {
-            Regex regExp = new Regex("[*a-zA-Z0-9_:-]");
+            Regex regExp = new Regex("[*a-zA-Z0-9_:-<>]");
 
             foreach (Match match in regExp.Matches(rtb.Text))
             {
@@ -150,7 +150,7 @@ namespace ProductsDataMQS
                                     {
                                         if (result >= filterValue)
                                         {
-                                            string temp = "**Product: " + table1.Rows[i_rowIndex][colIndex - 2].ToString() + " - Process: " + table1.Rows[i_rowIndex][colIndex - 1].ToString() + " - OLD AvgTestTime: " + table1.Rows[i_rowIndex][colIndex].ToString() + "s" + " - TotHandle:" + table1.Rows[i_rowIndex][colIndex + 1].ToString() + "**" + Environment.NewLine + "**Product: " + table2.Rows[j_rowIndex][colIndex - 2].ToString() + " - Process: " + table2.Rows[j_rowIndex][colIndex - 1].ToString() + " - NEW AvgTestTime: " + table2.Rows[j_rowIndex][colIndex].ToString() + "s" + " - TotHandle:" + table2.Rows[i_rowIndex][colIndex + 1].ToString() + "**" + Environment.NewLine + Environment.NewLine;
+                                            string temp = ">> Product: " + table1.Rows[i_rowIndex][colIndex - 2].ToString() + " - Process: " + table1.Rows[i_rowIndex][colIndex - 1].ToString() + " [ OLD AvgTestTime: " + table1.Rows[i_rowIndex][colIndex].ToString() + "s" + "] - TotHandle:" + table1.Rows[i_rowIndex][colIndex + 1].ToString() + " <<" + Environment.NewLine + ">> Product: " + table2.Rows[j_rowIndex][colIndex - 2].ToString() + " - Process: " + table2.Rows[j_rowIndex][colIndex - 1].ToString() + " [ NEW AvgTestTime: " + table2.Rows[j_rowIndex][colIndex].ToString() + "s" + "] - TotHandle:" + table2.Rows[i_rowIndex][colIndex + 1].ToString() + " <<" + Environment.NewLine + Environment.NewLine;
                                             frm.richTextBoxCompare.Text += temp;
                                             countCompareOut++;
                                             frm.textBoxFilterCount.Text = countCompareOut.ToString();
