@@ -112,6 +112,8 @@
             this.avgPASSTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totFailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totHandleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBoxConfirmPassword = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMQS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dailyMQSDataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mQSRequestDatabaseDataSet)).BeginInit();
@@ -738,7 +740,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1391, 678);
+            this.tabPage2.Size = new System.Drawing.Size(1364, 678);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Login Setting";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -756,6 +758,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.textBoxConfirmPassword);
+            this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.buttonSaveNew);
             this.groupBox2.Controls.Add(this.buttonNewUser);
             this.groupBox2.Controls.Add(this.textBoxCreatePassword);
@@ -764,7 +768,7 @@
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Location = new System.Drawing.Point(21, 47);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(240, 240);
+            this.groupBox2.Size = new System.Drawing.Size(240, 255);
             this.groupBox2.TabIndex = 34;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Create User and Password";
@@ -793,6 +797,7 @@
             this.textBoxCreatePassword.Name = "textBoxCreatePassword";
             this.textBoxCreatePassword.Size = new System.Drawing.Size(185, 20);
             this.textBoxCreatePassword.TabIndex = 3;
+            this.textBoxCreatePassword.UseSystemPasswordChar = true;
             // 
             // labelCreatePassword
             // 
@@ -816,7 +821,7 @@
             // buttonSaveNew
             // 
             this.buttonSaveNew.Enabled = false;
-            this.buttonSaveNew.Location = new System.Drawing.Point(141, 183);
+            this.buttonSaveNew.Location = new System.Drawing.Point(141, 226);
             this.buttonSaveNew.Name = "buttonSaveNew";
             this.buttonSaveNew.Size = new System.Drawing.Size(64, 23);
             this.buttonSaveNew.TabIndex = 5;
@@ -844,6 +849,7 @@
             this.locationDataGridViewTextBoxColumn.DataPropertyName = "Location";
             this.locationDataGridViewTextBoxColumn.HeaderText = "Location";
             this.locationDataGridViewTextBoxColumn.Name = "locationDataGridViewTextBoxColumn";
+            this.locationDataGridViewTextBoxColumn.Width = 95;
             // 
             // familyDataGridViewTextBoxColumn
             // 
@@ -856,6 +862,7 @@
             this.processDataGridViewTextBoxColumn.DataPropertyName = "Process";
             this.processDataGridViewTextBoxColumn.HeaderText = "Process";
             this.processDataGridViewTextBoxColumn.Name = "processDataGridViewTextBoxColumn";
+            this.processDataGridViewTextBoxColumn.Width = 90;
             // 
             // technologyDataGridViewTextBoxColumn
             // 
@@ -929,6 +936,24 @@
             this.totHandleDataGridViewTextBoxColumn.HeaderText = "TotHandle";
             this.totHandleDataGridViewTextBoxColumn.Name = "totHandleDataGridViewTextBoxColumn";
             this.totHandleDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // textBoxConfirmPassword
+            // 
+            this.textBoxConfirmPassword.Enabled = false;
+            this.textBoxConfirmPassword.Location = new System.Drawing.Point(20, 191);
+            this.textBoxConfirmPassword.Name = "textBoxConfirmPassword";
+            this.textBoxConfirmPassword.Size = new System.Drawing.Size(185, 20);
+            this.textBoxConfirmPassword.TabIndex = 7;
+            this.textBoxConfirmPassword.UseSystemPasswordChar = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(17, 174);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Confirm Password:";
             // 
             // FormMain
             // 
@@ -1046,6 +1071,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn avgPASSTimeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn totFailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn totHandleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox textBoxConfirmPassword;
+        private System.Windows.Forms.Label label2;
     }
 }
 

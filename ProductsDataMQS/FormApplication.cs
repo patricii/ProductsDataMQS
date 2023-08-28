@@ -307,21 +307,37 @@ namespace ProductsDataMQS
         {
             textBoxCreatePassword.Enabled = true;
             textBoxCreateUserName.Enabled = true;
+            textBoxConfirmPassword.Enabled = true;
             buttonSaveNew.Enabled = true;
         }
 
         private void buttonSaveNew_Click(object sender, EventArgs e)
         {
-            SQLProcedure sqlProc = new SQLProcedure();
-            bool result = sqlProc.InsertNewLoginUsertoDb(textBoxCreateUserName.Text, textBoxCreateUserName.Text);
-            if (result)
-                MessageBox.Show("Novo usuario inserido com sucesso!!");
+            verifyAndCreateUserLogin();
+        }
+        private void verifyAndCreateUserLogin()
+        {
+            if (textBoxCreatePassword.Text == "" || textBoxCreateUserName.Text == "")
+            {
+                MessageBox.Show("Preencha corretamente todos os campos!");
+            }
+            else if (textBoxCreatePassword.Text != textBoxConfirmPassword.Text)
+            {
+                MessageBox.Show("Os campos [Password] e [Confirm Password] devem ser iguais!");
+            }
             else
-                MessageBox.Show("Erro ao inserir novo usuario!!");
-
+            {
+                SQLProcedure sqlProc = new SQLProcedure();
+                bool result = sqlProc.InsertNewLoginUsertoDb(textBoxCreateUserName.Text, textBoxCreateUserName.Text);
+                if (result)
+                    MessageBox.Show("Novo usuario inserido com sucesso!!");
+                else
+                    MessageBox.Show("Erro ao inserir novo usuario!!");
+            }
 
             textBoxCreatePassword.Text = "";
             textBoxCreateUserName.Text = "";
+            textBoxConfirmPassword.Text = "";
         }
     }
 }
