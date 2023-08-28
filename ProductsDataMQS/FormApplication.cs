@@ -141,6 +141,7 @@ namespace ProductsDataMQS
         }
         private void updateDB()
         {
+            FormLogin fl = new FormLogin();
             DialogResult dialogResult = MessageBox.Show("Deseja realmente carregar o arquivo .csv? o DataBase será atualizado.", "!!!Atenção!!!", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
@@ -154,7 +155,7 @@ namespace ProductsDataMQS
                         dailyMQSDataBindingSource.DataSource = dt;
                         dataGridViewToDt();
                     }
-                    MessageBox.Show("Banco de dados atualizado com sucesso!!");
+                    MessageBox.Show("Banco de dados atualizado com sucesso pelo usuario: " + fl.getUserName());
                 }
                 catch (Exception ex)
                 {

@@ -7,7 +7,7 @@ namespace ProductsDataMQS
 { 
     public partial class FormLogin : Form
     {
-        private string userName = string.Empty;
+        public static string userName = string.Empty;
         string dbConnection = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\ProductDataMQS\db\MQSRequestDatabase.mdb";
         public FormLogin()
         {
