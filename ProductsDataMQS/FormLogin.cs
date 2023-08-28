@@ -4,9 +4,10 @@ using System.Data.OleDb;
 using System.Windows.Forms;
 
 namespace ProductsDataMQS
-{
+{ 
     public partial class FormLogin : Form
     {
+        private string userName = string.Empty;
         string dbConnection = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\ProductDataMQS\db\MQSRequestDatabase.mdb";
         public FormLogin()
         {
@@ -24,6 +25,7 @@ namespace ProductsDataMQS
             da.Fill(ds);
             if (ds.Tables[0].Rows.Count > 0)
             {
+                setUserName(textBoxUser.Text);
                 FormMain frm = FormMain.getInstance();
                 Hide();
                 frm.buttonSave.Enabled = true;
@@ -38,6 +40,14 @@ namespace ProductsDataMQS
                 textBoxUser.Text = "";
                 textBoxPassword.Text = "";
             }
+        }
+        private void setUserName(string UserName)
+        {
+            userName = UserName;
+        }
+        public string getUserName()
+        {
+            return userName;
         }
     }
 }
