@@ -97,6 +97,7 @@
             this.labelCreatePassword = new System.Windows.Forms.Label();
             this.buttonNewUser = new System.Windows.Forms.Button();
             this.buttonSaveNew = new System.Windows.Forms.Button();
+            this.labelUserLogin = new System.Windows.Forms.Label();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.locationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.familyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -111,7 +112,6 @@
             this.avgPASSTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totFailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totHandleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.labelUserLogin = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMQS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dailyMQSDataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mQSRequestDatabaseDataSet)).BeginInit();
@@ -824,6 +824,14 @@
             this.buttonSaveNew.UseVisualStyleBackColor = true;
             this.buttonSaveNew.Click += new System.EventHandler(this.buttonSaveNew_Click);
             // 
+            // labelUserLogin
+            // 
+            this.labelUserLogin.AutoSize = true;
+            this.labelUserLogin.Location = new System.Drawing.Point(70, 61);
+            this.labelUserLogin.Name = "labelUserLogin";
+            this.labelUserLogin.Size = new System.Drawing.Size(0, 15);
+            this.labelUserLogin.TabIndex = 41;
+            // 
             // iDDataGridViewTextBoxColumn
             // 
             this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
@@ -878,18 +886,21 @@
             this.primeHandleDataGridViewTextBoxColumn.DataPropertyName = "PrimeHandle";
             this.primeHandleDataGridViewTextBoxColumn.HeaderText = "PrimeHandle";
             this.primeHandleDataGridViewTextBoxColumn.Name = "primeHandleDataGridViewTextBoxColumn";
+            this.primeHandleDataGridViewTextBoxColumn.Visible = false;
             // 
             // totYieldDataGridViewTextBoxColumn
             // 
             this.totYieldDataGridViewTextBoxColumn.DataPropertyName = "TotYield";
             this.totYieldDataGridViewTextBoxColumn.HeaderText = "TotYield";
             this.totYieldDataGridViewTextBoxColumn.Name = "totYieldDataGridViewTextBoxColumn";
+            this.totYieldDataGridViewTextBoxColumn.Visible = false;
             // 
             // totPassDataGridViewTextBoxColumn
             // 
             this.totPassDataGridViewTextBoxColumn.DataPropertyName = "TotPass";
             this.totPassDataGridViewTextBoxColumn.HeaderText = "TotPass";
             this.totPassDataGridViewTextBoxColumn.Name = "totPassDataGridViewTextBoxColumn";
+            this.totPassDataGridViewTextBoxColumn.Visible = false;
             // 
             // avgPASSTimeDataGridViewTextBoxColumn
             // 
@@ -902,20 +913,13 @@
             this.totFailDataGridViewTextBoxColumn.DataPropertyName = "TotFail";
             this.totFailDataGridViewTextBoxColumn.HeaderText = "TotFail";
             this.totFailDataGridViewTextBoxColumn.Name = "totFailDataGridViewTextBoxColumn";
+            this.totFailDataGridViewTextBoxColumn.Visible = false;
             // 
             // totHandleDataGridViewTextBoxColumn
             // 
             this.totHandleDataGridViewTextBoxColumn.DataPropertyName = "TotHandle";
             this.totHandleDataGridViewTextBoxColumn.HeaderText = "TotHandle";
             this.totHandleDataGridViewTextBoxColumn.Name = "totHandleDataGridViewTextBoxColumn";
-            // 
-            // labelUserLogin
-            // 
-            this.labelUserLogin.AutoSize = true;
-            this.labelUserLogin.Location = new System.Drawing.Point(70, 61);
-            this.labelUserLogin.Name = "labelUserLogin";
-            this.labelUserLogin.Size = new System.Drawing.Size(0, 15);
-            this.labelUserLogin.TabIndex = 41;
             // 
             // FormMain
             // 
@@ -1018,6 +1022,7 @@
         private System.Windows.Forms.TextBox textBoxCreateUserName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelLoginSetting;
+        public System.Windows.Forms.Label labelUserLogin;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn locationDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn familyDataGridViewTextBoxColumn;
@@ -1032,7 +1037,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn avgPASSTimeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn totFailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn totHandleDataGridViewTextBoxColumn;
-        public System.Windows.Forms.Label labelUserLogin;
     }
 }
 
