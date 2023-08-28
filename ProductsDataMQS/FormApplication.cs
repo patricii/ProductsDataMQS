@@ -37,138 +37,24 @@ namespace ProductsDataMQS
         {
             dailyMQSDataTableAdapter.Fill(mQSRequestDatabaseDataSet.DailyMQSData);
         }
-        private void buttonSave_Click(object sender, EventArgs e)
+        private DataTable GetDataTableFromDGV(DataGridView dgv)
         {
-            saveChangesDB();
-        }
-        private void buttonExit_Click(object sender, EventArgs e)
-        {
-            Environment.Exit(0);
-        }
-        private void buttonNext_Click(object sender, EventArgs e)
-        {
-            try
+            var dt = new DataTable();
+            foreach (DataGridViewColumn column in dgv.Columns)
             {
-                dailyMQSDataBindingSource.MoveNext();
+                dt.Columns.Add();
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(errorDBMessage + ex.Message);
-            }
-        }
-        private void buttonPrev_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                dailyMQSDataBindingSource.MovePrevious();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(errorDBMessage + ex.Message);
-            }
-        }
-        private void buttonUpdate_Click(object sender, EventArgs e)
-        {
-            callMQSRequestData();
 
-            try
+            object[] cellValues = new object[dgv.Columns.Count];
+            foreach (DataGridViewRow row in dgv.Rows)
             {
-                dailyMQSDataBindingSource.DataSource = cCTD.ConvertCSVtoDataTable(textBoxCsvFolder.Text);
-                DataTable dt = GetDataTableFromDGV(dataGridViewMQS);
-                sqlProcedure.dataTableToMdb(dt, dbTableNameTemp);
-                MessageBox.Show(successDBTempMessage);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(errorDBMessage + ex.Message);
-            }
-        }
-        private void buttonUpdateToDb_Click(object sender, EventArgs e)
-        {
-            updateDB();
-        }
-        private void textBoxPYield_TextChanged(object sender, EventArgs e)
-        {
-            yieldEvaluateLogic();
-            fillAllInofs();
-        }
-        private void textBoxFamily_TextChanged(object sender, EventArgs e)
-        {
-            textBoxFamily.BackColor = Color.LightBlue;
-        }
-
-        private void textBoxProcess_TextChanged(object sender, EventArgs e)
-        {
-            textBoxProcess.BackColor = Color.LightBlue;
-        }   
-        private void textBoxTTime_TextChanged(object sender, EventArgs e)
-        {
-            calMchTime();
-        }
-        private void buttonNewUser_Click(object sender, EventArgs e)
-        {
-            textBoxCreatePassword.Enabled = true;
-            textBoxCreateUserName.Enabled = true;
-            textBoxConfirmPassword.Enabled = true;
-            buttonSaveNew.Enabled = true;
-        }
-
-        private void buttonSaveNew_Click(object sender, EventArgs e)
-        {
-            verifyAndCreateUserLogin();
-        }
-        private void buttonInsertDB_Click(object sender, EventArgs e)
-        {
-            insertDB();
-        }
-        private void buttonCompareAvg_Click(object sender, EventArgs e)
-        {
-            initializeFields();
-            readRichTextBoxAndFillComboBox();
-        }
-        private void textBoxFilterValue_TextChanged(object sender, EventArgs e)
-        {
-            if (textBoxFilterValue.Text == "0" || textBoxFilterValue.Text == "")
-                textBoxFilterValue.Text = "10";
-        }
-        private void buttonAddNew_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                dailyMQSDataBindingSource.AddNew();
-                setField();
-                buttonSave.Enabled = true;
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(errorDBMessage + ex);
-            }
-        }
-        private void buttonDelete_Click(object sender, EventArgs e)
-        {
-            DialogResult dialogResult = MessageBox.Show("Deseja realmente deletar o registro? o DataBase será atualizado.", "!!!Atenção!!!", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
-            {
-                try
+                for (int i = 0; i < row.Cells.Count; i++)
                 {
-                    dailyMQSDataBindingSource.RemoveCurrent();
-                    saveChangesDB();
+                    cellValues[i] = row.Cells[i].Value;
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(errorDBMessage + ex);
-                }
+                dt.Rows.Add(cellValues);
             }
-            else if (dialogResult == DialogResult.No)
-            {
-                //do nothing
-            }
-        }
-        private void buttonEnableLogin_Click(object sender, EventArgs e)
-        {
-            FormLogin frmLogin = new FormLogin();
-            frmLogin.Show();
+            return dt;
         }
         private void updateDB()
         {
@@ -251,25 +137,6 @@ namespace ProductsDataMQS
             {
                 MessageBox.Show("Error:" + ex.Message);
             }
-        }
-        private DataTable GetDataTableFromDGV(DataGridView dgv)
-        {
-            var dt = new DataTable();
-            foreach (DataGridViewColumn column in dgv.Columns)
-            {
-                dt.Columns.Add();
-            }
-
-            object[] cellValues = new object[dgv.Columns.Count];
-            foreach (DataGridViewRow row in dgv.Rows)
-            {
-                for (int i = 0; i < row.Cells.Count; i++)
-                {
-                    cellValues[i] = row.Cells[i].Value;
-                }
-                dt.Rows.Add(cellValues);
-            }
-            return dt;
         }
         private void calMchTime() //to do!!!
         {
@@ -384,6 +251,144 @@ namespace ProductsDataMQS
         private void fillAllInofs()
         {
             textBoxAllInfos.Text = "[PRODUCT: " + textBoxFamily.Text + "] [PROCESS: " + textBoxProcess.Text + "] [PYIELD: " + textBoxPYield.Text + "] [TestTime:" + textBoxTTime.Text + " s]";
+        }
+
+
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////////////////Buttons area/////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            saveChangesDB();
+        }
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
+        private void buttonNext_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dailyMQSDataBindingSource.MoveNext();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(errorDBMessage + ex.Message);
+            }
+        }
+        private void buttonPrev_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dailyMQSDataBindingSource.MovePrevious();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(errorDBMessage + ex.Message);
+            }
+        }
+        private void buttonUpdate_Click(object sender, EventArgs e)
+        {
+            callMQSRequestData();
+
+            try
+            {
+                dailyMQSDataBindingSource.DataSource = cCTD.ConvertCSVtoDataTable(textBoxCsvFolder.Text);
+                DataTable dt = GetDataTableFromDGV(dataGridViewMQS);
+                sqlProcedure.dataTableToMdb(dt, dbTableNameTemp);
+                MessageBox.Show(successDBTempMessage);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(errorDBMessage + ex.Message);
+            }
+        }
+        private void buttonUpdateToDb_Click(object sender, EventArgs e)
+        {
+            updateDB();
+        }
+        private void textBoxPYield_TextChanged(object sender, EventArgs e)
+        {
+            yieldEvaluateLogic();
+            fillAllInofs();
+        }
+        private void textBoxFamily_TextChanged(object sender, EventArgs e)
+        {
+            textBoxFamily.BackColor = Color.LightBlue;
+        }
+
+        private void textBoxProcess_TextChanged(object sender, EventArgs e)
+        {
+            textBoxProcess.BackColor = Color.LightBlue;
+        }
+        private void textBoxTTime_TextChanged(object sender, EventArgs e)
+        {
+            calMchTime();
+        }
+        private void buttonNewUser_Click(object sender, EventArgs e)
+        {
+            textBoxCreatePassword.Enabled = true;
+            textBoxCreateUserName.Enabled = true;
+            textBoxConfirmPassword.Enabled = true;
+            buttonSaveNew.Enabled = true;
+        }
+
+        private void buttonSaveNew_Click(object sender, EventArgs e)
+        {
+            verifyAndCreateUserLogin();
+        }
+        private void buttonInsertDB_Click(object sender, EventArgs e)
+        {
+            insertDB();
+        }
+        private void buttonCompareAvg_Click(object sender, EventArgs e)
+        {
+            initializeFields();
+            readRichTextBoxAndFillComboBox();
+        }
+        private void textBoxFilterValue_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxFilterValue.Text == "0" || textBoxFilterValue.Text == "")
+                textBoxFilterValue.Text = "10";
+        }
+        private void buttonAddNew_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dailyMQSDataBindingSource.AddNew();
+                setField();
+                buttonSave.Enabled = true;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(errorDBMessage + ex);
+            }
+        }
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Deseja realmente deletar o registro? o DataBase será atualizado.", "!!!Atenção!!!", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                try
+                {
+                    dailyMQSDataBindingSource.RemoveCurrent();
+                    saveChangesDB();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(errorDBMessage + ex);
+                }
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do nothing
+            }
+        }
+        private void buttonEnableLogin_Click(object sender, EventArgs e)
+        {
+            FormLogin frmLogin = new FormLogin();
+            frmLogin.Show();
         }
 
     }
