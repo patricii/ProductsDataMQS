@@ -145,7 +145,7 @@
             this.dataGridViewMQS.DataSource = this.dailyMQSDataBindingSource;
             this.dataGridViewMQS.Location = new System.Drawing.Point(8, 197);
             this.dataGridViewMQS.Name = "dataGridViewMQS";
-            this.dataGridViewMQS.Size = new System.Drawing.Size(804, 475);
+            this.dataGridViewMQS.Size = new System.Drawing.Size(757, 475);
             this.dataGridViewMQS.TabIndex = 0;
             // 
             // dailyMQSDataBindingSource
@@ -652,9 +652,9 @@
             // 
             // richTextBoxCompare
             // 
-            this.richTextBoxCompare.Location = new System.Drawing.Point(823, 229);
+            this.richTextBoxCompare.Location = new System.Drawing.Point(771, 229);
             this.richTextBoxCompare.Name = "richTextBoxCompare";
-            this.richTextBoxCompare.Size = new System.Drawing.Size(535, 443);
+            this.richTextBoxCompare.Size = new System.Drawing.Size(587, 443);
             this.richTextBoxCompare.TabIndex = 41;
             this.richTextBoxCompare.Text = "";
             // 
@@ -711,7 +711,7 @@
             this.labelStatusCompare.AutoSize = true;
             this.labelStatusCompare.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelStatusCompare.ForeColor = System.Drawing.Color.Teal;
-            this.labelStatusCompare.Location = new System.Drawing.Point(827, 210);
+            this.labelStatusCompare.Location = new System.Drawing.Point(780, 210);
             this.labelStatusCompare.Name = "labelStatusCompare";
             this.labelStatusCompare.Size = new System.Drawing.Size(0, 16);
             this.labelStatusCompare.TabIndex = 33;
@@ -719,7 +719,7 @@
             // buttonCompareAvg
             // 
             this.buttonCompareAvg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCompareAvg.Location = new System.Drawing.Point(823, 171);
+            this.buttonCompareAvg.Location = new System.Drawing.Point(771, 171);
             this.buttonCompareAvg.Name = "buttonCompareAvg";
             this.buttonCompareAvg.Size = new System.Drawing.Size(171, 36);
             this.buttonCompareAvg.TabIndex = 32;
@@ -868,18 +868,21 @@
             this.pYieldDataGridViewTextBoxColumn.DataPropertyName = "PYield";
             this.pYieldDataGridViewTextBoxColumn.HeaderText = "PYield";
             this.pYieldDataGridViewTextBoxColumn.Name = "pYieldDataGridViewTextBoxColumn";
+            this.pYieldDataGridViewTextBoxColumn.Width = 60;
             // 
             // primePassDataGridViewTextBoxColumn
             // 
             this.primePassDataGridViewTextBoxColumn.DataPropertyName = "PrimePass";
             this.primePassDataGridViewTextBoxColumn.HeaderText = "PrimePass";
             this.primePassDataGridViewTextBoxColumn.Name = "primePassDataGridViewTextBoxColumn";
+            this.primePassDataGridViewTextBoxColumn.Width = 60;
             // 
             // primeFailDataGridViewTextBoxColumn
             // 
             this.primeFailDataGridViewTextBoxColumn.DataPropertyName = "PrimeFail";
             this.primeFailDataGridViewTextBoxColumn.HeaderText = "PrimeFail";
             this.primeFailDataGridViewTextBoxColumn.Name = "primeFailDataGridViewTextBoxColumn";
+            this.primeFailDataGridViewTextBoxColumn.Width = 60;
             // 
             // primeHandleDataGridViewTextBoxColumn
             // 
@@ -887,6 +890,7 @@
             this.primeHandleDataGridViewTextBoxColumn.HeaderText = "PrimeHandle";
             this.primeHandleDataGridViewTextBoxColumn.Name = "primeHandleDataGridViewTextBoxColumn";
             this.primeHandleDataGridViewTextBoxColumn.Visible = false;
+            this.primeHandleDataGridViewTextBoxColumn.Width = 65;
             // 
             // totYieldDataGridViewTextBoxColumn
             // 
@@ -894,6 +898,7 @@
             this.totYieldDataGridViewTextBoxColumn.HeaderText = "TotYield";
             this.totYieldDataGridViewTextBoxColumn.Name = "totYieldDataGridViewTextBoxColumn";
             this.totYieldDataGridViewTextBoxColumn.Visible = false;
+            this.totYieldDataGridViewTextBoxColumn.Width = 50;
             // 
             // totPassDataGridViewTextBoxColumn
             // 
@@ -901,12 +906,14 @@
             this.totPassDataGridViewTextBoxColumn.HeaderText = "TotPass";
             this.totPassDataGridViewTextBoxColumn.Name = "totPassDataGridViewTextBoxColumn";
             this.totPassDataGridViewTextBoxColumn.Visible = false;
+            this.totPassDataGridViewTextBoxColumn.Width = 50;
             // 
             // avgPASSTimeDataGridViewTextBoxColumn
             // 
             this.avgPASSTimeDataGridViewTextBoxColumn.DataPropertyName = "AvgPASSTime";
             this.avgPASSTimeDataGridViewTextBoxColumn.HeaderText = "AvgPASSTime";
             this.avgPASSTimeDataGridViewTextBoxColumn.Name = "avgPASSTimeDataGridViewTextBoxColumn";
+            this.avgPASSTimeDataGridViewTextBoxColumn.Width = 80;
             // 
             // totFailDataGridViewTextBoxColumn
             // 
@@ -914,12 +921,14 @@
             this.totFailDataGridViewTextBoxColumn.HeaderText = "TotFail";
             this.totFailDataGridViewTextBoxColumn.Name = "totFailDataGridViewTextBoxColumn";
             this.totFailDataGridViewTextBoxColumn.Visible = false;
+            this.totFailDataGridViewTextBoxColumn.Width = 50;
             // 
             // totHandleDataGridViewTextBoxColumn
             // 
             this.totHandleDataGridViewTextBoxColumn.DataPropertyName = "TotHandle";
             this.totHandleDataGridViewTextBoxColumn.HeaderText = "TotHandle";
             this.totHandleDataGridViewTextBoxColumn.Name = "totHandleDataGridViewTextBoxColumn";
+            this.totHandleDataGridViewTextBoxColumn.Width = 60;
             // 
             // FormMain
             // 
