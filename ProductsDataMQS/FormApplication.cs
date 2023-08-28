@@ -12,6 +12,8 @@ namespace ProductsDataMQS
     {
         public static string errorDBMessage = "Não foi possivel conectar com o Banco de Dados! : ";
         public static string successDBMessage = "Data updated successfully!!";
+        public static string successDBTempMessage = "DataBase *Temp* updated Successfully!!!";
+        public static string updatedDaSuccessfullyMsg = "Banco de dados atualizado com sucesso pelo usuario: ";
         ConvertCsvToDt cCTD = new ConvertCsvToDt();
         SQLProcedure sqlProcedure = new SQLProcedure();
         string dbTableName = "DailyMQSData";
@@ -34,6 +36,10 @@ namespace ProductsDataMQS
         private void FormMain_Load(object sender, EventArgs e)
         {
             dailyMQSDataTableAdapter.Fill(mQSRequestDatabaseDataSet.DailyMQSData);
+        }
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            saveChangesDB();
         }
         private void buttonExit_Click(object sender, EventArgs e)
         {
@@ -61,24 +67,6 @@ namespace ProductsDataMQS
                 MessageBox.Show(errorDBMessage + ex.Message);
             }
         }
-        private void yieldEvaluateLogic()
-        {
-            try
-            {
-                if (Convert.ToDouble(textBoxPYield.Text) < 96.0)
-                    textBoxPYield.BackColor = Color.OrangeRed;
-                else if (Convert.ToDouble(textBoxPYield.Text) >= 96.0 && Convert.ToDouble(textBoxPYield.Text) <= 98.5)
-                    textBoxPYield.BackColor = Color.LightYellow;
-                else if (Convert.ToDouble(textBoxPYield.Text) > 98.5)
-                    textBoxPYield.BackColor = Color.LightGreen;
-                Application.DoEvents();
-            }
-            catch { }
-        }
-        private void fillAllInofs()
-        {
-            textBoxAllInfos.Text = "[PRODUCT: " + textBoxFamily.Text + "] [PROCESS: " + textBoxProcess.Text + "] [PYIELD: " + textBoxPYield.Text + "] [TestTime:" + textBoxTTime.Text + " s]";
-        }
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
             callMQSRequestData();
@@ -88,12 +76,16 @@ namespace ProductsDataMQS
                 dailyMQSDataBindingSource.DataSource = cCTD.ConvertCSVtoDataTable(textBoxCsvFolder.Text);
                 DataTable dt = GetDataTableFromDGV(dataGridViewMQS);
                 sqlProcedure.dataTableToMdb(dt, dbTableNameTemp);
-                MessageBox.Show("DataBase *Temp* updated Successfully!!!");
+                MessageBox.Show(successDBTempMessage);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(errorDBMessage + ex.Message);
             }
+        }
+        private void buttonUpdateToDb_Click(object sender, EventArgs e)
+        {
+            updateDB();
         }
         private void textBoxPYield_TextChanged(object sender, EventArgs e)
         {
@@ -108,40 +100,76 @@ namespace ProductsDataMQS
         private void textBoxProcess_TextChanged(object sender, EventArgs e)
         {
             textBoxProcess.BackColor = Color.LightBlue;
-        }
-        private void callMQSRequestData()
-        {
-            labelUpdate.Text = "Updating....";
-            Application.DoEvents();
-            var process = Process.Start(@"C:\ProductDataMQS\MQSRequestData\MQSRequestData.exe");
-            process.WaitForExit();
-            labelUpdate.Text = "Updated!!!";
-            Application.DoEvents();
-        }
+        }   
         private void textBoxTTime_TextChanged(object sender, EventArgs e)
         {
             calMchTime();
         }
-        private void calMchTime() //to do!!!
+        private void buttonNewUser_Click(object sender, EventArgs e)
         {
-            textBoxTTime.BackColor = Color.LightBlue;
-            if (textBoxTTime.Text != "")
-            {
-                if (Convert.ToDouble(textBoxTTime.Text) != 0)
-                {
-                    textBoxMchTime.Text = (Convert.ToDouble(textBoxTTime.Text) + 12).ToString();
-                    textBoxNPI.Text = (Convert.ToDouble(textBoxTTime.Text) + 15).ToString();
-                }
-
-            }
+            textBoxCreatePassword.Enabled = true;
+            textBoxCreateUserName.Enabled = true;
+            textBoxConfirmPassword.Enabled = true;
+            buttonSaveNew.Enabled = true;
         }
 
+        private void buttonSaveNew_Click(object sender, EventArgs e)
+        {
+            verifyAndCreateUserLogin();
+        }
         private void buttonInsertDB_Click(object sender, EventArgs e)
         {
-
             insertDB();
         }
+        private void buttonCompareAvg_Click(object sender, EventArgs e)
+        {
+            initializeFields();
+            readRichTextBoxAndFillComboBox();
+        }
+        private void textBoxFilterValue_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxFilterValue.Text == "0" || textBoxFilterValue.Text == "")
+                textBoxFilterValue.Text = "10";
+        }
+        private void buttonAddNew_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dailyMQSDataBindingSource.AddNew();
+                setField();
+                buttonSave.Enabled = true;
 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(errorDBMessage + ex);
+            }
+        }
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Deseja realmente deletar o registro? o DataBase será atualizado.", "!!!Atenção!!!", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                try
+                {
+                    dailyMQSDataBindingSource.RemoveCurrent();
+                    saveChangesDB();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(errorDBMessage + ex);
+                }
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do nothing
+            }
+        }
+        private void buttonEnableLogin_Click(object sender, EventArgs e)
+        {
+            FormLogin frmLogin = new FormLogin();
+            frmLogin.Show();
+        }
         private void updateDB()
         {
             if (comboBoxListToADDdb.Text == "")
@@ -154,7 +182,6 @@ namespace ProductsDataMQS
 
                 if (dialogResult == DialogResult.Yes)
                 {
-
                     try
                     {
                         string[] vect = comboBoxListToADDdb.Text.Split('-');
@@ -171,7 +198,7 @@ namespace ProductsDataMQS
 
                         sqlProc.updateAVGTestTimeToMdb(product, process, avgTT);
 
-                        MessageBox.Show("Banco de dados atualizado com sucesso pelo usuario: " + fl.getUserName());
+                        MessageBox.Show(updatedDaSuccessfullyMsg + fl.getUserName());
                     }
                     catch (Exception ex)
                     {
@@ -200,7 +227,7 @@ namespace ProductsDataMQS
                         dailyMQSDataBindingSource.DataSource = dt;
                         dataGridViewToDt();
                     }
-                    MessageBox.Show("Banco de dados atualizado com sucesso pelo usuario: " + fl.getUserName());
+                    MessageBox.Show(updatedDaSuccessfullyMsg + fl.getUserName());
                 }
                 catch (Exception ex)
                 {
@@ -242,21 +269,26 @@ namespace ProductsDataMQS
                 }
                 dt.Rows.Add(cellValues);
             }
-
             return dt;
         }
-
-        private void buttonCompareAvg_Click(object sender, EventArgs e)
+        private void calMchTime() //to do!!!
         {
-            initializeFields();
-            readRichTextBoxAndFillComboBox();
+            textBoxTTime.BackColor = Color.LightBlue;
+            if (textBoxTTime.Text != "")
+            {
+                if (Convert.ToDouble(textBoxTTime.Text) != 0)
+                {
+                    textBoxMchTime.Text = (Convert.ToDouble(textBoxTTime.Text) + 12).ToString();
+                    textBoxNPI.Text = (Convert.ToDouble(textBoxTTime.Text) + 15).ToString();
+                }
+            }
         }
         public void readRichTextBoxAndFillComboBox()
         {
             richTextBoxCompare.Lines.ToList()
-         .GetRange(0, richTextBoxCompare.Lines.Count() - 1)
-         .Where(line => line.Contains("NEW")).ToList()
-         .ForEach(validLine => comboBoxListToADDdb.Items.Add(validLine));
+            .GetRange(0, richTextBoxCompare.Lines.Count() - 1)
+            .Where(line => line.Contains("NEW")).ToList()
+            .ForEach(validLine => comboBoxListToADDdb.Items.Add(validLine));
         }
         private void initializeFields()
         {
@@ -275,27 +307,6 @@ namespace ProductsDataMQS
             buttonCompareAvg.Enabled = true;
             buttonCompareAvg.BackColor = Color.LightYellow;
         }
-
-        private void textBoxFilterValue_TextChanged(object sender, EventArgs e)
-        {
-            if (textBoxFilterValue.Text == "0" || textBoxFilterValue.Text == "")
-                textBoxFilterValue.Text = "10";
-        }
-
-        private void buttonAddNew_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                dailyMQSDataBindingSource.AddNew();
-                setField();
-                buttonSave.Enabled = true;
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(errorDBMessage + ex);
-            }
-        }
         private void saveChangesDB()
         {
             try
@@ -308,11 +319,6 @@ namespace ProductsDataMQS
             {
                 MessageBox.Show(errorDBMessage + ex);
             }
-        }
-
-        private void buttonSave_Click(object sender, EventArgs e)
-        {
-            saveChangesDB();
         }
         private void setField()
         {
@@ -327,46 +333,6 @@ namespace ProductsDataMQS
             textBoxTYield.Text = "0";
             textBoxThandle.Text = "0";
             textBoxLocation.Text = "MDB_Jaguariuna";
-        }
-
-        private void buttonEnableLogin_Click(object sender, EventArgs e)
-        {
-            FormLogin frmLogin = new FormLogin();
-            frmLogin.Show();
-        }
-
-        private void buttonDelete_Click(object sender, EventArgs e)
-        {
-            DialogResult dialogResult = MessageBox.Show("Deseja realmente deletar o registro? o DataBase será atualizado.", "!!!Atenção!!!", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
-            {
-                try
-                {
-                    dailyMQSDataBindingSource.RemoveCurrent();
-                    saveChangesDB();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(errorDBMessage + ex);
-                }
-            }
-            else if (dialogResult == DialogResult.No)
-            {
-                //do nothing
-            }
-        }
-
-        private void buttonNewUser_Click(object sender, EventArgs e)
-        {
-            textBoxCreatePassword.Enabled = true;
-            textBoxCreateUserName.Enabled = true;
-            textBoxConfirmPassword.Enabled = true;
-            buttonSaveNew.Enabled = true;
-        }
-
-        private void buttonSaveNew_Click(object sender, EventArgs e)
-        {
-            verifyAndCreateUserLogin();
         }
         private void verifyAndCreateUserLogin()
         {
@@ -392,10 +358,33 @@ namespace ProductsDataMQS
             textBoxCreateUserName.Text = "";
             textBoxConfirmPassword.Text = "";
         }
-
-        private void buttonUpdateToDb_Click(object sender, EventArgs e)
+        private void callMQSRequestData()
         {
-            updateDB();
+            labelUpdate.Text = "Updating....";
+            Application.DoEvents();
+            var process = Process.Start(@"C:\ProductDataMQS\MQSRequestData\MQSRequestData.exe");
+            process.WaitForExit();
+            labelUpdate.Text = "Updated!!!";
+            Application.DoEvents();
         }
+        private void yieldEvaluateLogic()
+        {
+            try
+            {
+                if (Convert.ToDouble(textBoxPYield.Text) < 96.0)
+                    textBoxPYield.BackColor = Color.OrangeRed;
+                else if (Convert.ToDouble(textBoxPYield.Text) >= 96.0 && Convert.ToDouble(textBoxPYield.Text) <= 98.5)
+                    textBoxPYield.BackColor = Color.LightYellow;
+                else if (Convert.ToDouble(textBoxPYield.Text) > 98.5)
+                    textBoxPYield.BackColor = Color.LightGreen;
+                Application.DoEvents();
+            }
+            catch { }
+        }
+        private void fillAllInofs()
+        {
+            textBoxAllInfos.Text = "[PRODUCT: " + textBoxFamily.Text + "] [PROCESS: " + textBoxProcess.Text + "] [PYIELD: " + textBoxPYield.Text + "] [TestTime:" + textBoxTTime.Text + " s]";
+        }
+
     }
 }
