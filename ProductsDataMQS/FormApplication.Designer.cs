@@ -48,15 +48,17 @@
             this.dailyMQSDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mQSRequestDatabaseDataSet = new ProductsDataMQS.MQSRequestDatabaseDataSet();
             this.groupBoxProductData = new System.Windows.Forms.GroupBox();
-            this.labelUserLogin = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.checkBoxEdit = new System.Windows.Forms.CheckBox();
+            this.buttonSave = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
+            this.buttonAddNew = new System.Windows.Forms.Button();
+            this.labelUserLogin = new System.Windows.Forms.Label();
             this.buttonEnableLogin = new System.Windows.Forms.Button();
             this.textBoxThandle = new System.Windows.Forms.TextBox();
             this.labelTHandle = new System.Windows.Forms.Label();
             this.textBoxLocation = new System.Windows.Forms.TextBox();
             this.labelSite = new System.Windows.Forms.Label();
-            this.buttonSave = new System.Windows.Forms.Button();
-            this.buttonAddNew = new System.Windows.Forms.Button();
             this.labelLogo = new System.Windows.Forms.Label();
             this.textBoxNPI = new System.Windows.Forms.TextBox();
             this.labelNPI = new System.Windows.Forms.Label();
@@ -121,6 +123,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dailyMQSDataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mQSRequestDatabaseDataSet)).BeginInit();
             this.groupBoxProductData.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -266,15 +269,13 @@
             // 
             // groupBoxProductData
             // 
+            this.groupBoxProductData.Controls.Add(this.groupBox4);
             this.groupBoxProductData.Controls.Add(this.labelUserLogin);
-            this.groupBoxProductData.Controls.Add(this.buttonDelete);
             this.groupBoxProductData.Controls.Add(this.buttonEnableLogin);
             this.groupBoxProductData.Controls.Add(this.textBoxThandle);
             this.groupBoxProductData.Controls.Add(this.labelTHandle);
             this.groupBoxProductData.Controls.Add(this.textBoxLocation);
             this.groupBoxProductData.Controls.Add(this.labelSite);
-            this.groupBoxProductData.Controls.Add(this.buttonSave);
-            this.groupBoxProductData.Controls.Add(this.buttonAddNew);
             this.groupBoxProductData.Controls.Add(this.labelLogo);
             this.groupBoxProductData.Controls.Add(this.textBoxNPI);
             this.groupBoxProductData.Controls.Add(this.labelNPI);
@@ -311,28 +312,74 @@
             this.groupBoxProductData.TabStop = false;
             this.groupBoxProductData.Text = "Product Infos";
             // 
-            // labelUserLogin
+            // groupBox4
             // 
-            this.labelUserLogin.AutoSize = true;
-            this.labelUserLogin.Location = new System.Drawing.Point(84, 57);
-            this.labelUserLogin.Name = "labelUserLogin";
-            this.labelUserLogin.Size = new System.Drawing.Size(0, 15);
-            this.labelUserLogin.TabIndex = 41;
+            this.groupBox4.Controls.Add(this.checkBoxEdit);
+            this.groupBox4.Controls.Add(this.buttonSave);
+            this.groupBox4.Controls.Add(this.buttonDelete);
+            this.groupBox4.Controls.Add(this.buttonAddNew);
+            this.groupBox4.Location = new System.Drawing.Point(7, 51);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(173, 97);
+            this.groupBox4.TabIndex = 42;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Edit DB";
+            // 
+            // checkBoxEdit
+            // 
+            this.checkBoxEdit.AutoSize = true;
+            this.checkBoxEdit.Location = new System.Drawing.Point(105, 20);
+            this.checkBoxEdit.Name = "checkBoxEdit";
+            this.checkBoxEdit.Size = new System.Drawing.Size(65, 19);
+            this.checkBoxEdit.TabIndex = 41;
+            this.checkBoxEdit.Text = "Enable";
+            this.checkBoxEdit.UseVisualStyleBackColor = true;
+            this.checkBoxEdit.CheckedChanged += new System.EventHandler(this.checkBoxEdit_CheckedChanged);
+            // 
+            // buttonSave
+            // 
+            this.buttonSave.Enabled = false;
+            this.buttonSave.Location = new System.Drawing.Point(6, 64);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(93, 25);
+            this.buttonSave.TabIndex = 34;
+            this.buttonSave.Text = "Save";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // buttonDelete
             // 
             this.buttonDelete.Enabled = false;
-            this.buttonDelete.Location = new System.Drawing.Point(87, 116);
+            this.buttonDelete.Location = new System.Drawing.Point(105, 64);
             this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(75, 34);
+            this.buttonDelete.Size = new System.Drawing.Size(62, 25);
             this.buttonDelete.TabIndex = 40;
             this.buttonDelete.Text = "Delete";
             this.buttonDelete.UseVisualStyleBackColor = true;
             this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
+            // buttonAddNew
+            // 
+            this.buttonAddNew.Enabled = false;
+            this.buttonAddNew.Location = new System.Drawing.Point(6, 20);
+            this.buttonAddNew.Name = "buttonAddNew";
+            this.buttonAddNew.Size = new System.Drawing.Size(93, 40);
+            this.buttonAddNew.TabIndex = 33;
+            this.buttonAddNew.Text = "Add New";
+            this.buttonAddNew.UseVisualStyleBackColor = true;
+            this.buttonAddNew.Click += new System.EventHandler(this.buttonAddNew_Click);
+            // 
+            // labelUserLogin
+            // 
+            this.labelUserLogin.AutoSize = true;
+            this.labelUserLogin.Location = new System.Drawing.Point(83, 27);
+            this.labelUserLogin.Name = "labelUserLogin";
+            this.labelUserLogin.Size = new System.Drawing.Size(0, 15);
+            this.labelUserLogin.TabIndex = 41;
+            // 
             // buttonEnableLogin
             // 
-            this.buttonEnableLogin.Location = new System.Drawing.Point(6, 50);
+            this.buttonEnableLogin.Location = new System.Drawing.Point(6, 20);
             this.buttonEnableLogin.Name = "buttonEnableLogin";
             this.buttonEnableLogin.Size = new System.Drawing.Size(70, 25);
             this.buttonEnableLogin.TabIndex = 39;
@@ -376,34 +423,12 @@
             this.labelSite.TabIndex = 35;
             this.labelSite.Text = "Location:";
             // 
-            // buttonSave
-            // 
-            this.buttonSave.Enabled = false;
-            this.buttonSave.Location = new System.Drawing.Point(6, 116);
-            this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(75, 34);
-            this.buttonSave.TabIndex = 34;
-            this.buttonSave.Text = "Save";
-            this.buttonSave.UseVisualStyleBackColor = true;
-            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
-            // 
-            // buttonAddNew
-            // 
-            this.buttonAddNew.Enabled = false;
-            this.buttonAddNew.Location = new System.Drawing.Point(6, 79);
-            this.buttonAddNew.Name = "buttonAddNew";
-            this.buttonAddNew.Size = new System.Drawing.Size(156, 34);
-            this.buttonAddNew.TabIndex = 33;
-            this.buttonAddNew.Text = "Add New";
-            this.buttonAddNew.UseVisualStyleBackColor = true;
-            this.buttonAddNew.Click += new System.EventHandler(this.buttonAddNew_Click);
-            // 
             // labelLogo
             // 
             this.labelLogo.AutoSize = true;
             this.labelLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLogo.ForeColor = System.Drawing.Color.Teal;
-            this.labelLogo.Location = new System.Drawing.Point(6, 20);
+            this.labelLogo.Location = new System.Drawing.Point(596, 12);
             this.labelLogo.Name = "labelLogo";
             this.labelLogo.Size = new System.Drawing.Size(143, 20);
             this.labelLogo.TabIndex = 32;
@@ -781,9 +806,9 @@
             this.buttonUpdateToDb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.buttonUpdateToDb.Enabled = false;
             this.buttonUpdateToDb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.buttonUpdateToDb.Location = new System.Drawing.Point(242, 58);
+            this.buttonUpdateToDb.Location = new System.Drawing.Point(227, 47);
             this.buttonUpdateToDb.Name = "buttonUpdateToDb";
-            this.buttonUpdateToDb.Size = new System.Drawing.Size(138, 36);
+            this.buttonUpdateToDb.Size = new System.Drawing.Size(138, 45);
             this.buttonUpdateToDb.TabIndex = 33;
             this.buttonUpdateToDb.Text = "Update To DB";
             this.buttonUpdateToDb.UseVisualStyleBackColor = false;
@@ -1012,6 +1037,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.mQSRequestDatabaseDataSet)).EndInit();
             this.groupBoxProductData.ResumeLayout(false);
             this.groupBoxProductData.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -1116,6 +1143,8 @@
         private System.Windows.Forms.GroupBox groupBox3;
         public System.Windows.Forms.ComboBox comboBoxListToADDdb;
         public System.Windows.Forms.Button buttonUpdateToDb;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.CheckBox checkBoxEdit;
     }
 }
 

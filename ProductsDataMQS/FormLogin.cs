@@ -30,11 +30,10 @@ namespace ProductsDataMQS
                 FormMain frm = FormMain.getInstance();
                 frm.labelUserLogin.Text = "User: " + textBoxUser.Text;
                 Hide();
-                frm.buttonSave.Enabled = true;
-                frm.buttonAddNew.Enabled = true;
+
                 if (textBoxUser.Text == "admin")
                     frm.buttonInsertDB.Enabled = true;
-                frm.buttonDelete.Enabled = true;
+
                 frm.comboBoxListToADDdb.Enabled = true;
                 frm.buttonUpdateToDb.Enabled = true;
 

@@ -62,7 +62,7 @@ namespace ProductsDataMQS
         }
         private void updateDB()
         {
-           
+
             if (comboBoxListToADDdb.Text == "")
                 MessageBox.Show("Selecione o Novo AvgTestTime para adicionar!");
             else
@@ -157,6 +157,7 @@ namespace ProductsDataMQS
         }
         public void readRichTextBoxAndFillComboBox()
         {
+            comboBoxListToADDdb.Text = "";
             comboBoxListToADDdb.Items.Clear();
             richTextBoxCompare.Lines.ToList()
             .GetRange(0, richTextBoxCompare.Lines.Count() - 1)
@@ -187,7 +188,7 @@ namespace ProductsDataMQS
                 dailyMQSDataBindingSource.EndEdit();
                 dailyMQSDataTableAdapter.Update(mQSRequestDatabaseDataSet);
                 MessageBox.Show(successDBMessage);
-                logManager.logGen("MANUAL CHANGES - " + textBoxAllInfos.Text +  " User:" + fl.getUserName());
+                logManager.logGen("MANUAL CHANGES - " + textBoxAllInfos.Text + " User:" + fl.getUserName());
             }
             catch (Exception ex)
             {
@@ -392,10 +393,26 @@ namespace ProductsDataMQS
             }
         }
         private void buttonEnableLogin_Click(object sender, EventArgs e)
-        {
+        {           
             FormLogin frmLogin = new FormLogin();
             frmLogin.Show();
         }
 
+        private void checkBoxEdit_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxEdit.Checked == true)
+            {
+                buttonSave.Enabled = true;
+                buttonAddNew.Enabled = true;
+                buttonDelete.Enabled = true;
+                dailyMQSDataBindingSource.DataSource = mQSRequestDatabaseDataSet.DailyMQSData;
+            }
+            else
+            {
+                buttonSave.Enabled = false;
+                buttonAddNew.Enabled = false;
+                buttonDelete.Enabled = false;
+            }
+        }
     }
 }
