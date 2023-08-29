@@ -413,7 +413,7 @@ namespace ProductsDataMQS
                 buttonSave.Enabled = true;
                 buttonAddNew.Enabled = true;
                 buttonDelete.Enabled = true;
-                dailyMQSDataBindingSource.DataSource = mQSRequestDatabaseDataSet.DailyMQSData;
+                dataGridViewMQS.DataSource = sqlProcedure.updatePersistDataBase(dbTableName);
             }
             else
             {
@@ -421,6 +421,11 @@ namespace ProductsDataMQS
                 buttonAddNew.Enabled = false;
                 buttonDelete.Enabled = false;
             }
-        }   
+        }
+
+        private void buttonRefresh_Click(object sender, EventArgs e)
+        {
+            dataGridViewMQS.DataSource = sqlProcedure.updatePersistDataBase(dbTableName);
+        }
     }
 }

@@ -118,6 +118,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.labelLoginSetting = new System.Windows.Forms.Label();
             this.dailyMQSDataTableAdapter = new ProductsDataMQS.MQSRequestDatabaseDataSetTableAdapters.DailyMQSDataTableAdapter();
+            this.buttonRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMQS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dailyMQSDataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mQSRequestDatabaseDataSet)).BeginInit();
@@ -761,6 +762,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.buttonRefresh);
             this.tabPage1.Controls.Add(this.groupBox3);
             this.tabPage1.Controls.Add(this.richTextBoxCompare);
             this.tabPage1.Controls.Add(this.groupBox1);
@@ -1012,6 +1014,16 @@
             // 
             this.dailyMQSDataTableAdapter.ClearBeforeFill = true;
             // 
+            // buttonRefresh
+            // 
+            this.buttonRefresh.Location = new System.Drawing.Point(624, 170);
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.Size = new System.Drawing.Size(127, 21);
+            this.buttonRefresh.TabIndex = 43;
+            this.buttonRefresh.Text = "Refresh DataBase";
+            this.buttonRefresh.UseVisualStyleBackColor = true;
+            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1137,6 +1149,7 @@
         public System.Windows.Forms.Button buttonUpdateToDb;
         private System.Windows.Forms.GroupBox groupBox4;
         public System.Windows.Forms.CheckBox checkBoxEdit;
+        private System.Windows.Forms.Button buttonRefresh;
     }
 }
 

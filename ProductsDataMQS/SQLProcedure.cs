@@ -46,6 +46,29 @@ namespace ProductsDataMQS
                 myConn.Close();
             }
         }
+        public DataTable updatePersistDataBase(string tableName)
+        {
+            DataTable persistData = new DataTable();
+            FormMain frm = FormMain.getInstance();
+            try
+            {
+                string cmdText = string.Format("SELECT * FROM {0}", tableName);
+                OleDbConnection con = new OleDbConnection(dbConnection);
+                OleDbCommand cmd = new OleDbCommand(cmdText, con);
+                con.Open();
+                cmd.CommandType = CommandType.Text;
+                OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+                da.Fill(persistData);
+
+                return persistData;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+
+            return persistData;
+        }
         private void deleteTableProcedure(string tableName)
         {
             OleDbConnection myConn = new OleDbConnection(dbConnection);
