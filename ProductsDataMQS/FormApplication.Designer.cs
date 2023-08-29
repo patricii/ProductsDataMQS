@@ -617,7 +617,7 @@
             // textBoxProcess
             // 
             this.textBoxProcess.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dailyMQSDataBindingSource, "Process", true));
-            this.textBoxProcess.Location = new System.Drawing.Point(361, 44);
+            this.textBoxProcess.Location = new System.Drawing.Point(361, 70);
             this.textBoxProcess.Name = "textBoxProcess";
             this.textBoxProcess.Size = new System.Drawing.Size(178, 21);
             this.textBoxProcess.TabIndex = 5;
@@ -627,7 +627,7 @@
             // labelProcess
             // 
             this.labelProcess.AutoSize = true;
-            this.labelProcess.Location = new System.Drawing.Point(303, 51);
+            this.labelProcess.Location = new System.Drawing.Point(303, 78);
             this.labelProcess.Name = "labelProcess";
             this.labelProcess.Size = new System.Drawing.Size(54, 15);
             this.labelProcess.TabIndex = 4;
@@ -636,7 +636,7 @@
             // textBoxFamily
             // 
             this.textBoxFamily.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dailyMQSDataBindingSource, "Family", true));
-            this.textBoxFamily.Location = new System.Drawing.Point(361, 70);
+            this.textBoxFamily.Location = new System.Drawing.Point(361, 44);
             this.textBoxFamily.Name = "textBoxFamily";
             this.textBoxFamily.Size = new System.Drawing.Size(178, 21);
             this.textBoxFamily.TabIndex = 3;
@@ -646,7 +646,7 @@
             // labelFamily
             // 
             this.labelFamily.AutoSize = true;
-            this.labelFamily.Location = new System.Drawing.Point(303, 77);
+            this.labelFamily.Location = new System.Drawing.Point(303, 52);
             this.labelFamily.Name = "labelFamily";
             this.labelFamily.Size = new System.Drawing.Size(46, 15);
             this.labelFamily.TabIndex = 2;

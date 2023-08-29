@@ -192,7 +192,7 @@ namespace ProductsDataMQS
             }
             catch (Exception ex)
             {
-                MessageBox.Show(errorDBMessage + ex);
+                MessageBox.Show(errorDBMessage + ex.Message);
             }
         }
         private void setField()
@@ -376,7 +376,7 @@ namespace ProductsDataMQS
             }
             catch (Exception ex)
             {
-                MessageBox.Show(errorDBMessage + ex);
+                MessageBox.Show(errorDBMessage + ex.Message);
             }
         }
         private void buttonDelete_Click(object sender, EventArgs e)
@@ -392,7 +392,7 @@ namespace ProductsDataMQS
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(errorDBMessage + ex);
+                    MessageBox.Show(errorDBMessage + ex.Message);
                 }
             }
             else if (dialogResult == DialogResult.No)
