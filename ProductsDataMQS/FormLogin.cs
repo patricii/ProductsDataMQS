@@ -34,6 +34,7 @@ namespace ProductsDataMQS
                 if (textBoxUser.Text == "admin")
                     frm.buttonInsertDB.Enabled = true;
 
+                frm.checkBoxEdit.Enabled = true;
                 frm.comboBoxListToADDdb.Enabled = true;
                 frm.buttonUpdateToDb.Enabled = true;
 

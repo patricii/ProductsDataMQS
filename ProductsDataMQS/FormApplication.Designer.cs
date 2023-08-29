@@ -328,6 +328,7 @@
             // checkBoxEdit
             // 
             this.checkBoxEdit.AutoSize = true;
+            this.checkBoxEdit.Enabled = false;
             this.checkBoxEdit.Location = new System.Drawing.Point(105, 20);
             this.checkBoxEdit.Name = "checkBoxEdit";
             this.checkBoxEdit.Size = new System.Drawing.Size(65, 19);
@@ -1144,7 +1145,7 @@
         public System.Windows.Forms.ComboBox comboBoxListToADDdb;
         public System.Windows.Forms.Button buttonUpdateToDb;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.CheckBox checkBoxEdit;
+        public System.Windows.Forms.CheckBox checkBoxEdit;
     }
 }
 
