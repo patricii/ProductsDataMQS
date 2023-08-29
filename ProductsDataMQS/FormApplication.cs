@@ -152,6 +152,7 @@ namespace ProductsDataMQS
         }
         public void readRichTextBoxAndFillComboBox()
         {
+            comboBoxListToADDdb.Items.Clear();
             richTextBoxCompare.Lines.ToList()
             .GetRange(0, richTextBoxCompare.Lines.Count() - 1)
             .Where(line => line.Contains("NEW")).ToList()
