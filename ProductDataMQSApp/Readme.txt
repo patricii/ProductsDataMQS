@@ -14,8 +14,10 @@ periodos solicitados em poucos segundos;
 - Após A busca dos dados na opção "MQS UPDATE" as informações do MQS serão 
 alocadas na table "MQSDailyDataTemp";
 
-- Se desejar inserir os dados permanentemente, utilizar a opção "Insert To DB"
- e os dados atualizados serão inseridos na table "MQSDailyData";
+- Se desejar inserir os dados permanentemente, primeiramente será necessário 
+o "Login" na aplicação para registro de alterações, posteriormente utilizar 
+a opção "Insert To DB" e os dados atualizados serão inseridos na table 
+"MQSDailyData";
 
 - Na opção "Compare Test Time" é possivel comparar as mudanças de AvgTestTime
 da Table MQSDailyDataTemp e MQSDailyData.
@@ -27,9 +29,10 @@ diferença em segundos "s" dos dados anteriores (MQSDailyData) os novos dados
 - No campo "Filter Count" serão mostradas as quantidades de Testes com 
 diferença de AvgTestTime maiores do que o valor solicitado em "Filter Value"
 
-- No campo "Total Count" serão mostradas as quantidades totais de Testes
-com diferença entre os dados da Table "MQSDailyData" com a table 
-"MQSDailyDataTemp";
+- Se desejar incluir manualmente algum novo produto ou qualquer alteração,
+utilizar as opções abaixo do botão "Login", após qualquer alteração será 
+necessário clicar no botão "Save" para que as mudanças sejam aplicadas. 
+
 
 ****************************************************************************
 ****************************************************************************

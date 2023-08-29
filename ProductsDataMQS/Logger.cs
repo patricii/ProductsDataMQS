@@ -17,7 +17,7 @@ namespace ProductsDataMQS
             try
             {
                 DateTime now = DateTime.Now;
-                logString = "DB UPDATED: " + now.ToString() + " " + message + " ]" + Environment.NewLine;
+                logString = "DB UPDATED: " + now.ToString() + " " + message;
                 Application.DoEvents();
                 filepath = @"log\dbUpdateRecord.txt";
 

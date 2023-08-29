@@ -1,0 +1,3 @@
+DB UPDATED: 8/29/2023 10:33:27 AM >>Product: CANCUN5G23_LATAM-Process: IFLASH-[NEW AvgTestTime:158s]-TotHandle:2<< User:admin
+DB UPDATED: 8/29/2023 10:33:36 AM >>Product: CANCUN5G23_LATAM-Process: DEPTHVAL-[NEW AvgTestTime:22s]-TotHandle:3040<< User:admin
+DB UPDATED: 8/29/2023 10:33:43 AM >>Product: CANCUN5G23_LATAM-Process: L2AR-[NEW AvgTestTime:70s]-TotHandle:3<< User:admin

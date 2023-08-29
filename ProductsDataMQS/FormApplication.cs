@@ -20,6 +20,7 @@ namespace ProductsDataMQS
         ConvertCsvToDt cCTD = new ConvertCsvToDt();
         SQLProcedure sqlProcedure = new SQLProcedure();
         Logger logManager = new Logger();
+        FormLogin fl = new FormLogin();
 
         private static FormMain INSTANCE = null;
 
@@ -66,8 +67,6 @@ namespace ProductsDataMQS
                 MessageBox.Show("Selecione o Novo AvgTestTime para adicionar!");
             else
             {
-                FormLogin fl = new FormLogin();
-                SQLProcedure sqlProc = new SQLProcedure();
                 DialogResult dialogResult = MessageBox.Show("Deseja realmente atualizar o AvgTestTime?", "!!!Atenção!!!", MessageBoxButtons.YesNo);
 
                 if (dialogResult == DialogResult.Yes)
@@ -86,7 +85,7 @@ namespace ProductsDataMQS
                         avgTT = avgTT.Replace("[NEW AvgTestTime:", "");
                         avgTT = avgTT.Replace("s]", "");
 
-                        sqlProc.updateAVGTestTimeToMdb(product, process, avgTT);
+                        sqlProcedure.updateAVGTestTimeToMdb(product, process, avgTT);
 
                         logManager.logGen(comboBoxListToADDdb.Text + " User:" + fl.getUserName());
 
@@ -188,6 +187,7 @@ namespace ProductsDataMQS
                 dailyMQSDataBindingSource.EndEdit();
                 dailyMQSDataTableAdapter.Update(mQSRequestDatabaseDataSet);
                 MessageBox.Show(successDBMessage);
+                logManager.logGen("MANUAL CHANGES - " + textBoxAllInfos.Text +  " User:" + fl.getUserName());
             }
             catch (Exception ex)
             {

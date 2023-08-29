@@ -2,30 +2,6 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ProductsDataMQS.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="MQSRequestDatabaseConnectionString" Type="(Connection string)" Scope="Application">
-      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Provider=Microsoft.Jet.OLEDB.4.0;Data Source="C:\DEVELOPMENT PROJECTS\ProductsDataMQS\db\MQSRequestDatabase.mdb"&lt;/ConnectionString&gt;
-  &lt;ProviderName&gt;System.Data.OleDb&lt;/ProviderName&gt;
-&lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Provider=Microsoft.Jet.OLEDB.4.0;Data Source="C:\DEVELOPMENT PROJECTS\ProductsDataMQS\db\MQSRequestDatabase.mdb"</Value>
-    </Setting>
-    <Setting Name="MQSRequestDatabaseConnectionString1" Type="(Connection string)" Scope="Application">
-      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\bin\Debug\db\MQSRequestDatabase.mdb&lt;/ConnectionString&gt;
-  &lt;ProviderName&gt;System.Data.OleDb&lt;/ProviderName&gt;
-&lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\bin\Debug\db\MQSRequestDatabase.mdb</Value>
-    </Setting>
-    <Setting Name="MQSRequestDatabaseConnectionString2" Type="(Connection string)" Scope="Application">
-      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Provider=Microsoft.Jet.OLEDB.4.0;Data Source=V:\Tools\MqsProductsData\db\MQSRequestDatabase.mdb&lt;/ConnectionString&gt;
-  &lt;ProviderName&gt;System.Data.OleDb&lt;/ProviderName&gt;
-&lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=V:\Tools\MqsProductsData\db\MQSRequestDatabase.mdb</Value>
-    </Setting>
     <Setting Name="BotDataConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
@@ -34,7 +10,7 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=V:\Tools\MqsProductsData\db\BotData.mdb</Value>
     </Setting>
-    <Setting Name="MQSRequestDatabaseConnectionString3" Type="(Connection string)" Scope="Application">
+    <Setting Name="MQSRequestDatabaseConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
   &lt;ConnectionString&gt;Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\ProductDataMQS\db\MQSRequestDatabase.mdb&lt;/ConnectionString&gt;

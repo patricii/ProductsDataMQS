@@ -94,6 +94,9 @@
             this.buttonExit = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.buttonUpdateToDb = new System.Windows.Forms.Button();
+            this.comboBoxListToADDdb = new System.Windows.Forms.ComboBox();
             this.richTextBoxCompare = new System.Windows.Forms.RichTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBoxFilterCount = new System.Windows.Forms.TextBox();
@@ -114,19 +117,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.labelLoginSetting = new System.Windows.Forms.Label();
             this.dailyMQSDataTableAdapter = new ProductsDataMQS.MQSRequestDatabaseDataSetTableAdapters.DailyMQSDataTableAdapter();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.comboBoxListToADDdb = new System.Windows.Forms.ComboBox();
-            this.buttonUpdateToDb = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMQS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dailyMQSDataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mQSRequestDatabaseDataSet)).BeginInit();
             this.groupBoxProductData.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridViewMQS
@@ -314,7 +314,7 @@
             // labelUserLogin
             // 
             this.labelUserLogin.AutoSize = true;
-            this.labelUserLogin.Location = new System.Drawing.Point(70, 61);
+            this.labelUserLogin.Location = new System.Drawing.Point(84, 57);
             this.labelUserLogin.Name = "labelUserLogin";
             this.labelUserLogin.Size = new System.Drawing.Size(0, 15);
             this.labelUserLogin.TabIndex = 41;
@@ -332,11 +332,11 @@
             // 
             // buttonEnableLogin
             // 
-            this.buttonEnableLogin.Location = new System.Drawing.Point(6, 54);
+            this.buttonEnableLogin.Location = new System.Drawing.Point(6, 50);
             this.buttonEnableLogin.Name = "buttonEnableLogin";
-            this.buttonEnableLogin.Size = new System.Drawing.Size(58, 23);
+            this.buttonEnableLogin.Size = new System.Drawing.Size(70, 25);
             this.buttonEnableLogin.TabIndex = 39;
-            this.buttonEnableLogin.Text = "Login";
+            this.buttonEnableLogin.Text = "Login >>";
             this.buttonEnableLogin.UseVisualStyleBackColor = true;
             this.buttonEnableLogin.Click += new System.EventHandler(this.buttonEnableLogin_Click);
             // 
@@ -765,8 +765,42 @@
             this.tabPage1.Text = "MQS Product Infos";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.buttonUpdateToDb);
+            this.groupBox3.Controls.Add(this.comboBoxListToADDdb);
+            this.groupBox3.Location = new System.Drawing.Point(771, 562);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(587, 100);
+            this.groupBox3.TabIndex = 42;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Insert To DB";
+            // 
+            // buttonUpdateToDb
+            // 
+            this.buttonUpdateToDb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.buttonUpdateToDb.Enabled = false;
+            this.buttonUpdateToDb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.buttonUpdateToDb.Location = new System.Drawing.Point(242, 58);
+            this.buttonUpdateToDb.Name = "buttonUpdateToDb";
+            this.buttonUpdateToDb.Size = new System.Drawing.Size(138, 36);
+            this.buttonUpdateToDb.TabIndex = 33;
+            this.buttonUpdateToDb.Text = "Update To DB";
+            this.buttonUpdateToDb.UseVisualStyleBackColor = false;
+            this.buttonUpdateToDb.Click += new System.EventHandler(this.buttonUpdateToDb_Click);
+            // 
+            // comboBoxListToADDdb
+            // 
+            this.comboBoxListToADDdb.Enabled = false;
+            this.comboBoxListToADDdb.FormattingEnabled = true;
+            this.comboBoxListToADDdb.Location = new System.Drawing.Point(15, 19);
+            this.comboBoxListToADDdb.Name = "comboBoxListToADDdb";
+            this.comboBoxListToADDdb.Size = new System.Drawing.Size(566, 21);
+            this.comboBoxListToADDdb.TabIndex = 32;
+            // 
             // richTextBoxCompare
             // 
+            this.richTextBoxCompare.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBoxCompare.Location = new System.Drawing.Point(771, 213);
             this.richTextBoxCompare.Name = "richTextBoxCompare";
             this.richTextBoxCompare.Size = new System.Drawing.Size(587, 342);
@@ -960,39 +994,6 @@
             // 
             this.dailyMQSDataTableAdapter.ClearBeforeFill = true;
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.buttonUpdateToDb);
-            this.groupBox3.Controls.Add(this.comboBoxListToADDdb);
-            this.groupBox3.Location = new System.Drawing.Point(771, 562);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(587, 100);
-            this.groupBox3.TabIndex = 42;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Insert To DB";
-            // 
-            // comboBoxListToADDdb
-            // 
-            this.comboBoxListToADDdb.Enabled = false;
-            this.comboBoxListToADDdb.FormattingEnabled = true;
-            this.comboBoxListToADDdb.Location = new System.Drawing.Point(15, 19);
-            this.comboBoxListToADDdb.Name = "comboBoxListToADDdb";
-            this.comboBoxListToADDdb.Size = new System.Drawing.Size(566, 21);
-            this.comboBoxListToADDdb.TabIndex = 32;
-            // 
-            // buttonUpdateToDb
-            // 
-            this.buttonUpdateToDb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.buttonUpdateToDb.Enabled = false;
-            this.buttonUpdateToDb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.buttonUpdateToDb.Location = new System.Drawing.Point(242, 58);
-            this.buttonUpdateToDb.Name = "buttonUpdateToDb";
-            this.buttonUpdateToDb.Size = new System.Drawing.Size(138, 36);
-            this.buttonUpdateToDb.TabIndex = 33;
-            this.buttonUpdateToDb.Text = "Update To DB";
-            this.buttonUpdateToDb.UseVisualStyleBackColor = false;
-            this.buttonUpdateToDb.Click += new System.EventHandler(this.buttonUpdateToDb_Click);
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1014,13 +1015,13 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

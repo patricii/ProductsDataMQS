@@ -26,39 +26,6 @@ namespace ProductsDataMQS.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=\"C:\\DEVELOPMENT PROJECTS\\ProductsDat" +
-            "aMQS\\db\\MQSRequestDatabase.mdb\"")]
-        public string MQSRequestDatabaseConnectionString {
-            get {
-                return ((string)(this["MQSRequestDatabaseConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\\bin\\Debug\\db\\MQSRequ" +
-            "estDatabase.mdb")]
-        public string MQSRequestDatabaseConnectionString1 {
-            get {
-                return ((string)(this["MQSRequestDatabaseConnectionString1"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=V:\\Tools\\MqsProductsData\\db\\MQSReque" +
-            "stDatabase.mdb")]
-        public string MQSRequestDatabaseConnectionString2 {
-            get {
-                return ((string)(this["MQSRequestDatabaseConnectionString2"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=V:\\Tools\\MqsProductsData\\db\\BotData." +
             "mdb")]
         public string BotDataConnectionString {
@@ -72,9 +39,9 @@ namespace ProductsDataMQS.Properties {
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\\ProductDataMQS\\db\\MQSRequestDatab" +
             "ase.mdb")]
-        public string MQSRequestDatabaseConnectionString3 {
+        public string MQSRequestDatabaseConnectionString {
             get {
-                return ((string)(this["MQSRequestDatabaseConnectionString3"]));
+                return ((string)(this["MQSRequestDatabaseConnectionString"]));
             }
         }
     }
