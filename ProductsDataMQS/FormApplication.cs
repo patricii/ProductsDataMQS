@@ -14,10 +14,13 @@ namespace ProductsDataMQS
         public static string successDBMessage = "Data updated successfully!!";
         public static string successDBTempMessage = "DataBase *Temp* updated Successfully!!!";
         public static string updatedDaSuccessfullyMsg = "Banco de dados atualizado com sucesso pelo usuario: ";
+        public static string dbTableName = "DailyMQSData";
+        public static string dbTableNameTemp = "DailyMQSDataTemp";
+
         ConvertCsvToDt cCTD = new ConvertCsvToDt();
         SQLProcedure sqlProcedure = new SQLProcedure();
-        string dbTableName = "DailyMQSData";
-        string dbTableNameTemp = "DailyMQSDataTemp";
+        Logger logManager = new Logger();
+
         private static FormMain INSTANCE = null;
 
         public FormMain()
@@ -58,6 +61,7 @@ namespace ProductsDataMQS
         }
         private void updateDB()
         {
+           
             if (comboBoxListToADDdb.Text == "")
                 MessageBox.Show("Selecione o Novo AvgTestTime para adicionar!");
             else
@@ -83,6 +87,8 @@ namespace ProductsDataMQS
                         avgTT = avgTT.Replace("s]", "");
 
                         sqlProc.updateAVGTestTimeToMdb(product, process, avgTT);
+
+                        logManager.logGen(comboBoxListToADDdb.Text + " User:" + fl.getUserName());
 
                         MessageBox.Show(updatedDaSuccessfullyMsg + fl.getUserName());
                     }
@@ -253,7 +259,6 @@ namespace ProductsDataMQS
         {
             textBoxAllInfos.Text = "[PRODUCT: " + textBoxFamily.Text + "] [PROCESS: " + textBoxProcess.Text + "] [PYIELD: " + textBoxPYield.Text + "] [TestTime:" + textBoxTTime.Text + " s]";
         }
-
 
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //////////////////////////////////////////////////////////////////////////Buttons area/////////////////////////////////////////////////////////////////////////
