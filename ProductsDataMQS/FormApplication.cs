@@ -112,7 +112,7 @@ namespace ProductsDataMQS
                 DataTable dt = new DataTable();
                 try
                 {
-                    foreach (string file_name in Directory.GetFiles(@"C:\ProductDataMQS\rawdata\", "*.csv*", SearchOption.AllDirectories))
+                    foreach (string file_name in Directory.GetFiles(@"rawdata\", "*.csv*", SearchOption.AllDirectories))
                     {
                         dt = cCTD.ConvertCSVtoDataTable(file_name);
                         dailyMQSDataBindingSource.DataSource = dt;
@@ -181,14 +181,14 @@ namespace ProductsDataMQS
             buttonCompareAvg.Enabled = true;
             buttonCompareAvg.BackColor = Color.LightYellow;
         }
-        private void saveChangesDB()
+        private void saveChangesDB(string type)
         {
             try
             {
                 dailyMQSDataBindingSource.EndEdit();
                 dailyMQSDataTableAdapter.Update(mQSRequestDatabaseDataSet);
                 MessageBox.Show(successDBMessage);
-                logManager.logGen("MANUAL CHANGES - " + textBoxAllInfos.Text + " User:" + fl.getUserName());
+                logManager.logGen(type + " [* Manually Update] - " + textBoxAllInfos.Text + " User:" + fl.getUserName());
             }
             catch (Exception ex)
             {
@@ -237,7 +237,7 @@ namespace ProductsDataMQS
         {
             labelUpdate.Text = "Updating....";
             Application.DoEvents();
-            var process = Process.Start(@"C:\ProductDataMQS\MQSRequestData\MQSRequestData.exe");
+            var process = Process.Start(@"MQSRequestData\MQSRequestData.exe");
             process.WaitForExit();
             labelUpdate.Text = "Updated!!!";
             Application.DoEvents();
@@ -266,7 +266,7 @@ namespace ProductsDataMQS
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            saveChangesDB();
+            saveChangesDB("SAVE CHANGES");
         }
         private void buttonExit_Click(object sender, EventArgs e)
         {
@@ -380,7 +380,7 @@ namespace ProductsDataMQS
                 try
                 {
                     dailyMQSDataBindingSource.RemoveCurrent();
-                    saveChangesDB();
+                    saveChangesDB("DELETE");
                 }
                 catch (Exception ex)
                 {
