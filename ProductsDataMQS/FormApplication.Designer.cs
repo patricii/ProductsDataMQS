@@ -51,10 +51,10 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.checkBoxEdit = new System.Windows.Forms.CheckBox();
             this.buttonSave = new System.Windows.Forms.Button();
+            this.buttonEnableLogin = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonAddNew = new System.Windows.Forms.Button();
             this.labelUserLogin = new System.Windows.Forms.Label();
-            this.buttonEnableLogin = new System.Windows.Forms.Button();
             this.textBoxThandle = new System.Windows.Forms.TextBox();
             this.labelTHandle = new System.Windows.Forms.Label();
             this.textBoxLocation = new System.Windows.Forms.TextBox();
@@ -346,6 +346,16 @@
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
+            // buttonEnableLogin
+            // 
+            this.buttonEnableLogin.Location = new System.Drawing.Point(6, 26);
+            this.buttonEnableLogin.Name = "buttonEnableLogin";
+            this.buttonEnableLogin.Size = new System.Drawing.Size(70, 34);
+            this.buttonEnableLogin.TabIndex = 39;
+            this.buttonEnableLogin.Text = "Login >>";
+            this.buttonEnableLogin.UseVisualStyleBackColor = true;
+            this.buttonEnableLogin.Click += new System.EventHandler(this.buttonEnableLogin_Click);
+            // 
             // buttonDelete
             // 
             this.buttonDelete.Enabled = false;
@@ -371,20 +381,10 @@
             // labelUserLogin
             // 
             this.labelUserLogin.AutoSize = true;
-            this.labelUserLogin.Location = new System.Drawing.Point(83, 27);
+            this.labelUserLogin.Location = new System.Drawing.Point(167, 28);
             this.labelUserLogin.Name = "labelUserLogin";
             this.labelUserLogin.Size = new System.Drawing.Size(0, 15);
             this.labelUserLogin.TabIndex = 41;
-            // 
-            // buttonEnableLogin
-            // 
-            this.buttonEnableLogin.Location = new System.Drawing.Point(6, 26);
-            this.buttonEnableLogin.Name = "buttonEnableLogin";
-            this.buttonEnableLogin.Size = new System.Drawing.Size(70, 34);
-            this.buttonEnableLogin.TabIndex = 39;
-            this.buttonEnableLogin.Text = "Login >>";
-            this.buttonEnableLogin.UseVisualStyleBackColor = true;
-            this.buttonEnableLogin.Click += new System.EventHandler(this.buttonEnableLogin_Click);
             // 
             // textBoxThandle
             // 
