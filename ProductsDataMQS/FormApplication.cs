@@ -16,6 +16,10 @@ namespace ProductsDataMQS
         public static string updatedDaSuccessfullyMsg = "Banco de dados atualizado com sucesso pelo usuario: ";
         public static string dbTableName = "DailyMQSData";
         public static string dbTableNameTemp = "DailyMQSDataTemp";
+        public static string setProcess = string.Empty;
+        public static string setFamily = string.Empty;
+        public static string setAvgTestTime = string.Empty;
+        public static string totHandle = string.Empty;
 
         ConvertCsvToDt cCTD = new ConvertCsvToDt();
         SQLProcedure sqlProcedure = new SQLProcedure();
@@ -62,7 +66,6 @@ namespace ProductsDataMQS
         }
         private void updateDB()
         {
-
             if (comboBoxListToADDdb.Text == "")
                 MessageBox.Show("Selecione o Novo AvgTestTime para adicionar!");
             else
@@ -108,7 +111,6 @@ namespace ProductsDataMQS
             DialogResult dialogResult = MessageBox.Show("Deseja realmente carregar o arquivo .csv? o DataBase será atualizado.", "!!!Atenção!!!", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-
                 DataTable dt = new DataTable();
                 try
                 {
@@ -173,22 +175,20 @@ namespace ProductsDataMQS
             labelStatusCompare.Text = "Searching...this may take a several seconds...";
             richTextBoxCompare.Text = "";
             Application.DoEvents();
-
             sqlProcedure.compareAvgTestTime();
-
             labelStatusCompare.Text = "Finished!";
             buttonUpdate.Enabled = true;
             buttonCompareAvg.Enabled = true;
             buttonCompareAvg.BackColor = Color.LightYellow;
         }
-        private void saveChangesDB(string type)
+        private void saveChangesDB(string type, string allInfos)
         {
             try
             {
+                logManager.logGen(type + " [* Manually Update] - " + allInfos + " User:" + fl.getUserName());
                 dailyMQSDataBindingSource.EndEdit();
                 dailyMQSDataTableAdapter.Update(mQSRequestDatabaseDataSet);
                 MessageBox.Show(successDBMessage);
-                logManager.logGen(type + " [* Manually Update] - " + textBoxAllInfos.Text + " User:" + fl.getUserName());
             }
             catch (Exception ex)
             {
@@ -255,18 +255,16 @@ namespace ProductsDataMQS
                 Application.DoEvents();
             }
             catch { }
-        }
-        private void fillAllInofs()
-        {
-            textBoxAllInfos.Text = "[PRODUCT: " + textBoxFamily.Text + "] [PROCESS: " + textBoxProcess.Text + "] [PYIELD: " + textBoxPYield.Text + "] [TestTime:" + textBoxTTime.Text + " s]";
-        }
-
+        }   
+      
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //////////////////////////////////////////////////////////////////////////Buttons area/////////////////////////////////////////////////////////////////////////
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            saveChangesDB("SAVE CHANGES");
+            string allInfos = fillAllInfos();
+            saveChangesDB("SAVE CHANGES", allInfos);
         }
         private void buttonExit_Click(object sender, EventArgs e)
         {
@@ -297,7 +295,6 @@ namespace ProductsDataMQS
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
             callMQSRequestData();
-
             try
             {
                 dailyMQSDataBindingSource.DataSource = cCTD.ConvertCSVtoDataTable(textBoxCsvFolder.Text);
@@ -317,20 +314,31 @@ namespace ProductsDataMQS
         private void textBoxPYield_TextChanged(object sender, EventArgs e)
         {
             yieldEvaluateLogic();
-            fillAllInofs();
+        }
+        private void textBoxThandle_TextChanged(object sender, EventArgs e)
+        {
+            totHandle = textBoxThandle.Text;
         }
         private void textBoxFamily_TextChanged(object sender, EventArgs e)
         {
             textBoxFamily.BackColor = Color.LightBlue;
+            setFamily = textBoxFamily.Text;
         }
 
         private void textBoxProcess_TextChanged(object sender, EventArgs e)
         {
             textBoxProcess.BackColor = Color.LightBlue;
+            setProcess = textBoxProcess.Text;
         }
         private void textBoxTTime_TextChanged(object sender, EventArgs e)
         {
             calMchTime();
+            setAvgTestTime = textBoxTTime.Text;
+        }
+        private string fillAllInfos()
+        {
+            string resumeInfos = "[PRODUCT:" + setFamily + "][PROCESS:" + setProcess + "][TestTime:" + setAvgTestTime + "s][TotalHandle:" + totHandle + "]";
+            return resumeInfos;
         }
         private void buttonNewUser_Click(object sender, EventArgs e)
         {
@@ -339,7 +347,6 @@ namespace ProductsDataMQS
             textBoxConfirmPassword.Enabled = true;
             buttonSaveNew.Enabled = true;
         }
-
         private void buttonSaveNew_Click(object sender, EventArgs e)
         {
             verifyAndCreateUserLogin();
@@ -379,8 +386,9 @@ namespace ProductsDataMQS
             {
                 try
                 {
+                    string allInfos = fillAllInfos();
                     dailyMQSDataBindingSource.RemoveCurrent();
-                    saveChangesDB("DELETE");
+                    saveChangesDB("DELETE", allInfos);
                 }
                 catch (Exception ex)
                 {
@@ -413,6 +421,6 @@ namespace ProductsDataMQS
                 buttonAddNew.Enabled = false;
                 buttonDelete.Enabled = false;
             }
-        }
+        }   
     }
 }

@@ -64,7 +64,6 @@
             this.labelNPI = new System.Windows.Forms.Label();
             this.textBoxMchTime = new System.Windows.Forms.TextBox();
             this.labelMchTime = new System.Windows.Forms.Label();
-            this.textBoxAllInfos = new System.Windows.Forms.TextBox();
             this.textBoxCsvFolder = new System.Windows.Forms.TextBox();
             this.labelCsvFile = new System.Windows.Forms.Label();
             this.textBoxTTime = new System.Windows.Forms.TextBox();
@@ -271,7 +270,6 @@
             // 
             this.groupBoxProductData.Controls.Add(this.groupBox4);
             this.groupBoxProductData.Controls.Add(this.labelUserLogin);
-            this.groupBoxProductData.Controls.Add(this.buttonEnableLogin);
             this.groupBoxProductData.Controls.Add(this.textBoxThandle);
             this.groupBoxProductData.Controls.Add(this.labelTHandle);
             this.groupBoxProductData.Controls.Add(this.textBoxLocation);
@@ -281,7 +279,6 @@
             this.groupBoxProductData.Controls.Add(this.labelNPI);
             this.groupBoxProductData.Controls.Add(this.textBoxMchTime);
             this.groupBoxProductData.Controls.Add(this.labelMchTime);
-            this.groupBoxProductData.Controls.Add(this.textBoxAllInfos);
             this.groupBoxProductData.Controls.Add(this.textBoxCsvFolder);
             this.groupBoxProductData.Controls.Add(this.labelCsvFile);
             this.groupBoxProductData.Controls.Add(this.textBoxTTime);
@@ -307,7 +304,7 @@
             this.groupBoxProductData.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxProductData.Location = new System.Drawing.Point(6, 6);
             this.groupBoxProductData.Name = "groupBoxProductData";
-            this.groupBoxProductData.Size = new System.Drawing.Size(1155, 157);
+            this.groupBoxProductData.Size = new System.Drawing.Size(1099, 157);
             this.groupBoxProductData.TabIndex = 1;
             this.groupBoxProductData.TabStop = false;
             this.groupBoxProductData.Text = "Product Infos";
@@ -316,11 +313,12 @@
             // 
             this.groupBox4.Controls.Add(this.checkBoxEdit);
             this.groupBox4.Controls.Add(this.buttonSave);
+            this.groupBox4.Controls.Add(this.buttonEnableLogin);
             this.groupBox4.Controls.Add(this.buttonDelete);
             this.groupBox4.Controls.Add(this.buttonAddNew);
-            this.groupBox4.Location = new System.Drawing.Point(7, 51);
+            this.groupBox4.Location = new System.Drawing.Point(17, 46);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(173, 97);
+            this.groupBox4.Size = new System.Drawing.Size(260, 98);
             this.groupBox4.TabIndex = 42;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Edit DB";
@@ -329,7 +327,7 @@
             // 
             this.checkBoxEdit.AutoSize = true;
             this.checkBoxEdit.Enabled = false;
-            this.checkBoxEdit.Location = new System.Drawing.Point(105, 20);
+            this.checkBoxEdit.Location = new System.Drawing.Point(6, 76);
             this.checkBoxEdit.Name = "checkBoxEdit";
             this.checkBoxEdit.Size = new System.Drawing.Size(65, 19);
             this.checkBoxEdit.TabIndex = 41;
@@ -340,9 +338,9 @@
             // buttonSave
             // 
             this.buttonSave.Enabled = false;
-            this.buttonSave.Location = new System.Drawing.Point(6, 64);
+            this.buttonSave.Location = new System.Drawing.Point(97, 68);
             this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(93, 25);
+            this.buttonSave.Size = new System.Drawing.Size(69, 25);
             this.buttonSave.TabIndex = 34;
             this.buttonSave.Text = "Save";
             this.buttonSave.UseVisualStyleBackColor = true;
@@ -351,9 +349,9 @@
             // buttonDelete
             // 
             this.buttonDelete.Enabled = false;
-            this.buttonDelete.Location = new System.Drawing.Point(105, 64);
+            this.buttonDelete.Location = new System.Drawing.Point(185, 68);
             this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(62, 25);
+            this.buttonDelete.Size = new System.Drawing.Size(69, 25);
             this.buttonDelete.TabIndex = 40;
             this.buttonDelete.Text = "Delete";
             this.buttonDelete.UseVisualStyleBackColor = true;
@@ -362,9 +360,9 @@
             // buttonAddNew
             // 
             this.buttonAddNew.Enabled = false;
-            this.buttonAddNew.Location = new System.Drawing.Point(6, 20);
+            this.buttonAddNew.Location = new System.Drawing.Point(97, 24);
             this.buttonAddNew.Name = "buttonAddNew";
-            this.buttonAddNew.Size = new System.Drawing.Size(93, 40);
+            this.buttonAddNew.Size = new System.Drawing.Size(157, 37);
             this.buttonAddNew.TabIndex = 33;
             this.buttonAddNew.Text = "Add New";
             this.buttonAddNew.UseVisualStyleBackColor = true;
@@ -380,9 +378,9 @@
             // 
             // buttonEnableLogin
             // 
-            this.buttonEnableLogin.Location = new System.Drawing.Point(6, 20);
+            this.buttonEnableLogin.Location = new System.Drawing.Point(6, 26);
             this.buttonEnableLogin.Name = "buttonEnableLogin";
-            this.buttonEnableLogin.Size = new System.Drawing.Size(70, 25);
+            this.buttonEnableLogin.Size = new System.Drawing.Size(70, 34);
             this.buttonEnableLogin.TabIndex = 39;
             this.buttonEnableLogin.Text = "Login >>";
             this.buttonEnableLogin.UseVisualStyleBackColor = true;
@@ -391,34 +389,35 @@
             // textBoxThandle
             // 
             this.textBoxThandle.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dailyMQSDataBindingSource, "TotHandle", true));
-            this.textBoxThandle.Location = new System.Drawing.Point(1042, 59);
+            this.textBoxThandle.Location = new System.Drawing.Point(622, 124);
             this.textBoxThandle.Name = "textBoxThandle";
-            this.textBoxThandle.Size = new System.Drawing.Size(59, 21);
+            this.textBoxThandle.Size = new System.Drawing.Size(85, 21);
             this.textBoxThandle.TabIndex = 38;
             this.textBoxThandle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxThandle.TextChanged += new System.EventHandler(this.textBoxThandle_TextChanged);
             // 
             // labelTHandle
             // 
             this.labelTHandle.AutoSize = true;
-            this.labelTHandle.Location = new System.Drawing.Point(961, 64);
+            this.labelTHandle.Location = new System.Drawing.Point(550, 129);
             this.labelTHandle.Name = "labelTHandle";
-            this.labelTHandle.Size = new System.Drawing.Size(80, 15);
+            this.labelTHandle.Size = new System.Drawing.Size(70, 15);
             this.labelTHandle.TabIndex = 37;
-            this.labelTHandle.Text = "Total Handle:";
+            this.labelTHandle.Text = "Tot Handle:";
             // 
             // textBoxLocation
             // 
             this.textBoxLocation.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dailyMQSDataBindingSource, "Location", true));
-            this.textBoxLocation.Location = new System.Drawing.Point(1042, 32);
+            this.textBoxLocation.Location = new System.Drawing.Point(361, 126);
             this.textBoxLocation.Name = "textBoxLocation";
-            this.textBoxLocation.Size = new System.Drawing.Size(107, 21);
+            this.textBoxLocation.Size = new System.Drawing.Size(178, 21);
             this.textBoxLocation.TabIndex = 36;
             this.textBoxLocation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // labelSite
             // 
             this.labelSite.AutoSize = true;
-            this.labelSite.Location = new System.Drawing.Point(961, 39);
+            this.labelSite.Location = new System.Drawing.Point(303, 129);
             this.labelSite.Name = "labelSite";
             this.labelSite.Size = new System.Drawing.Size(57, 15);
             this.labelSite.TabIndex = 35;
@@ -429,7 +428,7 @@
             this.labelLogo.AutoSize = true;
             this.labelLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLogo.ForeColor = System.Drawing.Color.Teal;
-            this.labelLogo.Location = new System.Drawing.Point(596, 12);
+            this.labelLogo.Location = new System.Drawing.Point(6, 20);
             this.labelLogo.Name = "labelLogo";
             this.labelLogo.Size = new System.Drawing.Size(143, 20);
             this.labelLogo.TabIndex = 32;
@@ -437,16 +436,16 @@
             // 
             // textBoxNPI
             // 
-            this.textBoxNPI.Location = new System.Drawing.Point(863, 87);
+            this.textBoxNPI.Location = new System.Drawing.Point(980, 96);
             this.textBoxNPI.Name = "textBoxNPI";
-            this.textBoxNPI.Size = new System.Drawing.Size(80, 21);
+            this.textBoxNPI.Size = new System.Drawing.Size(92, 21);
             this.textBoxNPI.TabIndex = 29;
             this.textBoxNPI.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // labelNPI
             // 
             this.labelNPI.AutoSize = true;
-            this.labelNPI.Location = new System.Drawing.Point(789, 90);
+            this.labelNPI.Location = new System.Drawing.Point(906, 99);
             this.labelNPI.Name = "labelNPI";
             this.labelNPI.Size = new System.Drawing.Size(61, 15);
             this.labelNPI.TabIndex = 28;
@@ -454,42 +453,34 @@
             // 
             // textBoxMchTime
             // 
-            this.textBoxMchTime.Location = new System.Drawing.Point(863, 62);
+            this.textBoxMchTime.Location = new System.Drawing.Point(980, 71);
             this.textBoxMchTime.Name = "textBoxMchTime";
-            this.textBoxMchTime.Size = new System.Drawing.Size(80, 21);
+            this.textBoxMchTime.Size = new System.Drawing.Size(92, 21);
             this.textBoxMchTime.TabIndex = 27;
             this.textBoxMchTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // labelMchTime
             // 
             this.labelMchTime.AutoSize = true;
-            this.labelMchTime.Location = new System.Drawing.Point(789, 67);
+            this.labelMchTime.Location = new System.Drawing.Point(906, 76);
             this.labelMchTime.Name = "labelMchTime";
             this.labelMchTime.Size = new System.Drawing.Size(69, 15);
             this.labelMchTime.TabIndex = 26;
             this.labelMchTime.Text = "MCH Time:";
             // 
-            // textBoxAllInfos
-            // 
-            this.textBoxAllInfos.Location = new System.Drawing.Point(518, 130);
-            this.textBoxAllInfos.Name = "textBoxAllInfos";
-            this.textBoxAllInfos.Size = new System.Drawing.Size(627, 21);
-            this.textBoxAllInfos.TabIndex = 25;
-            this.textBoxAllInfos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // textBoxCsvFolder
             // 
             this.textBoxCsvFolder.Enabled = false;
-            this.textBoxCsvFolder.Location = new System.Drawing.Point(239, 130);
+            this.textBoxCsvFolder.Location = new System.Drawing.Point(792, 123);
             this.textBoxCsvFolder.Name = "textBoxCsvFolder";
-            this.textBoxCsvFolder.Size = new System.Drawing.Size(273, 21);
+            this.textBoxCsvFolder.Size = new System.Drawing.Size(280, 21);
             this.textBoxCsvFolder.TabIndex = 24;
             this.textBoxCsvFolder.Text = "C:\\ProductDataMQS\\rawdata\\DailyMQSData.csv";
             // 
             // labelCsvFile
             // 
             this.labelCsvFile.AutoSize = true;
-            this.labelCsvFile.Location = new System.Drawing.Point(186, 136);
+            this.labelCsvFile.Location = new System.Drawing.Point(726, 129);
             this.labelCsvFile.Name = "labelCsvFile";
             this.labelCsvFile.Size = new System.Drawing.Size(52, 15);
             this.labelCsvFile.TabIndex = 23;
@@ -498,9 +489,9 @@
             // textBoxTTime
             // 
             this.textBoxTTime.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dailyMQSDataBindingSource, "AvgPASSTime", true));
-            this.textBoxTTime.Location = new System.Drawing.Point(863, 35);
+            this.textBoxTTime.Location = new System.Drawing.Point(980, 44);
             this.textBoxTTime.Name = "textBoxTTime";
-            this.textBoxTTime.Size = new System.Drawing.Size(80, 21);
+            this.textBoxTTime.Size = new System.Drawing.Size(92, 21);
             this.textBoxTTime.TabIndex = 19;
             this.textBoxTTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxTTime.TextChanged += new System.EventHandler(this.textBoxTTime_TextChanged);
@@ -508,7 +499,7 @@
             // labelTestTime
             // 
             this.labelTestTime.AutoSize = true;
-            this.labelTestTime.Location = new System.Drawing.Point(789, 42);
+            this.labelTestTime.Location = new System.Drawing.Point(906, 51);
             this.labelTestTime.Name = "labelTestTime";
             this.labelTestTime.Size = new System.Drawing.Size(64, 15);
             this.labelTestTime.TabIndex = 18;
@@ -517,7 +508,7 @@
             // textBoxTYield
             // 
             this.textBoxTYield.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dailyMQSDataBindingSource, "TotYield", true));
-            this.textBoxTYield.Location = new System.Drawing.Point(675, 35);
+            this.textBoxTYield.Location = new System.Drawing.Point(792, 44);
             this.textBoxTYield.Name = "textBoxTYield";
             this.textBoxTYield.Size = new System.Drawing.Size(85, 21);
             this.textBoxTYield.TabIndex = 17;
@@ -526,7 +517,7 @@
             // labelTotalYield
             // 
             this.labelTotalYield.AutoSize = true;
-            this.labelTotalYield.Location = new System.Drawing.Point(609, 42);
+            this.labelTotalYield.Location = new System.Drawing.Point(726, 51);
             this.labelTotalYield.Name = "labelTotalYield";
             this.labelTotalYield.Size = new System.Drawing.Size(67, 15);
             this.labelTotalYield.TabIndex = 16;
@@ -535,7 +526,7 @@
             // textBoxTFail
             // 
             this.textBoxTFail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dailyMQSDataBindingSource, "TotFail", true));
-            this.textBoxTFail.Location = new System.Drawing.Point(675, 87);
+            this.textBoxTFail.Location = new System.Drawing.Point(792, 96);
             this.textBoxTFail.Name = "textBoxTFail";
             this.textBoxTFail.Size = new System.Drawing.Size(85, 21);
             this.textBoxTFail.TabIndex = 15;
@@ -544,7 +535,7 @@
             // labelTotalFail
             // 
             this.labelTotalFail.AutoSize = true;
-            this.labelTotalFail.Location = new System.Drawing.Point(609, 94);
+            this.labelTotalFail.Location = new System.Drawing.Point(726, 103);
             this.labelTotalFail.Name = "labelTotalFail";
             this.labelTotalFail.Size = new System.Drawing.Size(60, 15);
             this.labelTotalFail.TabIndex = 14;
@@ -553,7 +544,7 @@
             // textBoxTPass
             // 
             this.textBoxTPass.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dailyMQSDataBindingSource, "TotPass", true));
-            this.textBoxTPass.Location = new System.Drawing.Point(675, 61);
+            this.textBoxTPass.Location = new System.Drawing.Point(792, 70);
             this.textBoxTPass.Name = "textBoxTPass";
             this.textBoxTPass.Size = new System.Drawing.Size(85, 21);
             this.textBoxTPass.TabIndex = 13;
@@ -562,7 +553,7 @@
             // labelTotalPass
             // 
             this.labelTotalPass.AutoSize = true;
-            this.labelTotalPass.Location = new System.Drawing.Point(609, 68);
+            this.labelTotalPass.Location = new System.Drawing.Point(726, 77);
             this.labelTotalPass.Name = "labelTotalPass";
             this.labelTotalPass.Size = new System.Drawing.Size(67, 15);
             this.labelTotalPass.TabIndex = 12;
@@ -571,7 +562,7 @@
             // textBoxPYield
             // 
             this.textBoxPYield.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dailyMQSDataBindingSource, "PYield", true));
-            this.textBoxPYield.Location = new System.Drawing.Point(505, 35);
+            this.textBoxPYield.Location = new System.Drawing.Point(622, 44);
             this.textBoxPYield.Name = "textBoxPYield";
             this.textBoxPYield.Size = new System.Drawing.Size(85, 21);
             this.textBoxPYield.TabIndex = 11;
@@ -581,7 +572,7 @@
             // labelPYield
             // 
             this.labelPYield.AutoSize = true;
-            this.labelPYield.Location = new System.Drawing.Point(433, 42);
+            this.labelPYield.Location = new System.Drawing.Point(550, 51);
             this.labelPYield.Name = "labelPYield";
             this.labelPYield.Size = new System.Drawing.Size(45, 15);
             this.labelPYield.TabIndex = 10;
@@ -590,7 +581,7 @@
             // textBoxPrimeFail
             // 
             this.textBoxPrimeFail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dailyMQSDataBindingSource, "PrimeFail", true));
-            this.textBoxPrimeFail.Location = new System.Drawing.Point(505, 87);
+            this.textBoxPrimeFail.Location = new System.Drawing.Point(622, 96);
             this.textBoxPrimeFail.Name = "textBoxPrimeFail";
             this.textBoxPrimeFail.Size = new System.Drawing.Size(85, 21);
             this.textBoxPrimeFail.TabIndex = 9;
@@ -599,7 +590,7 @@
             // labelPrimeFail
             // 
             this.labelPrimeFail.AutoSize = true;
-            this.labelPrimeFail.Location = new System.Drawing.Point(433, 94);
+            this.labelPrimeFail.Location = new System.Drawing.Point(550, 103);
             this.labelPrimeFail.Name = "labelPrimeFail";
             this.labelPrimeFail.Size = new System.Drawing.Size(66, 15);
             this.labelPrimeFail.TabIndex = 8;
@@ -608,7 +599,7 @@
             // textBoxPrimePass
             // 
             this.textBoxPrimePass.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dailyMQSDataBindingSource, "PrimePass", true));
-            this.textBoxPrimePass.Location = new System.Drawing.Point(505, 61);
+            this.textBoxPrimePass.Location = new System.Drawing.Point(622, 70);
             this.textBoxPrimePass.Name = "textBoxPrimePass";
             this.textBoxPrimePass.Size = new System.Drawing.Size(85, 21);
             this.textBoxPrimePass.TabIndex = 7;
@@ -617,7 +608,7 @@
             // labelPrimePass
             // 
             this.labelPrimePass.AutoSize = true;
-            this.labelPrimePass.Location = new System.Drawing.Point(433, 68);
+            this.labelPrimePass.Location = new System.Drawing.Point(550, 77);
             this.labelPrimePass.Name = "labelPrimePass";
             this.labelPrimePass.Size = new System.Drawing.Size(73, 15);
             this.labelPrimePass.TabIndex = 6;
@@ -626,7 +617,7 @@
             // textBoxProcess
             // 
             this.textBoxProcess.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dailyMQSDataBindingSource, "Process", true));
-            this.textBoxProcess.Location = new System.Drawing.Point(239, 35);
+            this.textBoxProcess.Location = new System.Drawing.Point(361, 44);
             this.textBoxProcess.Name = "textBoxProcess";
             this.textBoxProcess.Size = new System.Drawing.Size(178, 21);
             this.textBoxProcess.TabIndex = 5;
@@ -636,7 +627,7 @@
             // labelProcess
             // 
             this.labelProcess.AutoSize = true;
-            this.labelProcess.Location = new System.Drawing.Point(186, 42);
+            this.labelProcess.Location = new System.Drawing.Point(303, 51);
             this.labelProcess.Name = "labelProcess";
             this.labelProcess.Size = new System.Drawing.Size(54, 15);
             this.labelProcess.TabIndex = 4;
@@ -645,7 +636,7 @@
             // textBoxFamily
             // 
             this.textBoxFamily.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dailyMQSDataBindingSource, "Family", true));
-            this.textBoxFamily.Location = new System.Drawing.Point(239, 61);
+            this.textBoxFamily.Location = new System.Drawing.Point(361, 70);
             this.textBoxFamily.Name = "textBoxFamily";
             this.textBoxFamily.Size = new System.Drawing.Size(178, 21);
             this.textBoxFamily.TabIndex = 3;
@@ -655,7 +646,7 @@
             // labelFamily
             // 
             this.labelFamily.AutoSize = true;
-            this.labelFamily.Location = new System.Drawing.Point(186, 68);
+            this.labelFamily.Location = new System.Drawing.Point(303, 77);
             this.labelFamily.Name = "labelFamily";
             this.labelFamily.Size = new System.Drawing.Size(46, 15);
             this.labelFamily.TabIndex = 2;
@@ -664,7 +655,7 @@
             // textBoxProductName
             // 
             this.textBoxProductName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dailyMQSDataBindingSource, "Technology", true));
-            this.textBoxProductName.Location = new System.Drawing.Point(239, 88);
+            this.textBoxProductName.Location = new System.Drawing.Point(361, 97);
             this.textBoxProductName.Name = "textBoxProductName";
             this.textBoxProductName.Size = new System.Drawing.Size(178, 21);
             this.textBoxProductName.TabIndex = 1;
@@ -673,7 +664,7 @@
             // labelProductName
             // 
             this.labelProductName.AutoSize = true;
-            this.labelProductName.Location = new System.Drawing.Point(186, 95);
+            this.labelProductName.Location = new System.Drawing.Point(303, 104);
             this.labelProductName.Name = "labelProductName";
             this.labelProductName.Size = new System.Drawing.Size(52, 15);
             this.labelProductName.TabIndex = 0;
@@ -706,7 +697,7 @@
             this.buttonInsertDB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.buttonInsertDB.Enabled = false;
             this.buttonInsertDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonInsertDB.Location = new System.Drawing.Point(20, 114);
+            this.buttonInsertDB.Location = new System.Drawing.Point(67, 113);
             this.buttonInsertDB.Name = "buttonInsertDB";
             this.buttonInsertDB.Size = new System.Drawing.Size(138, 36);
             this.buttonInsertDB.TabIndex = 31;
@@ -719,7 +710,7 @@
             this.labelUpdate.AutoSize = true;
             this.labelUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUpdate.ForeColor = System.Drawing.Color.Teal;
-            this.labelUpdate.Location = new System.Drawing.Point(50, 87);
+            this.labelUpdate.Location = new System.Drawing.Point(91, 86);
             this.labelUpdate.Name = "labelUpdate";
             this.labelUpdate.Size = new System.Drawing.Size(0, 24);
             this.labelUpdate.TabIndex = 30;
@@ -729,7 +720,7 @@
             this.buttonUpdate.BackColor = System.Drawing.Color.Teal;
             this.buttonUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonUpdate.ForeColor = System.Drawing.Color.White;
-            this.buttonUpdate.Location = new System.Drawing.Point(6, 20);
+            this.buttonUpdate.Location = new System.Drawing.Point(45, 19);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(169, 63);
             this.buttonUpdate.TabIndex = 22;
@@ -838,16 +829,16 @@
             this.groupBox1.Controls.Add(this.buttonUpdate);
             this.groupBox1.Controls.Add(this.buttonInsertDB);
             this.groupBox1.Controls.Add(this.labelUpdate);
-            this.groupBox1.Location = new System.Drawing.Point(1167, 6);
+            this.groupBox1.Location = new System.Drawing.Point(1111, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(181, 157);
+            this.groupBox1.Size = new System.Drawing.Size(237, 157);
             this.groupBox1.TabIndex = 40;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Query";
             // 
             // textBoxFilterCount
             // 
-            this.textBoxFilterCount.Location = new System.Drawing.Point(1296, 187);
+            this.textBoxFilterCount.Location = new System.Drawing.Point(1229, 187);
             this.textBoxFilterCount.Name = "textBoxFilterCount";
             this.textBoxFilterCount.Size = new System.Drawing.Size(29, 20);
             this.textBoxFilterCount.TabIndex = 38;
@@ -856,7 +847,7 @@
             // labelFilterCount
             // 
             this.labelFilterCount.AutoSize = true;
-            this.labelFilterCount.Location = new System.Drawing.Point(1228, 194);
+            this.labelFilterCount.Location = new System.Drawing.Point(1161, 194);
             this.labelFilterCount.Name = "labelFilterCount";
             this.labelFilterCount.Size = new System.Drawing.Size(63, 13);
             this.labelFilterCount.TabIndex = 37;
@@ -864,7 +855,7 @@
             // 
             // textBoxFilterValue
             // 
-            this.textBoxFilterValue.Location = new System.Drawing.Point(1178, 187);
+            this.textBoxFilterValue.Location = new System.Drawing.Point(1111, 187);
             this.textBoxFilterValue.Name = "textBoxFilterValue";
             this.textBoxFilterValue.Size = new System.Drawing.Size(29, 20);
             this.textBoxFilterValue.TabIndex = 36;
@@ -875,7 +866,7 @@
             // labelCriteria
             // 
             this.labelCriteria.AutoSize = true;
-            this.labelCriteria.Location = new System.Drawing.Point(1052, 194);
+            this.labelCriteria.Location = new System.Drawing.Point(985, 194);
             this.labelCriteria.Name = "labelCriteria";
             this.labelCriteria.Size = new System.Drawing.Size(123, 13);
             this.labelCriteria.TabIndex = 35;
@@ -924,9 +915,10 @@
             this.groupBox2.Controls.Add(this.labelCreatePassword);
             this.groupBox2.Controls.Add(this.textBoxCreateUserName);
             this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(21, 47);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(240, 255);
+            this.groupBox2.Size = new System.Drawing.Size(240, 271);
             this.groupBox2.TabIndex = 34;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Create User and Password";
@@ -936,7 +928,7 @@
             this.textBoxConfirmPassword.Enabled = false;
             this.textBoxConfirmPassword.Location = new System.Drawing.Point(20, 191);
             this.textBoxConfirmPassword.Name = "textBoxConfirmPassword";
-            this.textBoxConfirmPassword.Size = new System.Drawing.Size(185, 20);
+            this.textBoxConfirmPassword.Size = new System.Drawing.Size(185, 21);
             this.textBoxConfirmPassword.TabIndex = 7;
             this.textBoxConfirmPassword.UseSystemPasswordChar = true;
             // 
@@ -945,7 +937,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(17, 174);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 13);
+            this.label2.Size = new System.Drawing.Size(110, 15);
             this.label2.TabIndex = 6;
             this.label2.Text = "Confirm Password:";
             // 
@@ -954,7 +946,7 @@
             this.buttonSaveNew.Enabled = false;
             this.buttonSaveNew.Location = new System.Drawing.Point(141, 226);
             this.buttonSaveNew.Name = "buttonSaveNew";
-            this.buttonSaveNew.Size = new System.Drawing.Size(64, 23);
+            this.buttonSaveNew.Size = new System.Drawing.Size(64, 39);
             this.buttonSaveNew.TabIndex = 5;
             this.buttonSaveNew.Text = "Save";
             this.buttonSaveNew.UseVisualStyleBackColor = true;
@@ -962,9 +954,9 @@
             // 
             // buttonNewUser
             // 
-            this.buttonNewUser.Location = new System.Drawing.Point(20, 34);
+            this.buttonNewUser.Location = new System.Drawing.Point(20, 20);
             this.buttonNewUser.Name = "buttonNewUser";
-            this.buttonNewUser.Size = new System.Drawing.Size(64, 23);
+            this.buttonNewUser.Size = new System.Drawing.Size(64, 37);
             this.buttonNewUser.TabIndex = 4;
             this.buttonNewUser.Text = "New";
             this.buttonNewUser.UseVisualStyleBackColor = true;
@@ -975,7 +967,7 @@
             this.textBoxCreatePassword.Enabled = false;
             this.textBoxCreatePassword.Location = new System.Drawing.Point(20, 141);
             this.textBoxCreatePassword.Name = "textBoxCreatePassword";
-            this.textBoxCreatePassword.Size = new System.Drawing.Size(185, 20);
+            this.textBoxCreatePassword.Size = new System.Drawing.Size(185, 21);
             this.textBoxCreatePassword.TabIndex = 3;
             this.textBoxCreatePassword.UseSystemPasswordChar = true;
             // 
@@ -984,7 +976,7 @@
             this.labelCreatePassword.AutoSize = true;
             this.labelCreatePassword.Location = new System.Drawing.Point(17, 124);
             this.labelCreatePassword.Name = "labelCreatePassword";
-            this.labelCreatePassword.Size = new System.Drawing.Size(56, 13);
+            this.labelCreatePassword.Size = new System.Drawing.Size(64, 15);
             this.labelCreatePassword.TabIndex = 2;
             this.labelCreatePassword.Text = "Password:";
             // 
@@ -993,7 +985,7 @@
             this.textBoxCreateUserName.Enabled = false;
             this.textBoxCreateUserName.Location = new System.Drawing.Point(20, 86);
             this.textBoxCreateUserName.Name = "textBoxCreateUserName";
-            this.textBoxCreateUserName.Size = new System.Drawing.Size(185, 20);
+            this.textBoxCreateUserName.Size = new System.Drawing.Size(185, 21);
             this.textBoxCreateUserName.TabIndex = 1;
             // 
             // label1
@@ -1001,7 +993,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(17, 69);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 13);
+            this.label1.Size = new System.Drawing.Size(73, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "User Name:";
             // 
@@ -1010,7 +1002,7 @@
             this.labelLoginSetting.AutoSize = true;
             this.labelLoginSetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLoginSetting.ForeColor = System.Drawing.Color.Teal;
-            this.labelLoginSetting.Location = new System.Drawing.Point(17, 7);
+            this.labelLoginSetting.Location = new System.Drawing.Point(6, 20);
             this.labelLoginSetting.Name = "labelLoginSetting";
             this.labelLoginSetting.Size = new System.Drawing.Size(103, 20);
             this.labelLoginSetting.TabIndex = 33;
@@ -1085,7 +1077,6 @@
         private System.Windows.Forms.Button buttonNext;
         private System.Windows.Forms.TextBox textBoxCsvFolder;
         private System.Windows.Forms.Label labelCsvFile;
-        private System.Windows.Forms.TextBox textBoxAllInfos;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private MQSRequestDatabaseDataSet mQSRequestDatabaseDataSet;
