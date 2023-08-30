@@ -10,8 +10,8 @@ namespace ProductsDataMQS
 {
     class SQLProcedure
     {
-        public static string dbConnection = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\ProductDataMQS\db\MQSRequestDatabase.mdb";
-        // public static string dbConnection = @"Provider=Microsoft.Jet.OLEDB.4.0; Data Source=\\jagnt092\transfer\ProductDataMQS\db\MQSRequestDatabase.mdb; User Id=admin;Password=";
+       // public static string dbConnection = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\ProductDataMQS\db\MQSRequestDatabase.mdb";
+        public static string dbConnection = @"Provider=Microsoft.Jet.OLEDB.4.0; Data Source=\\jagnt092\transfer\ProductDataMQS\db\MQSRequestDatabase.mdb; User Id=admin;Password=";
         public void dataTableToMdb(DataTable dataTable, string tableName)
         {
             deleteTableProcedure(tableName);
