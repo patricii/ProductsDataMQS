@@ -180,6 +180,7 @@ namespace ProductsDataMQS
             buttonUpdate.Enabled = true;
             buttonCompareAvg.Enabled = true;
             buttonCompareAvg.BackColor = Color.LightYellow;
+            readRichTextBoxAndFillComboBox();
         }
         private void saveChangesDB(string type, string allInfos)
         {
@@ -301,6 +302,8 @@ namespace ProductsDataMQS
                 DataTable dt = GetDataTableFromDGV(dataGridViewMQS);
                 sqlProcedure.dataTableToMdb(dt, dbTableNameTemp);
                 MessageBox.Show(successDBTempMessage);
+                initializeFields();
+                
             }
             catch (Exception ex)
             {
@@ -358,7 +361,6 @@ namespace ProductsDataMQS
         private void buttonCompareAvg_Click(object sender, EventArgs e)
         {
             initializeFields();
-            readRichTextBoxAndFillComboBox();
         }
         private void textBoxFilterValue_TextChanged(object sender, EventArgs e)
         {
