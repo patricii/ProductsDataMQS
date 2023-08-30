@@ -255,8 +255,8 @@ namespace ProductsDataMQS
                 Application.DoEvents();
             }
             catch { }
-        }   
-      
+        }
+
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //////////////////////////////////////////////////////////////////////////Buttons area/////////////////////////////////////////////////////////////////////////
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -401,7 +401,7 @@ namespace ProductsDataMQS
             }
         }
         private void buttonEnableLogin_Click(object sender, EventArgs e)
-        {           
+        {
             FormLogin frmLogin = new FormLogin();
             frmLogin.Show();
         }
@@ -413,7 +413,7 @@ namespace ProductsDataMQS
                 buttonSave.Enabled = true;
                 buttonAddNew.Enabled = true;
                 buttonDelete.Enabled = true;
-                dataGridViewMQS.DataSource = sqlProcedure.updatePersistDataBase(dbTableName);
+                bindingWithPersistDB();
             }
             else
             {
@@ -425,7 +425,20 @@ namespace ProductsDataMQS
 
         private void buttonRefresh_Click(object sender, EventArgs e)
         {
-            dataGridViewMQS.DataSource = sqlProcedure.updatePersistDataBase(dbTableName);
+            bindingWithPersistDB();
+        }
+        private void bindingWithPersistDB()
+        {
+            try
+            {
+                dailyMQSDataBindingSource.DataSource = mQSRequestDatabaseDataSet.DailyMQSData;
+                dailyMQSDataTableAdapter.Fill(mQSRequestDatabaseDataSet.DailyMQSData);
+                dataGridViewMQS.Refresh();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
     }
 }

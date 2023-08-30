@@ -8,8 +8,7 @@ namespace ProductsDataMQS
     public partial class FormLogin : Form
     {
         public static string userName = string.Empty;
-        string dbConnection = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\ProductDataMQS\db\MQSRequestDatabase.mdb";
-       // public static string dbConnection = @"Provider=Microsoft.Jet.OLEDB.4.0; Data Source=\\jagnt092\transfer\ProductDataMQS\db\MQSRequestDatabase.mdb; User Id=admin;Password=";
+       
         public FormLogin()
         {
             InitializeComponent();
@@ -21,7 +20,7 @@ namespace ProductsDataMQS
         }
         private void login()
         {
-            OleDbDataAdapter da = new OleDbDataAdapter("SELECT * FROM [Login] Where [user]='" + textBoxUser.Text + "' And [password]='" + textBoxPassword.Text + "'", dbConnection);
+            OleDbDataAdapter da = new OleDbDataAdapter("SELECT * FROM [Login] Where [user]='" + textBoxUser.Text + "' And [password]='" + textBoxPassword.Text + "'", SQLProcedure.dbConnection);
             DataSet ds = new DataSet();
             da.Fill(ds);
             if (ds.Tables[0].Rows.Count > 0)

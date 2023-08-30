@@ -95,6 +95,7 @@
             this.buttonExit = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.buttonRefresh = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.buttonUpdateToDb = new System.Windows.Forms.Button();
             this.comboBoxListToADDdb = new System.Windows.Forms.ComboBox();
@@ -118,7 +119,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.labelLoginSetting = new System.Windows.Forms.Label();
             this.dailyMQSDataTableAdapter = new ProductsDataMQS.MQSRequestDatabaseDataSetTableAdapters.DailyMQSDataTableAdapter();
-            this.buttonRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMQS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dailyMQSDataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mQSRequestDatabaseDataSet)).BeginInit();
@@ -784,6 +784,16 @@
             this.tabPage1.Text = "MQS Product Infos";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // buttonRefresh
+            // 
+            this.buttonRefresh.Location = new System.Drawing.Point(624, 170);
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.Size = new System.Drawing.Size(127, 21);
+            this.buttonRefresh.TabIndex = 43;
+            this.buttonRefresh.Text = "Refresh DataBase";
+            this.buttonRefresh.UseVisualStyleBackColor = true;
+            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.buttonUpdateToDb);
@@ -1013,16 +1023,6 @@
             // dailyMQSDataTableAdapter
             // 
             this.dailyMQSDataTableAdapter.ClearBeforeFill = true;
-            // 
-            // buttonRefresh
-            // 
-            this.buttonRefresh.Location = new System.Drawing.Point(624, 170);
-            this.buttonRefresh.Name = "buttonRefresh";
-            this.buttonRefresh.Size = new System.Drawing.Size(127, 21);
-            this.buttonRefresh.TabIndex = 43;
-            this.buttonRefresh.Text = "Refresh DataBase";
-            this.buttonRefresh.UseVisualStyleBackColor = true;
-            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
             // FormMain
             // 
