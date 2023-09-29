@@ -26,8 +26,8 @@ namespace ProductsDataMQS.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\\ProductDataMQS\\db\\MQSRequestDatab" +
-            "ase.mdb")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=\\\\jagnt092\\transfer\\ProductDataMQS\\d" +
+            "b\\MQSRequestDatabase.mdb")]
         public string MQSRequestDatabaseConnectionString {
             get {
                 return ((string)(this["MQSRequestDatabaseConnectionString"]));
