@@ -3,7 +3,6 @@ C:\DEVELOPMENT PROJECTS\ProductsDataMQS\ProductsDataMQS\bin\Release\ProductsData
 C:\DEVELOPMENT PROJECTS\ProductsDataMQS\ProductsDataMQS\bin\Release\ProductsDataMQS.application
 C:\DEVELOPMENT PROJECTS\ProductsDataMQS\ProductsDataMQS\bin\Release\ProductsDataMQS.exe
 C:\DEVELOPMENT PROJECTS\ProductsDataMQS\ProductsDataMQS\bin\Release\ProductsDataMQS.pdb
-C:\DEVELOPMENT PROJECTS\ProductsDataMQS\ProductsDataMQS\obj\Release\ProductsDataMQS.csprojAssemblyReference.cache
 C:\DEVELOPMENT PROJECTS\ProductsDataMQS\ProductsDataMQS\obj\Release\ProductsDataMQS.FormMain.resources
 C:\DEVELOPMENT PROJECTS\ProductsDataMQS\ProductsDataMQS\obj\Release\ProductsDataMQS.FormLogin.resources
 C:\DEVELOPMENT PROJECTS\ProductsDataMQS\ProductsDataMQS\obj\Release\ProductsDataMQS.Properties.Resources.resources
