@@ -2,6 +2,8 @@ C:\DEVELOPMENT PROJECTS\ProductsDataMQS\ProductsDataMQS\bin\Debug\ProductsDataMQ
 C:\DEVELOPMENT PROJECTS\ProductsDataMQS\ProductsDataMQS\bin\Debug\ProductsDataMQS.exe
 C:\DEVELOPMENT PROJECTS\ProductsDataMQS\ProductsDataMQS\bin\Debug\ProductsDataMQS.pdb
 C:\ProductDataMQS\ProductsDataMQS.exe.config
+C:\ProductDataMQS\ProductsDataMQS.exe.manifest
+C:\ProductDataMQS\ProductsDataMQS.application
 C:\ProductDataMQS\ProductsDataMQS.exe
 C:\ProductDataMQS\ProductsDataMQS.pdb
 C:\DEVELOPMENT PROJECTS\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQS.FormMain.resources
@@ -9,10 +11,7 @@ C:\DEVELOPMENT PROJECTS\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQ
 C:\DEVELOPMENT PROJECTS\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQS.Properties.Resources.resources
 C:\DEVELOPMENT PROJECTS\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQS.csproj.GenerateResource.cache
 C:\DEVELOPMENT PROJECTS\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQS.csproj.CoreCompileInputs.cache
-C:\DEVELOPMENT PROJECTS\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQS.exe
-C:\DEVELOPMENT PROJECTS\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQS.pdb
-C:\ProductDataMQS\ProductsDataMQS.exe.manifest
-C:\ProductDataMQS\ProductsDataMQS.application
-C:\DEVELOPMENT PROJECTS\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQS.csprojAssemblyReference.cache
 C:\DEVELOPMENT PROJECTS\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQS.exe.manifest
 C:\DEVELOPMENT PROJECTS\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQS.application
+C:\DEVELOPMENT PROJECTS\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQS.exe
+C:\DEVELOPMENT PROJECTS\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQS.pdb

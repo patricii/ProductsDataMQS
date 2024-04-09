@@ -236,12 +236,19 @@ namespace ProductsDataMQS
         }
         private void callMQSRequestData()
         {
-            labelUpdate.Text = "Updating....";
-            Application.DoEvents();
-            var process = Process.Start(@"MQSRequestData\MQSRequestData.exe");
-            process.WaitForExit();
-            labelUpdate.Text = "Updated!!!";
-            Application.DoEvents();
+            try
+            {
+                labelUpdate.Text = "Updating....";
+                Application.DoEvents();
+                var process = Process.Start(@"MQSRequestData\MQSRequestData.exe");
+                process.WaitForExit();
+                labelUpdate.Text = "Updated!!!";
+                Application.DoEvents();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message);
+            }
         }
         private void yieldEvaluateLogic()
         {
