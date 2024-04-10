@@ -1,11 +1,6 @@
 C:\DEVELOPMENT PROJECTS\ProductsDataMQS\ProductsDataMQS\bin\Debug\ProductsDataMQS.exe.config
 C:\DEVELOPMENT PROJECTS\ProductsDataMQS\ProductsDataMQS\bin\Debug\ProductsDataMQS.exe
 C:\DEVELOPMENT PROJECTS\ProductsDataMQS\ProductsDataMQS\bin\Debug\ProductsDataMQS.pdb
-C:\ProductDataMQS\ProductsDataMQS.exe.config
-C:\ProductDataMQS\ProductsDataMQS.exe.manifest
-C:\ProductDataMQS\ProductsDataMQS.application
-C:\ProductDataMQS\ProductsDataMQS.exe
-C:\ProductDataMQS\ProductsDataMQS.pdb
 C:\DEVELOPMENT PROJECTS\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQS.FormMain.resources
 C:\DEVELOPMENT PROJECTS\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQS.FormLogin.resources
 C:\DEVELOPMENT PROJECTS\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQS.Properties.Resources.resources
@@ -15,3 +10,19 @@ C:\DEVELOPMENT PROJECTS\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQ
 C:\DEVELOPMENT PROJECTS\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQS.application
 C:\DEVELOPMENT PROJECTS\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQS.exe
 C:\DEVELOPMENT PROJECTS\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQS.pdb
+C:\ProductDataMQS\ProductsDataMQS.exe.config
+C:\ProductDataMQS\ProductsDataMQS.exe.manifest
+C:\ProductDataMQS\ProductsDataMQS.application
+C:\ProductDataMQS\ProductsDataMQS.exe
+C:\ProductDataMQS\ProductsDataMQS.pdb
+C:\Development_Projects\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQS.csproj.AssemblyReference.cache
+C:\Development_Projects\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQS.csproj.SuggestedBindingRedirects.cache
+C:\Development_Projects\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQS.FormMain.resources
+C:\Development_Projects\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQS.FormLogin.resources
+C:\Development_Projects\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQS.Properties.Resources.resources
+C:\Development_Projects\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQS.csproj.GenerateResource.cache
+C:\Development_Projects\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQS.csproj.CoreCompileInputs.cache
+C:\Development_Projects\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQS.exe.manifest
+C:\Development_Projects\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQS.application
+C:\Development_Projects\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQS.exe
+C:\Development_Projects\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQS.pdb
