@@ -31,20 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.dataGridViewMQS = new System.Windows.Forms.DataGridView();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.locationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.familyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.processDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.technologyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pYieldDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.primePassDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.primeFailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.primeHandleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totYieldDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totPassDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.avgPASSTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totFailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totHandleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dailyMQSDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mQSRequestDatabaseDataSet = new ProductsDataMQS.MQSRequestDatabaseDataSet();
             this.groupBoxProductData = new System.Windows.Forms.GroupBox();
@@ -119,6 +105,20 @@
             this.label1 = new System.Windows.Forms.Label();
             this.labelLoginSetting = new System.Windows.Forms.Label();
             this.dailyMQSDataTableAdapter = new ProductsDataMQS.MQSRequestDatabaseDataSetTableAdapters.DailyMQSDataTableAdapter();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.locationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.familyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.processDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.technologyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pYieldDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.primePassDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.primeFailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.primeHandleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totYieldDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totPassDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.avgPASSTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totFailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totHandleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMQS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dailyMQSDataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mQSRequestDatabaseDataSet)).BeginInit();
@@ -158,125 +158,8 @@
             this.dataGridViewMQS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridViewMQS.Name = "dataGridViewMQS";
             this.dataGridViewMQS.RowHeadersWidth = 51;
-            this.dataGridViewMQS.Size = new System.Drawing.Size(1009, 585);
+            this.dataGridViewMQS.Size = new System.Drawing.Size(1175, 585);
             this.dataGridViewMQS.TabIndex = 0;
-            // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.Visible = false;
-            this.iDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // locationDataGridViewTextBoxColumn
-            // 
-            this.locationDataGridViewTextBoxColumn.DataPropertyName = "Location";
-            this.locationDataGridViewTextBoxColumn.HeaderText = "Location";
-            this.locationDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.locationDataGridViewTextBoxColumn.Name = "locationDataGridViewTextBoxColumn";
-            this.locationDataGridViewTextBoxColumn.Width = 95;
-            // 
-            // familyDataGridViewTextBoxColumn
-            // 
-            this.familyDataGridViewTextBoxColumn.DataPropertyName = "Family";
-            this.familyDataGridViewTextBoxColumn.HeaderText = "Family";
-            this.familyDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.familyDataGridViewTextBoxColumn.Name = "familyDataGridViewTextBoxColumn";
-            this.familyDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // processDataGridViewTextBoxColumn
-            // 
-            this.processDataGridViewTextBoxColumn.DataPropertyName = "Process";
-            this.processDataGridViewTextBoxColumn.HeaderText = "Process";
-            this.processDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.processDataGridViewTextBoxColumn.Name = "processDataGridViewTextBoxColumn";
-            this.processDataGridViewTextBoxColumn.Width = 90;
-            // 
-            // technologyDataGridViewTextBoxColumn
-            // 
-            this.technologyDataGridViewTextBoxColumn.DataPropertyName = "Technology";
-            this.technologyDataGridViewTextBoxColumn.HeaderText = "Technology";
-            this.technologyDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.technologyDataGridViewTextBoxColumn.Name = "technologyDataGridViewTextBoxColumn";
-            this.technologyDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // pYieldDataGridViewTextBoxColumn
-            // 
-            this.pYieldDataGridViewTextBoxColumn.DataPropertyName = "PYield";
-            this.pYieldDataGridViewTextBoxColumn.HeaderText = "PYield";
-            this.pYieldDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.pYieldDataGridViewTextBoxColumn.Name = "pYieldDataGridViewTextBoxColumn";
-            this.pYieldDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // primePassDataGridViewTextBoxColumn
-            // 
-            this.primePassDataGridViewTextBoxColumn.DataPropertyName = "PrimePass";
-            this.primePassDataGridViewTextBoxColumn.HeaderText = "PrimePass";
-            this.primePassDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.primePassDataGridViewTextBoxColumn.Name = "primePassDataGridViewTextBoxColumn";
-            this.primePassDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // primeFailDataGridViewTextBoxColumn
-            // 
-            this.primeFailDataGridViewTextBoxColumn.DataPropertyName = "PrimeFail";
-            this.primeFailDataGridViewTextBoxColumn.HeaderText = "PrimeFail";
-            this.primeFailDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.primeFailDataGridViewTextBoxColumn.Name = "primeFailDataGridViewTextBoxColumn";
-            this.primeFailDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // primeHandleDataGridViewTextBoxColumn
-            // 
-            this.primeHandleDataGridViewTextBoxColumn.DataPropertyName = "PrimeHandle";
-            this.primeHandleDataGridViewTextBoxColumn.HeaderText = "PrimeHandle";
-            this.primeHandleDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.primeHandleDataGridViewTextBoxColumn.Name = "primeHandleDataGridViewTextBoxColumn";
-            this.primeHandleDataGridViewTextBoxColumn.Visible = false;
-            this.primeHandleDataGridViewTextBoxColumn.Width = 65;
-            // 
-            // totYieldDataGridViewTextBoxColumn
-            // 
-            this.totYieldDataGridViewTextBoxColumn.DataPropertyName = "TotYield";
-            this.totYieldDataGridViewTextBoxColumn.HeaderText = "TotYield";
-            this.totYieldDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.totYieldDataGridViewTextBoxColumn.Name = "totYieldDataGridViewTextBoxColumn";
-            this.totYieldDataGridViewTextBoxColumn.Visible = false;
-            this.totYieldDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // totPassDataGridViewTextBoxColumn
-            // 
-            this.totPassDataGridViewTextBoxColumn.DataPropertyName = "TotPass";
-            this.totPassDataGridViewTextBoxColumn.HeaderText = "TotPass";
-            this.totPassDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.totPassDataGridViewTextBoxColumn.Name = "totPassDataGridViewTextBoxColumn";
-            this.totPassDataGridViewTextBoxColumn.Visible = false;
-            this.totPassDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // avgPASSTimeDataGridViewTextBoxColumn
-            // 
-            this.avgPASSTimeDataGridViewTextBoxColumn.DataPropertyName = "AvgPASSTime";
-            this.avgPASSTimeDataGridViewTextBoxColumn.HeaderText = "AvgPASSTime";
-            this.avgPASSTimeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.avgPASSTimeDataGridViewTextBoxColumn.Name = "avgPASSTimeDataGridViewTextBoxColumn";
-            this.avgPASSTimeDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // totFailDataGridViewTextBoxColumn
-            // 
-            this.totFailDataGridViewTextBoxColumn.DataPropertyName = "TotFail";
-            this.totFailDataGridViewTextBoxColumn.HeaderText = "TotFail";
-            this.totFailDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.totFailDataGridViewTextBoxColumn.Name = "totFailDataGridViewTextBoxColumn";
-            this.totFailDataGridViewTextBoxColumn.Visible = false;
-            this.totFailDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // totHandleDataGridViewTextBoxColumn
-            // 
-            this.totHandleDataGridViewTextBoxColumn.DataPropertyName = "TotHandle";
-            this.totHandleDataGridViewTextBoxColumn.HeaderText = "TotHandle";
-            this.totHandleDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.totHandleDataGridViewTextBoxColumn.Name = "totHandleDataGridViewTextBoxColumn";
-            this.totHandleDataGridViewTextBoxColumn.Width = 60;
             // 
             // dailyMQSDataBindingSource
             // 
@@ -423,10 +306,10 @@
             // textBoxThandle
             // 
             this.textBoxThandle.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dailyMQSDataBindingSource, "TotHandle", true));
-            this.textBoxThandle.Location = new System.Drawing.Point(829, 153);
+            this.textBoxThandle.Location = new System.Drawing.Point(793, 153);
             this.textBoxThandle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxThandle.Name = "textBoxThandle";
-            this.textBoxThandle.Size = new System.Drawing.Size(112, 24);
+            this.textBoxThandle.Size = new System.Drawing.Size(80, 24);
             this.textBoxThandle.TabIndex = 38;
             this.textBoxThandle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxThandle.TextChanged += new System.EventHandler(this.textBoxThandle_TextChanged);
@@ -434,7 +317,7 @@
             // labelTHandle
             // 
             this.labelTHandle.AutoSize = true;
-            this.labelTHandle.Location = new System.Drawing.Point(733, 159);
+            this.labelTHandle.Location = new System.Drawing.Point(697, 159);
             this.labelTHandle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTHandle.Name = "labelTHandle";
             this.labelTHandle.Size = new System.Drawing.Size(84, 18);
@@ -447,7 +330,7 @@
             this.textBoxLocation.Location = new System.Drawing.Point(481, 155);
             this.textBoxLocation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxLocation.Name = "textBoxLocation";
-            this.textBoxLocation.Size = new System.Drawing.Size(236, 24);
+            this.textBoxLocation.Size = new System.Drawing.Size(210, 24);
             this.textBoxLocation.TabIndex = 36;
             this.textBoxLocation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -475,17 +358,17 @@
             // 
             // textBoxNPI
             // 
-            this.textBoxNPI.Location = new System.Drawing.Point(1307, 118);
+            this.textBoxNPI.Location = new System.Drawing.Point(1157, 118);
             this.textBoxNPI.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxNPI.Name = "textBoxNPI";
-            this.textBoxNPI.Size = new System.Drawing.Size(121, 24);
+            this.textBoxNPI.Size = new System.Drawing.Size(80, 24);
             this.textBoxNPI.TabIndex = 29;
             this.textBoxNPI.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // labelNPI
             // 
             this.labelNPI.AutoSize = true;
-            this.labelNPI.Location = new System.Drawing.Point(1208, 122);
+            this.labelNPI.Location = new System.Drawing.Point(1058, 122);
             this.labelNPI.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelNPI.Name = "labelNPI";
             this.labelNPI.Size = new System.Drawing.Size(73, 18);
@@ -494,17 +377,17 @@
             // 
             // textBoxMchTime
             // 
-            this.textBoxMchTime.Location = new System.Drawing.Point(1307, 87);
+            this.textBoxMchTime.Location = new System.Drawing.Point(1157, 87);
             this.textBoxMchTime.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxMchTime.Name = "textBoxMchTime";
-            this.textBoxMchTime.Size = new System.Drawing.Size(121, 24);
+            this.textBoxMchTime.Size = new System.Drawing.Size(80, 24);
             this.textBoxMchTime.TabIndex = 27;
             this.textBoxMchTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // labelMchTime
             // 
             this.labelMchTime.AutoSize = true;
-            this.labelMchTime.Location = new System.Drawing.Point(1208, 94);
+            this.labelMchTime.Location = new System.Drawing.Point(1058, 94);
             this.labelMchTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelMchTime.Name = "labelMchTime";
             this.labelMchTime.Size = new System.Drawing.Size(84, 18);
@@ -514,17 +397,17 @@
             // textBoxCsvFolder
             // 
             this.textBoxCsvFolder.Enabled = false;
-            this.textBoxCsvFolder.Location = new System.Drawing.Point(1056, 151);
+            this.textBoxCsvFolder.Location = new System.Drawing.Point(957, 156);
             this.textBoxCsvFolder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxCsvFolder.Name = "textBoxCsvFolder";
-            this.textBoxCsvFolder.Size = new System.Drawing.Size(372, 24);
+            this.textBoxCsvFolder.Size = new System.Drawing.Size(383, 24);
             this.textBoxCsvFolder.TabIndex = 24;
             this.textBoxCsvFolder.Text = "C:\\ProductDataMQS\\rawdata\\DailyMQSData.csv";
             // 
             // labelCsvFile
             // 
             this.labelCsvFile.AutoSize = true;
-            this.labelCsvFile.Location = new System.Drawing.Point(968, 159);
+            this.labelCsvFile.Location = new System.Drawing.Point(884, 159);
             this.labelCsvFile.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCsvFile.Name = "labelCsvFile";
             this.labelCsvFile.Size = new System.Drawing.Size(65, 18);
@@ -534,10 +417,10 @@
             // textBoxTTime
             // 
             this.textBoxTTime.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dailyMQSDataBindingSource, "AvgPASSTime", true));
-            this.textBoxTTime.Location = new System.Drawing.Point(1307, 54);
+            this.textBoxTTime.Location = new System.Drawing.Point(1157, 54);
             this.textBoxTTime.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxTTime.Name = "textBoxTTime";
-            this.textBoxTTime.Size = new System.Drawing.Size(121, 24);
+            this.textBoxTTime.Size = new System.Drawing.Size(80, 24);
             this.textBoxTTime.TabIndex = 19;
             this.textBoxTTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxTTime.TextChanged += new System.EventHandler(this.textBoxTTime_TextChanged);
@@ -545,7 +428,7 @@
             // labelTestTime
             // 
             this.labelTestTime.AutoSize = true;
-            this.labelTestTime.Location = new System.Drawing.Point(1208, 63);
+            this.labelTestTime.Location = new System.Drawing.Point(1058, 63);
             this.labelTestTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTestTime.Name = "labelTestTime";
             this.labelTestTime.Size = new System.Drawing.Size(78, 18);
@@ -555,17 +438,17 @@
             // textBoxTYield
             // 
             this.textBoxTYield.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dailyMQSDataBindingSource, "TotYield", true));
-            this.textBoxTYield.Location = new System.Drawing.Point(1056, 54);
+            this.textBoxTYield.Location = new System.Drawing.Point(972, 54);
             this.textBoxTYield.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxTYield.Name = "textBoxTYield";
-            this.textBoxTYield.Size = new System.Drawing.Size(112, 24);
+            this.textBoxTYield.Size = new System.Drawing.Size(80, 24);
             this.textBoxTYield.TabIndex = 17;
             this.textBoxTYield.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // labelTotalYield
             // 
             this.labelTotalYield.AutoSize = true;
-            this.labelTotalYield.Location = new System.Drawing.Point(968, 63);
+            this.labelTotalYield.Location = new System.Drawing.Point(884, 63);
             this.labelTotalYield.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTotalYield.Name = "labelTotalYield";
             this.labelTotalYield.Size = new System.Drawing.Size(80, 18);
@@ -575,17 +458,17 @@
             // textBoxTFail
             // 
             this.textBoxTFail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dailyMQSDataBindingSource, "TotFail", true));
-            this.textBoxTFail.Location = new System.Drawing.Point(1056, 118);
+            this.textBoxTFail.Location = new System.Drawing.Point(972, 118);
             this.textBoxTFail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxTFail.Name = "textBoxTFail";
-            this.textBoxTFail.Size = new System.Drawing.Size(112, 24);
+            this.textBoxTFail.Size = new System.Drawing.Size(80, 24);
             this.textBoxTFail.TabIndex = 15;
             this.textBoxTFail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // labelTotalFail
             // 
             this.labelTotalFail.AutoSize = true;
-            this.labelTotalFail.Location = new System.Drawing.Point(968, 127);
+            this.labelTotalFail.Location = new System.Drawing.Point(884, 127);
             this.labelTotalFail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTotalFail.Name = "labelTotalFail";
             this.labelTotalFail.Size = new System.Drawing.Size(72, 18);
@@ -595,17 +478,17 @@
             // textBoxTPass
             // 
             this.textBoxTPass.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dailyMQSDataBindingSource, "TotPass", true));
-            this.textBoxTPass.Location = new System.Drawing.Point(1056, 86);
+            this.textBoxTPass.Location = new System.Drawing.Point(972, 86);
             this.textBoxTPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxTPass.Name = "textBoxTPass";
-            this.textBoxTPass.Size = new System.Drawing.Size(112, 24);
+            this.textBoxTPass.Size = new System.Drawing.Size(80, 24);
             this.textBoxTPass.TabIndex = 13;
             this.textBoxTPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // labelTotalPass
             // 
             this.labelTotalPass.AutoSize = true;
-            this.labelTotalPass.Location = new System.Drawing.Point(968, 95);
+            this.labelTotalPass.Location = new System.Drawing.Point(884, 95);
             this.labelTotalPass.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTotalPass.Name = "labelTotalPass";
             this.labelTotalPass.Size = new System.Drawing.Size(83, 18);
@@ -615,10 +498,10 @@
             // textBoxPYield
             // 
             this.textBoxPYield.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dailyMQSDataBindingSource, "PYield", true));
-            this.textBoxPYield.Location = new System.Drawing.Point(829, 54);
+            this.textBoxPYield.Location = new System.Drawing.Point(793, 54);
             this.textBoxPYield.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxPYield.Name = "textBoxPYield";
-            this.textBoxPYield.Size = new System.Drawing.Size(112, 24);
+            this.textBoxPYield.Size = new System.Drawing.Size(80, 24);
             this.textBoxPYield.TabIndex = 11;
             this.textBoxPYield.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxPYield.TextChanged += new System.EventHandler(this.textBoxPYield_TextChanged);
@@ -626,7 +509,7 @@
             // labelPYield
             // 
             this.labelPYield.AutoSize = true;
-            this.labelPYield.Location = new System.Drawing.Point(733, 63);
+            this.labelPYield.Location = new System.Drawing.Point(697, 63);
             this.labelPYield.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPYield.Name = "labelPYield";
             this.labelPYield.Size = new System.Drawing.Size(53, 18);
@@ -636,17 +519,17 @@
             // textBoxPrimeFail
             // 
             this.textBoxPrimeFail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dailyMQSDataBindingSource, "PrimeFail", true));
-            this.textBoxPrimeFail.Location = new System.Drawing.Point(829, 118);
+            this.textBoxPrimeFail.Location = new System.Drawing.Point(793, 118);
             this.textBoxPrimeFail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxPrimeFail.Name = "textBoxPrimeFail";
-            this.textBoxPrimeFail.Size = new System.Drawing.Size(112, 24);
+            this.textBoxPrimeFail.Size = new System.Drawing.Size(80, 24);
             this.textBoxPrimeFail.TabIndex = 9;
             this.textBoxPrimeFail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // labelPrimeFail
             // 
             this.labelPrimeFail.AutoSize = true;
-            this.labelPrimeFail.Location = new System.Drawing.Point(733, 127);
+            this.labelPrimeFail.Location = new System.Drawing.Point(697, 127);
             this.labelPrimeFail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPrimeFail.Name = "labelPrimeFail";
             this.labelPrimeFail.Size = new System.Drawing.Size(78, 18);
@@ -656,17 +539,17 @@
             // textBoxPrimePass
             // 
             this.textBoxPrimePass.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dailyMQSDataBindingSource, "PrimePass", true));
-            this.textBoxPrimePass.Location = new System.Drawing.Point(829, 86);
+            this.textBoxPrimePass.Location = new System.Drawing.Point(793, 86);
             this.textBoxPrimePass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxPrimePass.Name = "textBoxPrimePass";
-            this.textBoxPrimePass.Size = new System.Drawing.Size(112, 24);
+            this.textBoxPrimePass.Size = new System.Drawing.Size(80, 24);
             this.textBoxPrimePass.TabIndex = 7;
             this.textBoxPrimePass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // labelPrimePass
             // 
             this.labelPrimePass.AutoSize = true;
-            this.labelPrimePass.Location = new System.Drawing.Point(733, 95);
+            this.labelPrimePass.Location = new System.Drawing.Point(697, 95);
             this.labelPrimePass.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPrimePass.Name = "labelPrimePass";
             this.labelPrimePass.Size = new System.Drawing.Size(89, 18);
@@ -679,7 +562,7 @@
             this.textBoxProcess.Location = new System.Drawing.Point(481, 86);
             this.textBoxProcess.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxProcess.Name = "textBoxProcess";
-            this.textBoxProcess.Size = new System.Drawing.Size(236, 24);
+            this.textBoxProcess.Size = new System.Drawing.Size(210, 24);
             this.textBoxProcess.TabIndex = 5;
             this.textBoxProcess.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxProcess.TextChanged += new System.EventHandler(this.textBoxProcess_TextChanged);
@@ -700,7 +583,7 @@
             this.textBoxFamily.Location = new System.Drawing.Point(481, 54);
             this.textBoxFamily.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxFamily.Name = "textBoxFamily";
-            this.textBoxFamily.Size = new System.Drawing.Size(236, 24);
+            this.textBoxFamily.Size = new System.Drawing.Size(210, 24);
             this.textBoxFamily.TabIndex = 3;
             this.textBoxFamily.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxFamily.TextChanged += new System.EventHandler(this.textBoxFamily_TextChanged);
@@ -721,7 +604,7 @@
             this.textBoxProductName.Location = new System.Drawing.Point(481, 119);
             this.textBoxProductName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxProductName.Name = "textBoxProductName";
-            this.textBoxProductName.Size = new System.Drawing.Size(236, 24);
+            this.textBoxProductName.Size = new System.Drawing.Size(210, 24);
             this.textBoxProductName.TabIndex = 1;
             this.textBoxProductName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -868,7 +751,7 @@
             // 
             // buttonRefresh
             // 
-            this.buttonRefresh.Location = new System.Drawing.Point(832, 209);
+            this.buttonRefresh.Location = new System.Drawing.Point(1017, 211);
             this.buttonRefresh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonRefresh.Name = "buttonRefresh";
             this.buttonRefresh.Size = new System.Drawing.Size(169, 26);
@@ -883,11 +766,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.buttonUpdateToDb);
             this.groupBox3.Controls.Add(this.comboBoxListToADDdb);
-            this.groupBox3.Location = new System.Drawing.Point(1028, 692);
+            this.groupBox3.Location = new System.Drawing.Point(1194, 692);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox3.Size = new System.Drawing.Size(783, 123);
+            this.groupBox3.Size = new System.Drawing.Size(617, 123);
             this.groupBox3.TabIndex = 42;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Insert To DB";
@@ -899,10 +782,10 @@
             this.buttonUpdateToDb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.buttonUpdateToDb.Enabled = false;
             this.buttonUpdateToDb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.buttonUpdateToDb.Location = new System.Drawing.Point(303, 58);
+            this.buttonUpdateToDb.Location = new System.Drawing.Point(167, 58);
             this.buttonUpdateToDb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonUpdateToDb.Name = "buttonUpdateToDb";
-            this.buttonUpdateToDb.Size = new System.Drawing.Size(184, 55);
+            this.buttonUpdateToDb.Size = new System.Drawing.Size(284, 42);
             this.buttonUpdateToDb.TabIndex = 33;
             this.buttonUpdateToDb.Text = "Update To DB";
             this.buttonUpdateToDb.UseVisualStyleBackColor = false;
@@ -917,7 +800,7 @@
             this.comboBoxListToADDdb.Location = new System.Drawing.Point(20, 23);
             this.comboBoxListToADDdb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBoxListToADDdb.Name = "comboBoxListToADDdb";
-            this.comboBoxListToADDdb.Size = new System.Drawing.Size(753, 24);
+            this.comboBoxListToADDdb.Size = new System.Drawing.Size(587, 24);
             this.comboBoxListToADDdb.TabIndex = 32;
             // 
             // richTextBoxCompare
@@ -926,10 +809,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBoxCompare.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBoxCompare.Location = new System.Drawing.Point(1028, 262);
+            this.richTextBoxCompare.Location = new System.Drawing.Point(1194, 262);
             this.richTextBoxCompare.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.richTextBoxCompare.Name = "richTextBoxCompare";
-            this.richTextBoxCompare.Size = new System.Drawing.Size(781, 420);
+            this.richTextBoxCompare.Size = new System.Drawing.Size(615, 420);
             this.richTextBoxCompare.TabIndex = 41;
             this.richTextBoxCompare.Text = "";
             // 
@@ -951,7 +834,7 @@
             // 
             // textBoxFilterCount
             // 
-            this.textBoxFilterCount.Location = new System.Drawing.Point(1639, 230);
+            this.textBoxFilterCount.Location = new System.Drawing.Point(1756, 230);
             this.textBoxFilterCount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxFilterCount.Name = "textBoxFilterCount";
             this.textBoxFilterCount.Size = new System.Drawing.Size(37, 22);
@@ -961,7 +844,7 @@
             // labelFilterCount
             // 
             this.labelFilterCount.AutoSize = true;
-            this.labelFilterCount.Location = new System.Drawing.Point(1548, 239);
+            this.labelFilterCount.Location = new System.Drawing.Point(1665, 239);
             this.labelFilterCount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelFilterCount.Name = "labelFilterCount";
             this.labelFilterCount.Size = new System.Drawing.Size(76, 16);
@@ -970,7 +853,7 @@
             // 
             // textBoxFilterValue
             // 
-            this.textBoxFilterValue.Location = new System.Drawing.Point(1481, 230);
+            this.textBoxFilterValue.Location = new System.Drawing.Point(1598, 230);
             this.textBoxFilterValue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxFilterValue.Name = "textBoxFilterValue";
             this.textBoxFilterValue.Size = new System.Drawing.Size(37, 22);
@@ -982,7 +865,7 @@
             // labelCriteria
             // 
             this.labelCriteria.AutoSize = true;
-            this.labelCriteria.Location = new System.Drawing.Point(1313, 239);
+            this.labelCriteria.Location = new System.Drawing.Point(1430, 239);
             this.labelCriteria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCriteria.Name = "labelCriteria";
             this.labelCriteria.Size = new System.Drawing.Size(154, 16);
@@ -992,18 +875,18 @@
             // labelStatusCompare
             // 
             this.labelStatusCompare.AutoSize = true;
-            this.labelStatusCompare.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStatusCompare.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelStatusCompare.ForeColor = System.Drawing.Color.Teal;
-            this.labelStatusCompare.Location = new System.Drawing.Point(1281, 206);
+            this.labelStatusCompare.Location = new System.Drawing.Point(1436, 212);
             this.labelStatusCompare.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelStatusCompare.Name = "labelStatusCompare";
-            this.labelStatusCompare.Size = new System.Drawing.Size(0, 20);
+            this.labelStatusCompare.Size = new System.Drawing.Size(0, 18);
             this.labelStatusCompare.TabIndex = 33;
             // 
             // buttonCompareAvg
             // 
             this.buttonCompareAvg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCompareAvg.Location = new System.Drawing.Point(1028, 210);
+            this.buttonCompareAvg.Location = new System.Drawing.Point(1194, 211);
             this.buttonCompareAvg.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonCompareAvg.Name = "buttonCompareAvg";
             this.buttonCompareAvg.Size = new System.Drawing.Size(228, 44);
@@ -1143,6 +1026,135 @@
             // 
             this.dailyMQSDataTableAdapter.ClearBeforeFill = true;
             // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.Visible = false;
+            this.iDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // locationDataGridViewTextBoxColumn
+            // 
+            this.locationDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.locationDataGridViewTextBoxColumn.DataPropertyName = "Location";
+            this.locationDataGridViewTextBoxColumn.HeaderText = "Location";
+            this.locationDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.locationDataGridViewTextBoxColumn.Name = "locationDataGridViewTextBoxColumn";
+            this.locationDataGridViewTextBoxColumn.Width = 87;
+            // 
+            // familyDataGridViewTextBoxColumn
+            // 
+            this.familyDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.familyDataGridViewTextBoxColumn.DataPropertyName = "Family";
+            this.familyDataGridViewTextBoxColumn.HeaderText = "Family";
+            this.familyDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.familyDataGridViewTextBoxColumn.Name = "familyDataGridViewTextBoxColumn";
+            this.familyDataGridViewTextBoxColumn.Width = 76;
+            // 
+            // processDataGridViewTextBoxColumn
+            // 
+            this.processDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.processDataGridViewTextBoxColumn.DataPropertyName = "Process";
+            this.processDataGridViewTextBoxColumn.HeaderText = "Process";
+            this.processDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.processDataGridViewTextBoxColumn.Name = "processDataGridViewTextBoxColumn";
+            this.processDataGridViewTextBoxColumn.Width = 86;
+            // 
+            // technologyDataGridViewTextBoxColumn
+            // 
+            this.technologyDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.technologyDataGridViewTextBoxColumn.DataPropertyName = "Technology";
+            this.technologyDataGridViewTextBoxColumn.HeaderText = "Technology";
+            this.technologyDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.technologyDataGridViewTextBoxColumn.Name = "technologyDataGridViewTextBoxColumn";
+            this.technologyDataGridViewTextBoxColumn.Width = 108;
+            // 
+            // pYieldDataGridViewTextBoxColumn
+            // 
+            this.pYieldDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.pYieldDataGridViewTextBoxColumn.DataPropertyName = "PYield";
+            this.pYieldDataGridViewTextBoxColumn.HeaderText = "PYield";
+            this.pYieldDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.pYieldDataGridViewTextBoxColumn.Name = "pYieldDataGridViewTextBoxColumn";
+            this.pYieldDataGridViewTextBoxColumn.Width = 76;
+            // 
+            // primePassDataGridViewTextBoxColumn
+            // 
+            this.primePassDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.primePassDataGridViewTextBoxColumn.DataPropertyName = "PrimePass";
+            this.primePassDataGridViewTextBoxColumn.HeaderText = "PrimePass";
+            this.primePassDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.primePassDataGridViewTextBoxColumn.Name = "primePassDataGridViewTextBoxColumn";
+            this.primePassDataGridViewTextBoxColumn.Width = 102;
+            // 
+            // primeFailDataGridViewTextBoxColumn
+            // 
+            this.primeFailDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.primeFailDataGridViewTextBoxColumn.DataPropertyName = "PrimeFail";
+            this.primeFailDataGridViewTextBoxColumn.HeaderText = "PrimeFail";
+            this.primeFailDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.primeFailDataGridViewTextBoxColumn.Name = "primeFailDataGridViewTextBoxColumn";
+            this.primeFailDataGridViewTextBoxColumn.Width = 93;
+            // 
+            // primeHandleDataGridViewTextBoxColumn
+            // 
+            this.primeHandleDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.primeHandleDataGridViewTextBoxColumn.DataPropertyName = "PrimeHandle";
+            this.primeHandleDataGridViewTextBoxColumn.HeaderText = "PrimeHandle";
+            this.primeHandleDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.primeHandleDataGridViewTextBoxColumn.Name = "primeHandleDataGridViewTextBoxColumn";
+            this.primeHandleDataGridViewTextBoxColumn.Visible = false;
+            this.primeHandleDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // totYieldDataGridViewTextBoxColumn
+            // 
+            this.totYieldDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.totYieldDataGridViewTextBoxColumn.DataPropertyName = "TotYield";
+            this.totYieldDataGridViewTextBoxColumn.HeaderText = "TotYield";
+            this.totYieldDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.totYieldDataGridViewTextBoxColumn.Name = "totYieldDataGridViewTextBoxColumn";
+            this.totYieldDataGridViewTextBoxColumn.Visible = false;
+            this.totYieldDataGridViewTextBoxColumn.Width = 87;
+            // 
+            // totPassDataGridViewTextBoxColumn
+            // 
+            this.totPassDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.totPassDataGridViewTextBoxColumn.DataPropertyName = "TotPass";
+            this.totPassDataGridViewTextBoxColumn.HeaderText = "TotPass";
+            this.totPassDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.totPassDataGridViewTextBoxColumn.Name = "totPassDataGridViewTextBoxColumn";
+            this.totPassDataGridViewTextBoxColumn.Visible = false;
+            this.totPassDataGridViewTextBoxColumn.Width = 87;
+            // 
+            // avgPASSTimeDataGridViewTextBoxColumn
+            // 
+            this.avgPASSTimeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.avgPASSTimeDataGridViewTextBoxColumn.DataPropertyName = "AvgPASSTime";
+            this.avgPASSTimeDataGridViewTextBoxColumn.HeaderText = "AvgPASSTime";
+            this.avgPASSTimeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.avgPASSTimeDataGridViewTextBoxColumn.Name = "avgPASSTimeDataGridViewTextBoxColumn";
+            this.avgPASSTimeDataGridViewTextBoxColumn.Width = 127;
+            // 
+            // totFailDataGridViewTextBoxColumn
+            // 
+            this.totFailDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.totFailDataGridViewTextBoxColumn.DataPropertyName = "TotFail";
+            this.totFailDataGridViewTextBoxColumn.HeaderText = "TotFail";
+            this.totFailDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.totFailDataGridViewTextBoxColumn.Name = "totFailDataGridViewTextBoxColumn";
+            this.totFailDataGridViewTextBoxColumn.Visible = false;
+            this.totFailDataGridViewTextBoxColumn.Width = 78;
+            // 
+            // totHandleDataGridViewTextBoxColumn
+            // 
+            this.totHandleDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.totHandleDataGridViewTextBoxColumn.DataPropertyName = "TotHandle";
+            this.totHandleDataGridViewTextBoxColumn.HeaderText = "TotHandle";
+            this.totHandleDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.totHandleDataGridViewTextBoxColumn.Name = "totHandleDataGridViewTextBoxColumn";
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1249,6 +1261,14 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelLoginSetting;
         public System.Windows.Forms.Label labelUserLogin;
+        private System.Windows.Forms.TextBox textBoxConfirmPassword;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        public System.Windows.Forms.ComboBox comboBoxListToADDdb;
+        public System.Windows.Forms.Button buttonUpdateToDb;
+        private System.Windows.Forms.GroupBox groupBox4;
+        public System.Windows.Forms.CheckBox checkBoxEdit;
+        private System.Windows.Forms.Button buttonRefresh;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn locationDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn familyDataGridViewTextBoxColumn;
@@ -1263,14 +1283,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn avgPASSTimeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn totFailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn totHandleDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TextBox textBoxConfirmPassword;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.GroupBox groupBox3;
-        public System.Windows.Forms.ComboBox comboBoxListToADDdb;
-        public System.Windows.Forms.Button buttonUpdateToDb;
-        private System.Windows.Forms.GroupBox groupBox4;
-        public System.Windows.Forms.CheckBox checkBoxEdit;
-        private System.Windows.Forms.Button buttonRefresh;
     }
 }
 
