@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace ProductsDataMQS
 {
-    public partial class FormMain : Form
+    public partial class FormMain : MetroFramework.Forms.MetroForm
     {
         public static string errorDBMessage = "Não foi possivel conectar com o Banco de Dados! : ";
         public static string successDBMessage = "Data updated successfully!!";
