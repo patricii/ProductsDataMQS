@@ -49,7 +49,7 @@ namespace ProductsDataMQS
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Não foi possivel conectar ao Banco de Dados!!! error: " + ex.Message);
+                MessageBox.Show("Não foi possivel conectar ao Banco de Dados!!! error: " + ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         private DataTable GetDataTableFromDGV(DataGridView dgv)
@@ -103,7 +103,7 @@ namespace ProductsDataMQS
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(errorDBMessage + ex.Message);
+                        MessageBox.Show(errorDBMessage + ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 else if (dialogResult == DialogResult.No)
@@ -177,7 +177,7 @@ namespace ProductsDataMQS
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Não foi possivel adicionar os valores de tempo de teste do comparador!!! error: " + ex.Message);
+                MessageBox.Show("Não foi possivel adicionar os valores de tempo de teste do comparador!!! error: " + ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         private void initializeFields()
@@ -207,7 +207,7 @@ namespace ProductsDataMQS
             }
             catch (Exception ex)
             {
-                MessageBox.Show(errorDBMessage + ex.Message);
+                MessageBox.Show(errorDBMessage + ex.Message,"Warning",MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         private void setField()
@@ -460,7 +460,7 @@ namespace ProductsDataMQS
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Não foi possivel conectar ao banco de dados!!! Error: " + ex.Message);
+                MessageBox.Show("Não foi possivel conectar ao banco de dados!!! Error: " + ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

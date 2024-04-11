@@ -109,7 +109,7 @@ namespace ProductsDataMQS
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Não foi possivél comparar os tempos de teste!!! error: " + ex.Message);
+                    MessageBox.Show("Não foi possivél comparar os tempos de teste!!! error: " + ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
         }
