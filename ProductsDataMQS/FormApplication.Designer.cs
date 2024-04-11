@@ -336,7 +336,7 @@
             this.groupBoxProductData.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxProductData.Location = new System.Drawing.Point(6, 6);
             this.groupBoxProductData.Name = "groupBoxProductData";
-            this.groupBoxProductData.Size = new System.Drawing.Size(1099, 157);
+            this.groupBoxProductData.Size = new System.Drawing.Size(1023, 157);
             this.groupBoxProductData.TabIndex = 1;
             this.groupBoxProductData.TabStop = false;
             this.groupBoxProductData.Text = "Product Infos";
@@ -730,7 +730,7 @@
             this.buttonInsertDB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.buttonInsertDB.Enabled = false;
             this.buttonInsertDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonInsertDB.Location = new System.Drawing.Point(67, 113);
+            this.buttonInsertDB.Location = new System.Drawing.Point(103, 111);
             this.buttonInsertDB.Name = "buttonInsertDB";
             this.buttonInsertDB.Size = new System.Drawing.Size(138, 36);
             this.buttonInsertDB.TabIndex = 31;
@@ -754,7 +754,7 @@
             this.buttonUpdate.BackColor = System.Drawing.Color.Teal;
             this.buttonUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonUpdate.ForeColor = System.Drawing.Color.White;
-            this.buttonUpdate.Location = new System.Drawing.Point(45, 19);
+            this.buttonUpdate.Location = new System.Drawing.Point(83, 19);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(169, 63);
             this.buttonUpdate.TabIndex = 22;
@@ -842,7 +842,7 @@
             this.groupBox3.Controls.Add(this.comboBoxListToADDdb);
             this.groupBox3.Location = new System.Drawing.Point(896, 562);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(463, 100);
+            this.groupBox3.Size = new System.Drawing.Size(463, 110);
             this.groupBox3.TabIndex = 42;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Insert To DB";
@@ -853,7 +853,7 @@
             this.buttonUpdateToDb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.buttonUpdateToDb.Enabled = false;
             this.buttonUpdateToDb.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUpdateToDb.Location = new System.Drawing.Point(125, 47);
+            this.buttonUpdateToDb.Location = new System.Drawing.Point(139, 58);
             this.buttonUpdateToDb.Name = "buttonUpdateToDb";
             this.buttonUpdateToDb.Size = new System.Drawing.Size(213, 34);
             this.buttonUpdateToDb.TabIndex = 33;
@@ -890,9 +890,9 @@
             this.groupBox1.Controls.Add(this.buttonUpdate);
             this.groupBox1.Controls.Add(this.buttonInsertDB);
             this.groupBox1.Controls.Add(this.labelUpdate);
-            this.groupBox1.Location = new System.Drawing.Point(1111, 6);
+            this.groupBox1.Location = new System.Drawing.Point(1035, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(237, 157);
+            this.groupBox1.Size = new System.Drawing.Size(313, 157);
             this.groupBox1.TabIndex = 40;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Query";
