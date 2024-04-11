@@ -99,11 +99,18 @@ namespace ProductsDataMQS
             using (var installedTable = new DataTable())
             using (var baselineTable = new DataTable())
             {
-                installedDBAdapter.Fill(installedTable);
-                baselineDBAdapter.Fill(baselineTable);
+                try
+                {
+                    installedDBAdapter.Fill(installedTable);
+                    baselineDBAdapter.Fill(baselineTable);
 
-                int[] columnsToCompare = new int[] { 0, 1, 2, 3 };
-                CompareTables(installedTable, baselineTable, columnsToCompare);
+                    int[] columnsToCompare = new int[] { 0, 1, 2, 3 };
+                    CompareTables(installedTable, baselineTable, columnsToCompare);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Não foi possivél comparar os tempos de teste!!! error: " + ex.Message);
+                }
             }
         }
 

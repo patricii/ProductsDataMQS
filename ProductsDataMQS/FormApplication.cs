@@ -43,7 +43,14 @@ namespace ProductsDataMQS
         }
         private void FormMain_Load(object sender, EventArgs e)
         {
-            dailyMQSDataTableAdapter.Fill(mQSRequestDatabaseDataSet.DailyMQSData);
+            try
+            {
+                dailyMQSDataTableAdapter.Fill(mQSRequestDatabaseDataSet.DailyMQSData);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Não foi possivel conectar ao Banco de Dados!!! error: " + ex.Message);
+            }
         }
         private DataTable GetDataTableFromDGV(DataGridView dgv)
         {
@@ -161,10 +168,17 @@ namespace ProductsDataMQS
         {
             comboBoxListToADDdb.Text = "";
             comboBoxListToADDdb.Items.Clear();
-            richTextBoxCompare.Lines.ToList()
-            .GetRange(0, richTextBoxCompare.Lines.Count() - 1)
-            .Where(line => line.Contains("NEW")).ToList()
-            .ForEach(validLine => comboBoxListToADDdb.Items.Add(validLine));
+            try
+            {
+                richTextBoxCompare.Lines.ToList()
+                .GetRange(0, richTextBoxCompare.Lines.Count() - 1)
+                .Where(line => line.Contains("NEW")).ToList()
+                .ForEach(validLine => comboBoxListToADDdb.Items.Add(validLine));
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Não foi possivel adicionar os valores de tempo de teste do comparador!!! error: " + ex.Message);
+            }
         }
         private void initializeFields()
         {
@@ -446,7 +460,7 @@ namespace ProductsDataMQS
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Não foi possivel conectar ao banco de dados!!! Error: " + ex.Message);
             }
         }
     }
