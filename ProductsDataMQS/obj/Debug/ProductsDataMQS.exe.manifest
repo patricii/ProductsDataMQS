@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProductsDataMQS.exe" size="462760">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProductsDataMQS.exe" size="461224">
       <assemblyIdentity name="ProductsDataMQS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>tDu4VUj/Ox1Gj99/ccFUMUtCJx/d0L2pzPCm6UlMqoM=</dsig:DigestValue>
+        <dsig:DigestValue>TxvfKl8LmGBC8P9cvlY6Gn8q/CydfCRjM0tK706ZcZ8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -27,4 +27,3 @@ C:\Development_Projects\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQ
 C:\Development_Projects\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQS.exe
 C:\Development_Projects\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQS.pdb
 C:\Development_Projects\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQS.csproj.CopyComplete
-C:\DEVELOPMENT PROJECTS\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQS.csprojAssemblyReference.cache
