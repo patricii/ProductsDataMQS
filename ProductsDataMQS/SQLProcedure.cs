@@ -10,7 +10,7 @@ namespace ProductsDataMQS
 {
     class SQLProcedure
     {
-        
+
         public static string dbConnection = Properties.Settings.Default.MQSRequestDatabaseConnectionString;
         public void dataTableToMdb(DataTable dataTable, string tableName)
         {
@@ -62,7 +62,7 @@ namespace ProductsDataMQS
 
                 return persistData;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
@@ -202,7 +202,7 @@ namespace ProductsDataMQS
                                     result = avgTTOld - avgTTNew;
                                     if (result < 0)
                                         result = result * -1;
-                                    if (!table1.Rows[i_rowIndex][colIndex - 1].ToString().Contains("CAL") && !table1.Rows[i_rowIndex][colIndex - 1].ToString().Contains("NORM") && !table1.Rows[i_rowIndex][colIndex - 1].ToString().Contains("BACKFLASH"))
+                                    if (!table1.Rows[i_rowIndex][colIndex - 1].ToString().Contains("NCAL") && !table1.Rows[i_rowIndex][colIndex - 1].ToString().Contains("_CAL") && !table1.Rows[i_rowIndex][colIndex - 1].ToString().Contains("NORM") && !table1.Rows[i_rowIndex][colIndex - 1].ToString().Contains("BACKFLASH"))
                                     {
                                         if (result >= filterValue)
                                         {
@@ -222,7 +222,11 @@ namespace ProductsDataMQS
                                 Application.DoEvents();
 
                         }
-                        catch { }
+                        catch (Exception ex)
+                        {
+                            string debugMessage = ex.Message;
+
+                        }
                     }
                 }
             }
