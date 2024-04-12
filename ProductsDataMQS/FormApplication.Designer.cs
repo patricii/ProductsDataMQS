@@ -119,6 +119,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.labelLoginSetting = new System.Windows.Forms.Label();
             this.dailyMQSDataTableAdapter = new ProductsDataMQS.MQSRequestDatabaseDataSetTableAdapters.DailyMQSDataTableAdapter();
+            this.comboBoxProductsFilter = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMQS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dailyMQSDataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mQSRequestDatabaseDataSet)).BeginInit();
@@ -853,6 +854,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.comboBoxProductsFilter);
             this.tabPage1.Controls.Add(this.groupBox4);
             this.tabPage1.Controls.Add(this.buttonRefresh);
             this.tabPage1.Controls.Add(this.labelUpdate);
@@ -939,10 +941,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBoxCompare.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBoxCompare.Location = new System.Drawing.Point(1195, 262);
+            this.richTextBoxCompare.Location = new System.Drawing.Point(1195, 289);
             this.richTextBoxCompare.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.richTextBoxCompare.Name = "richTextBoxCompare";
-            this.richTextBoxCompare.Size = new System.Drawing.Size(615, 420);
+            this.richTextBoxCompare.Size = new System.Drawing.Size(615, 393);
             this.richTextBoxCompare.TabIndex = 41;
             this.richTextBoxCompare.Text = "";
             // 
@@ -962,7 +964,7 @@
             // 
             // textBoxFilterCount
             // 
-            this.textBoxFilterCount.Location = new System.Drawing.Point(1756, 230);
+            this.textBoxFilterCount.Location = new System.Drawing.Point(1745, 264);
             this.textBoxFilterCount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxFilterCount.Name = "textBoxFilterCount";
             this.textBoxFilterCount.Size = new System.Drawing.Size(37, 22);
@@ -972,7 +974,7 @@
             // labelFilterCount
             // 
             this.labelFilterCount.AutoSize = true;
-            this.labelFilterCount.Location = new System.Drawing.Point(1665, 239);
+            this.labelFilterCount.Location = new System.Drawing.Point(1661, 270);
             this.labelFilterCount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelFilterCount.Name = "labelFilterCount";
             this.labelFilterCount.Size = new System.Drawing.Size(76, 16);
@@ -981,7 +983,7 @@
             // 
             // textBoxFilterValue
             // 
-            this.textBoxFilterValue.Location = new System.Drawing.Point(1597, 230);
+            this.textBoxFilterValue.Location = new System.Drawing.Point(1616, 264);
             this.textBoxFilterValue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxFilterValue.Name = "textBoxFilterValue";
             this.textBoxFilterValue.Size = new System.Drawing.Size(37, 22);
@@ -993,7 +995,7 @@
             // labelCriteria
             // 
             this.labelCriteria.AutoSize = true;
-            this.labelCriteria.Location = new System.Drawing.Point(1429, 239);
+            this.labelCriteria.Location = new System.Drawing.Point(1454, 270);
             this.labelCriteria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCriteria.Name = "labelCriteria";
             this.labelCriteria.Size = new System.Drawing.Size(154, 16);
@@ -1005,7 +1007,7 @@
             this.labelStatusCompare.AutoSize = true;
             this.labelStatusCompare.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelStatusCompare.ForeColor = System.Drawing.Color.Teal;
-            this.labelStatusCompare.Location = new System.Drawing.Point(1436, 212);
+            this.labelStatusCompare.Location = new System.Drawing.Point(1429, 214);
             this.labelStatusCompare.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelStatusCompare.Name = "labelStatusCompare";
             this.labelStatusCompare.Size = new System.Drawing.Size(0, 18);
@@ -1014,7 +1016,7 @@
             // buttonCompareAvg
             // 
             this.buttonCompareAvg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCompareAvg.Location = new System.Drawing.Point(1195, 210);
+            this.buttonCompareAvg.Location = new System.Drawing.Point(1193, 211);
             this.buttonCompareAvg.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonCompareAvg.Name = "buttonCompareAvg";
             this.buttonCompareAvg.Size = new System.Drawing.Size(228, 44);
@@ -1154,6 +1156,15 @@
             // 
             this.dailyMQSDataTableAdapter.ClearBeforeFill = true;
             // 
+            // comboBoxProductsFilter
+            // 
+            this.comboBoxProductsFilter.FormattingEnabled = true;
+            this.comboBoxProductsFilter.Location = new System.Drawing.Point(1193, 262);
+            this.comboBoxProductsFilter.Name = "comboBoxProductsFilter";
+            this.comboBoxProductsFilter.Size = new System.Drawing.Size(254, 24);
+            this.comboBoxProductsFilter.TabIndex = 45;
+            this.comboBoxProductsFilter.SelectedIndexChanged += new System.EventHandler(this.comboBoxProductsFilter_SelectedIndexChanged);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1280,6 +1291,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn avgPASSTimeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn totFailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn totHandleDataGridViewTextBoxColumn;
+        public System.Windows.Forms.ComboBox comboBoxProductsFilter;
     }
 }
 

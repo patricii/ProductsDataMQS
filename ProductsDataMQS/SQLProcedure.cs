@@ -5,6 +5,7 @@ using System.Data.OleDb;
 using System.Drawing;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ProductsDataMQS
 {
@@ -176,6 +177,19 @@ namespace ProductsDataMQS
             }
 
         }
+        private void clearComboItems(System.Windows.Forms.ComboBox comb)
+        {
+            List<object> list = new List<object>();
+            foreach (object o in comb.Items)
+            {
+                if (!list.Contains(o))
+                {
+                    list.Add(o);
+                }
+            }
+            comb.Items.Clear();
+            comb.Items.AddRange(list.ToArray());
+        }
         private void CompareTables(DataTable table1, DataTable table2, IEnumerable<int> columnsToCompare)
         {
             FormMain frm = FormMain.getInstance();
@@ -207,14 +221,30 @@ namespace ProductsDataMQS
                                         if (result >= filterValue)
                                         {
                                             string temp = ">>Product: " + table1.Rows[i_rowIndex][colIndex - 2].ToString() + "-Process: " + table1.Rows[i_rowIndex][colIndex - 1].ToString() + "-[OLD AvgTestTime: " + table1.Rows[i_rowIndex][colIndex].ToString() + "s" + "]-TotHandle:" + table1.Rows[i_rowIndex][colIndex + 1].ToString() + "<<" + Environment.NewLine + ">>Product: " + table2.Rows[j_rowIndex][colIndex - 2].ToString() + "-Process: " + table2.Rows[j_rowIndex][colIndex - 1].ToString() + "-[NEW AvgTestTime:" + table2.Rows[j_rowIndex][colIndex].ToString() + "s" + "]-TotHandle:" + table2.Rows[i_rowIndex][colIndex + 1].ToString() + "<<" + Environment.NewLine + Environment.NewLine;
-                                            frm.richTextBoxCompare.Text += temp;
-                                            countCompareOut++;
+
+                                            if (frm.comboBoxProductsFilter.Text == "")
+                                            {
+                                                frm.richTextBoxCompare.Text += temp;
+                                                countCompareOut++;
+                                            }
+                                            else
+                                            {
+                                                if (temp.Contains(frm.comboBoxProductsFilter.Text))
+                                                {
+                                                    frm.richTextBoxCompare.Text += temp;
+                                                    countCompareOut++;
+                                                }
+
+                                            }
                                             frm.textBoxFilterCount.Text = countCompareOut.ToString();
                                             frm.textBoxFilterCount.BackColor = Color.OrangeRed;
+                                            frm.comboBoxProductsFilter.Items.Add(table1.Rows[i_rowIndex][colIndex - 2].ToString());
+
                                         }
                                     }
                                     Application.DoEvents();
                                     result = 0;
+                                    clearComboItems(frm.comboBoxProductsFilter);
 
                                 }
                             }

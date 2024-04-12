@@ -47,7 +47,7 @@ namespace ProductsDataMQS
             {
                 dailyMQSDataTableAdapter.Fill(mQSRequestDatabaseDataSet.DailyMQSData);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Não foi possivel conectar ao Banco de Dados!!! error: " + ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -175,7 +175,7 @@ namespace ProductsDataMQS
                 .Where(line => line.Contains("NEW")).ToList()
                 .ForEach(validLine => comboBoxListToADDdb.Items.Add(validLine));
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Não foi possivel adicionar os valores de tempo de teste do comparador!!! error: " + ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -207,7 +207,7 @@ namespace ProductsDataMQS
             }
             catch (Exception ex)
             {
-                MessageBox.Show(errorDBMessage + ex.Message,"Warning",MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(errorDBMessage + ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         private void setField()
@@ -324,7 +324,7 @@ namespace ProductsDataMQS
                 sqlProcedure.dataTableToMdb(dt, dbTableNameTemp);
                 MessageBox.Show(successDBTempMessage);
                 initializeFields();
-                
+
             }
             catch (Exception ex)
             {
@@ -462,6 +462,19 @@ namespace ProductsDataMQS
             {
                 MessageBox.Show("Não foi possivel conectar ao banco de dados!!! Error: " + ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void comboBoxProductsFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxProductsFilter.Text == "")
+            {
+                //do nothing!!
+            }
+            else
+            {
+                initializeFields();
+            }
+
         }
     }
 }
