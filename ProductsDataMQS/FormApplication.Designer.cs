@@ -48,7 +48,6 @@
             this.dailyMQSDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mQSRequestDatabaseDataSet = new ProductsDataMQS.MQSRequestDatabaseDataSet();
             this.groupBoxProductData = new System.Windows.Forms.GroupBox();
-            this.labelUserLogin = new System.Windows.Forms.Label();
             this.textBoxThandle = new System.Windows.Forms.TextBox();
             this.labelTHandle = new System.Windows.Forms.Label();
             this.textBoxLocation = new System.Windows.Forms.TextBox();
@@ -95,6 +94,8 @@
             this.buttonExit = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.labelUserLogin = new System.Windows.Forms.Label();
+            this.comboBoxProductsFilter = new System.Windows.Forms.ComboBox();
             this.buttonRefresh = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.buttonUpdateToDb = new System.Windows.Forms.Button();
@@ -119,7 +120,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.labelLoginSetting = new System.Windows.Forms.Label();
             this.dailyMQSDataTableAdapter = new ProductsDataMQS.MQSRequestDatabaseDataSetTableAdapters.DailyMQSDataTableAdapter();
-            this.comboBoxProductsFilter = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMQS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dailyMQSDataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mQSRequestDatabaseDataSet)).BeginInit();
@@ -156,7 +156,7 @@
             this.totHandleDataGridViewTextBoxColumn});
             this.dataGridViewMQS.DataSource = this.dailyMQSDataBindingSource;
             this.dataGridViewMQS.Location = new System.Drawing.Point(11, 262);
-            this.dataGridViewMQS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridViewMQS.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewMQS.Name = "dataGridViewMQS";
             this.dataGridViewMQS.RowHeadersWidth = 51;
             this.dataGridViewMQS.Size = new System.Drawing.Size(1175, 565);
@@ -305,7 +305,6 @@
             // 
             this.groupBoxProductData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBoxProductData.Controls.Add(this.labelUserLogin);
             this.groupBoxProductData.Controls.Add(this.textBoxThandle);
             this.groupBoxProductData.Controls.Add(this.labelTHandle);
             this.groupBoxProductData.Controls.Add(this.textBoxLocation);
@@ -338,28 +337,19 @@
             this.groupBoxProductData.Controls.Add(this.labelProductName);
             this.groupBoxProductData.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxProductData.Location = new System.Drawing.Point(404, 42);
-            this.groupBoxProductData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBoxProductData.Margin = new System.Windows.Forms.Padding(4);
             this.groupBoxProductData.Name = "groupBoxProductData";
-            this.groupBoxProductData.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBoxProductData.Padding = new System.Windows.Forms.Padding(4);
             this.groupBoxProductData.Size = new System.Drawing.Size(968, 159);
             this.groupBoxProductData.TabIndex = 1;
             this.groupBoxProductData.TabStop = false;
             this.groupBoxProductData.Text = "Product Infos";
             // 
-            // labelUserLogin
-            // 
-            this.labelUserLogin.AutoSize = true;
-            this.labelUserLogin.Location = new System.Drawing.Point(223, -1);
-            this.labelUserLogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelUserLogin.Name = "labelUserLogin";
-            this.labelUserLogin.Size = new System.Drawing.Size(0, 18);
-            this.labelUserLogin.TabIndex = 41;
-            // 
             // textBoxThandle
             // 
             this.textBoxThandle.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dailyMQSDataBindingSource, "TotHandle", true));
             this.textBoxThandle.Location = new System.Drawing.Point(393, 122);
-            this.textBoxThandle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxThandle.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxThandle.Name = "textBoxThandle";
             this.textBoxThandle.Size = new System.Drawing.Size(80, 24);
             this.textBoxThandle.TabIndex = 38;
@@ -380,7 +370,7 @@
             // 
             this.textBoxLocation.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dailyMQSDataBindingSource, "Location", true));
             this.textBoxLocation.Location = new System.Drawing.Point(81, 124);
-            this.textBoxLocation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxLocation.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxLocation.Name = "textBoxLocation";
             this.textBoxLocation.Size = new System.Drawing.Size(209, 24);
             this.textBoxLocation.TabIndex = 36;
@@ -399,7 +389,7 @@
             // textBoxNPI
             // 
             this.textBoxNPI.Location = new System.Drawing.Point(757, 87);
-            this.textBoxNPI.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxNPI.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNPI.Name = "textBoxNPI";
             this.textBoxNPI.Size = new System.Drawing.Size(80, 24);
             this.textBoxNPI.TabIndex = 29;
@@ -418,7 +408,7 @@
             // textBoxMchTime
             // 
             this.textBoxMchTime.Location = new System.Drawing.Point(757, 57);
-            this.textBoxMchTime.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxMchTime.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxMchTime.Name = "textBoxMchTime";
             this.textBoxMchTime.Size = new System.Drawing.Size(80, 24);
             this.textBoxMchTime.TabIndex = 27;
@@ -438,7 +428,7 @@
             // 
             this.textBoxCsvFolder.Enabled = false;
             this.textBoxCsvFolder.Location = new System.Drawing.Point(557, 126);
-            this.textBoxCsvFolder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxCsvFolder.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxCsvFolder.Name = "textBoxCsvFolder";
             this.textBoxCsvFolder.Size = new System.Drawing.Size(383, 24);
             this.textBoxCsvFolder.TabIndex = 24;
@@ -458,7 +448,7 @@
             // 
             this.textBoxTTime.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dailyMQSDataBindingSource, "AvgPASSTime", true));
             this.textBoxTTime.Location = new System.Drawing.Point(757, 23);
-            this.textBoxTTime.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxTTime.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxTTime.Name = "textBoxTTime";
             this.textBoxTTime.Size = new System.Drawing.Size(80, 24);
             this.textBoxTTime.TabIndex = 19;
@@ -479,7 +469,7 @@
             // 
             this.textBoxTYield.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dailyMQSDataBindingSource, "TotYield", true));
             this.textBoxTYield.Location = new System.Drawing.Point(572, 23);
-            this.textBoxTYield.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxTYield.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxTYield.Name = "textBoxTYield";
             this.textBoxTYield.Size = new System.Drawing.Size(80, 24);
             this.textBoxTYield.TabIndex = 17;
@@ -499,7 +489,7 @@
             // 
             this.textBoxTFail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dailyMQSDataBindingSource, "TotFail", true));
             this.textBoxTFail.Location = new System.Drawing.Point(572, 87);
-            this.textBoxTFail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxTFail.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxTFail.Name = "textBoxTFail";
             this.textBoxTFail.Size = new System.Drawing.Size(80, 24);
             this.textBoxTFail.TabIndex = 15;
@@ -519,7 +509,7 @@
             // 
             this.textBoxTPass.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dailyMQSDataBindingSource, "TotPass", true));
             this.textBoxTPass.Location = new System.Drawing.Point(572, 55);
-            this.textBoxTPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxTPass.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxTPass.Name = "textBoxTPass";
             this.textBoxTPass.Size = new System.Drawing.Size(80, 24);
             this.textBoxTPass.TabIndex = 13;
@@ -539,7 +529,7 @@
             // 
             this.textBoxPYield.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dailyMQSDataBindingSource, "PYield", true));
             this.textBoxPYield.Location = new System.Drawing.Point(393, 23);
-            this.textBoxPYield.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxPYield.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxPYield.Name = "textBoxPYield";
             this.textBoxPYield.Size = new System.Drawing.Size(80, 24);
             this.textBoxPYield.TabIndex = 11;
@@ -560,7 +550,7 @@
             // 
             this.textBoxPrimeFail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dailyMQSDataBindingSource, "PrimeFail", true));
             this.textBoxPrimeFail.Location = new System.Drawing.Point(393, 87);
-            this.textBoxPrimeFail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxPrimeFail.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxPrimeFail.Name = "textBoxPrimeFail";
             this.textBoxPrimeFail.Size = new System.Drawing.Size(80, 24);
             this.textBoxPrimeFail.TabIndex = 9;
@@ -580,7 +570,7 @@
             // 
             this.textBoxPrimePass.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dailyMQSDataBindingSource, "PrimePass", true));
             this.textBoxPrimePass.Location = new System.Drawing.Point(393, 55);
-            this.textBoxPrimePass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxPrimePass.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxPrimePass.Name = "textBoxPrimePass";
             this.textBoxPrimePass.Size = new System.Drawing.Size(80, 24);
             this.textBoxPrimePass.TabIndex = 7;
@@ -600,7 +590,7 @@
             // 
             this.textBoxProcess.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dailyMQSDataBindingSource, "Process", true));
             this.textBoxProcess.Location = new System.Drawing.Point(81, 55);
-            this.textBoxProcess.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxProcess.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxProcess.Name = "textBoxProcess";
             this.textBoxProcess.Size = new System.Drawing.Size(209, 24);
             this.textBoxProcess.TabIndex = 5;
@@ -621,7 +611,7 @@
             // 
             this.textBoxFamily.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dailyMQSDataBindingSource, "Family", true));
             this.textBoxFamily.Location = new System.Drawing.Point(81, 23);
-            this.textBoxFamily.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxFamily.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxFamily.Name = "textBoxFamily";
             this.textBoxFamily.Size = new System.Drawing.Size(209, 24);
             this.textBoxFamily.TabIndex = 3;
@@ -642,7 +632,7 @@
             // 
             this.textBoxProductName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dailyMQSDataBindingSource, "Technology", true));
             this.textBoxProductName.Location = new System.Drawing.Point(81, 89);
-            this.textBoxProductName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxProductName.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxProductName.Name = "textBoxProductName";
             this.textBoxProductName.Size = new System.Drawing.Size(209, 24);
             this.textBoxProductName.TabIndex = 1;
@@ -666,9 +656,9 @@
             this.groupBox4.Controls.Add(this.buttonDelete);
             this.groupBox4.Controls.Add(this.buttonAddNew);
             this.groupBox4.Location = new System.Drawing.Point(16, 42);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox4.Size = new System.Drawing.Size(347, 155);
             this.groupBox4.TabIndex = 42;
             this.groupBox4.TabStop = false;
@@ -679,7 +669,7 @@
             this.checkBoxEdit.AutoSize = true;
             this.checkBoxEdit.Enabled = false;
             this.checkBoxEdit.Location = new System.Drawing.Point(8, 94);
-            this.checkBoxEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBoxEdit.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxEdit.Name = "checkBoxEdit";
             this.checkBoxEdit.Size = new System.Drawing.Size(72, 20);
             this.checkBoxEdit.TabIndex = 41;
@@ -691,7 +681,7 @@
             // 
             this.buttonSave.Enabled = false;
             this.buttonSave.Location = new System.Drawing.Point(129, 84);
-            this.buttonSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonSave.Margin = new System.Windows.Forms.Padding(4);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(92, 31);
             this.buttonSave.TabIndex = 34;
@@ -702,7 +692,7 @@
             // buttonEnableLogin
             // 
             this.buttonEnableLogin.Location = new System.Drawing.Point(8, 32);
-            this.buttonEnableLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonEnableLogin.Margin = new System.Windows.Forms.Padding(4);
             this.buttonEnableLogin.Name = "buttonEnableLogin";
             this.buttonEnableLogin.Size = new System.Drawing.Size(93, 42);
             this.buttonEnableLogin.TabIndex = 39;
@@ -714,7 +704,7 @@
             // 
             this.buttonDelete.Enabled = false;
             this.buttonDelete.Location = new System.Drawing.Point(247, 84);
-            this.buttonDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonDelete.Margin = new System.Windows.Forms.Padding(4);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(92, 31);
             this.buttonDelete.TabIndex = 40;
@@ -726,7 +716,7 @@
             // 
             this.buttonAddNew.Enabled = false;
             this.buttonAddNew.Location = new System.Drawing.Point(129, 30);
-            this.buttonAddNew.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonAddNew.Margin = new System.Windows.Forms.Padding(4);
             this.buttonAddNew.Name = "buttonAddNew";
             this.buttonAddNew.Size = new System.Drawing.Size(209, 46);
             this.buttonAddNew.TabIndex = 33;
@@ -750,7 +740,7 @@
             // 
             this.buttonPrev.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPrev.Location = new System.Drawing.Point(16, 209);
-            this.buttonPrev.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonPrev.Margin = new System.Windows.Forms.Padding(4);
             this.buttonPrev.Name = "buttonPrev";
             this.buttonPrev.Size = new System.Drawing.Size(93, 46);
             this.buttonPrev.TabIndex = 21;
@@ -762,7 +752,7 @@
             // 
             this.buttonNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonNext.Location = new System.Drawing.Point(117, 209);
-            this.buttonNext.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonNext.Margin = new System.Windows.Forms.Padding(4);
             this.buttonNext.Name = "buttonNext";
             this.buttonNext.Size = new System.Drawing.Size(93, 46);
             this.buttonNext.TabIndex = 20;
@@ -777,7 +767,7 @@
             this.buttonInsertDB.Enabled = false;
             this.buttonInsertDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonInsertDB.Location = new System.Drawing.Point(137, 111);
-            this.buttonInsertDB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonInsertDB.Margin = new System.Windows.Forms.Padding(4);
             this.buttonInsertDB.Name = "buttonInsertDB";
             this.buttonInsertDB.Size = new System.Drawing.Size(184, 44);
             this.buttonInsertDB.TabIndex = 31;
@@ -804,7 +794,7 @@
             this.buttonUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonUpdate.ForeColor = System.Drawing.Color.White;
             this.buttonUpdate.Location = new System.Drawing.Point(117, 23);
-            this.buttonUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(225, 78);
             this.buttonUpdate.TabIndex = 22;
@@ -830,7 +820,7 @@
             this.buttonExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonExit.Location = new System.Drawing.Point(1733, 878);
-            this.buttonExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonExit.Margin = new System.Windows.Forms.Padding(4);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(91, 28);
             this.buttonExit.TabIndex = 3;
@@ -846,7 +836,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Location = new System.Drawing.Point(0, 4);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1829, 866);
@@ -854,6 +844,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.labelUserLogin);
             this.tabPage1.Controls.Add(this.comboBoxProductsFilter);
             this.tabPage1.Controls.Add(this.groupBox4);
             this.tabPage1.Controls.Add(this.buttonRefresh);
@@ -873,19 +864,38 @@
             this.tabPage1.Controls.Add(this.buttonPrev);
             this.tabPage1.Controls.Add(this.buttonNext);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage1.Size = new System.Drawing.Size(1821, 837);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "MQS Product Infos";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // labelUserLogin
+            // 
+            this.labelUserLogin.AutoSize = true;
+            this.labelUserLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUserLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.labelUserLogin.Location = new System.Drawing.Point(210, 28);
+            this.labelUserLogin.Name = "labelUserLogin";
+            this.labelUserLogin.Size = new System.Drawing.Size(0, 18);
+            this.labelUserLogin.TabIndex = 46;
+            // 
+            // comboBoxProductsFilter
+            // 
+            this.comboBoxProductsFilter.FormattingEnabled = true;
+            this.comboBoxProductsFilter.Location = new System.Drawing.Point(1193, 262);
+            this.comboBoxProductsFilter.Name = "comboBoxProductsFilter";
+            this.comboBoxProductsFilter.Size = new System.Drawing.Size(254, 24);
+            this.comboBoxProductsFilter.TabIndex = 45;
+            this.comboBoxProductsFilter.SelectedIndexChanged += new System.EventHandler(this.comboBoxProductsFilter_SelectedIndexChanged);
+            // 
             // buttonRefresh
             // 
             this.buttonRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRefresh.Location = new System.Drawing.Point(1017, 210);
-            this.buttonRefresh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonRefresh.Margin = new System.Windows.Forms.Padding(4);
             this.buttonRefresh.Name = "buttonRefresh";
             this.buttonRefresh.Size = new System.Drawing.Size(169, 44);
             this.buttonRefresh.TabIndex = 43;
@@ -900,9 +910,9 @@
             this.groupBox3.Controls.Add(this.buttonUpdateToDb);
             this.groupBox3.Controls.Add(this.comboBoxListToADDdb);
             this.groupBox3.Location = new System.Drawing.Point(1195, 692);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(617, 135);
             this.groupBox3.TabIndex = 42;
             this.groupBox3.TabStop = false;
@@ -915,7 +925,7 @@
             this.buttonUpdateToDb.Enabled = false;
             this.buttonUpdateToDb.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonUpdateToDb.Location = new System.Drawing.Point(185, 71);
-            this.buttonUpdateToDb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonUpdateToDb.Margin = new System.Windows.Forms.Padding(4);
             this.buttonUpdateToDb.Name = "buttonUpdateToDb";
             this.buttonUpdateToDb.Size = new System.Drawing.Size(284, 42);
             this.buttonUpdateToDb.TabIndex = 33;
@@ -930,7 +940,7 @@
             this.comboBoxListToADDdb.Enabled = false;
             this.comboBoxListToADDdb.FormattingEnabled = true;
             this.comboBoxListToADDdb.Location = new System.Drawing.Point(20, 23);
-            this.comboBoxListToADDdb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxListToADDdb.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxListToADDdb.Name = "comboBoxListToADDdb";
             this.comboBoxListToADDdb.Size = new System.Drawing.Size(587, 24);
             this.comboBoxListToADDdb.TabIndex = 32;
@@ -942,7 +952,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBoxCompare.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBoxCompare.Location = new System.Drawing.Point(1195, 289);
-            this.richTextBoxCompare.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBoxCompare.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBoxCompare.Name = "richTextBoxCompare";
             this.richTextBoxCompare.Size = new System.Drawing.Size(615, 393);
             this.richTextBoxCompare.TabIndex = 41;
@@ -954,9 +964,9 @@
             this.groupBox1.Controls.Add(this.buttonUpdate);
             this.groupBox1.Controls.Add(this.buttonInsertDB);
             this.groupBox1.Location = new System.Drawing.Point(1380, 42);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(417, 159);
             this.groupBox1.TabIndex = 40;
             this.groupBox1.TabStop = false;
@@ -965,7 +975,7 @@
             // textBoxFilterCount
             // 
             this.textBoxFilterCount.Location = new System.Drawing.Point(1745, 264);
-            this.textBoxFilterCount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxFilterCount.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxFilterCount.Name = "textBoxFilterCount";
             this.textBoxFilterCount.Size = new System.Drawing.Size(37, 22);
             this.textBoxFilterCount.TabIndex = 38;
@@ -984,7 +994,7 @@
             // textBoxFilterValue
             // 
             this.textBoxFilterValue.Location = new System.Drawing.Point(1616, 264);
-            this.textBoxFilterValue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxFilterValue.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxFilterValue.Name = "textBoxFilterValue";
             this.textBoxFilterValue.Size = new System.Drawing.Size(37, 22);
             this.textBoxFilterValue.TabIndex = 36;
@@ -1017,7 +1027,7 @@
             // 
             this.buttonCompareAvg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCompareAvg.Location = new System.Drawing.Point(1193, 211);
-            this.buttonCompareAvg.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonCompareAvg.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCompareAvg.Name = "buttonCompareAvg";
             this.buttonCompareAvg.Size = new System.Drawing.Size(228, 44);
             this.buttonCompareAvg.TabIndex = 32;
@@ -1030,9 +1040,9 @@
             this.tabPage2.Controls.Add(this.groupBox2);
             this.tabPage2.Controls.Add(this.labelLoginSetting);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage2.Size = new System.Drawing.Size(1821, 837);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Login Setting";
@@ -1050,9 +1060,9 @@
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(28, 58);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(320, 334);
             this.groupBox2.TabIndex = 34;
             this.groupBox2.TabStop = false;
@@ -1062,7 +1072,7 @@
             // 
             this.textBoxConfirmPassword.Enabled = false;
             this.textBoxConfirmPassword.Location = new System.Drawing.Point(27, 235);
-            this.textBoxConfirmPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxConfirmPassword.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxConfirmPassword.Name = "textBoxConfirmPassword";
             this.textBoxConfirmPassword.Size = new System.Drawing.Size(245, 24);
             this.textBoxConfirmPassword.TabIndex = 7;
@@ -1082,7 +1092,7 @@
             // 
             this.buttonSaveNew.Enabled = false;
             this.buttonSaveNew.Location = new System.Drawing.Point(188, 278);
-            this.buttonSaveNew.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonSaveNew.Margin = new System.Windows.Forms.Padding(4);
             this.buttonSaveNew.Name = "buttonSaveNew";
             this.buttonSaveNew.Size = new System.Drawing.Size(85, 48);
             this.buttonSaveNew.TabIndex = 5;
@@ -1093,7 +1103,7 @@
             // buttonNewUser
             // 
             this.buttonNewUser.Location = new System.Drawing.Point(27, 25);
-            this.buttonNewUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonNewUser.Margin = new System.Windows.Forms.Padding(4);
             this.buttonNewUser.Name = "buttonNewUser";
             this.buttonNewUser.Size = new System.Drawing.Size(85, 46);
             this.buttonNewUser.TabIndex = 4;
@@ -1105,7 +1115,7 @@
             // 
             this.textBoxCreatePassword.Enabled = false;
             this.textBoxCreatePassword.Location = new System.Drawing.Point(27, 174);
-            this.textBoxCreatePassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxCreatePassword.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxCreatePassword.Name = "textBoxCreatePassword";
             this.textBoxCreatePassword.Size = new System.Drawing.Size(245, 24);
             this.textBoxCreatePassword.TabIndex = 3;
@@ -1125,7 +1135,7 @@
             // 
             this.textBoxCreateUserName.Enabled = false;
             this.textBoxCreateUserName.Location = new System.Drawing.Point(27, 106);
-            this.textBoxCreateUserName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxCreateUserName.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxCreateUserName.Name = "textBoxCreateUserName";
             this.textBoxCreateUserName.Size = new System.Drawing.Size(245, 24);
             this.textBoxCreateUserName.TabIndex = 1;
@@ -1156,15 +1166,6 @@
             // 
             this.dailyMQSDataTableAdapter.ClearBeforeFill = true;
             // 
-            // comboBoxProductsFilter
-            // 
-            this.comboBoxProductsFilter.FormattingEnabled = true;
-            this.comboBoxProductsFilter.Location = new System.Drawing.Point(1193, 262);
-            this.comboBoxProductsFilter.Name = "comboBoxProductsFilter";
-            this.comboBoxProductsFilter.Size = new System.Drawing.Size(254, 24);
-            this.comboBoxProductsFilter.TabIndex = 45;
-            this.comboBoxProductsFilter.SelectedIndexChanged += new System.EventHandler(this.comboBoxProductsFilter_SelectedIndexChanged);
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1174,7 +1175,7 @@
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.labelDev);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormMain";
             this.Text = "Products Data MQS v1.2";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -1268,7 +1269,6 @@
         private System.Windows.Forms.TextBox textBoxCreateUserName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelLoginSetting;
-        public System.Windows.Forms.Label labelUserLogin;
         private System.Windows.Forms.TextBox textBoxConfirmPassword;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox3;
@@ -1292,6 +1292,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn totFailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn totHandleDataGridViewTextBoxColumn;
         public System.Windows.Forms.ComboBox comboBoxProductsFilter;
+        public System.Windows.Forms.Label labelUserLogin;
     }
 }
 
