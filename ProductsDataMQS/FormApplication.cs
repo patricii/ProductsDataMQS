@@ -182,6 +182,7 @@ namespace ProductsDataMQS
         }
         private void initializeFields()
         {
+            comboBoxProductsFilter.Items.Clear();
             buttonCompareAvg.Enabled = false;
             buttonUpdate.Enabled = false;
             textBoxFilterCount.Text = "";
