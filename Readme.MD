@@ -3,8 +3,6 @@
 *******************************ProductDataMQS*******************************
 ****************************************************************************
 ****************************************************************************
-- A Aplicação deve rodar no diretório C:\ProductDataMQS;
-
 - A Aplicação contempla um DataBase com duas tabelas MQSDailyData e 
 MQSDailyDataTemp;
 
