@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace ProductsDataMQS
@@ -493,6 +494,9 @@ namespace ProductsDataMQS
 
         private void buttonRefreshLogs_Click(object sender, EventArgs e)
         {
+            textBoxLogTracking.Text = "";
+            Application.DoEvents();
+            Thread.Sleep(300);
             setLoegTracking();
         }
     }
