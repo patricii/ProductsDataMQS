@@ -120,6 +120,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.labelLoginSetting = new System.Windows.Forms.Label();
             this.dailyMQSDataTableAdapter = new ProductsDataMQS.MQSRequestDatabaseDataSetTableAdapters.DailyMQSDataTableAdapter();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.labelLogTracking = new System.Windows.Forms.Label();
+            this.textBoxLogTracking = new System.Windows.Forms.TextBox();
+            this.buttonRefreshLogs = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMQS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dailyMQSDataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mQSRequestDatabaseDataSet)).BeginInit();
@@ -131,6 +135,7 @@
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridViewMQS
@@ -836,6 +841,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(0, 4);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
@@ -1167,6 +1173,53 @@
             // 
             this.dailyMQSDataTableAdapter.ClearBeforeFill = true;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.buttonRefreshLogs);
+            this.tabPage3.Controls.Add(this.textBoxLogTracking);
+            this.tabPage3.Controls.Add(this.labelLogTracking);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1821, 837);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Logs";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // labelLogTracking
+            // 
+            this.labelLogTracking.AutoSize = true;
+            this.labelLogTracking.Location = new System.Drawing.Point(32, 18);
+            this.labelLogTracking.Name = "labelLogTracking";
+            this.labelLogTracking.Size = new System.Drawing.Size(89, 16);
+            this.labelLogTracking.TabIndex = 0;
+            this.labelLogTracking.Text = "Log Tracking:";
+            // 
+            // textBoxLogTracking
+            // 
+            this.textBoxLogTracking.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxLogTracking.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxLogTracking.Location = new System.Drawing.Point(35, 61);
+            this.textBoxLogTracking.Multiline = true;
+            this.textBoxLogTracking.Name = "textBoxLogTracking";
+            this.textBoxLogTracking.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxLogTracking.Size = new System.Drawing.Size(1757, 770);
+            this.textBoxLogTracking.TabIndex = 1;
+            // 
+            // buttonRefreshLogs
+            // 
+            this.buttonRefreshLogs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonRefreshLogs.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRefreshLogs.Location = new System.Drawing.Point(1702, 18);
+            this.buttonRefreshLogs.Name = "buttonRefreshLogs";
+            this.buttonRefreshLogs.Size = new System.Drawing.Size(90, 37);
+            this.buttonRefreshLogs.TabIndex = 2;
+            this.buttonRefreshLogs.Text = "Refresh";
+            this.buttonRefreshLogs.UseVisualStyleBackColor = true;
+            this.buttonRefreshLogs.Click += new System.EventHandler(this.buttonRefreshLogs_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1197,6 +1250,8 @@
             this.tabPage2.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1294,6 +1349,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn totHandleDataGridViewTextBoxColumn;
         public System.Windows.Forms.ComboBox comboBoxProductsFilter;
         public System.Windows.Forms.Label labelUserLogin;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TextBox textBoxLogTracking;
+        private System.Windows.Forms.Label labelLogTracking;
+        private System.Windows.Forms.Button buttonRefreshLogs;
     }
 }
 

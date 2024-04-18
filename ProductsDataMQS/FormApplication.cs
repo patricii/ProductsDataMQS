@@ -32,6 +32,7 @@ namespace ProductsDataMQS
         {
             InitializeComponent();
             INSTANCE = this;
+            setLoegTracking();
 
         }
         public static FormMain getInstance()
@@ -196,6 +197,7 @@ namespace ProductsDataMQS
             buttonCompareAvg.Enabled = true;
             buttonCompareAvg.BackColor = Color.LightYellow;
             readRichTextBoxAndFillComboBox();
+            setLoegTracking();
         }
         private void saveChangesDB(string type, string allInfos)
         {
@@ -279,7 +281,18 @@ namespace ProductsDataMQS
             }
             catch { }
         }
-
+        private void setLoegTracking()
+        {
+            try
+            {
+                string LogContents = File.ReadAllText(@"\\jagnt092\transfer\ProductDataMQS\log\dbUpdateRecord.txt");
+                textBoxLogTracking.Text = LogContents;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message);
+            }
+        }
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //////////////////////////////////////////////////////////////////////////Buttons area/////////////////////////////////////////////////////////////////////////
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -476,6 +489,11 @@ namespace ProductsDataMQS
                 initializeFields();
             }
 
+        }
+
+        private void buttonRefreshLogs_Click(object sender, EventArgs e)
+        {
+            setLoegTracking();
         }
     }
 }
