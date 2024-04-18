@@ -33,7 +33,7 @@ namespace ProductsDataMQS
         {
             InitializeComponent();
             INSTANCE = this;
-            setLoegTracking();
+            setLogTracking();
 
         }
         public static FormMain getInstance()
@@ -198,7 +198,7 @@ namespace ProductsDataMQS
             buttonCompareAvg.Enabled = true;
             buttonCompareAvg.BackColor = Color.LightYellow;
             readRichTextBoxAndFillComboBox();
-            setLoegTracking();
+            setLogTracking();
         }
         private void saveChangesDB(string type, string allInfos)
         {
@@ -282,7 +282,7 @@ namespace ProductsDataMQS
             }
             catch { }
         }
-        private void setLoegTracking()
+        private void setLogTracking()
         {
             try
             {
@@ -497,7 +497,7 @@ namespace ProductsDataMQS
             textBoxLogTracking.Text = "";
             Application.DoEvents();
             Thread.Sleep(300);
-            setLoegTracking();
+            setLogTracking();
         }
     }
 }
