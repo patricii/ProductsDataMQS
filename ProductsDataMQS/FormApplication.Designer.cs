@@ -135,6 +135,7 @@
             // 
             // dataGridViewMQS
             // 
+            this.dataGridViewMQS.AllowUserToOrderColumns = true;
             this.dataGridViewMQS.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.dataGridViewMQS.AutoGenerateColumns = false;
