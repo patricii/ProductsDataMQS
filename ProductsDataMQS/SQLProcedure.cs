@@ -216,7 +216,7 @@ namespace ProductsDataMQS
                                     result = avgTTOld - avgTTNew;
                                     if (result < 0)
                                         result = result * -1;
-                                    if (!table1.Rows[i_rowIndex][colIndex - 1].ToString().Contains("NCAL") && !table1.Rows[i_rowIndex][colIndex - 1].ToString().Contains("_CAL") && !table1.Rows[i_rowIndex][colIndex - 1].ToString().Contains("NORM") && !table1.Rows[i_rowIndex][colIndex - 1].ToString().Contains("BACKFLASH"))
+                                    if (avgTTNew != 0 && !table1.Rows[i_rowIndex][colIndex - 1].ToString().Contains("NCAL") && !table1.Rows[i_rowIndex][colIndex - 1].ToString().Contains("_CAL") && !table1.Rows[i_rowIndex][colIndex - 1].ToString().Contains("NORM") && !table1.Rows[i_rowIndex][colIndex - 1].ToString().Contains("BACKFLASH"))
                                     {
                                         if (result >= filterValue)
                                         {
