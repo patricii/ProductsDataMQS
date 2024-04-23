@@ -294,6 +294,19 @@ namespace ProductsDataMQS
                 MessageBox.Show("Error:" + ex.Message);
             }
         }
+        private void bindingWithPersistDB()
+        {
+            try
+            {
+                dailyMQSDataBindingSource.DataSource = mQSRequestDatabaseDataSet.DailyMQSData;
+                dailyMQSDataTableAdapter.Fill(mQSRequestDatabaseDataSet.DailyMQSData);
+                dataGridViewMQS.Refresh();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não foi possivel conectar ao banco de dados!!! Error: " + ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //////////////////////////////////////////////////////////////////////////Buttons area/////////////////////////////////////////////////////////////////////////
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -465,20 +478,6 @@ namespace ProductsDataMQS
         {
             bindingWithPersistDB();
         }
-        private void bindingWithPersistDB()
-        {
-            try
-            {
-                dailyMQSDataBindingSource.DataSource = mQSRequestDatabaseDataSet.DailyMQSData;
-                dailyMQSDataTableAdapter.Fill(mQSRequestDatabaseDataSet.DailyMQSData);
-                dataGridViewMQS.Refresh();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Não foi possivel conectar ao banco de dados!!! Error: " + ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
         private void comboBoxProductsFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBoxProductsFilter.Text == "")
