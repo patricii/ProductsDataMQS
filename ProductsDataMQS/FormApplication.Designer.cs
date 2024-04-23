@@ -124,6 +124,7 @@
             this.labelLogTracking = new System.Windows.Forms.Label();
             this.textBoxLogTracking = new System.Windows.Forms.TextBox();
             this.buttonRefreshLogs = new System.Windows.Forms.Button();
+            this.buttonMqsTempData = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMQS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dailyMQSDataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mQSRequestDatabaseDataSet)).BeginInit();
@@ -851,6 +852,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.buttonMqsTempData);
             this.tabPage1.Controls.Add(this.labelUserLogin);
             this.tabPage1.Controls.Add(this.comboBoxProductsFilter);
             this.tabPage1.Controls.Add(this.groupBox4);
@@ -1066,7 +1068,7 @@
             this.groupBox2.Controls.Add(this.textBoxCreateUserName);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(28, 58);
+            this.groupBox2.Location = new System.Drawing.Point(16, 42);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
@@ -1162,7 +1164,7 @@
             this.labelLoginSetting.AutoSize = true;
             this.labelLoginSetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLoginSetting.ForeColor = System.Drawing.Color.Teal;
-            this.labelLoginSetting.Location = new System.Drawing.Point(8, 25);
+            this.labelLoginSetting.Location = new System.Drawing.Point(4, 7);
             this.labelLoginSetting.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelLoginSetting.Name = "labelLoginSetting";
             this.labelLoginSetting.Size = new System.Drawing.Size(126, 25);
@@ -1189,9 +1191,11 @@
             // labelLogTracking
             // 
             this.labelLogTracking.AutoSize = true;
-            this.labelLogTracking.Location = new System.Drawing.Point(32, 18);
+            this.labelLogTracking.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic);
+            this.labelLogTracking.ForeColor = System.Drawing.Color.Teal;
+            this.labelLogTracking.Location = new System.Drawing.Point(4, 7);
             this.labelLogTracking.Name = "labelLogTracking";
-            this.labelLogTracking.Size = new System.Drawing.Size(89, 16);
+            this.labelLogTracking.Size = new System.Drawing.Size(132, 25);
             this.labelLogTracking.TabIndex = 0;
             this.labelLogTracking.Text = "Log Tracking:";
             // 
@@ -1219,6 +1223,18 @@
             this.buttonRefreshLogs.Text = "Refresh";
             this.buttonRefreshLogs.UseVisualStyleBackColor = true;
             this.buttonRefreshLogs.Click += new System.EventHandler(this.buttonRefreshLogs_Click);
+            // 
+            // buttonMqsTempData
+            // 
+            this.buttonMqsTempData.BackColor = System.Drawing.Color.Teal;
+            this.buttonMqsTempData.ForeColor = System.Drawing.Color.White;
+            this.buttonMqsTempData.Location = new System.Drawing.Point(233, 228);
+            this.buttonMqsTempData.Name = "buttonMqsTempData";
+            this.buttonMqsTempData.Size = new System.Drawing.Size(198, 26);
+            this.buttonMqsTempData.TabIndex = 47;
+            this.buttonMqsTempData.Text = "Show MQS Temp Data";
+            this.buttonMqsTempData.UseVisualStyleBackColor = false;
+            this.buttonMqsTempData.Click += new System.EventHandler(this.buttonMqsTempData_Click);
             // 
             // FormMain
             // 
@@ -1353,6 +1369,7 @@
         private System.Windows.Forms.TextBox textBoxLogTracking;
         private System.Windows.Forms.Label labelLogTracking;
         private System.Windows.Forms.Button buttonRefreshLogs;
+        private System.Windows.Forms.Button buttonMqsTempData;
     }
 }
 

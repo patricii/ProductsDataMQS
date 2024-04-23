@@ -499,5 +499,17 @@ namespace ProductsDataMQS
             Thread.Sleep(300);
             setLogTracking();
         }
+
+        private void buttonMqsTempData_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dailyMQSDataBindingSource.DataSource = cCTD.ConvertCSVtoDataTable(textBoxCsvFolder.Text);
+            }
+            catch(Exception ex) 
+            {
+                MessageBox.Show("Erro ao mostrar dados temporarios do MQS! error:" + ex.Message);
+            }
+        }
     }
 }
