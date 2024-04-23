@@ -772,11 +772,11 @@
             this.buttonInsertDB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttonInsertDB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.buttonInsertDB.Enabled = false;
-            this.buttonInsertDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonInsertDB.Location = new System.Drawing.Point(137, 111);
+            this.buttonInsertDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonInsertDB.Location = new System.Drawing.Point(117, 111);
             this.buttonInsertDB.Margin = new System.Windows.Forms.Padding(4);
             this.buttonInsertDB.Name = "buttonInsertDB";
-            this.buttonInsertDB.Size = new System.Drawing.Size(184, 44);
+            this.buttonInsertDB.Size = new System.Drawing.Size(225, 44);
             this.buttonInsertDB.TabIndex = 31;
             this.buttonInsertDB.Text = "Create DataBase";
             this.buttonInsertDB.UseVisualStyleBackColor = false;
@@ -798,14 +798,14 @@
             // 
             this.buttonUpdate.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttonUpdate.BackColor = System.Drawing.Color.Teal;
-            this.buttonUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonUpdate.ForeColor = System.Drawing.Color.White;
             this.buttonUpdate.Location = new System.Drawing.Point(117, 23);
             this.buttonUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(225, 78);
             this.buttonUpdate.TabIndex = 22;
-            this.buttonUpdate.Text = "MQS Update";
+            this.buttonUpdate.Text = "<MQS Update>";
             this.buttonUpdate.UseVisualStyleBackColor = false;
             this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
@@ -902,14 +902,16 @@
             // 
             // buttonRefresh
             // 
-            this.buttonRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRefresh.Location = new System.Drawing.Point(1017, 210);
+            this.buttonRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.buttonRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRefresh.ForeColor = System.Drawing.Color.White;
+            this.buttonRefresh.Location = new System.Drawing.Point(966, 229);
             this.buttonRefresh.Margin = new System.Windows.Forms.Padding(4);
             this.buttonRefresh.Name = "buttonRefresh";
-            this.buttonRefresh.Size = new System.Drawing.Size(169, 44);
+            this.buttonRefresh.Size = new System.Drawing.Size(220, 26);
             this.buttonRefresh.TabIndex = 43;
-            this.buttonRefresh.Text = "Refresh DataBase";
-            this.buttonRefresh.UseVisualStyleBackColor = true;
+            this.buttonRefresh.Text = ">>Refresh DataBase";
+            this.buttonRefresh.UseVisualStyleBackColor = false;
             this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
             // groupBox3
@@ -932,11 +934,11 @@
             this.buttonUpdateToDb.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttonUpdateToDb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.buttonUpdateToDb.Enabled = false;
-            this.buttonUpdateToDb.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonUpdateToDb.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonUpdateToDb.Location = new System.Drawing.Point(185, 71);
             this.buttonUpdateToDb.Margin = new System.Windows.Forms.Padding(4);
             this.buttonUpdateToDb.Name = "buttonUpdateToDb";
-            this.buttonUpdateToDb.Size = new System.Drawing.Size(284, 42);
+            this.buttonUpdateToDb.Size = new System.Drawing.Size(284, 36);
             this.buttonUpdateToDb.TabIndex = 33;
             this.buttonUpdateToDb.Text = "Update To DB";
             this.buttonUpdateToDb.UseVisualStyleBackColor = false;
@@ -1034,13 +1036,14 @@
             // 
             // buttonCompareAvg
             // 
-            this.buttonCompareAvg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCompareAvg.Location = new System.Drawing.Point(1193, 211);
+            this.buttonCompareAvg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCompareAvg.ForeColor = System.Drawing.Color.Black;
+            this.buttonCompareAvg.Location = new System.Drawing.Point(1193, 214);
             this.buttonCompareAvg.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCompareAvg.Name = "buttonCompareAvg";
-            this.buttonCompareAvg.Size = new System.Drawing.Size(228, 44);
+            this.buttonCompareAvg.Size = new System.Drawing.Size(254, 41);
             this.buttonCompareAvg.TabIndex = 32;
-            this.buttonCompareAvg.Text = "Compare Test Time";
+            this.buttonCompareAvg.Text = ">>Compare Test Time";
             this.buttonCompareAvg.UseVisualStyleBackColor = true;
             this.buttonCompareAvg.Click += new System.EventHandler(this.buttonCompareAvg_Click);
             // 
@@ -1227,12 +1230,13 @@
             // buttonMqsTempData
             // 
             this.buttonMqsTempData.BackColor = System.Drawing.Color.Teal;
+            this.buttonMqsTempData.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonMqsTempData.ForeColor = System.Drawing.Color.White;
             this.buttonMqsTempData.Location = new System.Drawing.Point(233, 228);
             this.buttonMqsTempData.Name = "buttonMqsTempData";
-            this.buttonMqsTempData.Size = new System.Drawing.Size(198, 26);
+            this.buttonMqsTempData.Size = new System.Drawing.Size(220, 26);
             this.buttonMqsTempData.TabIndex = 47;
-            this.buttonMqsTempData.Text = "Show MQS Temp Data";
+            this.buttonMqsTempData.Text = ">>Show MQS Temp Data";
             this.buttonMqsTempData.UseVisualStyleBackColor = false;
             this.buttonMqsTempData.Click += new System.EventHandler(this.buttonMqsTempData_Click);
             // 
