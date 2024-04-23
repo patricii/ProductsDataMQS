@@ -1127,13 +1127,14 @@
             // 
             // buttonNewUser
             // 
+            this.buttonNewUser.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.buttonNewUser.Location = new System.Drawing.Point(27, 25);
             this.buttonNewUser.Margin = new System.Windows.Forms.Padding(4);
             this.buttonNewUser.Name = "buttonNewUser";
             this.buttonNewUser.Size = new System.Drawing.Size(85, 46);
             this.buttonNewUser.TabIndex = 4;
             this.buttonNewUser.Text = "New";
-            this.buttonNewUser.UseVisualStyleBackColor = true;
+            this.buttonNewUser.UseVisualStyleBackColor = false;
             this.buttonNewUser.Click += new System.EventHandler(this.buttonNewUser_Click);
             // 
             // textBoxCreatePassword
@@ -1203,13 +1204,14 @@
             // buttonRefreshLogs
             // 
             this.buttonRefreshLogs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonRefreshLogs.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRefreshLogs.Location = new System.Drawing.Point(1702, 18);
+            this.buttonRefreshLogs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.buttonRefreshLogs.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRefreshLogs.Location = new System.Drawing.Point(1675, 18);
             this.buttonRefreshLogs.Name = "buttonRefreshLogs";
-            this.buttonRefreshLogs.Size = new System.Drawing.Size(90, 37);
+            this.buttonRefreshLogs.Size = new System.Drawing.Size(117, 37);
             this.buttonRefreshLogs.TabIndex = 2;
             this.buttonRefreshLogs.Text = "Refresh";
-            this.buttonRefreshLogs.UseVisualStyleBackColor = true;
+            this.buttonRefreshLogs.UseVisualStyleBackColor = false;
             this.buttonRefreshLogs.Click += new System.EventHandler(this.buttonRefreshLogs_Click);
             // 
             // textBoxLogTracking
