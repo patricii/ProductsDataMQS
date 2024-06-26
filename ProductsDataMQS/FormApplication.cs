@@ -286,7 +286,7 @@ namespace ProductsDataMQS
         {
             try
             {
-                string LogContents = File.ReadAllText(@"\\jagnt092\transfer\ProductDataMQS\log\dbUpdateRecord.txt");
+                string LogContents = File.ReadAllText(@"C:\ProductDataMQS\log\dbUpdateRecord.txt");
                 textBoxLogTracking.Text = LogContents;
             }
             catch(Exception ex)

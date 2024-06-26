@@ -15,8 +15,6 @@ C:\ProductDataMQS\ProductsDataMQS.exe.manifest
 C:\ProductDataMQS\ProductsDataMQS.application
 C:\ProductDataMQS\ProductsDataMQS.exe
 C:\ProductDataMQS\ProductsDataMQS.pdb
-C:\Development_Projects\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQS.csproj.AssemblyReference.cache
-C:\Development_Projects\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQS.csproj.SuggestedBindingRedirects.cache
 C:\Development_Projects\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQS.FormMain.resources
 C:\Development_Projects\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQS.FormLogin.resources
 C:\Development_Projects\ProductsDataMQS\ProductsDataMQS\obj\Debug\ProductsDataMQS.Properties.Resources.resources
